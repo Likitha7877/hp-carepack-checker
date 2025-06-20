@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <title>HP Warranty Checker</title>
   <link rel="stylesheet" href="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <style>
     * {
@@ -43,7 +45,7 @@
     .form-section h2 {
       color: #1a40ff;
       font-size: 48px;
-        font-family: 'Roboto Slab', serif;
+      font-family: 'Roboto Slab', serif;
       margin-bottom: 16px;
       font-weight: 400;
     }
@@ -52,7 +54,7 @@
       display: block;
       margin: 0px 0 16px 0px;
       font-size: 14px;
-      font-family: 'poppins',serif;
+      font-family: 'poppins', serif;
     }
 
     input[type="text"] {
@@ -77,18 +79,18 @@
       cursor: pointer;
       letter-spacing: 1px;
       transition: background 0.3s ease;
-      font-family: 'poppins',serif;
+      font-family: 'poppins', serif;
     }
 
     button:hover {
       background-color: #1533cc;
-      border:none;
+      border: none;
     }
 
     #loader {
       margin-top: 10px;
       color: #666;
-       font-family: 'poppins',serif;
+      font-family: 'poppins', serif;
     }
 
     .image-section {
@@ -132,8 +134,8 @@
       margin: 0 0 0px;
       font-size: 32px;
       color: #1A45EF;
-        font-family: 'Roboto Slab', serif;
-        font-weight:400;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
 
     }
 
@@ -147,7 +149,7 @@
       flex-wrap: wrap;
       font-size: 14px;
       margin: 16px 0px;
-        font-family: 'Roboto Slab', serif;
+      font-family: 'Roboto Slab', serif;
 
     }
 
@@ -172,7 +174,7 @@
       margin: 0;
       font-size: 14px;
       color: #00115A;
-      font-family: 'poppins',serif;
+      font-family: 'poppins', serif;
     }
 
     .box strong {
@@ -185,7 +187,7 @@
     .box .blue {
       color: #1F48F0;
       font-weight: 600;
-      font-family: 'Roboto Slab',serif;
+      font-family: 'Roboto Slab', serif;
       font-size: 16px;
 
     }
@@ -210,33 +212,34 @@
     .status-active {
       color: green;
       font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: bold;
+      font-family: 'Poppins';
+      font-weight: bold;
 
     }
 
     .status-expired {
       color: red;
       background: #FFFAFA;
-     font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: bold;
+      font-size: 16px;
+      font-family: 'Poppins';
+      font-weight: bold;
 
     }
 
     .status-expiring {
       color: #D4A400;
-     font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: bold;
+      font-size: 16px;
+      font-family: 'Poppins';
+      font-weight: bold;
 
     }
+
     .status-upcoming {
-  color: #878787;
-   font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: bold;
-}
+      color: #878787;
+      font-size: 16px;
+      font-family: 'Poppins';
+      font-weight: bold;
+    }
 
 
     .status-expiring-border {
@@ -257,7 +260,8 @@
     .status-expired-border {
       border-color: red;
     }
-    .status-upcoming-border{
+
+    .status-upcoming-border {
       border-color: #878787;
     }
 
@@ -285,105 +289,106 @@
       justify-content: space-between;
 
     }
-    
 
 
 
-.img-wrapper {
-  text-align: center;
-  background: #F0EFFF;
-  padding: 16px;
-  border-radius: 8px 8px 0px 0px;
-  position: relative;
+
+    .img-wrapper {
+      text-align: center;
+      background: #F0EFFF;
+      padding: 16px;
+      border-radius: 8px 8px 0px 0px;
+      position: relative;
 
 
-}
+    }
 
-.img-wrapper img {
-  max-width: 220PX;
-  height: auto;
-  
-  border-radius: 8PX;
-}
+    .img-wrapper img {
+      max-width: 220PX;
+      height: auto;
 
-.sku {
-  color: #00115a;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 16px;
-  font-family:'poppins',serif;
+      border-radius: 8PX;
+    }
 
-}
+    .sku {
+      color: #00115a;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 16px;
+      font-family: 'poppins', serif;
 
-.title {
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #00115A;
-   padding: 0px 16px;
-   height: 72px;
+    }
 
-}
-.title a{
-  color:#00115A !important;
-  text-decoration: none;
+    .title {
+      font-family: 'Roboto Slab', serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #00115A;
+      padding: 0px 16px;
+      height: 72px;
 
+    }
 
-
-}
-
-.price-cart {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-}
-
-.price {
-  font-weight: 400;
-  color: #00115A;
-  font-family: 'poppins',serif;
-  font-size: 16px;
-
-}
-
-.buy-link {
-  color: #1F48F0;
-  font-weight: 600;
-  font-family: 'poppins',serif;
-  font-size: 14px;
-}
+    .title a {
+      color: #00115A !important;
+      text-decoration: none;
 
 
 
-.tag-label {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 16px;
-  border-radius: 50px;
-  color: white;
-  z-index: 1;
-  width:155px;
-  font-family: 'poppins',serif;
+    }
 
-  
-  
-}
+    .price-cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+    }
 
-.tag-customer {
-  background-color: #0031C6;
-}
+    .price {
+      font-weight: 400;
+      color: #00115A;
+      font-family: 'poppins', serif;
+      font-size: 16px;
 
-.tag-smart {
-  background-color: #107F10;
-}
+    }
 
-.tag-essentials{
-  background-color: #00115a;
-}
+    .buy-link {
+      color: #1F48F0;
+      font-weight: 600;
+      font-family: 'poppins', serif;
+      font-size: 14px;
+    }
+
+
+
+    .tag-label {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 16px;
+      border-radius: 50px;
+      color: white;
+      z-index: 1;
+      width: 155px;
+      font-family: 'poppins', serif;
+
+
+
+    }
+
+    .tag-customer {
+      background-color: #0031C6;
+    }
+
+    .tag-smart {
+      background-color: #107F10;
+    }
+
+    .tag-essentials {
+      background-color: #00115a;
+    }
 
 
 
@@ -400,24 +405,23 @@
         padding: 30px 20px;
       }
     }
-    
   </style>
 
   <script>
     async function submitForm(event) {
       event.preventDefault();
       function getTagClass(tag) {
-  switch ((tag || '').toLowerCase()) {
-    case 'customer favourite':
-      return 'tag-customer';
-    case 'smart pick':
-      return 'tag-smart';
-    case 'essentials':
-      return 'tag-essentials';
-    default:
-      return '';
-  }
-}
+        switch ((tag || '').toLowerCase()) {
+          case 'customer favourite':
+            return 'tag-customer';
+          case 'smart pick':
+            return 'tag-smart';
+          case 'essentials':
+            return 'tag-essentials';
+          default:
+            return '';
+        }
+      }
 
       document.getElementById("loader").style.display = "block";
       document.getElementById("result").innerHTML = "";
@@ -439,12 +443,11 @@
         return;
       }
 
-      const response = await fetch("http://127.0.0.1:5000/check-warranty", {
+      const response = await fetch("/check-warranty", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ serial, product })
       });
-
       const data = await response.json();
       document.getElementById("loader").style.display = "none";
       const output = document.getElementById("result");
@@ -460,14 +463,14 @@
         </p>`;
         }
 
-       //utput.innerHTML = `<p style="color:red;"><strong>Error:</strong> ${data.error}</p>`;
+        //utput.innerHTML = `<p style="color:red;"><strong>Error:</strong> ${data.error}</p>`;
 
 
       } else {
-  let carePackHTML = "";
+        let carePackHTML = "";
 
-  if (data.care_packs?.length > 0) {
-    carePackHTML = `
+        if (data.care_packs?.length > 0) {
+          carePackHTML = `
 <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size:48px; font-weight:400; ">Compatible Care Packs</h2>
 
       <div class="care-pack-wrapper">
@@ -488,7 +491,7 @@
           </div>
         `).join("")}
       </div>`;
-  }
+        }
 
 
 
@@ -507,25 +510,22 @@
 
 
           </div>
-         <div class="status-box ${
-  data.status === 'Active' ? 'status-active-border'
-  : data.status === 'Coverage expiring' ? 'status-expiring-border'
-  : data.status === 'Upcoming' ? 'status-upcoming-border'
-  : 'status-expired-border'
-}">
+         <div class="status-box ${data.status === 'Active' ? 'status-active-border'
+            : data.status === 'Coverage expiring' ? 'status-expiring-border'
+              : data.status === 'Upcoming' ? 'status-upcoming-border'
+                : 'status-expired-border'
+          }">
   <p><strong>
-    <span class="${
-      data.status === 'Active' ? 'status-active'
-      : data.status === 'Coverage expiring' ? 'status-expiring'
-      : data.status === 'Upcoming' ? 'status-upcoming'
-      : 'status-expired'
-    }">Status:</span> –
-    <span class="${
-      data.status === 'Active' ? 'status-active'
-      : data.status === 'Coverage expiring' ? 'status-expiring'
-      : data.status === 'Upcoming' ? 'status-upcoming'
-      : 'status-expired'
-    }">${data.status}</span>
+    <span class="${data.status === 'Active' ? 'status-active'
+            : data.status === 'Coverage expiring' ? 'status-expiring'
+              : data.status === 'Upcoming' ? 'status-upcoming'
+                : 'status-expired'
+          }">Status:</span> –
+    <span class="${data.status === 'Active' ? 'status-active'
+            : data.status === 'Coverage expiring' ? 'status-expiring'
+              : data.status === 'Upcoming' ? 'status-upcoming'
+                : 'status-expired'
+          }">${data.status}</span>
   </strong></p>
             <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
   <strong>Add-on –</strong> ${data.addon}
