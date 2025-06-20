@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HP Warranty Checker</title>
+  <link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1140px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .form-section {
+      flex: 0 0 60%;
+      padding: 0px;
+      /* background-color: #F3F4FE; */
+      border-radius: 8px;
+    }
+
+    .form-section h2 {
+      color: #1a40ff;
+      font-size: 48px;
+        font-family: 'Roboto Slab', serif;
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    label {
+      display: block;
+      margin: 0px 0 16px 0px;
+      font-size: 14px;
+      font-family: 'poppins',serif;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white !important;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 16px;
+      width: 100%;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #1a40ff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.3s ease;
+      font-family: 'poppins',serif;
+    }
+
+    button:hover {
+      background-color: #1533cc;
+      border:none;
+    }
+
+    #loader {
+      margin-top: 10px;
+      color: #666;
+       font-family: 'poppins',serif;
+    }
+
+    .image-section {
+      flex: 0 0 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #result {
+      margin-top: 30px;
+      max-width: 1140px;
+      width: 100%;
+    }
+
+
+    .product-info-flex {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 20px;
+      border: 1px solid #BAC3FF;
+      border-radius: 8px;
+      padding: 16px;
+      background: #FBFBFF;
+      width: 100%;
+    }
+
+    .product-image img {
+      width: 150px;
+      height: auto;
+    }
+
+    .product-text h2 {
+      margin: 0 0 0px;
+      font-size: 32px;
+      color: #1A45EF;
+        font-family: 'Roboto Slab', serif;
+        font-weight:400;
+
+    }
+
+    .product-image {
+      width: 20%;
+    }
+
+    .product-serial-flex {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin: 16px 0px;
+        font-family: 'Roboto Slab', serif;
+
+    }
+
+
+    .warranty-boxes {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .box {
+      flex: 1 1 180px;
+      background: #fff;
+      border: 1px solid #d6dff2;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .box p {
+      margin: 0;
+      font-size: 14px;
+      color: #00115A;
+      font-family: 'poppins',serif;
+    }
+
+    .box strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .box .blue {
+      color: #1F48F0;
+      font-weight: 600;
+      font-family: 'Roboto Slab',serif;
+      font-size: 16px;
+
+    }
+
+    .product-text {
+      margin: 8px 0px;
+      width: 80%;
+    }
+
+    .status-box {
+      margin-top: 10px;
+      background-color: #fff;
+      padding: 10px 12px;
+      border-radius: 6px;
+    }
+
+    .status-box p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .status-active {
+      color: green;
+      font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    }
+
+    .status-expired {
+      color: red;
+      background: #FFFAFA;
+     font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    }
+
+    .status-expiring {
+      color: #D4A400;
+     font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    }
+    .status-upcoming {
+  color: #878787;
+   font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+
+    .status-expiring-border {
+      border-color: #D4A400 !important;
+      /* Amber color for warning */
+    }
+
+    .status-box {
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+    }
+
+    .status-active-border {
+      border-color: green;
+    }
+
+    .status-expired-border {
+      border-color: red;
+    }
+    .status-upcoming-border{
+      border-color: #878787;
+    }
+
+    .status-active {
+      color: green;
+    }
+
+    .care-pack-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 1140px;
+      padding: 30px 0;
+      gap: 20px;
+    }
+
+    .care-pack-card {
+      border: 1px solid #DEE0FF;
+      border-radius: 8px;
+      text-align: left;
+      background-color: white;
+    }
+
+    .price-cart {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    
+
+
+
+.img-wrapper {
+  text-align: center;
+  background: #F0EFFF;
+  padding: 16px;
+  border-radius: 8px 8px 0px 0px;
+  position: relative;
+
+
+}
+
+.img-wrapper img {
+  max-width: 220PX;
+  height: auto;
+  
+  border-radius: 8PX;
+}
+
+.sku {
+  color: #00115a;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-family:'poppins',serif;
+
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #00115A;
+   padding: 0px 16px;
+   height: 72px;
+
+}
+.title a{
+  color:#00115A !important;
+  text-decoration: none;
+
+
+
+}
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.price {
+  font-weight: 400;
+  color: #00115A;
+  font-family: 'poppins',serif;
+  font-size: 16px;
+
+}
+
+.buy-link {
+  color: #1F48F0;
+  font-weight: 600;
+  font-family: 'poppins',serif;
+  font-size: 14px;
+}
+
+
+
+.tag-label {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 16px;
+  border-radius: 50px;
+  color: white;
+  z-index: 1;
+  width:155px;
+  font-family: 'poppins',serif;
+
+  
+  
+}
+
+.tag-customer {
+  background-color: #0031C6;
+}
+
+.tag-smart {
+  background-color: #107F10;
+}
+
+.tag-essentials{
+  background-color: #00115a;
+}
+
+
+
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .form-section,
+      .image-section {
+        width: 100%;
+        padding: 30px 20px;
+      }
+    }
+    
+  </style>
+
+  <script>
+    async function submitForm(event) {
+      event.preventDefault();
+      function getTagClass(tag) {
+  switch ((tag || '').toLowerCase()) {
+    case 'customer favourite':
+      return 'tag-customer';
+    case 'smart pick':
+      return 'tag-smart';
+    case 'essentials':
+      return 'tag-essentials';
+    default:
+      return '';
+  }
+}
+
+      document.getElementById("loader").style.display = "block";
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("compatible-packs").innerHTML = "";
+
+      document.getElementById("serial-error").innerHTML = ""; // Clear previous error
+
+      const serial = document.getElementById("serial").value;
+      const product = document.getElementById("product").value;
+
+      // Check if the serial number format is valid (you can adjust the regex as needed)
+      const serialRegex = /^[A-Za-z0-9]{10}$/; // Example format: 10 alphanumeric characters
+      if (!serialRegex.test(serial)) {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("serial-error").innerHTML = `
+      <p style="color: #FF5544; margin-top: 6px; font-size:10px">
+         Verify that your serial number is entered correctly.
+      </p>`;
+        return;
+      }
+
+      const response = await fetch("http://127.0.0.1:5000/check-warranty", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ serial, product })
+      });
+
+      const data = await response.json();
+      document.getElementById("loader").style.display = "none";
+      const output = document.getElementById("result");
+
+      if (data.error) {
+        if (data.error.toLowerCase().includes("product number")) {
+          document.getElementById("product-container").style.display = "block";
+          document.getElementById("product").focus();
+          // Show custom error under serial input
+          document.getElementById("serial-error").innerHTML = ` 
+        <p style="color: #FF5544; margin-top: 6px; font-size:10px">
+          This product cannot be identified using the serial number alone. Please add a product number in the field below:
+        </p>`;
+        }
+
+       //utput.innerHTML = `<p style="color:red;"><strong>Error:</strong> ${data.error}</p>`;
+
+
+      } else {
+  let carePackHTML = "";
+
+  if (data.care_packs?.length > 0) {
+    carePackHTML = `
+<h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size:48px; font-weight:400; ">Compatible Care Packs</h2>
+
+      <div class="care-pack-wrapper">
+        ${data.care_packs.map(pack => `
+          <div class="care-pack-card">
+            <div class="img-wrapper">
+                          ${pack.tag ? `<div class="tag-label ${getTagClass(pack.tag)}">${pack.tag}</div>` : ''}
+              <img src="${pack.image}" alt="product-img" />
+            </div>
+            <p class="sku">SKU: ${pack.part}</p>
+<h3 class="title">
+  <a href="${pack.url}" target="_blank">${pack.title}</a>
+</h3>
+            <div class="price-cart">
+             <p class="price">₹${pack.price ?? '—'}</p>
+              <a class="buy-link" href="${pack.url}" target="_blank">PROCEED TO BUY</a>
+            </div>
+          </div>
+        `).join("")}
+      </div>`;
+  }
+
+
+
+        output.innerHTML = `
+    <div class="result-card">
+      <div class="product-info-flex">
+        <div class="product-image">
+          ${data.image_url ? `<img src="${data.image_url}" alt="${data.product_name}" style="width: 160px; margin-bottom: 12px;" />` : ""}
+        </div>
+        <div class="product-text">
+          <h2>${data.product_name}</h2>
+          <div class="product-serial-flex">
+<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
+
+            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
+
+
+          </div>
+         <div class="status-box ${
+  data.status === 'Active' ? 'status-active-border'
+  : data.status === 'Coverage expiring' ? 'status-expiring-border'
+  : data.status === 'Upcoming' ? 'status-upcoming-border'
+  : 'status-expired-border'
+}">
+  <p><strong>
+    <span class="${
+      data.status === 'Active' ? 'status-active'
+      : data.status === 'Coverage expiring' ? 'status-expiring'
+      : data.status === 'Upcoming' ? 'status-upcoming'
+      : 'status-expired'
+    }">Status:</span> –
+    <span class="${
+      data.status === 'Active' ? 'status-active'
+      : data.status === 'Coverage expiring' ? 'status-expiring'
+      : data.status === 'Upcoming' ? 'status-upcoming'
+      : 'status-expired'
+    }">${data.status}</span>
+  </strong></p>
+            <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
+  <strong>Add-on –</strong> ${data.addon}
+</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="warranty-boxes">
+        <div class="box"><p>Warranty Start Date</p><strong class="blue">${data.start_date}</strong></div>
+        <div class="box"><p>Warranty End Date</p><strong class="blue">${data.end_date}</strong></div>
+        <div class="box"><p>Coverage Type</p><strong class="blue">${data.coverage_type}</strong></div>
+        <div class="box"><p>Time Remaining</p><strong class="blue">${data.remaining_days}</strong></div>
+      </div>
+    </div>
+  `;
+
+        // Insert carePackHTML **only in compatible-packs container**
+        document.getElementById('compatible-packs').innerHTML = carePackHTML;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Check your Warranty</h2>
+      <form onsubmit="submitForm(event)" style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
+        <label>Enter Your HP Device Serial Number</label>
+        <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
+            document.getElementById('product').value = '';
+            document.getElementById('product-container').style.display = 'none';
+            document.getElementById('serial-error').innerHTML = '';
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('compatible-packs').innerHTML = '';     
+            document.getElementById('loader').style.display = 'none';
+          ">
+        <!-- ✅ Serial error message container -->
+        <div id="serial-error" style="margin-bottom: 10px;"></div>
+
+        <div id="product-container" style="display: none;">
+          <label>Enter Your HP Device Product Number</label>
+          <input type="text" id="product">
+        </div>
+
+        <button type="submit">CHECK HP WARRANTY STATUS</button>
+        <div id="loader" style="display:none;">🔍 Checking warranty… Please wait.</div>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="https://arminfoserve.com/wp-content/uploads/2025/05/Group-1116599858.png"
+        alt="Warranty Check Illustration">
+    </div>
+  </div>
+
+  <!-- Warranty Result Output Below Container -->
+  <div id="result"></div>
+  <div id="compatible-packs" style="margin-top: 20px;"></div>
+
+  </div>
+
+</body>
+
+</html>

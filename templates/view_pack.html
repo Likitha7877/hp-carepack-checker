@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Care Pack Product Page</title>
+</head>
+<body>
+  <h2>Product Fields</h2>
+
+  <form action="/cart" method="post">
+    <div class="wapf-field-input">
+      <input type="text"
+             name="wapf[field_65e71cd28eb98]"
+             class="wapf-input"
+             data-field-id="65e71cd28eb98"
+             placeholder="Serial Number Example: HU265BM18V">
+    </div>
+
+    <div class="wapf-field-input" style="margin-top:10px;">
+      <input type="text"
+             name="wapf[field_65e71d27370eb]"
+             class="wapf-input"
+             data-field-id="65e71d27370eb"
+             placeholder="Product Number Example: 686V0PA">
+    </div>
+
+    <button type="submit" style="margin-top:20px;">Submit</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var serial  = "{{ serial_number }}";
+      var product = "{{ product_number }}";
+
+      var sEl = document.querySelector('input[name="wapf[field_65e71cd28eb98]"]');
+      if (sEl && serial) sEl.value = serial;
+
+      var pEl = document.querySelector('input[name="wapf[field_65e71d27370eb]"]');
+      if (pEl && product) pEl.value = product;
+    });
+  </script>
+</body>
+</html>
