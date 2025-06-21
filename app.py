@@ -47,11 +47,23 @@ def index():
 
 @app.route('/check-warranty', methods=['POST'])
 def check_warranty():
-    data = request.json
-    serial = data.get("serial")
-    product = data.get("product")
-    result = run_warranty_check(serial, product)
-    return jsonify(result)
+    try:
+        data = request.get_json()
+        print("📥 Received JSON:", data)
+
+        serial = data.get("serial")
+        product = data.get("product")
+        print(f"🔧 Serial: {serial}, Product: {product}")
+
+        result = run_warranty_check(serial, product)
+        print("✅ Warranty check result:", result)
+
+        return jsonify(result)
+
+    except Exception as e:
+        print("❌ Error during warranty check:", e)
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route('/view-pack')
 def view_pack():

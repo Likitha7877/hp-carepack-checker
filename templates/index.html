@@ -451,6 +451,15 @@
         body: JSON.stringify({ serial, product })
       });
       const data = await response.json();
+      if (!response.ok) {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("serial-error").innerHTML = `
+    <p style="color: #FF5544; margin-top: 6px; font-size:10px">
+      Something went wrong on the server. Try again later.
+    </p>`;
+  return;
+}
+
       document.getElementById("loader").style.display = "none";
       const output = document.getElementById("result");
 
