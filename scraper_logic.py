@@ -209,7 +209,7 @@ product_title_mapping = {
 }
 
 def calculate_remaining_days(end_date_str):
-try:
+    try:
     end_date = datetime.strptime(end_date_str, "%B %d, %Y").date()
     today = datetime.today().date()
 
