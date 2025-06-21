@@ -23,4 +23,5 @@ COPY . .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Run the app with Xvfb
-CMD xvfb-run --server-args="-screen 0 1024x768x24" gunicorn --bind 0.0.0.0:$PORT app:app
+CMD xvfb-run --server-args="-screen 0 1024x768x24" gunicorn --bind 0.0.0.0:${PORT:-10000} app:app
+
