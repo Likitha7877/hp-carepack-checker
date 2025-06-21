@@ -63,6 +63,13 @@ def view_pack():
                            product_number=product_number,
                            image_url=image_url)
 
+# ✅ This enables iframe support across domains
+@app.after_request
+def allow_iframe(response):
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    response.headers['Content-Security-Policy'] = "frame-ancestors *"
+    return response
+
 # ✅ Required for Render deployment
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # Render provides this PORT env variable
