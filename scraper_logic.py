@@ -234,16 +234,34 @@ def calculate_remaining_days(end_date_str):
         return "N/A"
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless=new")
+     options = webdriver.ChromeOptions()
+
+    # Fix: Explicit path to Chrome binary in Docker container
+    options.binary_location = "/usr/bin/google-chrome"
+
+    # Headless + container-safe options
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920x1080")
 
+    # Create WebDriver instance using matching ChromeDriver
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()),
         options=options
-        )
-    wait = WebDriverWait(driver, 7)
+    )
+
+    # options = webdriver.ChromeOptions()
+    # options.add_argument("--headless=new")
+    # options.add_argument("--no-sandbox")
+    # options.add_argument("--disable-dev-shm-usage")
+
+    # driver = webdriver.Chrome(
+    #     service=Service(ChromeDriverManager().install()),
+    #     options=options
+    #     )
+    # wait = WebDriverWait(driver, 7)
 
     try:
         driver.get("https://support.hp.com/in-en/check-warranty")
