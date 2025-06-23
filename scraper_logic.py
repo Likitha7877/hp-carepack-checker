@@ -239,10 +239,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=options
-          )
+    # driver = webdriver.Chrome(
+    #     service=Service(ChromeDriverManager().install()),
+    #     options=options
+    #       )
+    driver = webdriver.Chrome(options=options)
+
     wait = WebDriverWait(driver, 7)
 
     try:
