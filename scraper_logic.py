@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
 import time
 import re
 from datetime import datetime, timedelta
@@ -234,16 +233,16 @@ def calculate_remaining_days(end_date_str):
         return "N/A"
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
+    print("⚙️ Starting Chrome driver...")
+
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless=new")
+    options.add_argument("--headless")  # more compatible
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=options
-        )
-    wait = WebDriverWait(driver, 7)
+    try:
+        driver = webdriver.Chrome(options=options)
+        wait = WebDriverWait(driver, 7)
 
     try:
         driver.get("https://support.hp.com/in-en/check-warranty")
@@ -601,3 +600,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
     finally:
         driver.quit()
+        return result
+
+    except Exception as e:
+        print("❌ Selenium error:", e)
+        raise e

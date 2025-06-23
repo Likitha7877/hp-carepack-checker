@@ -36,11 +36,12 @@
 # if __name__ == "__main__":
 #     app.run(debug=True)
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from scraper_logic import run_warranty_check
-
-import os  # Required for reading PORT from environment
+import os
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
@@ -65,25 +66,12 @@ def check_warranty():
         print("❌ Error during warranty check:", e)
         return jsonify({"error": str(e)}), 500
 
-
-@app.route('/view-pack')
-def view_pack():
-    serial_number = request.args.get('serial', '')
-    product_number = request.args.get('product', '')
-    image_url = request.args.get('image_url', '')
-    return render_template("view_pack.html",
-                           serial_number=serial_number,
-                           product_number=product_number,
-                           image_url=image_url)
-
-# ✅ This enables iframe support across domains
 @app.after_request
 def allow_iframe(response):
     response.headers['X-Frame-Options'] = 'ALLOWALL'
     response.headers['Content-Security-Policy'] = "frame-ancestors *"
     return response
 
-# ✅ Required for Render deployment
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Render provides this PORT env variable
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port, debug=True)
