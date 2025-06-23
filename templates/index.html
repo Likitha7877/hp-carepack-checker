@@ -408,6 +408,49 @@
       }
     }
   </style>
+  </head>
+
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Check your Warranty</h2>
+      <form onsubmit="submitForm(event)" style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
+        <label>Enter Your HP Device Serial Number</label>
+        <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
+            document.getElementById('product').value = '';
+            document.getElementById('product-container').style.display = 'none';
+            document.getElementById('serial-error').innerHTML = '';
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('compatible-packs').innerHTML = '';     
+            document.getElementById('loader').style.display = 'none';
+          ">
+        <!-- ✅ Serial error message container -->
+        <div id="serial-error" style="margin-bottom: 10px;"></div>
+
+        <div id="product-container" style="display: none;">
+          <label>Enter Your HP Device Product Number</label>
+          <input type="text" id="product">
+        </div>
+
+        <button type="submit">CHECK HP WARRANTY STATUS</button>
+        <div id="loader" style="display:none;">🔍 Checking warranty… Please wait.</div>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="https://arminfoserve.com/wp-content/uploads/2025/05/Group-1116599858.png"
+        alt="Warranty Check Illustration">
+    </div>
+  </div>
+
+  <!-- Warranty Result Output Below Container -->
+  <div id="result"></div>
+  <div id="compatible-packs" style="margin-top: 20px;"></div>
+
+  </div>
+
+
+
 <script>
   async function submitForm(event) {
     event.preventDefault();
@@ -567,47 +610,5 @@
     .querySelector("form")
     .addEventListener("submit", submitForm);
 </script>
-</head>
-
-<body>
-  <div class="container">
-    <div class="form-section">
-      <h2>Check your Warranty</h2>
-      <form onsubmit="submitForm(event)" style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
-        <label>Enter Your HP Device Serial Number</label>
-        <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
-            document.getElementById('product').value = '';
-            document.getElementById('product-container').style.display = 'none';
-            document.getElementById('serial-error').innerHTML = '';
-            document.getElementById('result').innerHTML = '';
-            document.getElementById('compatible-packs').innerHTML = '';     
-            document.getElementById('loader').style.display = 'none';
-          ">
-        <!-- ✅ Serial error message container -->
-        <div id="serial-error" style="margin-bottom: 10px;"></div>
-
-        <div id="product-container" style="display: none;">
-          <label>Enter Your HP Device Product Number</label>
-          <input type="text" id="product">
-        </div>
-
-        <button type="submit">CHECK HP WARRANTY STATUS</button>
-        <div id="loader" style="display:none;">🔍 Checking warranty… Please wait.</div>
-      </form>
-    </div>
-
-    <div class="image-section">
-      <img src="https://arminfoserve.com/wp-content/uploads/2025/05/Group-1116599858.png"
-        alt="Warranty Check Illustration">
-    </div>
-  </div>
-
-  <!-- Warranty Result Output Below Container -->
-  <div id="result"></div>
-  <div id="compatible-packs" style="margin-top: 20px;"></div>
-
-  </div>
-
 </body>
-
 </html>
