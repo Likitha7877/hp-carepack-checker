@@ -36,10 +36,13 @@
 # if __name__ == "__main__":
 #     app.run(debug=True)
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from scraper_logic import run_warranty_check
 import os  # Required for reading PORT from environment
 
 app = Flask(__name__)
+CORS(app)  # Enable cross-origin requests
+
 
 @app.route('/')
 def index():
