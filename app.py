@@ -48,7 +48,7 @@ CORS(app)  # Enable cross-origin requests
 def index():
     return render_template("index.html")
 
-@app.route('/check-warranty', methods=['POST'])
+@app.route('/', methods=['POST'])
 def check_warranty():
     try:
         data = request.get_json()

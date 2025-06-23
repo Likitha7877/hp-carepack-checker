@@ -408,162 +408,165 @@
       }
     }
   </style>
+<script>
+  async function submitForm(event) {
+    event.preventDefault();
+    const loader    = document.getElementById("loader");
+    const resultEl  = document.getElementById("result");
+    const packsEl   = document.getElementById("compatible-packs");
+    const errorEl   = document.getElementById("serial-error");
+    loader.style.display = "block";
+    resultEl.innerHTML   = "";
+    packsEl.innerHTML    = "";
+    errorEl.innerHTML    = "";
 
-  <script>
-    async function submitForm(event) {
-      event.preventDefault();
-      function getTagClass(tag) {
-        switch ((tag || '').toLowerCase()) {
-          case 'customer favourite':
-            return 'tag-customer';
-          case 'smart pick':
-            return 'tag-smart';
-          case 'essentials':
-            return 'tag-essentials';
-          default:
-            return '';
-        }
-      }
-
-      document.getElementById("loader").style.display = "block";
-      document.getElementById("result").innerHTML = "";
-      document.getElementById("compatible-packs").innerHTML = "";
-
-      document.getElementById("serial-error").innerHTML = ""; // Clear previous error
-
-      const serial = document.getElementById("serial").value;
-      const product = document.getElementById("product").value;
-
-      // Check if the serial number format is valid (you can adjust the regex as needed)
-      const serialRegex = /^[A-Za-z0-9]{10}$/; // Example format: 10 alphanumeric characters
-      if (!serialRegex.test(serial)) {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("serial-error").innerHTML = `
-      <p style="color: #FF5544; margin-top: 6px; font-size:10px">
-         Verify that your serial number is entered correctly.
+    const serial  = document.getElementById("serial").value.trim();
+    const product = document.getElementById("product").value.trim();
+    const serialRegex = /^[A-Za-z0-9]{10}$/;
+    if (!serialRegex.test(serial)) {
+      loader.style.display = "none";
+      errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+        Verify that your serial number is entered correctly.
       </p>`;
-        return;
-      }
-
-      const response = await fetch("https://hp-carepack-checker.onrender.com/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ serial, product })
-      });
-      if (!response.ok) {
-        const text = await response.text();
-        throw new Error(`Fetch failed: ${ text }`);
-      }
- 
-      const data = await response.json();
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("serial-error").innerHTML = `
-    <p style="color: #FF5544; margin-top: 6px; font-size:10px">
-      Something went wrong on the server. Try again later.
-    </p>`;
       return;
     }
 
-    document.getElementById("loader").style.display = "none";
-    const output = document.getElementById("result");
+    try {
+      const resp = await fetch(
+        "https://hp-carepack-checker.onrender.com/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ serial, product })
+        }
+      );
+      if (!resp.ok) throw new Error(await resp.text());
+      const data = await resp.json();
+      loader.style.display = "none";
 
-    if (data.error) {
-      if (data.error.toLowerCase().includes("product number")) {
-        document.getElementById("product-container").style.display = "block";
-        document.getElementById("product").focus();
-        // Show custom error under serial input
-        document.getElementById("serial-error").innerHTML = ` 
-        <p style="color: #FF5544; margin-top: 6px; font-size:10px">
-          This product cannot be identified using the serial number alone. Please add a product number in the field below:
+      if (data.error) {
+        if (data.error.toLowerCase().includes("product number")) {
+          document.getElementById("product-container").style.display = "block";
+        }
+        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+          ${data.error}
         </p>`;
+      } else {
+        renderResult(data, serial);
       }
-
-      //utput.innerHTML = `<p style="color:red;"><strong>Error:</strong> ${data.error}</p>`;
-
-
-    } else {
-      let carePackHTML = "";
-
-      if (data.care_packs?.length > 0) {
-        carePackHTML = `
-<h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size:48px; font-weight:400; ">Compatible Care Packs</h2>
-
-      <div class="care-pack-wrapper">
-        ${data.care_packs.map(pack => `
-          <div class="care-pack-card">
-            <div class="img-wrapper">
-                          ${pack.tag ? `<div class="tag-label ${getTagClass(pack.tag)}">${pack.tag}</div>` : ''}
-              <img src="${pack.image}" alt="product-img" />
-            </div>
-            <p class="sku">SKU: ${pack.part}</p>
-<h3 class="title">
-  <a href="${pack.url}" target="_blank">${pack.title}</a>
-</h3>
-            <div class="price-cart">
-             <p class="price">₹${pack.price ?? '—'}</p>
-              <a class="buy-link" href="${pack.url}" target="_blank">PROCEED TO BUY</a>
-            </div>
-          </div>
-        `).join("")}
-      </div>`;
-      }
-
-
-
-
-      output.innerHTML = `
-    <div class="result-card">
-      <div class="product-info-flex">
-        <div class="product-image">
-          ${data.image_url ? `<img src="${data.image_url}" alt="${data.product_name}" style="width: 160px; margin-bottom: 12px;" />` : ""}
-        </div>
-        <div class="product-text">
-          <h2>${data.product_name}</h2>
-          <div class="product-serial-flex">
-<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
-
-            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
-
-
-          </div>
-         <div class="status-box ${data.status === 'Active' ? 'status-active-border'
-          : data.status === 'Coverage expiring' ? 'status-expiring-border'
-            : data.status === 'Upcoming' ? 'status-upcoming-border'
-              : 'status-expired-border'
-        }">
-  <p><strong>
-    <span class="${data.status === 'Active' ? 'status-active'
-          : data.status === 'Coverage expiring' ? 'status-expiring'
-            : data.status === 'Upcoming' ? 'status-upcoming'
-              : 'status-expired'
-        }">Status:</span> –
-    <span class="${data.status === 'Active' ? 'status-active'
-          : data.status === 'Coverage expiring' ? 'status-expiring'
-            : data.status === 'Upcoming' ? 'status-upcoming'
-              : 'status-expired'
-        }">${data.status}</span>
-  </strong></p>
-            <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
-  <strong>Add-on –</strong> ${data.addon}
-</p>
-
-          </div>
-        </div>
-      </div>
-      <div class="warranty-boxes">
-        <div class="box"><p>Warranty Start Date</p><strong class="blue">${data.start_date}</strong></div>
-        <div class="box"><p>Warranty End Date</p><strong class="blue">${data.end_date}</strong></div>
-        <div class="box"><p>Coverage Type</p><strong class="blue">${data.coverage_type}</strong></div>
-        <div class="box"><p>Time Remaining</p><strong class="blue">${data.remaining_days}</strong></div>
-      </div>
-    </div>
-  `;
-
-      // Insert carePackHTML **only in compatible-packs container**
-      document.getElementById('compatible-packs').innerHTML = carePackHTML;
+    } catch (err) {
+      loader.style.display = "none";
+      errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+        Something went wrong: ${err.message}
+      </p>`;
     }
-    
-  </script>
+  }
+
+  function renderResult(data, serial) {
+    const resultEl = document.getElementById("result");
+    const packsEl  = document.getElementById("compatible-packs");
+
+    // 1. Inject compatible care packs
+    if (data.care_packs && data.care_packs.length) {
+      const carePackHTML = `
+        <h2 class="heading">Compatible Care Packs</h2>
+        <div class="care-pack-wrapper">
+          ${data.care_packs
+            .map(pack => `
+              <div class="care-pack-card">
+                <div class="img-wrapper">
+                  ${
+                    pack.tag
+                      ? `<div class="tag-label ${getTagClass(pack.tag)}">
+                           ${pack.tag}
+                         </div>`
+                      : ""
+                  }
+                  <img src="${pack.image}" alt="${pack.title}" />
+                </div>
+                <p class="sku">SKU: ${pack.part}</p>
+                <h3 class="title">
+                  <a href="${pack.url}" target="_blank">
+                    ${pack.title}
+                  </a>
+                </h3>
+                <div class="price-cart">
+                  <p class="price">₹${pack.price ?? "—"}</p>
+                  <a class="buy-link" href="${pack.url}" target="_blank">
+                    PROCEED TO BUY
+                  </a>
+                </div>
+              </div>
+            `)
+            .join("")}
+        </div>`;
+      packsEl.innerHTML = carePackHTML;
+    }
+
+    // 2. Inject main result card
+    resultEl.innerHTML = `
+      <div class="result-card">
+        <div class="product-info-flex">
+          <div class="product-image">
+            ${
+              data.image_url
+                ? `<img src="${data.image_url}" alt="${data.product_name}"
+                    style="width:160px;margin-bottom:12px;" />`
+                : ""
+            }
+          </div>
+          <div class="product-text">
+            <h2>${data.product_name}</h2>
+            <div class="product-serial-flex">
+              <p>Serial Number:
+                 <span class="highlight">${serial}</span>
+              </p>
+              <p>Product Number:
+                 <span class="highlight">${data.product_number}</span>
+              </p>
+            </div>
+            <div class="status-box ${statusClass(data.status)}">
+              <strong>Status:</strong>
+              <span class="status-text">${data.status}</span>
+            </div>
+            <p><strong>Add-on –</strong> ${data.addon}</p>
+          </div>
+        </div>
+        <div class="warranty-boxes">
+          <div class="box">
+            <p>Warranty Start Date</p>
+            <strong class="blue">${data.start_date}</strong>
+          </div>
+          <div class="box">
+            <p>Warranty End Date</p>
+            <strong class="blue">${data.end_date}</strong>
+          </div>
+          <div class="box">
+            <p>Coverage Type</p>
+            <strong class="blue">${data.coverage_type}</strong>
+          </div>
+          <div class="box">
+            <p>Time Remaining</p>
+            <strong class="blue">${data.remaining_days}</strong>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  // Utility to pick your border/text classes based on status
+  function statusClass(status) {
+    switch (status) {
+      case "Active": return "status-active-border";
+      case "Coverage expiring": return "status-expiring-border";
+      case "Upcoming": return "status-upcoming-border";
+      default: return "status-expired-border";
+    }
+  }
+
+  document
+    .querySelector("form")
+    .addEventListener("submit", submitForm);
+</script>
 </head>
 
 <body>
