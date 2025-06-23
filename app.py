@@ -41,7 +41,10 @@ from scraper_logic import run_warranty_check
 import os  # Required for reading PORT from environment
 
 app = Flask(__name__)
-CORS(app)  # Enable cross-origin requests
+CORS(app, origins=["https://arminfoserve.com/"])  # Enable cross-origin requests
+@app.route('/ping')
+def ping():
+    return 'pong'
 
 
 @app.route('/')
