@@ -234,7 +234,7 @@ def calculate_remaining_days(end_date_str):
         return "N/A"
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
-     options = webdriver.ChromeOptions()
+    options = webdriver.ChromeOptions()
 
     # Fix: Explicit path to Chrome binary in Docker container
     options.binary_location = "/usr/bin/google-chrome"
