@@ -35,4 +35,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # 🔧 FIX: Bind Gunicorn to dynamic PORT for Render
-CMD ["sh", "-c", "xvfb-run -a gunicorn -b 0.0.0.0:${PORT:-5000} app:app"]
+CMD ["sh", "-c", "xvfb-run -a gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:${PORT:-5000} app:app"]
