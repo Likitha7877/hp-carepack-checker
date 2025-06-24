@@ -21,7 +21,6 @@ RUN apt-get update && apt-get install -y \
     xdg-utils \
     && rm -rf /var/lib/apt/lists/*
 
-# Set Chrome paths
 ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROMEDRIVER=/usr/bin/chromedriver
 
@@ -32,8 +31,8 @@ WORKDIR /app
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port Flask/gunicorn will use
-EXPOSE 10000
+# Expose port (optional, Render doesn’t require EXPOSE)
+EXPOSE 5000
 
-# Start the app with gunicorn inside a virtual display (xvfb-run)
-CMD ["xvfb-run", "-a", "gunicorn", "-b", "0.0.0.0:10000", "app:app"]
+# 🔧 FIX: Bind Gunicorn to dynamic PORT for Render
+CMD ["sh", "-c", "xvfb-run -a gunicorn -b 0.0.0.0:${PORT:-5000} app:app"]
