@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HP Warranty Checker</title>
-  <link rel="stylesheet" href="">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap"
     rel="stylesheet">
@@ -202,6 +202,9 @@
       background-color: #fff;
       padding: 10px 12px;
       border-radius: 6px;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 5px;
     }
 
     .status-box p {
@@ -245,12 +248,6 @@
     .status-expiring-border {
       border-color: #D4A400 !important;
       /* Amber color for warning */
-    }
-
-    .status-box {
-      padding: 10px;
-      border: 1px solid transparent;
-      border-radius: 5px;
     }
 
     .status-active-border {
@@ -408,13 +405,13 @@
       }
     }
   </style>
-  </head>
+</head>
 
 <body>
   <div class="container">
     <div class="form-section">
       <h2>Check your Warranty</h2>
-      <form onsubmit="submitForm(event)" style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
+      <form style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
         <label>Enter Your HP Device Serial Number</label>
         <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
             document.getElementById('product').value = '';
@@ -447,11 +444,7 @@
   <div id="result"></div>
   <div id="compatible-packs" style="margin-top: 20px;"></div>
 
-  </div>
-
-
-
-<script>
+ <script>
   async function submitForm(event) {
     event.preventDefault();
     const loader    = document.getElementById("loader");
@@ -473,6 +466,14 @@
       </p>`;
       return;
     }
+    function getTagClass(tag) {
+    switch((tag||"").toLowerCase()) {
+      case "essentials":    return "tag-essentials";
+      case "smart pick":    return "tag-smart";
+      case "customer favourite": return "tag-customer";
+      default:               return "";
+    }
+  }
 
     try {
       const resp = await fetch(
@@ -571,9 +572,9 @@
             <div class="status-box ${statusClass(data.status)}">
               <strong>Status:</strong>
               <span class="status-text">${data.status}</span>
-            </div>
             <p><strong>Add-on –</strong> ${data.addon}</p>
-          </div>
+          </div>            </div>
+
         </div>
         <div class="warranty-boxes">
           <div class="box">
@@ -610,5 +611,7 @@
     .querySelector("form")
     .addEventListener("submit", submitForm);
 </script>
+
 </body>
+
 </html>
