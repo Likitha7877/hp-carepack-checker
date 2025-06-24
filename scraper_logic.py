@@ -235,7 +235,7 @@ def calculate_remaining_days(end_date_str):
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     service = Service(ChromeDriverManager().install())
