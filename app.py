@@ -39,7 +39,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import os  # Required for reading PORT from environment
 import time  # Used for simulating delay
-# from scraper_logic import run_warranty_check  # Temporarily commented out
+from scraper_logic import run_warranty_check  # Temporarily commented out
 
 app = Flask(__name__)
 CORS(app, origins=["https://arminfoserve.com/"])  # Enable cross-origin requests
@@ -70,7 +70,7 @@ def check_warranty():
         result = {"mock": "response", "serial": serial, "product": product}
 
         # When ready to re-enable:
-        # result = run_warranty_check(serial, product)
+        result = run_warranty_check(serial, product)
 
         print("✅ Warranty check result (mock):", result)
         return jsonify(result)
