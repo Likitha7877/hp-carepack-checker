@@ -37,23 +37,27 @@
 #     app.run(debug=True)
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from scraper_logic import run_warranty_check
 import os  # Required for reading PORT from environment
+import time  # Used for simulating delay
+# from scraper_logic import run_warranty_check  # Temporarily commented out
 
 app = Flask(__name__)
 CORS(app, origins=["https://arminfoserve.com/"])  # Enable cross-origin requests
+
 @app.route('/ping')
 def ping():
     return 'pong'
 
-
 @app.route('/')
 def index():
+    print("🟢 GET / route hit")
     return render_template("index.html")
 
 @app.route('/', methods=['POST'])
 def check_warranty():
     try:
+        print("📨 Received POST request to /")
+
         data = request.get_json()
         print("📥 Received JSON:", data)
 
@@ -61,15 +65,19 @@ def check_warranty():
         product = data.get("product")
         print(f"🔧 Serial: {serial}, Product: {product}")
 
-        result = run_warranty_check(serial, product)
-        print("✅ Warranty check result:", result)
+        # Temporary: simulate long response
+        time.sleep(60)
+        result = {"mock": "response", "serial": serial, "product": product}
 
+        # When ready to re-enable:
+        # result = run_warranty_check(serial, product)
+
+        print("✅ Warranty check result (mock):", result)
         return jsonify(result)
 
     except Exception as e:
         print("❌ Error during warranty check:", e)
         return jsonify({"error": str(e)}), 500
-
 
 @app.route('/view-pack')
 def view_pack():
@@ -81,14 +89,14 @@ def view_pack():
                            product_number=product_number,
                            image_url=image_url)
 
-# ✅ This enables iframe support across domains
+# ✅ Enable iframe support
 @app.after_request
 def allow_iframe(response):
     response.headers['X-Frame-Options'] = 'ALLOWALL'
     response.headers['Content-Security-Policy'] = "frame-ancestors *"
     return response
 
-# ✅ Required for Render deployment
+# ✅ Entry point for Render
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # Render provides this PORT env variable
     app.run(host="0.0.0.0", port=port, debug=True)
