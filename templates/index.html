@@ -445,6 +445,15 @@
   <div id="compatible-packs" style="margin-top: 20px;"></div>
 
  <script>
+  function getTagClass(tag) {
+    switch((tag||"").toLowerCase()) {
+      case "essentials":    return "tag-essentials";
+      case "smart pick":    return "tag-smart";
+      case "customer favourite": return "tag-customer";
+      default:               return "";
+    }
+  }
+
   async function submitForm(event) {
     event.preventDefault();
     const loader    = document.getElementById("loader");
@@ -466,15 +475,7 @@
       </p>`;
       return;
     }
-    function getTagClass(tag) {
-    switch((tag||"").toLowerCase()) {
-      case "essentials":    return "tag-essentials";
-      case "smart pick":    return "tag-smart";
-      case "customer favourite": return "tag-customer";
-      default:               return "";
-    }
-  }
-
+    
     try {
       const resp = await fetch(
         "/",
