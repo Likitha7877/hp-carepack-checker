@@ -66,7 +66,7 @@ def check_warranty():
         print(f"🔧 Serial: {serial}, Product: {product}")
 
         # Temporary: simulate long response
-        time.sleep(60)
+        time.sleep(5)
         result = {"mock": "response", "serial": serial, "product": product}
 
         # When ready to re-enable:
