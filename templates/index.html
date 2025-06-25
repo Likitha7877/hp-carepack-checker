@@ -444,89 +444,88 @@
   <div id="result"></div>
   <div id="compatible-packs" style="margin-top: 20px;"></div>
 
- <script>
-  function getTagClass(tag) {
-    switch((tag||"").toLowerCase()) {
-      case "essentials":    return "tag-essentials";
-      case "smart pick":    return "tag-smart";
-      case "customer favourite": return "tag-customer";
-      default:               return "";
+  <script>
+    function getTagClass(tag) {
+      switch ((tag || "").toLowerCase()) {
+        case "essentials": return "tag-essentials";
+        case "smart pick": return "tag-smart";
+        case "customer favourite": return "tag-customer";
+        default: return "";
+      }
     }
-  }
 
-  async function submitForm(event) {
-    event.preventDefault();
-    const loader    = document.getElementById("loader");
-    const resultEl  = document.getElementById("result");
-    const packsEl   = document.getElementById("compatible-packs");
-    const errorEl   = document.getElementById("serial-error");
-    loader.style.display = "block";
-    resultEl.innerHTML   = "";
-    packsEl.innerHTML    = "";
-    errorEl.innerHTML    = "";
+    async function submitForm(event) {
+      event.preventDefault();
+      const loader = document.getElementById("loader");
+      const resultEl = document.getElementById("result");
+      const packsEl = document.getElementById("compatible-packs");
+      const errorEl = document.getElementById("serial-error");
+      loader.style.display = "block";
+      resultEl.innerHTML = "";
+      packsEl.innerHTML = "";
+      errorEl.innerHTML = "";
 
-    const serial  = document.getElementById("serial").value.trim();
-    const product = document.getElementById("product").value.trim();
-    const serialRegex = /^[A-Za-z0-9]{10}$/;
-    if (!serialRegex.test(serial)) {
-      loader.style.display = "none";
-      errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+      const serial = document.getElementById("serial").value.trim();
+      const product = document.getElementById("product").value.trim();
+      const serialRegex = /^[A-Za-z0-9]{10}$/;
+      if (!serialRegex.test(serial)) {
+        loader.style.display = "none";
+        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
         Verify that your serial number is entered correctly.
       </p>`;
-      return;
-    }
-    
-    try {
-      const resp = await fetch(
-        "/",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ serial, product })
-        }
-      );
-      if (!resp.ok) throw new Error(await resp.text());
-      const data = await resp.json();
-      loader.style.display = "none";
+        return;
+      }
 
-      if (data.error) {
-        if (data.error.toLowerCase().includes("product number")) {
-          document.getElementById("product-container").style.display = "block";
-        }
-        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+      try {
+        const resp = await fetch(
+          "/",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ serial, product })
+          }
+        );
+        if (!resp.ok) throw new Error(await resp.text());
+        const data = await resp.json();
+        loader.style.display = "none";
+
+        if (data.error) {
+          if (data.error.toLowerCase().includes("product number")) {
+            document.getElementById("product-container").style.display = "block";
+          }
+          errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
           ${data.error}
         </p>`;
-      } else {
-        renderResult(data, serial);
-      }
-    } catch (err) {
-      loader.style.display = "none";
-      errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+        } else {
+          renderResult(data, serial);
+        }
+      } catch (err) {
+        loader.style.display = "none";
+        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
         Something went wrong: ${err.message}
       </p>`;
+      }
     }
-  }
 
-  function renderResult(data, serial) {
-    const resultEl = document.getElementById("result");
-    const packsEl  = document.getElementById("compatible-packs");
+    function renderResult(data, serial) {
+      const resultEl = document.getElementById("result");
+      const packsEl = document.getElementById("compatible-packs");
 
-    // 1. Inject compatible care packs
-    if (data.care_packs && data.care_packs.length) {
-      const carePackHTML = `
-        <h2 class="heading">Compatible Care Packs</h2>
+      // 1. Inject compatible care packs
+      if (data.care_packs && data.care_packs.length) {
+        const carePackHTML = `
+<h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size:48px; font-weight:400; ">Compatible Care Packs</h2>
         <div class="care-pack-wrapper">
           ${data.care_packs
             .map(pack => `
               <div class="care-pack-card">
                 <div class="img-wrapper">
-                  ${
-                    pack.tag
-                      ? `<div class="tag-label ${getTagClass(pack.tag)}">
+                  ${pack.tag
+                ? `<div class="tag-label ${getTagClass(pack.tag)}">
                            ${pack.tag}
                          </div>`
-                      : ""
-                  }
+                : ""
+              }
                   <img src="${pack.image}" alt="${pack.title}" />
                 </div>
                 <p class="sku">SKU: ${pack.part}</p>
@@ -545,36 +544,48 @@
             `)
             .join("")}
         </div>`;
-      packsEl.innerHTML = carePackHTML;
-    }
+        packsEl.innerHTML = carePackHTML;
+      }
 
-    // 2. Inject main result card
-    resultEl.innerHTML = `
+      // 2. Inject main result card
+      resultEl.innerHTML = `
       <div class="result-card">
         <div class="product-info-flex">
           <div class="product-image">
-            ${
-              data.image_url
-                ? `<img src="${data.image_url}" alt="${data.product_name}"
+            ${data.image_url
+          ? `<img src="${data.image_url}" alt="${data.product_name}"
                     style="width:160px;margin-bottom:12px;" />`
-                : ""
-            }
+          : ""
+        }
           </div>
           <div class="product-text">
-            <h2>${data.product_name}</h2>
-            <div class="product-serial-flex">
-              <p>Serial Number:
-                 <span class="highlight">${serial}</span>
-              </p>
-              <p>Product Number:
-                 <span class="highlight">${data.product_number}</span>
-              </p>
-            </div>
-            <div class="status-box ${statusClass(data.status)}">
-              <strong>Status:</strong>
-              <span class="status-text">${data.status}</span>
-            <p><strong>Add-on –</strong> ${data.addon}</p>
-          </div>            </div>
+          <h2>${data.product_name}</h2>
+          <div class="product-serial-flex">
+<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
+
+
+            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
+
+
+
+
+          </div>
+          <div class="status-box ${data.status === 'Active' ? 'status-active-border'
+          : data.status === 'Coverage expiring' ? 'status-expiring-border'
+            : 'status-expired-border'}">
+            <p><strong><span class="${data.status === 'Active' ? 'status-active'
+          : data.status === 'Coverage expiring' ? 'status-expiring'
+            : 'status-expired'}">Status:</span> – <span class="${data.status === 'Active' ? 'status-active'
+              : data.status === 'Coverage expiring' ? 'status-expiring'
+                : 'status-expired'}">${data.status}</span></strong></p>
+            <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
+  <strong>Add-on –</strong> ${data.addon}
+</p>
+
+
+          </div>
+        </div>
+      </div>
 
         </div>
         <div class="warranty-boxes">
@@ -596,22 +607,22 @@
           </div>
         </div>
       </div>`;
-  }
-
-  // Utility to pick your border/text classes based on status
-  function statusClass(status) {
-    switch (status) {
-      case "Active": return "status-active-border";
-      case "Coverage expiring": return "status-expiring-border";
-      case "Upcoming": return "status-upcoming-border";
-      default: return "status-expired-border";
     }
-  }
 
-  document
-    .querySelector("form")
-    .addEventListener("submit", submitForm);
-</script>
+    // Utility to pick your border/text classes based on status
+    // function statusClass(status) {
+    //   switch (status) {
+    //     case "Active": return "status-active-border";
+    //     case "Coverage expiring": return "status-expiring-border";
+    //     case "Upcoming": return "status-upcoming-border";
+    //     default: return "status-expired-border";
+    //   }
+    // }
+
+    document
+      .querySelector("form")
+      .addEventListener("submit", submitForm);
+  </script>
 
 </body>
 

@@ -37,8 +37,40 @@ product_page_mapping = {
     "UN082PE": "un082pe-hp-envy-omen-1-year-post-warranty",
     "UN007E": "un007e-hp-envy-omen-1-year-additional-warranty-extension",
     "UB5R4E-U9WX1E": "ub5r4e-u9wx1e-hp-envy-omen-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
-    
-    
+    "U0H92E": "u0h92e-hp-spectre-2-years-additional-warranty-extension",
+    "U6WD3E": "u6wd3e-hp-spectre-2-years-additional-warranty-extension-with-accidental-damage-protection",
+    "UN011E": "un011e-hp-spectre-1-year-additional-warranty-extension-with-accidental-damage-protection",
+    "UB5R5E": "ub5r5e-hp-spectre-2-years-additional-warranty-extension-with-one-time-battery-replacement",
+    "U0H94PE": "u0h94pe-hp-spectre-1-year-post-warranty-extension",
+    "UB5R4E-U9WX1E-1": "ub5r4e-u9wx1e-1-hp-spectre-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
+    "UM952E": "um952e-hp-spectre-1-year-additional-warranty-extension",
+    "U6WD0E": "u6wd0e-hp-spectre-factory-warranty-add-on-with-accidental-damage-protection",
+    "U02BVE": "u02bve-hp-zbook-g7-g8-g9-factory-warranty-add-on-3-years",
+    "U02BSE": "u02bse-hp-z-book-2-years-additional-warranty-extension",
+    "U10KHE": "u10khe-hp-z-book-2-years-additional-warranty-extension-adp",
+    "U9EE8E": "u9ee8e-hp-200-300-series-4-years-additional-warranty-extension",
+    "U9BA7E": "u9ba7e-hp-200-300-series-2-years-additional-warranty-extension",
+    "U9BA9E": "u9ba9e-hp-200-300-series-2-years-additional-warranty-extension-with-accidental-damage-protection",
+    "U9BA3E": "u9ba3e-hp-200-300-series-1-year-additional-warranty-extension",
+    "UB5U0E": "ub5u0e-hp-200-300-series-4-years-additional-warranty-extension-with-accidental-damage-protection-2-claims",
+    "U9BB1PE": "u9bb1pe-hp-200-300-series-1-year-post-warranty",
+    "UK703E": "uk703e-hp-probook-400-laptop-2-years-additional-warranty-extension-1-year-factory-warranty",
+    "UK744E": "uk744e-hp-probook-400-laptop-2-years-additional-warranty-extension-on-1-year-base-warranty",
+    "UK726E": "uk726e-hp-probook-400-laptop-2-years-additional-warranty-extension-with-accidental-damage-protection-on-1-year-base-warranty",
+    "UK718E": "uk718e-hp-probook-400-laptop-4-years-additional-warranty-extension",
+    "UK749E": "uk749e-hp-probook-400-laptop-factory-warranty-add-on-accidental-damage-protection",
+    "UB8B3E": "ub8b3e-hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
+    "UK738PE": "uk738pe-hp-probook-400-laptop-1-year-post-warranty-carepack",
+    "UB8B6E": "ub8b6e-hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
+    "UB0E2E": "ub0e2e-hp-elitebook-10xx-2-years-additional-warranty-3-year-base-warranty",
+    "UB0E6E": "ub0e6e-hp-elitebook-10xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
+    "UC279E": "uc279ehp-elitebook-fw-adp-3yrs",
+    "U4391E": "u4391e-hp-elitebook-2-years-additional-warranty-extension",
+    "U7876E": "u7876e-hp-elitebook-7xx-8xx-4-years-additional-warranty-1-year-base-warranty",
+    "UC282E": "uc282e-hp-elitebook-fw-adp-1yrs",
+    "U7861E": "u7861e-hp-elitebook-2-years-additional-warranty-extension-3-year-base-warranty",
+    "UB5T7E": "ub5t7e-hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
+   
 }
 
 product_title_mapping = {
@@ -199,13 +231,160 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-    "U9WX1E": {
-        "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-        "price": "0",
-        "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-        "coverage": "in-warranty",
-        "duration":"3 year"
-    }
+  "U9WX1E": {
+    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+    "price": "0",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+    "coverage": "in-warranty",
+    "duration":"3 year"
+  },
+   "U0H92E": {
+    "title": "HP Spectre 2 Years Additional Warranty Extension",
+    "price": "18250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-2HW.webp",
+    "tag":"Essentials"
+  },
+  "U6WD3E": {
+    "title": "HP Spectre 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "price": "26000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-2HWADP.webp",
+    "tag":"Smart Pick"
+  },
+  "UM952E": {
+    "title": "HP Spectre 1 year Additional Warranty Extension",
+    "price": "12000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-1HW.webp"
+  },
+  "UN011E": {
+    "title": "HP Spectre 1 year Additional Warranty Extension with Accidental Damage Protection",
+    "price": "17100",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-1HWADP.webp",
+    "tag":"Customer favourite"
+  },
+  "U6WD0E": {
+    "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
+    "price": "8500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-ADP.webp"
+  },
+  "UB5R5E": {
+    "title": "HP Spectre 2 Years Additional Warranty Extension with One time Battery Replacement",
+    "price": "27500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-2HWBATT.webp"
+  },
+  "U0H94PE": {
+    "title": "HP Spectre 1 year Post Warranty Extension",
+    "price": "24500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-PW.webp"
+  },
+  "U9BA7E": {
+    "title": "HP 200/300 Series 2 years Additional Warranty Extension",
+    "price": "5556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HW-1.webp",
+    "tag":"Essentials"
+  },
+  "U9BA3E": {
+    "title": "HP 200/300 Series 1 Year Additional Warranty Extension",
+    "price": "3000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-1HW.webp"
+  },
+  "U9BA9E": {
+    "title": "HP 200/300 Series 2 years Additional Warranty Extension with Accidental Damage Protection",
+    "price": "10556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HWADP.webp",
+    "tag":"Customer favourite"
+  },
+  "U9EE8E": {
+    "title": "HP 200/300 Series 4 years Additional Warranty Extension",
+    "price": "10556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HW.webp"
+  },
+  "UB5U0E": {
+    "title": "HP 200/300 Series 4 years Additional Warranty Extension with Accidental Damage Protection",
+    "price": "15000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HWADP.webp",
+    "tag":"Smart Pick"
+  },
+  "U9BB1PE": {
+    "title": "HP 200/300 Series 1 year Post Warranty",
+    "price": "5556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-PW.webp"
+  },
+  "UK744E": {
+    "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (3 year factory warranty)",
+    "price": "10556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW-1.webp"
+  },
+  "UK726E": {
+    "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "price": "10556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP.webp"
+  },
+  "UK718E": {
+    "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension (1 year Base Warranty)",
+    "price": "15556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HW.webp"
+  },
+  "UK749E": {
+    "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection",
+    "price": "8111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-ADP.webp"
+  },
+  "UB8B3E": {
+    "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "price": "18778",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HWADP.webp"
+  },
+  "UK738PE": {
+    "title": "HP ProBook 400 laptop 1 year Post Warranty Care Pack",
+    "price": "8111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-PW.webp"
+  },
+  "UK703E": {
+    "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
+    "price": "8111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW.webp"
+  },
+  "UB8B6E": {
+    "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
+    "price": "15000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP-1.webp" 
+  },
+  "U7876E": {
+    "title": "HP Elitebook 7xx/8xx 4 years additional warranty (1 year base warranty)",
+    "price": "32500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+  },
+  "UB0E2E": {
+    "title": "HP EliteBook 10xx 2 years additional warranty (3 year base warranty)",
+    "price": "16000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+  },
+  "UB0E6E": {
+    "title": "HP EliteBook 10xx 2 years additional warranty with Accidental Damage Protection (3 year base warranty)",
+    "price": "23000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+  },
+  "U7861E": {
+    "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
+    "price": "12222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-2.webp"
+  },
+  "UB5T7E": {
+    "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
+    "price": "19889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HWADP-2.webp"
+  },
+  
+  "U4391E": {
+    "title": "HP EliteBook 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "12222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-1.webp"
+  },
+  
+
+
+  
+    
 }
 
 def calculate_remaining_days(end_date_str):
@@ -510,16 +689,96 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
                     
             }, 
-               {
-                   "includes": ["omen"],
-                   "excludes": ["All|desktop"],
-                   "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
-                },
-                {
-                   "includes": ["envy"],
-                   "excludes": ["all-"],
-                   "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
-                }
+            {
+                "includes": ["omen"],
+                "excludes": ["All|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+            },
+            {
+                "includes": ["envy"],
+                "excludes": ["all-"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+            },
+            {
+                "includes": ["spectre"],
+                "excludes": ["all-"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE"],
+            },
+            {
+                "includes": ["240|245|255|250|340|345|350|355"],
+                "excludes": ["all-"],
+                "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE"],
+            },
+            {
+                "includes": ["zbook"],
+                "excludes": ["All|MFP"],
+                "parts": ["U02BVE", "U02BSE", "U10KHE"],  
+            },
+
+            {
+                "includes": ["(?i)chromebook"],
+                "excludes": [],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E"],
+            },
+            {
+                "includes": ["(?i)Elitebook 8|Elitebook 7"],
+                "excludes": ["(?i)All|MFP"],
+                "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E"],
+            },
+            {
+                "includes": ["(?i)Elitebook 1|EliteBook x360 1030"],
+                "excludes": ["(?i)All|MFP"],
+                "parts": ["UB0E2E", "UB0E6E"],
+            },
+               
+            {
+                "includes": ["hp all-in-one", "slim", "desktop pc m"],
+                "excludes": ["victus", "omen", "envy", "spectre", "printer"],
+                "parts": ["UJ217E"]
+            },
+            {
+                "includes": ["(?i)ProBook 440|ProBook 445|ProBook 455|ProBook 450|ProBook 430"],
+                "excludes": ["(?i)All|MFP"],
+                "parts": ["UK703E", "UK744E", "UK726E", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
+            },
+            {
+                "includes": ["(?i)HP all-in-one|slim|Desktop PC M"],
+                "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
+                "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
+
+            },
+            {
+                "includes": [ "(?i)elitedesk|prodesk|Microtower"],
+                "excludes": ["(?i)200|Victus|Omen|Envy|Spectre|printer"],
+                "parts": ["UJ217E", "U4813PE"],
+
+            },
+            {
+                "includes": ["(?i)Pavilion all|Pavilion 3|pavilion gaming d"],
+                "excludes": [],
+                "parts": ["U4813PE", "UA055E"],
+            },
+            {
+                "includes": ["(?i)Envy all|gaming desktop"],
+                "excludes": ["(?i)Pavilion|Victus"],
+                "parts": ["UA055E", "UN062PE"],
+            },
+            {
+                "includes": ["zbook g10"],
+                "excludes": ["all-"],
+                "parts": ["U60ZBE", "U60ZCE", "U60ZWE", "U60ZXE", "U61E2E"],
+            },
+            {
+                "includes": [ "(?i)HP P2|HP e2"],
+                "excludes": [],
+                "parts": ["U7935E", "U4925PE", "U7937E", "U4936PE"],
+            },
+            {
+                "includes": ["workstation 600", "workstation 400"],
+                "excludes": ["pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook", "hp laptop", "15", "15s", "desktop", "all-in-one", "zbook", "monitor"],
+                "parts": ["U7944E", "U7942E", "U1G57E", "U1G39E", "U1G37E"]             
+            }
+
 
 
         ]
