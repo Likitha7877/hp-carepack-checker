@@ -411,22 +411,28 @@
   <div class="container">
     <div class="form-section">
       <h2>Check your Warranty</h2>
-      <form style=" background: #F3F4FE; padding: 24px; border-radius: 8px;">
+      <form style=" background: #F3F4FE; padding: 24px; border-radius: 8px;"
+        onsubmit="event.preventDefault(); checkWarranty();">
         <label>Enter Your HP Device Serial Number</label>
+
         <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
-            document.getElementById('product').value = '';
-            document.getElementById('product-container').style.display = 'none';
-            document.getElementById('serial-error').innerHTML = '';
-            document.getElementById('result').innerHTML = '';
-            document.getElementById('compatible-packs').innerHTML = '';     
-            document.getElementById('loader').style.display = 'none';
-          ">
-        <!-- ✅ Serial error message container -->
+          let rawSerial = this.value.replace(/\s/g, ''); // remove whitespaces
+          this.value = rawSerial.substring(0, 10); // allow only 10 chars
+          document.getElementById('product').value = '';
+          document.getElementById('product-container').style.display = 'none';
+          document.getElementById('serial-error').innerHTML = '';
+          document.getElementById('result').innerHTML = '';
+          document.getElementById('compatible-packs').innerHTML = '';
+          document.getElementById('loader').style.display = 'none';
+        ">
         <div id="serial-error" style="margin-bottom: 10px;"></div>
 
         <div id="product-container" style="display: none;">
           <label>Enter Your HP Device Product Number</label>
-          <input type="text" id="product">
+          <input type="text" id="product" oninput="
+            let rawProduct = this.value.replace(/\s/g, ''); // remove whitespaces
+            this.value = rawProduct.substring(0, 7); // allow only 7 chars
+          ">
         </div>
 
         <button type="submit">CHECK HP WARRANTY STATUS</button>
@@ -444,7 +450,17 @@
   <div id="result"></div>
   <div id="compatible-packs" style="margin-top: 20px;"></div>
 
+
+
   <script>
+    
+    function checkWarranty() {
+      const serial = document.getElementById('serial').value.trim();
+      const product = document.getElementById('product').value.trim();
+
+      // Add your validation or AJAX logic here.
+      console.log('Checking for', serial, product);
+    }
     function getTagClass(tag) {
       switch ((tag || "").toLowerCase()) {
         case "essentials": return "tag-essentials";
@@ -510,6 +526,7 @@
     function renderResult(data, serial) {
       const resultEl = document.getElementById("result");
       const packsEl = document.getElementById("compatible-packs");
+      
 
       // 1. Inject compatible care packs
       if (data.care_packs && data.care_packs.length) {
@@ -545,7 +562,28 @@
             .join("")}
         </div>`;
         packsEl.innerHTML = carePackHTML;
+      } else {
+        const productName = data.product_name || "This Product"; 
+        // Fallback when no care packs are available
+      packsEl.innerHTML = `
+     <div class="no-plan-wrapper">
+      <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
+     <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:center;">
+      Unfortunately, your device <strong>${productName}</strong> as reached End-of-Support-Life and is not eligible for extension.   .
+      </p>
+      <img src="https://arminfoserve.com/wp-content/uploads/2025/06/Group-1000003714.png" alt="Product Not Found" style="width: 329px; height: 240px; max-width: 100%; margin: 20px auto; display:grid" />
+      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #000; text-align:center; margin: 10px auto;">
+        Due to time your EOSL Limit is less than 365 days, your warranty cannot be Extended
+        <br>For any queries <a href="https://wa.link/zpjo1y" style="color: #1A45EF; text-decoration: underline;">Chat with us</a>.
+      </p>
+      <a href="https://arminfoserve.com/hp-end-of-support-life/" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
+        CHECK EOSL
+      </a>
+    </div>
+  `;
+  
       }
+
 
       // 2. Inject main result card
       resultEl.innerHTML = `

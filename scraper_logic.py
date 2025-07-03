@@ -10,7 +10,1339 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from eosl_data import eosl_data
 
-printer_mapping = {}
+printer_mapping = {
+      "Y5S43A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5S47A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5S50A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5S54A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "C6N21A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "CC418A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "CE655A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q37A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q39A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q46A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q47A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q50A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B51A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B52A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B59A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B60A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW48A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW49A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW63A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW64A": {
+        "2 yr add WE": {
+            "part": "UG361E"
+        },
+        "4 yr add WE": {
+            "part": "UQ463E"
+        },
+        "1 yr PW": {}
+    },
+    "C6N23A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "CB376A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "CE849A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "CZ175A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q62A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q66A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q74A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q75A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q68A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q79A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "G3Q76A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B70A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "T6B71A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW54A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "7KW56A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "F5S29B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "F5S41D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "F5S42D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "F5S66A": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "K4U05B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "K7B87D": {
+        "2 yr add WE": {
+            "part": "UG334E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "V1N02B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5H67D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5H68D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5H69D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5Z03B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Y5Z04B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "F5S31B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7WN46D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7WN07D": {
+        "2 yr add WE": {
+            "part": "UG334E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "7WN44D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7WQ06B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FT02B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FR27B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FR21B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FR53D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FR54D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7WQ08B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "7FS80D": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "25R72A": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "M2U76B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "25R69A": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "M2U86B": {
+        "2 yr add WE": {
+            "part": "UG338E"
+        },
+        "4 yr add WE": {
+            "part": "UZ304E"
+        },
+        "1 yr PW": {}
+    },
+    "M2U88B": {
+        "2 yr add WE": {
+            "part": "UG338E"
+        },
+        "4 yr add WE": {
+            "part": "UZ304E"
+        },
+        "1 yr PW": {}
+    },
+    "5SE26B": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "D9L20A": {
+        "2 yr add WE": {
+            "part": "U6M72E"
+        },
+        "4 yr add WE": {
+            "part": "U6M74E"
+        },
+        "1 yr PW": {}
+    },
+    "D9L63A": {
+        "2 yr add WE": {
+            "part": "UG346E"
+        },
+        "4 yr add WE": {
+            "part": "UZ295E"
+        },
+        "1 yr PW": {}
+    },
+    "E3E03A": {
+        "2 yr add WE": {
+            "part": "UG346E"
+        },
+        "4 yr add WE": {
+            "part": "UZ295E"
+        },
+        "1 yr PW": {}
+    },
+    "T0G56A": {
+        "2 yr add WE": {
+            "part": "U6M72E"
+        },
+        "4 yr add WE": {
+            "part": "U6M74E"
+        },
+        "1 yr PW": {}
+    },
+    "3UK97D": {
+        "2 yr add WE": {
+            "part": "UG350E"
+        },
+        "4 yr add WE": {
+            "part": "UZ299E"
+        },
+        "1 yr PW": {}
+    },
+    "3UK98D": {
+        "2 yr add WE": {
+            "part": "U6M85E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "3UK90D": {
+        "2 yr add WE": {
+            "part": "UG470E"
+        },
+        "4 yr add WE": {
+            "part": "UZ287E"
+        },
+        "1 yr PW": {}
+    },
+    "5LJ20D": {
+        "2 yr add WE": {
+            "part": "UG349E"
+        },
+        "4 yr add WE": {
+            "part": "UZ298E"
+        },
+        "1 yr PW": {}
+    },
+    "4KJ64D": {
+        "2 yr add WE": {
+            "part": "UG349E"
+        },
+        "4 yr add WE": {
+            "part": "UZ298E"
+        },
+        "1 yr PW": {}
+    },
+    "CR768A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "G1X85A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "G5J38A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "CZ993A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "N4L17A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "Y0S18A": {
+        "2 yr add WE": {
+            "part": "UG347E"
+        },
+        "4 yr add WE": {
+            "part": "UZ296E"
+        },
+        "1 yr PW": {}
+    },
+    "Y0S19A": {
+        "2 yr add WE": {
+            "part": "UG348E"
+        },
+        "4 yr add WE": {
+            "part": "UZ297E"
+        },
+        "1 yr PW": {}
+    },
+    "Z4B55A": {
+        "2 yr add WE": {
+            "part": "UG337E"
+        },
+        "4 yr add WE": {
+            "part": "UZ303E"
+        },
+        "1 yr PW": {}
+    },
+    "Z4B04A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "Z4B53A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "Z6Z11A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "Z6Z13A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "7ZV78A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "Z6Z95A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "Z6Z97A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "1TJ09A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4SB24A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4SR29A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "3YW70A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "6UU46A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "6UU47A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4WF66A": {
+        "2 yr add WE": {
+            "part": "U35PFE"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "4ZB79A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB80A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB81A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB85A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB86A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB87A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB91A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB92A": {
+        "2 yr add WE": {
+            "part": "UB4V5E"
+        },
+        "4 yr add WE": {
+            "part": "UC4Y1E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB94A": {
+        "2 yr add WE": {
+            "part": "UB4W7E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X9E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB95A": {
+        "2 yr add WE": {
+            "part": "UB4W7E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X9E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB96A": {
+        "2 yr add WE": {
+            "part": "UB4W7E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X9E"
+        },
+        "1 yr PW": {}
+    },
+    "4ZB97A": {
+        "2 yr add WE": {
+            "part": "UB4W7E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X9E"
+        },
+        "1 yr PW": {}
+    },
+    "4QD21A": {
+        "2 yr add WE": {
+            "part": "UB4X9E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X7E"
+        },
+        "1 yr PW": {}
+    },
+    "4RY26A": {
+        "2 yr add WE": {
+            "part": "UB4X9E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X7E"
+        },
+        "1 yr PW": {}
+    },
+    "4RY22A": {
+        "2 yr add WE": {
+            "part": "UB4Z1E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X5E"
+        },
+        "1 yr PW": {}
+    },
+    "4RY23A": {
+        "2 yr add WE": {
+            "part": "UB4Z1E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X5E"
+        },
+        "1 yr PW": {}
+    },
+    "5HG74A": {
+        "2 yr add WE": {
+            "part": "UB4Z1E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X5E"
+        },
+        "1 yr PW": {}
+    },
+    "5HG85A": {
+        "2 yr add WE": {
+            "part": "UB4X9E"
+        },
+        "4 yr add WE": {
+            "part": "UC4X7E"
+        },
+        "1 yr PW": {}
+    },
+    "6GX06A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "6GX04A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "3G635A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "3G636A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "6GW64A": {
+        "2 yr add WE": {
+            "part": "UG481E"
+        },
+        "4 yr add WE": {
+            "part": "UZ272E"
+        },
+        "1 yr PW": {}
+    },
+    "3G658A": {
+        "2 yr add WE": {
+            "part": "UG481E"
+        },
+        "4 yr add WE": {
+            "part": "UZ272E"
+        },
+        "1 yr PW": {}
+    },
+    "CZ174A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    },
+    "381U0A": {
+        "2 yr add WE": {
+            "part": "U04TKE"
+        },
+        "4 yr add WE": {
+            "part": "U04THE"
+        },
+        "1 yr PW": {}
+    },
+    "381U2A": {
+        "2 yr add WE": {
+            "part": "U04TKE"
+        },
+        "4 yr add WE": {
+            "part": "U04THE"
+        },
+        "1 yr PW": {}
+    },
+    "381U3A": {
+        "2 yr add WE": {
+            "part": "U04TKE"
+        },
+        "4 yr add WE": {
+            "part": "U04THE"
+        },
+        "1 yr PW": {}
+    },
+    "381U4A": {
+        "2 yr add WE": {
+            "part": "U04TKE"
+        },
+        "4 yr add WE": {
+            "part": "U04THE"
+        },
+        "1 yr PW": {}
+    },
+    "381V6A": {
+        "2 yr add WE": {
+            "part": "U04SME"
+        },
+        "4 yr add WE": {
+            "part": "U04SKE"
+        },
+        "1 yr PW": {}
+    },
+    "3D4L3A": {
+        "2 yr add WE": {
+            "part": "U57D7E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "1F3W3A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4A8S4A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "1F3W2A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4A8R9A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "1F3Y4A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4A8D9A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "1F3Y2A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "4A8D4A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "6UU48A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "28C12A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
+    "714Z8A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "714Z9A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "715A2A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "715A3A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "715A4A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "715A5A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {}
+    },
+    "53N94C": {
+        "2 yr add WE": {
+            "part": "UG467E"
+        },
+        "4 yr add WE": {
+            "part": "UZ275E"
+        },
+        "1 yr PW": {}
+    },
+    "537P5C": {
+        "2 yr add WE": {
+            "part": "UG468E"
+        },
+        "4 yr add WE": {
+            "part": "UZ276E"
+        },
+        "1 yr PW": {}
+    },
+    "405W2C": {
+        "2 yr add WE": {
+            "part": "UG349E"
+        },
+        "4 yr add WE": {
+            "part": "UZ277E"
+        },
+        "1 yr PW": {}
+    },
+    "404L7C": {
+        "2 yr add WE": {
+            "part": "U6M85E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {}
+    },
+    "499M6A": {
+        "2 yr add WE": {
+            "part": "UG482E"
+        },
+        "4 yr add WE": {
+            "part": "UZ260E"
+        },
+        "1 yr PW": {}
+    },
+    "499N4A": {
+        "2 yr add WE": {
+            "part": "UH773E"
+        },
+        "4 yr add WE": {
+            "part": "UZ289E"
+        },
+        "1 yr PW": {}
+    }
+}
+
+  
 
 product_page_mapping = {
     "U8LH8E": "u8lh8e-hp-laptop-14-15-series-2-years-additional-warranty-extension",
@@ -70,6 +1402,80 @@ product_page_mapping = {
     "UC282E": "uc282e-hp-elitebook-fw-adp-1yrs",
     "U7861E": "u7861e-hp-elitebook-2-years-additional-warranty-extension-3-year-base-warranty",
     "UB5T7E": "ub5t7e-hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
+    "UA5C0E": "ua5c0e-hp-smart-tank-aio-2-years-additional-warranty",
+    "U35PFE": "u35pfe-hp-smart-tank-790-aio-printer-2-years-additional-warranty",
+    "U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
+    "U57D7E": "u57d7e-hp-smart-tank-210-aio-2-years-additional-warranty",
+    "UG337E": "ug337e-hp-deskjet-2-years-additional-warranty",
+    "UZ303E": "uz303e-hp-deskjet-2-years-additional-warranty-2",
+    "UB4V5E": "ub4v5e-hp-laser-10x-and-13x-mfp-2-years-additional-warranty",
+    "UC4Y1E": "uc4y1e-hp-laser-10x-and-13x-mfp-4-years-additional-warranty",
+    "U62F3E": "hp-laser-u62f3e",
+    "U62F5E": "hp-laser-u62f5e",
+    "UG337E": "ug337e-hp-deskjet-2-years-additional-warranty",
+    "UG338E": "ug338e-hp-deskjet-ia-50xx-aio-printer-2-years-additional-warranty",
+    "UZ303E": "uz303e-hp-deskjet-2-years-additional-warranty-2",
+    "UZ304E": "uz304e-hp-deskjet-ia-50xx-aio-printer-4-years-additional-warranty",
+    "UG334E": "ug334e-hp-deskjet-1112-1212-2-years-additional-warranty",
+    "UG348E" : "ug348e-hp-officejet-printers-2-years-additional-warranty-2",
+    "UZ297E" : "uz297e-hp-officejet-printers-4-years-additional-warranty-2",
+    "UB4W7E": "ub4w7e-hp-color-laser-15x-and-17x-mfp-2-years-additional-warranty",
+    "UC4X9E": "uc4x9e-hp-color-laser-15x-and-17x-mfp-4-years-additional-warranty",
+    "U5AD9E": "u5ad9e-hp-laserjet-mfp-4-years-additional-warranty-with-defective-media-retention",
+    "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
+    "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
+    "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
+    "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
+    "UB9S8E": "ub9s8e-hp-color-laserjet-pro-mfp-m479-4-years-additional-warranty",
+    "U04TKE": "u04tke-hp-laserjet-tank-mfp-2-years-additional-warranty",
+    "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
+    "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
+    "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
+    "UZ272E": "uz272e-hp-laserjet-printer-4-years-additional-warranty",
+    "U04THE": "u04the-hp-laserjet-tank-mfp-4-years-additional-warranty",
+    "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
+    "U04SME": "u04sme-hp-laserjet-tank-printers-2-years-additional-warranty",
+    "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
+    "U04SKE": "u04ske-hp-laserjet-tank-1020w-4-years-additional-warranty",
+    "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
+    "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
+    "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
+    "UZ272E": "uz272e-hp-laserjet-printer-4-years-additional-warranty",
+    "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
+    "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
+    "U8TM2E": "u8tm2e-hp-laserjet-m402-2-years-additional-warranty",
+    "U8TQ9E": "u8tq9e-hp-laserjet-m42x-multi-function-2-years-additional-warranty",
+    "U5AD9E": "u5ad9e-hp-laserjet-mfp-4-years-additional-warranty-with-defective-media-retention",
+    "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
+    "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
+    "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
+    "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
+    "UC4X7E": "uc4x7e-hp-neverstop-laser-mfp-1200nw-2-years-additional-warranty",
+    "UB4X9E": "ub4x9e-hp-neverstop-laser-mfp-1200-nw-2-years-additional-warranty",
+    "UB4Z1E": "ub4z1e-hp-neverstop-laser-1xxx-2-years-additional-warranty",
+    "UC4X5E": "uc4x5e-hp-neverstop-laser-1xxx-4-years-additional-warranty",
+    "UZ277E": "uz277e-hp-officejet-pro-8120-aio-4-year-additional-warranty",
+    "UG346E": "ug346e-hp-officejet-printers-2-years-additional-warranty",
+    "UG347E": "ug347e-hp-oj-pro-7720-2-years-additional-warranty",
+    "U6M74E": "u6m74e-hp-officejet-pro-high-4-years-additional-warranty",
+    "UZ299E": "uz299e-hp-oj-pro-9010-4-years-additional-warranty",
+    "UZ287E": "uz287e-hp-officejet-pro-9016-aio-printer-4-years-additional-warranty",
+    "U6M72E": "u6m72e-hp-officejet-pro-high-2-years-additional-warranty",
+    "UZ298E": "uz298e-hp-oj-pro-802x-812x-4-years-additional-warranty",
+    "UZ297E": "uz297e-hp-officejet-printers-4-years-additional-warranty-2",
+    "UG350E": "ug350e-hp-oj-pro-9010-2-years-additional-warranty",
+    "UZ296E": "uz296e-hp-officejet-pro-7720-wide-format-4-years-additional-warranty",
+    "U6M85E": "u6m85e-hp-officejet-pro-printer-2-years-additional-warranty",
+    "UG467E": "ug467e-hp-officejet-pro-9720-wf-aio-2-years-additional-warranty",
+    "UG470E": "ug470e-hp-officejet-pro-9016-aio-printer-2-years-additional-warranty",
+    "UG468E": "ug468e-hp-officejet-pro-9730-wf-aio-2-years-additional-warranty/",
+    "UG349E": "ug349e-hp-oj-pro-802x-812x-2-years-additional-warranty",
+    "UZ275E": "uz275e-hp-officejet-pro-9720-wf-aio-4-years-additional-warranty",
+    "UG348E": "ug348e-hp-officejet-printers-2-years-additional-warranty-2",
+    "UZ276E": "uz276e-hp-officejet-pro-9730-wf-aio-5-years-additional-warranty",
+    # Add other parts mapping here...
+
+
    
 }
 
@@ -201,14 +1607,16 @@ product_title_mapping = {
     "price": "24500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-2HWADP.webp",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"3 year",
+    "tag":"Smart Pick"
   },
   "UN010E": {
     "title": "HP Envy/Omen 1-year Additional Warranty Extension with Accidental Damage Protection",
     "price": "12500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-1HWADP.webp",
     "coverage":"in-warranty",
-    "duration":"2 year"
+    "duration":"2 year",
+    "tag":"Customer Favourite"
   },
   "U6WC9E": {
     "title": "HP Envy/Omen Factory Warranty Add-On with Accidental Damage Protection",
@@ -242,24 +1650,32 @@ product_title_mapping = {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
     "price": "18250",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-2HW.webp",
-    "tag":"Essentials"
+    "tag":"Essentials",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U6WD3E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with Accidental Damage Protection",
     "price": "26000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-2HWADP.webp",
-    "tag":"Smart Pick"
+    "tag":"Smart Pick",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UM952E": {
     "title": "HP Spectre 1 year Additional Warranty Extension",
     "price": "12000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-1HW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Envy-1HW.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
   },
   "UN011E": {
     "title": "HP Spectre 1 year Additional Warranty Extension with Accidental Damage Protection",
     "price": "17100",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-1HWADP.webp",
-    "tag":"Customer favourite"
+    "tag":"Customer favourite",
+    "coverage":"in-warranty",
+    "duration":"2 year"
   },
   "U6WD0E": {
     "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
@@ -269,29 +1685,39 @@ product_title_mapping = {
   "UB5R5E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with One time Battery Replacement",
     "price": "27500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-2HWBATT.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-2HWBATT.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U0H94PE": {
     "title": "HP Spectre 1 year Post Warranty Extension",
     "price": "24500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-PW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-PW.webp",
+    "coverage":"post-warranty",
+    "duration":"1 year"
   },
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
     "price": "5556",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HW-1.webp",
-    "tag":"Essentials"
+    "tag":"Essentials",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U9BA3E": {
     "title": "HP 200/300 Series 1 Year Additional Warranty Extension",
     "price": "3000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-1HW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-1HW.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
   },
   "U9BA9E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension with Accidental Damage Protection",
     "price": "10556",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HWADP.webp",
-    "tag":"Customer favourite"
+    "tag":"Customer favourite",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U9EE8E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension",
@@ -307,17 +1733,23 @@ product_title_mapping = {
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
     "price": "5556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-PW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-PW.webp",
+    "coverage":"post-warranty",
+    "duration":"1 year"
   },
   "UK744E": {
     "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (3 year factory warranty)",
     "price": "10556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW-1.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UK726E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
     "price": "10556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UK718E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension (1 year Base Warranty)",
@@ -337,55 +1769,497 @@ product_title_mapping = {
   "UK738PE": {
     "title": "HP ProBook 400 laptop 1 year Post Warranty Care Pack",
     "price": "8111",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-PW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-PW.webp",
+    "coverage":"post-warranty",
+    "duration":"1 year"
   },
   "UK703E": {
     "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
     "price": "8111",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UB8B6E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
     "price": "15000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP-1.webp" 
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP-1.webp" ,
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U7876E": {
     "title": "HP Elitebook 7xx/8xx 4 years additional warranty (1 year base warranty)",
     "price": "32500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
   },
+  "UC279E":{
+    "title": "HP EliteBook 3-year Accidental Damage Protection on Factory Warranty",
+    "price": "10,556",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/Elite-ADP.webp?fit=520%2C400&ssl=1",
+    "coverage":"in-warranty"
+  },
+  "UC282E":{
+    "title": "HP EliteBook 3 year Accidental Damage Protection on 1 year Factory Warranty",
+    "price": "18,778",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/Elite-ADP-1.webp?fit=520%2C400&ssl=1",
+    "coverage":"in-warranty"
+      
+  },
   "UB0E2E": {
     "title": "HP EliteBook 10xx 2 years additional warranty (3 year base warranty)",
     "price": "16000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UB0E6E": {
     "title": "HP EliteBook 10xx 2 years additional warranty with Accidental Damage Protection (3 year base warranty)",
     "price": "23000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U7861E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
     "price": "12222",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-2.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-2.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UB5T7E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
     "price": "19889",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HWADP-2.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HWADP-2.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   
   "U4391E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (1 Year Base Warranty)",
     "price": "12222",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-1.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+#   printers
+    "UA5C0E": {
+    "title": "HP Smart Tank AiO 2 years Additional Warranty",
+    "price": "4000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U35PFE": {
+    "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U57D7E": {
+    "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+
+
+  },
+  "U9NR3PE": {
+    "title": "HP Smart Tank AiO 1 year Post Warranty",
+    "price": "3611",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "1 year",
+    "coverage":"post-warranty",
+  },
+  "UG361E": {
+    "title": "HP LaserJet Pro Printers 2 years Additional Warranty",
+    "price": "4444",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UH769E": {
+    "title": "HP 3-Year Pickup and Return for Consumer LaserJet - Entry Service",
+    "price": "5075",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UG337E": {
+    "title": "HP Multi-function Printer 2 years Additional Warranty",
+    "price": "5167",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG062E": {
+    "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
+    "price": "4667",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG334E": {
+    "title": "HP Deskjet 1112, 1212 2 years Additional Warranty",
+    "price": "4222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG338E": {
+    "title": "HP DeskJet IA 50XX AiO Printer 2 years Additional Warranty",
+    "price": "4444",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U6M72E": {
+    "title": "HP OfficeJet Pro High 2 years Additional Warranty",
+    "price": "7222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG346E": {
+    "title": "HP Officejet Printers 2 years Additional Warranty",
+    "price": "4667",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG350E": {
+    "title": "HP OJ Pro 9010 2 years Additional Warranty",
+    "price": "6222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U6M85E": {
+    "title": "HP OfficeJet Pro Printer (Ultra High) 2 years Additional Warranty",
+    "price": "8889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
   },
   
+  "UG470E": {
+    "title": "HP OfficeJet Pro 9016 AiO Printer 2 years Additional Warranty",
+    "price": "6556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG349E": {
+    "title": "HP OJ Pro 802X, 812X 2 years Additional Warranty",
+    "price": "5889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG348E": {
+    "title": "HP Officejet Printers 2 years Additional Warranty",
+    "price": "5167",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG347E": {
+    "title": "HP OJ Pro 7720 2 years Additional Warranty",
+    "price": "5167",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+ 
+  "U35PFE": {
+    "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UB4V5E": {
+    "title": "HP Laser 10x and 13x MFP 2 years Additional Warranty",
+    "price": "4833",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration":"3 year",
+    "coverage":"in-warranty"
+  },
+  "UB4W7E": {
+    "title": "HP Color Laser 15x and 17x MFP 2 years Additional Warranty",
+    "price": "7778",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UB4X9E": {
+    "title": "HP Neverstop Laser MFP 1200nw 2 years Additional Warranty",
+    "price": "6889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UB4Z1E": {
+    "title": "HP Neverstop Laser 1xxx 2 years Additional Warranty",
+    "price": "6222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UH773E": {
+    "title": "HP Consumer LaserJet 2 years Additional Warranty",
+    "price": "5556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UZ298E": {
+    "title": "HP OJ Pro 802X, 812X 4 years Additional Warranty",
+    "price": "7427",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UZ297E": {
+    "title": "HP Officejet Printers 4 years Additional Warranty",
+    "price": "7427",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UZ296E": {
+    "title": "HP OfficeJet Pro 7720 Wide Format 4 years Additional Warranty",
+    "price": "6670",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UC4Y1E": {
+    "title": "HP Laser 10x and 13x MFP 4 years Additional Warranty",
+    "price": "7427",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+  },
+  "UC4X9E": {
+    "title": "HP Color Laser 15x and 17x MFP 4 years Additional Warranty",
+    "price": "11440",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UC4X7E": {
+    "title": "HP Neverstop Laser MFP 1200nw 4 years Additional Warranty",
+    "price": "11267",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UC4X5E": {
+    "title": "HP Neverstop Laser 1xxx 4 years Additional Warranty",
+    "price": "10176",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UZ289E": {
+    "title": "HP Consumer LaserJet 4 years Additional Warranty",
+    "price": "6812",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UZ272E": {
+    "title": "HP LaserJet Printer 4 years Additional Warranty",
+    "price": "6822",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "U04THE": {
+    "title": "HP LaserJet Tank MFP 4 years Additional Warranty",
+    "price": "12567",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+  },
+  "U04TKE": {
+    "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
+    "price": "6,667",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration":"3 year",
+    "coverage":"in-warranty"
+  },
+  "U04SKE": {
+    "title": "HP LASERJET TANK 1020W 4 years Additional Warranty",
+    "price": "11307",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "U62F5E": {
+    "title": "HP Laser 100x and 11xx MFP 4 years Additional Warranty",
+    "price": "7427",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "U8TM2E": {
+    "title": "HP LaserJet M402 2 years Additional Warranty",
+    "price": "8120",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U8TN1E": {
+    "title": "HP Color LaserJet M452 2 years Additional Warranty",
+    "price": "10199",
+    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
+    "coverage":"in-warranty"
 
-
+  },
+  "U8TQ9E": {
+    "title": "HP LaserJet M42x Multi-Function 2 years Additional Warranty",
+    "price": "17369",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+      
+  },
+  "U9JT1E": {
+    "title": "HP Installation Service with network configuration for Personal Scanner and Printer (1 unit)",
+    "price": "5850",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png"
+      
+  },
+  "U6Z65E": {
+    "title": "HP 2 years Additional Next Business Day + Defective Media Retention",
+    "price": "33125",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+     
+  },
+  "U5AD9E": {
+    "title": "HP LaserJet MFP 4 years Additional Warranty with Defective Media Retention",
+    "price": "40540",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+      
+  },
+  "UB9R9E": {
+    "title": "HP LaserJet Pro MFP M429fdn, M429fdw 4 years Additional Warranty",
+    "price": "21599",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "UB9R7E": {
+    "title": "HP LaserJet Pro MFP M429dw, M329dn, M329dw 2 years Additional Warranty",
+    "price": "10200",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UB9S8E": {
+    "title": "HP Color LaserJet Pro MFP M479 4 years Additional Warranty",
+    "price": "25047",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+      
+  },
+  "UB9S6E": {
+    "title": "HP 2 years Additional Warranty for Color LaserJet Pro MFP M479",
+    "price": "19000",
+    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+      
+  },
+    "U8TP0E": {
+    "title": "HP 2 years Additional Color LaserJet Multi Function Printer",
+    "price": "24500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+      
+  },
+  "U57D7E": {
+    "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+      
+  },
+  "UG467E": {
+    "title": "HP OfficeJet Pro 9720 WF AiO 2 years Additional Warranty",
+    "price": "8444",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UG468E": {
+    "title": "HP OfficeJet Pro 9730 WF AiO 2 years Additional Warranty",
+    "price": "9278",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
   
+  },
+  "UZ275E": {
+    "title": "HP OfficeJet Pro 9720 WF AiO 4 years Additional Warranty",
+    "price": "16889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+   "UZ276E": {
+    "title": "HP OfficeJet Pro 9730 WF AiO 4 years Additional Warranty",
+    "price": "19444",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  
+  },
+  "UZ277E": {
+    "title": "HP OfficeJet Pro 8120 AiO 4 year Additional Warranty",
+    "price": "16111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
     
+  },
+ 
+  "U42GXPE": {
+    "title": "HP Neverstop Laser MFP 1200nw 1 year Post Warranty",
+    "price": "7500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "duration": "1 year",
+    "coverage":"post-warranty"
+    
+  },
+  "U34XRE": {
+    "title": "HP Scan jet 2600 2 years Warranty Extension",
+    "price": "11800",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/12/HP-Scanjet-2600.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "U9MW4PE": {
+    "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
+    "price": "20963",
+    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "duration": "1 year",
+    "coverage":"post-warranty"
+  }
+
 }
+                                        
 
 def calculate_remaining_days(end_date_str):
     try:
@@ -414,7 +2288,7 @@ def calculate_remaining_days(end_date_str):
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     service = Service(ChromeDriverManager().install())
@@ -511,7 +2385,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             ):
                 warranty_data = data
         
-        care_packs = []
+        # care_packs = []
+        
+
         addon_text = None
         if carepack_active:
             addon_parts = []
@@ -550,23 +2426,41 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 print("❌ Error parsing start/end date:", e)
                 return None, None
                     
-        start = datetime.strptime(warranty_data["Start date"], "%B %d, %Y")
+        start_date_obj = datetime.strptime(warranty_data["Start date"], "%B %d, %Y").date()
         end_date_obj = datetime.strptime(warranty_data["End date"], "%B %d, %Y").date()
-        span = relativedelta(end_date_obj, start)
+        today = datetime.today().date()
+        span = relativedelta(end_date_obj, start_date_obj)
         years, months = span.years, span.months
 
         def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date):
             dur          = duration_str.strip().lower()
-            has_adp      = bool(addon_text and addon_text.strip())
+            has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
             cov          = plan_cov.strip().lower()
             sts          = warranty_status.strip().lower()
             total_months = years * 12 + months
             today        = datetime.today().date()
+            print(f"📦 Plan: {sku} | dur: {dur} | cov: {cov} | status: {sts} | addon: {addon_text}")
+            if dur == "1 year" and cov == "post-warranty":
+                eosl_str = eosl_data.get(product_number)
+                if not eosl_str:
+                    print(f"❌ Skipping plan {sku} - EOSL date not found for {product_number}")
+                    return False
+                try:
+                    eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                    if (eosl_date - today).days < 0:
+                        print(f"❌ Skipping plan {sku} - EOSL expired on {eosl_date}")
+                        return False
+                except Exception as e:
+                    print(f"❌ Failed to parse EOSL date for product {product_number}: {e}")
+                    return False
+               
+
 
             if 11 <= total_months < 15:
                 if sku == "U9WX1E":
-                    return False
+                    return (cov == "in-warranty") and (sts in ("active", "coverage expiring")) and (not has_adp)
+
 
                 # Active/expiring: only in-warranty plans, any of 1/2/3 year
                 if sts in ("active", "coverage expiring"):
@@ -579,6 +2473,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     # time until 2-year mark
                     two_year_ann = end_date + timedelta(days=730)
                     days_to_2yr  = (two_year_ann - today).days
+                    if 90 < days_to_2yr < 365:
+                        # more than a year away from 2-year mark
+                        return dur in ("3 year")
 
                     if 0 < days_to_2yr < 90:
                         # within 3 months of 2-year mark
@@ -586,7 +2483,11 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     if days_to_2yr >= 365:
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
+                    if days_to_2yr < 0: 
+                        # more than a year away from 2-year mark
+                        return dur in ("1 year") and (cov == "post-warranty")
                 return False
+              
 
             # 15–23 months: 2- and 3-year plans (never add-on)
             elif 15 <= total_months < 23:
@@ -596,7 +2497,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             elif 23 <= total_months < 35:
                 return cov == "in-warranty" and sku != "U9WX1E" and dur == "3 year"
 
-            # ≥ 35 months: show both EOSL 1-year post-warranty **and** ADP add-on when valid
+           
             elif total_months >= 35:
                 # EOSL 1-year plan condition
                 eosl_ok = False
@@ -609,21 +2510,106 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     else:
                         days_remaining = (end_date - today).days
                         if (
-                            eosl_date == today + timedelta(days=365)
+                            0 <= (eosl_date - today).days <= 365
                             and sts in ("active", "coverage expiring","expired")
                             and days_remaining < 90
                             and cov == "post-warranty"
                             and dur == "1 year"
                         ):
                             eosl_ok = True
-
-                # ADP add-on condition
-                adp_ok = (not has_adp) and (sku == "U9WX1E")
-
-                # include either or both
+                adp_ok = (
+                  (not has_adp)
+                  and sku == "U9WX1E"
+                  and cov == "in-warranty"
+                  and sts in ("active", "coverage expiring",)
+                  )
+                print(f"🧪 EOSL_OK={eosl_ok}, ADP_OK={adp_ok}, TotalMonths={total_months}, HasADP={has_adp}")
                 return eosl_ok or adp_ok
-
             return False
+            
+        def is_eligible_printer_span(years, months, duration_str, plan_cov, warranty_status, product_number, eosl_data, end_date):
+            dur = duration_str.strip().lower().replace("years", "year").replace(" ", "")
+            cov = plan_cov.strip().lower().replace(" ", "")
+            sts = warranty_status.strip().lower()
+            today = datetime.today().date()
+            total_months = years * 12 + months
+            # if total_months < 11:
+            #     if sts in ("active", "coverage expiring"):
+            #         return dur in ("3year", "5year")
+            if 11 <= total_months < 15:
+                if sts in ("active", "coverage expiring"):
+                    return dur in ("3year", "5year")
+                if sts == "expired":
+                    two_year_ann = end_date + timedelta(days=730)
+                    days_to_2yr = (two_year_ann - today).days
+                    if days_to_2yr > 0:
+                        return dur in ("3year", "5year") or cov == "post-warranty"
+                    if days_to_2yr < 0:
+                        return dur == "5year" or cov == "post-warranty"
+                    return False
+            elif 15 <= total_months < 23:
+                    if sts in ("active", "coverage expiring"):
+                        return cov == "in-warranty" and dur in ("3year", "5year")
+                    if sts == "expired":
+                        one_year_ann = end_date + timedelta(days=365)
+                        days_to_1yr = (one_year_ann - today).days
+                        if days_to_1yr > 0:
+                            return dur in ("3year", "5year") or cov == "post-warranty"
+                        if days_to_1yr < 0:
+                            return dur == "5year" or cov == "post-warranty"
+                        return False
+            elif 23 <= total_months < 35:
+                        return cov == "in-warranty" and dur == "5year"
+            elif 35 <= total_months < 59:
+                        return cov == "in-warranty" and dur == "5year"
+            return False
+        care_packs = []
+        added_parts = set()
+        if extracted_product_number in printer_mapping:
+            warranty_status = warranty_data.get("Status", "").strip().lower()
+            plan_cov = warranty_data.get("Coverage type", "").strip().lower()
+            end_date_str = warranty_data.get("End date")
+            start_date_str = warranty_data.get("Start date")
+            mapped = printer_mapping[extracted_product_number]
+            print(f"🔍 Found printer mapping for {extracted_product_number}")
+            for mapped_duration in ["2 yr add WE", "4 yr add WE", "1 yr PW"]:
+                if mapped_duration in mapped:
+                    entries = mapped[mapped_duration]
+                    if isinstance(entries, dict):
+                        entries = [entries]
+                        for entry in entries:
+                            part = entry.get("part")
+                            if part and part not in added_parts:
+                                slug = product_page_mapping.get(part)
+                                details = product_title_mapping.get(part.upper(), {})
+                                print(f"🔍 DEBUG: Details fetched for {part}: {details}")
+                                title = details.get("title")
+                                price = details.get("price")
+                                image = details.get("image")
+                                tag = details.get("tag")
+                                duration = details.get("duration", "").strip().lower()  # → ""
+                                coverage = details.get("coverage", "").strip().lower()
+                                if not all([duration, coverage, title, price, image, slug]):
+                                    print(f"🔎 Part={part}, duration={duration}, coverage={coverage}, title={title}, price={price}, image={image}, slug={slug}")
+                                    continue
+                                is_eligible = is_eligible_printer_span(
+                                    years, months, duration, coverage, warranty_status,
+                                    extracted_product_number, eosl_data, end_date_obj
+                                    )
+                                print(f"🧪 {part} eligibility → {is_eligible}")
+                                if is_eligible:
+                                    care_packs.append({
+                                        "label": f"{mapped_duration.upper()} Care Pack",
+                                        "part": part,
+                                        "title": title,
+                                        "price": price,
+                                        "image": image,
+                                        "tag": tag,
+                                        "url": f"https://arminfoserve.com/product/{slug}/"
+                                        })
+                                    added_parts.add(part)
+        
+
 
         def is_commercial_model(name: str) -> bool:
             kws = [
@@ -632,7 +2618,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "probook","elitebook","zbook","pro"
             ]
             nl = name.lower()
-            return any(kw in nl for kw in kws)
+            return any(kw in nl.split() for kw in kws)
         def is_eligible_commercial_span(years, months, duration_str, plan_cov):
             total_months = years * 12 + months
             dur = duration_str.strip().lower().rstrip("s")
@@ -669,8 +2655,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             remaining_days = calculate_remaining_days(warranty_data.get("End date"))
         else:
             remaining_days = None
-
-        name = product_name.lower()
+        name = product_name.lower().strip()
         rules = [
             {
                 "includes": ["hp laptop", "x360 14", "chromebook 11", "15", "15s"],
@@ -678,15 +2663,20 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"]
             },
             {
+              "includes": ["15s"],
+              "excludes": [],
+              "parts": ["U9WX1E"]
+            },
+            {
                 "includes": ["pavilion"],
                 "excludes": ["All-", "Desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"]
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"]
             },
              
             {
                 "includes": ["victus"],
                 "excludes": ["all-"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"],
                     
             }, 
             {
@@ -697,22 +2687,22 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["envy"],
                 "excludes": ["all-"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
             },
             {
                 "includes": ["spectre"],
                 "excludes": ["all-"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E"],
             },
             {
                 "includes": ["240|245|255|250|340|345|350|355"],
                 "excludes": ["all-"],
-                "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE"],
+                "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
             {
                 "includes": ["zbook"],
                 "excludes": ["All|MFP"],
-                "parts": ["U02BVE", "U02BSE", "U10KHE"],  
+                "parts": ["U02BVE", "U02BSE", "U10KHE","U9WX1E"]
             },
 
             {
@@ -782,9 +2772,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
 
         ]
+        
 
         for rule in rules:
-            includes_match = any(re.search(inc, name) for inc in rule["includes"])
+            includes_match = all(any(kw in part for part in name.lower().split()) for kw in rule.get("includes", []))
             excludes_match = any(re.search(exc, name) for exc in rule["excludes"])
             if includes_match and not excludes_match:
                 try:
@@ -817,11 +2808,16 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
                     
                     if is_commercial_model(product_name):
-                        ok = is_eligible_commercial_span(years, months, duration, plan_cov)
+                      print("💼 Commercial device detected. Using commercial span logic.")
+                      ok = is_eligible_commercial_span(years, months, duration, plan_cov)
                     else:
+                        print("🧑‍💻 Consumer device. Using consumer logic with ADP check.")
                         ok = is_eligible_by_span(years, months,duration, addon_text, part,plan_cov, warranty_stat,product_num, eosl_data,end_date_obj) 
+                    print(f"📦 Plan: {part} | dur: {duration} | cov: {coverage} | status: {status} | addon: {addon_text}")
+
                     if ok and slug:
-                        care_packs.append({
+                      print(f"✅ MATCHED: {part} added as eligible care pack")
+                      care_packs.append({
                             "label": "Recommended Care Pack",
                             "part": part,
                             "title": title,
