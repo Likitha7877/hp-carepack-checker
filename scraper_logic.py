@@ -2287,6 +2287,8 @@ def calculate_remaining_days(end_date_str):
         return "N/A"
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
+
+    eosl_date = eosl_data.get(product_number) 
     options = webdriver.ChromeOptions()
     # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -2844,7 +2846,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "remaining_days": remaining_days if remaining_days is not None else "N/A",
                 "current_date": current_date_str,
                 "care_packs": care_packs,
+                "eosl_date": eosl_date,
                 "addon": addon_text
+                
             }
         else:
             return {"error": "No valid warranty information found."}
@@ -2854,3 +2858,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
     finally:
         driver.quit()
+
+
+
+
+        

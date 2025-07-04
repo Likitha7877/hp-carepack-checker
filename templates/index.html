@@ -563,25 +563,56 @@
         </div>`;
         packsEl.innerHTML = carePackHTML;
       } else {
-        const productName = data.product_name || "This Product"; 
+        const productName = data.product_name || "This Product";
+        const eoslDate = data.eosl_date || "Unknown";
+        const today = new Date();
+const eosl = new Date(eoslDate.split("-").reverse().join("-")); // convert DD-MM-YYYY to YYYY-MM-DD
+const daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
+
+
+         
         // Fallback when no care packs are available
-      packsEl.innerHTML = `
-     <div class="no-plan-wrapper">
+     if (daysToEOSL > 365) {
+  // ✅ Show: Already covered fallback
+    packsEl.innerHTML = `
+  <h1 style="color:#1A45EF; font-family:'Roboto Slab', serif; font-size:36px; margin-bottom:20px;">All Set For Now</h1>
+  <div style="display: flex; align-items: center;  max-width: 1140px; width: 100%; border-radius: 10px; overflow: hidden; margin-top: 30px; gap: 20px; flex-wrap: wrap;">
+  
+    <div style="flex: 0 0 60%; padding: 24px; border-radius: 8px;  background:#FBFBFF;border: 1px solid #eee;">
+      <p style="font-family:Poppins;font-size:16px; line-height: 1.5; color: #00072E;">Nothing to see here, No products found for now.</p>
+      <p style=" font-family:Poppins;margin-bottom:16px; line-height: 1.5; color: #00072E;font-size:16px;">But before you go, please share your details, so we can remind you to extend the warranty in time.</p>
+
+      <form>
+        <input type="text" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px ; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+        <input type="tel" placeholder="Phone Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+        <input type="text" placeholder="Serial Number"  required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+        <button type="submit" style="width: 100%; padding: 14px; background-color: #1A45EF; color: white; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; letter-spacing: 1px;">SUBMIT</button>
+      </form>
+    </div>
+
+    <div style="flex: 0 0 35%; display: flex; justify-content: center; align-items: center; ">
+      <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image" style="width: 350px; height: auto; ;" />
+    </div>
+  </div>
+`;
+
+} else {
+  // ❌ Show: Not eligible EOSL message
+  packsEl.innerHTML = `
+    <div class="no-plan-wrapper">
       <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
-     <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:center;">
-      Unfortunately, your device <strong>${productName}</strong> as reached End-of-Support-Life and is not eligible for extension.   .
+      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:30px 0px">
+        Unfortunately, your device <strong >${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
       </p>
       <img src="https://arminfoserve.com/wp-content/uploads/2025/06/Group-1000003714.png" alt="Product Not Found" style="width: 329px; height: 240px; max-width: 100%; margin: 20px auto; display:grid" />
-      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #000; text-align:center; margin: 10px auto;">
-        Due to time your EOSL Limit is less than 365 days, your warranty cannot be Extended
-        <br>For any queries <a href="https://wa.link/zpjo1y" style="color: #1A45EF; text-decoration: underline;">Chat with us</a>.
-      </p>
-      <a href="https://arminfoserve.com/hp-end-of-support-life/" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
-        CHECK EOSL
+      
+      <a href="https://wa.link/zpjo1y" target="_blank" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
+        Chat with us
       </a>
     </div>
   `;
-  
+}
+
       }
 
 
