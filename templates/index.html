@@ -453,7 +453,7 @@
 
 
   <script>
-    
+
     function checkWarranty() {
       const serial = document.getElementById('serial').value.trim();
       const product = document.getElementById('product').value.trim();
@@ -526,7 +526,7 @@
     function renderResult(data, serial) {
       const resultEl = document.getElementById("result");
       const packsEl = document.getElementById("compatible-packs");
-      
+
 
       // 1. Inject compatible care packs
       if (data.care_packs && data.care_packs.length) {
@@ -564,46 +564,70 @@
         packsEl.innerHTML = carePackHTML;
       } else {
         const productName = data.product_name || "This Product";
-        const eoslDate = data.eosl_date || "Unknown";
-        const today = new Date();
-const eosl = new Date(eoslDate.split("-").reverse().join("-")); // convert DD-MM-YYYY to YYYY-MM-DD
-const daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
+        const eoslDate = data.eosl_date;
+        let daysToEOSL = null;
+
+        if (eoslDate && eoslDate !== "Unknown") {
+          const today = new Date();
+          const eosl = new Date(eoslDate.split("-").reverse().join("-")); // convert DD-MM-YYYY to YYYY-MM-DD
+          daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
+        }
+
+        const actualServiceLevel = (data.actual_service_level || "").toLowerCase();
+        const showPostWarrantyHeading = actualServiceLevel.includes("next coverage day");
 
 
-         
-        // Fallback when no care packs are available
-     if (daysToEOSL > 365) {
-  // ✅ Show: Already covered fallback
-    packsEl.innerHTML = `
-  <h1 style="color:#1A45EF; font-family:'Roboto Slab', serif; font-size:36px; margin-bottom:20px;">All Set For Now</h1>
-  <div style="display: flex; align-items: center;  max-width: 1140px; width: 100%; border-radius: 10px; overflow: hidden; margin-top: 30px; gap: 20px; flex-wrap: wrap;">
-  
-    <div style="flex: 0 0 60%; padding: 24px; border-radius: 8px;  background:#FBFBFF;border: 1px solid #eee;">
-      <p style="font-family:Poppins;font-size:16px; line-height: 1.5; color: #00072E;">Nothing to see here, No products found for now.</p>
-      <p style=" font-family:Poppins;margin-bottom:16px; line-height: 1.5; color: #00072E;font-size:16px;">But before you go, please share your details, so we can remind you to extend the warranty in time.</p>
+        // Case 1: EOSL is valid and more than 365 days left
+        console.log("✅ Debug Output:");
+        console.log("→ eoslDate:", eoslDate); // Should be "31-01-2028"
+        console.log("→ daysToEOSL:", daysToEOSL); // Should be > 365
+        console.log("→ actual_service_level:", actualServiceLevel); // Should include "next coverage day"
+        console.log("→ showPostWarrantyHeading:", showPostWarrantyHeading); // Should be true
+        console.log("🧪 actual_service_level from backend:", data.actual_service_level);
+        
 
-      <form>
-        <input type="text" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px ; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-        <input type="tel" placeholder="Phone Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-        <input type="text" placeholder="Serial Number"  required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-        <button type="submit" style="width: 100%; padding: 14px; background-color: #1A45EF; color: white; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; letter-spacing: 1px;">SUBMIT</button>
-      </form>
-    </div>
+        if (daysToEOSL !== null && daysToEOSL > 365) {
+          packsEl.innerHTML = `
+      <h1 style="color:#1A45EF; font-family:'Roboto Slab', serif; font-size:36px; margin-bottom:20px;">
+        ${showPostWarrantyHeading ? "Post Warranty Plan is Active" : "All Set For Now"}
+      </h1>
+      <div style="display: flex; align-items: center; max-width: 1140px; width: 100%; border-radius: 10px; overflow: hidden; margin-top: 30px; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 0 0 60%; padding: 24px; border-radius: 8px; background:#FBFBFF; border: 1px solid #eee;">
+          <p style="font-family:Poppins;font-size:16px; line-height: 1.5; color: #00072E;">Nothing to see here, No products found for now.</p>
+          <p style="font-family:Poppins;margin-bottom:16px; line-height: 1.5; color: #00072E;font-size:16px;">But before you go, please share your details, so we can remind you to extend the warranty in time.</p>
 
-    <div style="flex: 0 0 35%; display: flex; justify-content: center; align-items: center; ">
-      <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image" style="width: 350px; height: auto; ;" />
-    </div>
-  </div>
-`;
+            <form id="reminder-form">
+              <input type="hidden" id="headingText" name="headingText" value="${showPostWarrantyHeading ? "Post Warranty Plan is Active" : "All Set For Now"}" />
+  <input type="text" id="name" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+  <input type="tel" id="phone" placeholder="Phone Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+  <input type="text" id="serialNum" placeholder="Serial Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+  <button type="submit" id="submit-btn" style="width: 100%; padding: 14px; background-color: #1A45EF; color: white; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; letter-spacing: 1px;">SUBMIT</button>
+</form>
+<p id="email-status" style="font-family:Poppins; font-size:14px; margin-top: 8px;"></p>
+        </div>
 
-} else {
-  // ❌ Show: Not eligible EOSL message
-  packsEl.innerHTML = `
+
+        <div style="flex: 0 0 35%; display: flex; justify-content: center; align-items: center;">
+          <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image" style="width: 350px; height: auto;" />
+        </div>
+      </div>
+    `;
+    
+          // Case 2 & 3: EOSL is missing or within 365 days
+        } else {
+          let eoslLine = '';
+          if (eoslDate) {
+            eoslLine = `
+      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:16px 0px">
+        Unfortunately, your device <strong>${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
+      </p>
+    `;
+          }
+
+          packsEl.innerHTML = `
     <div class="no-plan-wrapper">
       <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
-      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:30px 0px">
-        Unfortunately, your device <strong >${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
-      </p>
+      ${eoslLine}
       <img src="https://arminfoserve.com/wp-content/uploads/2025/06/Group-1000003714.png" alt="Product Not Found" style="width: 329px; height: 240px; max-width: 100%; margin: 20px auto; display:grid" />
       
       <a href="https://wa.link/zpjo1y" target="_blank" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
@@ -611,10 +635,11 @@ const daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
       </a>
     </div>
   `;
-}
+        }
+
 
       }
-
+      
 
       // 2. Inject main result card
       resultEl.innerHTML = `
@@ -691,6 +716,65 @@ const daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
     document
       .querySelector("form")
       .addEventListener("submit", submitForm);
+      document.addEventListener("DOMContentLoaded", () => {
+  const parent = document.querySelector("#compatible-packs");
+
+  if (!parent) return;
+
+  const formObserver = new MutationObserver(() => {
+    const heading = parent.querySelector("h1")?.innerText.trim();
+    const form = document.querySelector("#reminder-form");
+
+    if (
+      form &&
+      (heading === "Post Warranty Plan is Active" || heading === "All Set For Now") &&
+      !form.dataset.listenerAttached
+    ) {
+      form.dataset.listenerAttached = "true";
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const headingText = document.getElementById("headingText")?.value.trim();
+
+
+        const name = document.getElementById("name")?.value.trim();
+        const phone = document.getElementById("phone")?.value.trim();
+        const serial = document.getElementById("serialNum")?.value.trim();
+        const submitBtn = document.getElementById("submit-btn");
+        const statusMsg = document.getElementById("email-status");
+
+        if (!name || !phone || !serial) {
+          statusMsg.textContent = "❗ All fields are required.";
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "⏳ Sending...";
+        statusMsg.textContent = "";
+
+        try {
+          const res = await fetch("/submit-form", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, phone, serial, headingText })
+          });
+
+          const data = await res.json();
+          statusMsg.textContent = data.message || "✅ Thank you!";
+        } catch (error) {
+          console.error("❌ Failed to send email", error);
+          statusMsg.textContent = "❌ Something went wrong. Please try again.";
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.innerText = "SUBMIT";
+      });
+    }
+  });
+
+  formObserver.observe(parent, { childList: true, subtree: true });
+});
+
   </script>
 
 </body>

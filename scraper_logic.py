@@ -9,6 +9,8 @@ import re
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from eosl_data import eosl_data
+from datetime import datetime, date
+
 
 printer_mapping = {
       "Y5S43A": {
@@ -1386,6 +1388,7 @@ product_page_mapping = {
     "U9BA3E": "u9ba3e-hp-200-300-series-1-year-additional-warranty-extension",
     "UB5U0E": "ub5u0e-hp-200-300-series-4-years-additional-warranty-extension-with-accidental-damage-protection-2-claims",
     "U9BB1PE": "u9bb1pe-hp-200-300-series-1-year-post-warranty",
+    "U22N8E":"u22n8e-hp-200-300-series-2-years-additional-warranty-extension-on-3-year-care-pack",
     "UK703E": "uk703e-hp-probook-400-laptop-2-years-additional-warranty-extension-1-year-factory-warranty",
     "UK744E": "uk744e-hp-probook-400-laptop-2-years-additional-warranty-extension-on-1-year-base-warranty",
     "UK726E": "uk726e-hp-probook-400-laptop-2-years-additional-warranty-extension-with-accidental-damage-protection-on-1-year-base-warranty",
@@ -1393,6 +1396,7 @@ product_page_mapping = {
     "UK749E": "uk749e-hp-probook-400-laptop-factory-warranty-add-on-accidental-damage-protection",
     "UB8B3E": "ub8b3e-hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
     "UK738PE": "uk738pe-hp-probook-400-laptop-1-year-post-warranty-carepack",
+    "U86DXE": "u86dxe-hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty/",
     "UB8B6E": "ub8b6e-hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
     "UB0E2E": "ub0e2e-hp-elitebook-10xx-2-years-additional-warranty-3-year-base-warranty",
     "UB0E6E": "ub0e6e-hp-elitebook-10xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
@@ -1402,6 +1406,40 @@ product_page_mapping = {
     "UC282E": "uc282e-hp-elitebook-fw-adp-1yrs",
     "U7861E": "u7861e-hp-elitebook-2-years-additional-warranty-extension-3-year-base-warranty",
     "UB5T7E": "ub5t7e-hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
+    "U5864PE": "u5864pe-hp-all-in-one-business-pc-1-year-post-warranty",
+    "U6578E": "u6578e-hp-all-in-one-business-pc-2-years-additional-warranty-extension",
+    "U0A84E": "u0a84e-hp-all-in-one-business-pc-factory-warranty-adp",
+    "U7899E": "u7899e-hp-all-in-one-business-pc-2-years-additional-warranty-extension-3-year-base-warranty",
+    "UF361E": "uf361e-hp-all-in-one-business-pc-3-years-additional-warranty-extension-with-defective-media-retention",
+    "U7897E": "u7897e-hp-all-in-one-business-pc-1-year-additional-warranty-extension",
+    "U0A85E": "u0a85e-hp-all-in-one-business-pc-1-year-additional-warranty-extension-adp/",
+    "U11BVE": "u11bve-hp-all-in-one-business-pc-1-year-additional-warranty-extension-with-defective-media-retention",
+    "UF236E": "uf236ehp-all-in-one-business-pc-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
+    "U0A83E": "u0a83e-hp-all-in-one-business-pc-2-years-additional-warranty-extension-with-accidental-damage-protection",
+    "UF360E": "uf360e-hp-all-in-one-business-pc-2-years-additional-warranty-extension-with-defective-media-retention",
+    "U7923E": "u7923e-hp-all-in-one-business-pc-3-years-additional-warranty-extension",
+    "U7925E": "u7925e-hp-all-in-one-business-pc-4-years-additional-warranty-extension",
+    "UJ217E" :"uj217e-hp-desktop-a-i-o-2-years-additional-warranty",
+    "U4813PE" :"u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
+    "U4813PE" : "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
+    "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    "UN062PE": "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
+    "U11BWE": "u11bwe-hp-all-in-one-business-pc-2-years-additional-warranty-extension-with-defective-media-retention-3-year-base-warranty/",
+    "U11BTE": "u11bte-hp-desktop-3-year-defective-media-retention-on-factory-warranty/",
+    "U4813PE": "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
+    "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    "UA055E":"ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    "UN062PE" : "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
+    "U4925PE" :"u4925pe-tft-monitor-2-year-additional-warranty-extension-copy",
+    "U7935E" : "u7935e-21-tft-monitor-2-year-additional-warranty-extension",
+    "U1G24PE" : "u1g24pe-hp-workstation-1-year-post-warranty",
+    "U7942E" : "u7942e-workstation-600-800-series-1-year-additional-warranty-extension",
+    "U7944E" : "u7944e-workstation-600-800-series-2-year-additional-warranty-extension",
+    "U1G39E" : "u1g39e-hp-workstation-400-series-2-year-additional-warranty-extension",
+    "U1G37E" : "u1g37e-workstation-400-series-1-year-additional-warranty-extension",
+    "U1G57E" : "u1g57e-workstation-400-series-2-year-additional-warranty-extension-with-defective-media-retention",
+    "U1G24PE": "u1g24pe-hp-workstation-1-year-post-warranty",
     "UA5C0E": "ua5c0e-hp-smart-tank-aio-2-years-additional-warranty",
     "U35PFE": "u35pfe-hp-smart-tank-790-aio-printer-2-years-additional-warranty",
     "U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
@@ -1594,6 +1632,13 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+    "UB5R3E-U9WX1E": {
+    "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+    "price": "20999",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Pavilion-2ADPBATT.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
   
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
@@ -1680,7 +1725,9 @@ product_title_mapping = {
   "U6WD0E": {
     "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
     "price": "8500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-ADP.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-ADP.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
   },
   "UB5R5E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with One time Battery Replacement",
@@ -1695,6 +1742,13 @@ product_title_mapping = {
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Spectre-PW.webp",
     "coverage":"post-warranty",
     "duration":"1 year"
+  },
+   "UB5R4E-U9WX1E-1": {
+    "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+    "price": "32999",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Pavilion-2ADPBATT.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
@@ -1722,13 +1776,26 @@ product_title_mapping = {
   "U9EE8E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension",
     "price": "10556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HW.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HW.webp",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+
+  },
+   "U9EE8E": {
+    "title": "HP 200/300 Series 2 years Additional Warranty Extension on 3 year Care Pack",
+    "price": "10500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HW-1.webp",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+
   },
   "UB5U0E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension with Accidental Damage Protection",
     "price": "15000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HWADP.webp",
-    "tag":"Smart Pick"
+    "tag":"Smart Pick",
+    "duration":"5 year",
+    "coverage":"in-warranty"
   },
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
@@ -1742,7 +1809,7 @@ product_title_mapping = {
     "price": "10556",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW-1.webp",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   "UK726E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
@@ -1753,18 +1820,31 @@ product_title_mapping = {
   },
   "UK718E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension (1 year Base Warranty)",
-    "price": "15556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HW.webp"
+    "price": "14000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HW.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
   },
+  "U86DXE":{
+    "title": "HP ProBook G11 4 years Additional Warranty Extension (1 year Base Warranty)",
+    "price": "14000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HW.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+      },
   "UK749E": {
     "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection",
     "price": "8111",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-ADP.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-ADP.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
   },
   "UB8B3E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
     "price": "18778",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HWADP.webp"
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HWADP.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
   },
   "UK738PE": {
     "title": "HP ProBook 400 laptop 1 year Post Warranty Care Pack",
@@ -1785,53 +1865,71 @@ product_title_mapping = {
     "price": "15000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HWADP-1.webp" ,
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
+  "U86E0E":{
+    "title": "HP ProBook G11 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "price": "17000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-4HWADP.webp" ,
+    "coverage":"in-warranty",
+    "duration":"5 year"
+    },
+  "U86DVE":{
+    "title": "HP ProBook G11 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
+    "price": "8000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-2HW.webp" ,
+    "coverage":"in-warranty",
+    "duration":"3 year"
+    },
+  
   "U7876E": {
     "title": "HP Elitebook 7xx/8xx 4 years additional warranty (1 year base warranty)",
     "price": "32500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png"
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
   },
   "UC279E":{
     "title": "HP EliteBook 3-year Accidental Damage Protection on Factory Warranty",
     "price": "10,556",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/Elite-ADP.webp?fit=520%2C400&ssl=1",
-    "coverage":"in-warranty"
+    "coverage":"in-warranty",
+    
   },
   "UC282E":{
     "title": "HP EliteBook 3 year Accidental Damage Protection on 1 year Factory Warranty",
     "price": "18,778",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/Elite-ADP-1.webp?fit=520%2C400&ssl=1",
-    "coverage":"in-warranty"
-      
+    "coverage":"in-warranty",
+    "duration":"3 year"   
   },
   "UB0E2E": {
     "title": "HP EliteBook 10xx 2 years additional warranty (3 year base warranty)",
     "price": "16000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   "UB0E6E": {
     "title": "HP EliteBook 10xx 2 years additional warranty with Accidental Damage Protection (3 year base warranty)",
     "price": "23000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Elite-4HW.png",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   "U7861E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
     "price": "12222",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HW-2.webp",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   "UB5T7E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
     "price": "19889",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Elite-2HWADP-2.webp",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   
   "U4391E": {
@@ -1841,7 +1939,221 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-#   printers
+  #desktops
+  #hp aio bussines
+  "U5864PE": {
+    "title": "HP All-in-One Business PC 1 year Post Warranty",
+    "price": "5850",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+  "U6578E": {
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "5600",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HW.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U7899E": {
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (3 Year Base Warranty)",
+    "price": "4667",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U0A84E": {
+    "title": "HP All-in-One Business PC Factory Warranty Add-on Accidental Damage Protection",
+    "price": "9445",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-ADP-1.webp",
+    "coverage":"in-warranty",
+    "duration":"1 year"
+  },
+  
+  "U7897E": {
+    "title": "HP All-in-One Business PC 1 year Additional Warranty Extension",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HW.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+  "U0A85E": {
+    "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Accidental Damage Protection",
+    "price": "7250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HWADP.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+  "U11BVE": {
+    "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Defective Media Retention",
+    "price": "6944",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HWDMR.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+  "UF236E": {
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
+    "price": "13900",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HWADP-2.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U0A83E": {
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "price": "8500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HWADP.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "UF360E": {
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Defective Media Retention (1 Year Base Warranty)",
+    "price": "7800",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HWDMR.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U7923E": {
+    "title": "HP All-in-One Business PC 3 Years Additional Warranty Extension",
+    "price": "8500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/AIO-3HW.webp?fit=520%2C400&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "U7925E": {
+    "title": "HP All-in-One Business PC 4 Years Additional Warranty Extension",
+    "price": "9800",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-4HW.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    "UF361E": {
+    "title": "HP All-in-One Business PC 3 Years Additional Warranty Extension with Defective Media Retention",
+    "price": "10500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-3HWDMR.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  
+  
+  
+  
+   #hp aio desk
+  "UJ217E": {
+    "title": "HP Desktop/All-In-One 2 Years Additional Warranty",
+    "price": "7500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U4813PE": {
+    "title": "HP Desktop/All-In-One 1 Year Post Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+  #pavilion aio/desk,#envy aio/desk
+   "U4813PE": {
+    "title": "HP Desktop/All-In-One 1 Year Post Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+   "UA055E": {
+    "title": "HP Envy/Pavilion/Victus by HP/Omen by HP/Pro Desktop 2 Years Additional Warranty",
+    "price": "13500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   
+   "UN062PE": {
+    "title": "HP Envy/Omen Desktop/All-In-One 1 Year Post Warranty",
+    "price": "9850",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+   #HP Business Desktop
+   "U11BWE": {
+    "title": "HP Desktop 2 Years Additional Warranty Extension with DMR (3 Year Factory Warranty)",
+    "price": "7222",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HWDMR-1.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+   "U11BTE": {
+    "title": "HP Desktop 3 year Defective Media Retention on Factory Warranty",
+    "price": "6556",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/11/AIO-3DMR.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   #TFT Monitor
+    "U4925PE": {
+    "title": "TFT Monitor 1-year Post Warranty",
+    "price": "3500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-PW.png",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+    "U7935E": {
+    "title": "Up to 24in TFT Monitor 2-year Additional Warranty Extension",
+    "price": "4500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    #workstation 6xx-8xx/hp workstation 4xx
+    
+    "U1G24PE": {
+    "title": "HP WorkStation 1 Year Post Warranty",
+    "price": "13899",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-PW-2.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+    "U7944E": {
+    "title": "WorkStation 600/800 SERIES 2-year Additional Warranty Extension",
+    "price": "12500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "U7942E": {
+    "title": "WorkStation 600/800 SERIES 1-year Additional Warranty Extension",
+    "price": "8500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-1HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+    "U1G37E": {
+    "title": "WorkStation 400 SERIES 1 year Additional Warranty Extension",
+    "price": "7650",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-1HW-1-1.webp",
+    "coverage":"in-warranty",
+    "duration":"2 year"
+  },
+   "U1G57E": {
+    "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension with Defective Media Retention",
+    "price": "11500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HWDMR.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+
+   "U1G39E": {
+    "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension",
+    "price": "10000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HW-1-1.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   
+   
+  
+# printers
     "UA5C0E": {
     "title": "HP Smart Tank AiO 2 years Additional Warranty",
     "price": "4000",
@@ -1862,8 +2174,6 @@ product_title_mapping = {
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
-
-
   },
   "U9NR3PE": {
     "title": "HP Smart Tank AiO 1 year Post Warranty",
@@ -2288,7 +2598,6 @@ def calculate_remaining_days(end_date_str):
 
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
-    eosl_date = eosl_data.get(product_number) 
     options = webdriver.ChromeOptions()
     # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -2385,6 +2694,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         
 
         addon_text = None
+        actual_service_level = "Unknown" 
         if carepack_active:
             addon_parts = []
             for sec in sections:
@@ -2395,6 +2705,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         if label in ["service level", "deliverables"]:
                             text_div = it.find_element(By.CLASS_NAME, "text")
                             text_content = text_div.text.strip().lower()
+                            if label == "service level" and actual_service_level == "Unknown":
+                                actual_service_level = text_div.text.strip()
                             accidental_matches = re.findall(r"\b(accidental[^\n,]*)", text_content, re.IGNORECASE)
                             for match in accidental_matches:
                                 cleaned = match.strip().title()
@@ -2410,7 +2722,24 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             if addon_parts:
                 addon_text = ", ".join(addon_parts)
 
-     
+        def parse_date(date_input):
+            if isinstance(date_input, datetime):
+                return date_input
+            if isinstance(date_input, date):
+                return datetime.combine(date_input, datetime.min.time())
+            if isinstance(date_input, str):
+                try:
+                    return datetime.strptime(date_input.strip(), "%B %d, %Y")
+                except ValueError:
+                    try:
+                        return datetime.strptime(date_input.strip(), "%Y-%m-%d")
+                    except Exception as e:
+                        print(f"⚠️ Date parse error for '{date_input}': {e}")
+                        return None
+                    print(f"⚠️ Unsupported date format: {date_input}")
+                    return None
+
+
          
         def carepack_duration(start_date, end_date):
             try:
@@ -2427,8 +2756,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         today = datetime.today().date()
         span = relativedelta(end_date_obj, start_date_obj)
         years, months = span.years, span.months
-
-        def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date):
+        
+        result = {}
+        def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date,actual_service_level,coverage_type,result,):
             dur          = duration_str.strip().lower()
             has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
@@ -2436,19 +2766,74 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             sts          = warranty_status.strip().lower()
             total_months = years * 12 + months
             today        = datetime.today().date()
+            is_3yr_span = (years == 3 and months == 0) or (total_months >= 35)
+            is_carepack = coverage_type.strip().lower() == "care pack"
+            has_no_addon = not has_adp
+            is_in_warranty = cov == "in-warranty"
+            has_next_coverage_day = "next coverage day" in actual_service_level.lower()
+            print("🔍 Strict Check:")
+            print(f"  - is_3yr_span: {is_3yr_span}")
+            print(f"  - is_carepack: {is_carepack}")
+            print(f"  - has_no_addon: {has_no_addon}")
+            print(f"  - is_in_warranty: {is_in_warranty}")
+            print(f"  - has_next_coverage_day: {has_next_coverage_day}")
+            print(f"  - SKU: {sku} | Coverage: {cov}")
+            if has_next_coverage_day:
+                print("ℹ️ Detected 'Next Coverage Day' in service level")
+                if dur == "1 year" and cov == "post-warranty":
+                    result.update({
+                        "sku": sku,
+                        "duration": dur,
+                        "coverage_type": "Post Warranty",  # ✅ This is what you want in final output
+                        "reason": "strict_1yr_post_warranty",
+                        "plan_source": "strict",
+                        
+                        })
+                    return False
+                
+                if is_3yr_span and is_carepack and has_no_addon:
+                    if sku == "U9WX1E" and is_in_warranty:
+                        result.update({
+                            "sku": sku,
+                            "duration": dur,
+                            "coverage_type": "Care Pack",
+                            "reason": "strict_3yr_u9wx1e",
+                            "plan_source": "strict"
+                            })
+                        return result
+                    # if dur == "1 year" and cov == "post-warranty":
+                    #     result.update({
+                    #         "sku": sku,
+                    #         "duration": dur,
+                    #         "coverage_type": "Post Warranty",  # ✅ override here
+                    #         "reason": "strict_1yr_post_warranty",
+                    #         "plan_source": "strict"
+                    #         })
+                    #     return result
+
+ 
+                    print(f"❌ Blocked: SKU {sku} is not eligible (not U9WX1E or post-warranty)")
+                    return False  # ✅ STOP — strict failed
+                else:
+                    print("❌ Blocked: Strict 3-year check not satisfied with 'Next Coverage Day'")
+                    return False  # ✅ STOP — not a 3-year sp
+
+
+
+
             print(f"📦 Plan: {sku} | dur: {dur} | cov: {cov} | status: {sts} | addon: {addon_text}")
             if dur == "1 year" and cov == "post-warranty":
                 eosl_str = eosl_data.get(product_number)
                 if not eosl_str:
-                    print(f"❌ Skipping plan {sku} - EOSL date not found for {product_number}")
+                    # print(f"❌ Skipping plan {sku} - EOSL date not found for {product_number}")
                     return False
                 try:
                     eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
                     if (eosl_date - today).days < 0:
-                        print(f"❌ Skipping plan {sku} - EOSL expired on {eosl_date}")
+                        # print(f"❌ Skipping plan {sku} - EOSL expired on {eosl_date}")
                         return False
                 except Exception as e:
-                    print(f"❌ Failed to parse EOSL date for product {product_number}: {e}")
+                    # print(f"❌ Failed to parse EOSL date for product {product_number}: {e}")
                     return False
                
 
@@ -2522,6 +2907,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 print(f"🧪 EOSL_OK={eosl_ok}, ADP_OK={adp_ok}, TotalMonths={total_months}, HasADP={has_adp}")
                 return eosl_ok or adp_ok
             return False
+        
             
         def is_eligible_printer_span(years, months, duration_str, plan_cov, warranty_status, product_number, eosl_data, end_date):
             dur = duration_str.strip().lower().replace("years", "year").replace(" ", "")
@@ -2609,31 +2995,98 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
         def is_commercial_model(name: str) -> bool:
             kws = [
-                "240","245","255","250","340","345","350","355",
-                "elitedesk","prodesk","microtower",
-                "probook","elitebook","zbook","pro"
-            ]
-            nl = name.lower()
-            return any(kw in nl.split() for kw in kws)
-        def is_eligible_commercial_span(years, months, duration_str, plan_cov):
-            total_months = years * 12 + months
-            dur = duration_str.strip().lower().rstrip("s")
+                "240","247", "245", "255", "250", "340", "345", "350", "355",
+                "elitedesk", "prodesk", "microtower",
+                "probook", "elitebook", "zbook", "pro"
+                ]
+            name_clean = re.sub(r"[^\w\s]", "", name.lower())  # remove punctuation
+            return any(kw in name_clean for kw in kws)
+        def is_3_year_base_factory_warranty(start_date, end_date, coverage_type):
+            if coverage_type.strip().lower() != "factory warranty":
+                return False
+            diff = relativedelta(end_date, start_date)
+            total_months = diff.years * 12 + diff.months
+            print(f"📏 Calculated Warranty Duration: {total_months} months")
+            return 35 <= total_months <= 37  # allowing ±1 month
+        def matches_base_warranty_text(text: str, years: int) -> bool:
+            pattern = rf"\b{years}\s*year\s*base\s*warranty\b"
+            return re.search(pattern, text.lower()) is not None
+        def is_eligible_commercial_span(years, months, duration_str, addon_text, part_sku,
+                                        plan_cov, warranty_status, product_number,
+                                        eosl_data, end_date, start_date):  # added start_date
+            dur = duration_str.strip().lower()
+            sku = part_sku.upper()
             cov = plan_cov.strip().lower()
+            sts = warranty_status.strip().lower()
+            total_months = years * 12 + months
+            today = datetime.today().date()
+            print(f"📦 Plan: {sku} | dur: {dur} | cov: {cov} | status: {sts} | addon: {addon_text}")
+            is_3yr_base = is_3_year_base_factory_warranty(start_date, end_date, plan_cov)
+            dur_lower = (dur or "").lower().strip()
+            title_lower = (title or "").lower().strip()
+            start = parse_date(start_date)
+            end = parse_date(end_date)
+            is_3yr_base = (
+                coverage_type.strip().lower() == "factory warranty" and
+                (end - start).days >= 1000
+                )
+            if not is_3yr_base and re.search(r"\b3\s*year\s*(base|factory)\s*warranty\b", title_lower):
+                print(f"❌ Skipping: {part} is for 3-year base warranty but product has 1-year base warranty")
+                return False
+            if is_3yr_base and re.search(r"\b1\s*year\s*(base|factory)\s*warranty\b", title_lower):
+                print(f"❌ Skipping: {part} is for 1-year base warranty but product has 3-year base warranty")
+                return False
+
+
+
+         
+
 
             if 11 <= total_months < 15:
-                return dur in ("1 year","2 year","3 year","5 year")
+                if sts in ("active", "coverage expiring"):
+                    if cov != "in-warranty":
+                        return False
+                    return dur in ("1 year", "2 year", "3 year", "5 year")
+                if sts == "expired":
+                    five_year_ann = start_date + timedelta(days=1460)
+                    days_to_5yr = (five_year_ann - today).days
+                    if 90 < days_to_5yr <= 730:
+                        return dur in ("3 year", "5 year")
+                    if 0 < days_to_5yr < 90:
+                        return dur == "5 year" or (dur == "1 year" and cov == "post-warranty")
+                    if days_to_5yr > 730:
+                        return dur in ("3 year", "5 year")
+                    if days_to_5yr < 0:
+                        return dur == "1 year" and cov == "post-warranty"
+                return False
             if 15 <= total_months < 23:
-                return dur in ("2 year","3 year","5 year")
+                return cov == "in-warranty" and  dur in ("2 year", "3 year", "5 year")
             if 23 <= total_months < 35:
-                return dur in ("3 year","5 year")
+                return cov == "in-warranty" and  dur in ("3 year", "5 year")
             if 35 <= total_months < 59:
-                return dur == "5 year"
+                return cov == "in-warranty" and  dur == "5 year"
             if total_months >= 59:
-                return cov == "post-warranty"
-            return False
-
-
-
+                eosl_ok = False
+                eosl_str = eosl_data.get(product_number)
+                if eosl_str:
+                    try:
+                        eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                    except Exception:
+                        pass
+                    else:
+                        days_remaining = (end_date - today).days
+                        if (
+                            0 <= (eosl_date - today).days <= 365 and
+                            sts in ("active", "coverage expiring", "expired") and
+                            days_remaining <= 90 and
+                            cov == "post-warranty" and
+                            dur == "1 year"
+                            ):
+                            eosl_ok = True
+                            print(f"🧪 EOSL_OK={eosl_ok}, TotalMonths={total_months}")
+                            return eosl_ok
+                        return False
+                        
 
         # 1. Extract actual warranty data fields
         actual_start_date = warranty_data.get("Start date")
@@ -2661,7 +3114,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
               "includes": ["15s"],
               "excludes": [],
-              "parts": ["U9WX1E"]
+              "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
             },
             {
                 "includes": ["pavilion"],
@@ -2681,6 +3134,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
             },
             {
+                "includes": ["omnibook"],
+                "excludes": ["All|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+            },
+            
+            {
                 "includes": ["envy"],
                 "excludes": ["all-"],
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
@@ -2698,7 +3157,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["zbook"],
                 "excludes": ["All|MFP"],
-                "parts": ["U02BVE", "U02BSE", "U10KHE","U9WX1E"]
+                "parts": ["U02BVE", "U02BSE", "U10KHE"]
             },
 
             {
@@ -2725,10 +3184,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["(?i)ProBook 440|ProBook 445|ProBook 455|ProBook 450|ProBook 430"],
                 "excludes": ["(?i)All|MFP"],
-                "parts": ["UK703E", "UK744E", "UK726E", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
+                "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
             {
-                "includes": ["(?i)HP all-in-one|slim|Desktop PC M"],
+                "includes": ["(?i)HP all-in-one|slim|Desktop PC M|280"],
                 "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
                 "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
 
@@ -2771,7 +3230,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         
 
         for rule in rules:
-            includes_match = all(any(kw in part for part in name.lower().split()) for kw in rule.get("includes", []))
+            includes_match = all(re.search(kw, name) for kw in rule.get("includes", []))
             excludes_match = any(re.search(exc, name) for exc in rule["excludes"])
             if includes_match and not excludes_match:
                 try:
@@ -2794,6 +3253,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     coverage = details.get("coverage", "")
                     duration = details.get("duration", "")
                     status = warranty_data.get("Status", "")
+                    service_level = actual_service_level  # ✅ correctly parsed from DOM
                     coverage_type = warranty_data.get("Coverage type", "")
                     end_date = warranty_data.get("End date")
                     plan_cov      = details.get("coverage", "")
@@ -2802,13 +3262,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     name_low = product_name.lower()
                     commercial = is_commercial_model(product_name)
 
-                    
+                    print(f"🧪 Product name to check commercial: '{product_name}' → {product_name.lower().split()}")
                     if is_commercial_model(product_name):
                       print("💼 Commercial device detected. Using commercial span logic.")
-                      ok = is_eligible_commercial_span(years, months, duration, plan_cov)
+                      ok = is_eligible_commercial_span(years, months, duration, addon_text, part,plan_cov, warranty_stat, product_num,eosl_data, end_date_obj,start_date_obj)
                     else:
                         print("🧑‍💻 Consumer device. Using consumer logic with ADP check.")
-                        ok = is_eligible_by_span(years, months,duration, addon_text, part,plan_cov, warranty_stat,product_num, eosl_data,end_date_obj) 
+                        ok = is_eligible_by_span(years, months,duration, addon_text, part,plan_cov, warranty_stat,product_num, eosl_data,end_date_obj,actual_service_level,coverage_type,result) 
                     print(f"📦 Plan: {part} | dur: {duration} | cov: {coverage} | status: {status} | addon: {addon_text}")
 
                     if ok and slug:
@@ -2846,7 +3306,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "remaining_days": remaining_days if remaining_days is not None else "N/A",
                 "current_date": current_date_str,
                 "care_packs": care_packs,
-                "eosl_date": eosl_date,
+                "result":result,
+                "actual_service_level": actual_service_level,
+                # "eosl_date": eosl_date,
                 "addon": addon_text
                 
             }
