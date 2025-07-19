@@ -1781,7 +1781,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
 
   },
-   "U9EE8E": {
+   "U22N8E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension on 3 year Care Pack",
     "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HW-1.webp",
