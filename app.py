@@ -211,7 +211,6 @@ def submit_form():
         serial = data.get("serial")
         heading = data.get("headingText", "Not specified")
 
-
         if not (name and phone and serial):
             return jsonify({"error": "All fields are required"}), 400
 
@@ -228,6 +227,126 @@ def submit_form():
     except Exception as e:
         print("❌ Failed to send email:", e)
         return jsonify({"error": "Failed to send email"}), 500
+
+
+@app.route("/send_email", methods=["POST"])
+def send_email():
+    try:
+        data = request.get_json()
+        name = data.get("name")
+        email = data.get("email")
+        number = data.get("number")
+        result = data.get("result")
+
+        if not (name and email and number and result):
+            return jsonify({"message": "❌ Missing data"}), 400
+
+        # Check if any care pack title includes "post warranty"
+        care_packs = result.get("care_packs", [])
+        is_post_warranty = any("post warranty" in pack.get("title", "").lower() for pack in care_packs)
+
+        if is_post_warranty:
+            warranty_message = f"""<p>The warranty will start from the date of purchase</p>"""
+        else:
+            warranty_message = f"""<p>The warranty will start from the date of expiry: <strong>{result.get("end_date")}</strong></p>"""
+
+        html_content = f"""
+        <h2>Hi {name},</h2>
+        <p>Thank you for contacting <strong>ARM Infoserve India</strong>, the authorised HP Warranty Extension partner.</p>
+        <p>We are delighted to support you with the warranty extension of your <strong>{result.get("product_name")}</strong>.</p>
+        <hr />
+        <h3>HP Warranty Quotation</h3>
+        <p><strong>Name:</strong> {name}</p>
+        <p><strong>Mobile Number:</strong> {number}</p>
+        <p><strong>Serial Number:</strong> {result.get("serial")}</p>
+        <p><strong>Product Number:</strong> {result.get("product_number")}</p>
+        <p><strong>Warranty Start Date:</strong> {result.get("start_date")}</p>
+        <p><strong>Warranty End Date:</strong> {result.get("end_date")}</p>
+        <p><strong>Product Name:</strong> {result.get("product_name")}</p>
+        <p><strong>Status:</strong> {result.get("status")}</p>
+
+        <p><strong>Compatible Care Packs:</strong></p>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead style="background-color: #0033A0; color: white; text-align:left">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Serial Number</th>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Buy Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                {''.join([
+                    f"<tr><td>{result.get('product_name')}</td><td>{result.get('serial')}</td><td>{pack['title']}</td><td>₹{pack['price']}</td><td><a href='{pack['url']}'>Buy Now</a></td></tr>"
+                    for pack in care_packs
+                ])}
+            </tbody>
+        </table>
+
+        {warranty_message}
+
+        <h3>Terms and Conditions</h3>
+        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
+            <li>To avail ON-SITE support, please log a complaint at the HP Service Toll-free number <strong>18002587170</strong>.</li>
+            <li>The warranty extension covers all hardware parts except the battery, adapter, and physical damage (unless accidental damage protection is included).</li>
+            <li>In the case of accidental damage protection, physical damage is also covered except for battery and adapter.</li>
+            <li>Care Pack certificate will be issued by HP within <strong>2 to 3 days</strong> of order confirmation.</li>
+            <li>Full advance payment is required.</li>
+            <li>Pay in favour of <strong>ARM Infoserve India Pvt. Ltd.</strong></li>
+            <li>HP provides the warranty support.</li>
+        </ul>
+
+        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
+            <li>Damage due to improper use, site conditions, or unauthorized maintenance is not covered.</li>
+            <li>Failures due to non-HP software or products are also excluded.</li>
+        </ul>
+
+        <p style="font-family: Arial, sans-serif;">
+            For questions, contact <strong>info@arminfoserve.com</strong> or <strong>9560207904</strong>.
+        </p>
+
+        <h3>Alternative Payment Options:</h3>
+        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
+            <li>UPI/Cards/Netbanking: <a href="https://rzp.io/l/BHvzhDKEeb" target="_blank">https://rzp.io/l/BHvzhDKEeb</a></li>
+            <li><strong>Bank Transfer:</strong><br>
+                Bank: ICICI Bank<br>
+                Account Name: <strong>ARM INFOSERVE INDIA PVT. LTD.</strong><br>
+                Account No.: 054251000009<br>
+                Type: CURRENT ACCOUNT/OD ACCOUNT<br>
+                IFSC: ICIC0000542
+            </li>
+            <li><strong>UPI:</strong> MSARMINFOSERVEINDIAPVTLTD.eazypay@icici (QR Code attached)</li>
+        </ul>
+        """
+
+        msg = Message(
+            subject="Quotation for warranty extension.",
+            recipients=[email],
+            cc=["aayushi@arminfoserve.com,abhay@arminfoserve.com"],
+            html=html_content
+        )
+
+        # Attach QR Code
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        qr_path = os.path.join(base_dir, "static", "ARM QR Code.jpg")
+
+        print("QR Path:", qr_path)
+        if os.path.exists(qr_path):
+            with open(qr_path, "rb") as f:
+                content = f.read()
+                print("✅ QR File size:", len(content))
+                msg.attach("ARM QR Code.jpg", "image/jpeg", content)
+        else:
+            print("❌ QR file not found")
+
+        mail.send(msg)
+        return jsonify({"message": "✅ Quotation sent to your email."})
+
+    except Exception as e:
+        print("❌ Send email error:", e)
+        return jsonify({"message": "❌ Failed to send email"}), 500
+
 
 
 @app.route('/view-pack')
@@ -250,5 +369,4 @@ def allow_iframe(response):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
-    # print("🗂️ eosl_data loaded:", eosl_data.get("2D9H6PA"))
     app.run(host="0.0.0.0", port=port, debug=True)

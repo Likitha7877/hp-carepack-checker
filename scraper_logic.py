@@ -1466,7 +1466,7 @@ product_page_mapping = {
     "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
     "UB9S8E": "ub9s8e-hp-color-laserjet-pro-mfp-m479-4-years-additional-warranty",
     "U04TKE": "u04tke-hp-laserjet-tank-mfp-2-years-additional-warranty",
-    "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
+    # "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
     "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
     "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
     "UZ272E": "uz272e-hp-laserjet-printer-4-years-additional-warranty",
@@ -2189,6 +2189,13 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
+   "UQ463E": {
+    "title": "HP LaserJet Printers 4 years Additional Warranty",
+    "price": "6111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
   "UH769E": {
     "title": "HP 3-Year Pickup and Return for Consumer LaserJet - Entry Service",
     "price": "5075",
@@ -2201,6 +2208,13 @@ product_title_mapping = {
     "price": "5167",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+  "UZ303E": {
+    "title": "HP Multi-function Printer 4 years Additional Warranty",
+    "price": "6000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UG062E": {
@@ -2224,11 +2238,25 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
+   "UZ304E": {
+    "title": "HP DeskJet IA 50XX AiO Printer 4 years Additional Warranty",
+    "price": "5913",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
   "U6M72E": {
     "title": "HP OfficeJet Pro High 2 years Additional Warranty",
     "price": "7222",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+   "U6M74E": {
+    "title": "HP OfficeJet Pro High 4 years Additional Warranty",
+    "price": "11113",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UG346E": {
@@ -2387,6 +2415,13 @@ product_title_mapping = {
     "duration": "5 year",
     "coverage":"in-warranty"
   },
+   "UG481E": {
+    "title": "HP LaserJet Printer 2 years Additional Warranty",
+    "price": "5000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
   "U04THE": {
     "title": "HP LaserJet Tank MFP 4 years Additional Warranty",
     "price": "12567",
@@ -2413,6 +2448,13 @@ product_title_mapping = {
     "price": "7427",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "U62F3E": {
+    "title": "HP Laser 100x and 11xx MFP 2 years Additional Warranty",
+    "price": "4833",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U8TM2E": {
@@ -2887,13 +2929,18 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     try:
                         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
                     except Exception:
-                        pass
+                        eosl_ok = False
+
                     else:
                         days_remaining = (end_date - today).days
+                        days_until_eosl = (eosl_date - today).days
+                        print(f"📅 End date: {end_date}, EOSL: {eosl_date}, Today: {today}")
+                        print(f"📆 Days to EOSL: {days_until_eosl}, Days to End: {days_remaining}")
                         if (
                             0 <= (eosl_date - today).days <= 365
+                            and end_date < today
                             and sts in ("active", "coverage expiring","expired")
-                            and days_remaining < 90
+                            # and days_remaining < 90
                             and cov == "post-warranty"
                             and dur == "1 year"
                         ):
@@ -2914,6 +2961,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             cov = plan_cov.strip().lower().replace(" ", "")
             sts = warranty_status.strip().lower()
             today = datetime.today().date()
+            print(f"🛠 Raw end_date: {end_date} ({type(end_date)})")
+            print(f"📅 Parsed end_date: {end_date} | Today: {today} | In warranty: {end_date >= today}")
+
+
+            if isinstance(end_date, str):
+                try:
+                    end_date = datetime.strptime(end_date, "%d-%m-%Y").date()
+                except Exception as e:
+                    print(f"⚠️ Invalid end_date format for product {product_number}: {end_date} → {e}")
+                    return False
+
             total_months = years * 12 + months
             # if total_months < 11:
             #     if sts in ("active", "coverage expiring"):
