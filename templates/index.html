@@ -727,7 +727,7 @@ html {
         <div id="serial-error" style="margin-bottom: 10px;"></div>
 
         <div id="product-container" style="display: none;">
-          <label>Enter Your HP Device Product Number</label>
+          <label>Enter Your HP Device Serial Number</label>
           <input type="text" id="product" oninput="
             let rawProduct = this.value.replace(/\s/g, ''); // remove whitespaces
             this.value = rawProduct.substring(0, 15); // allow only 7 chars
