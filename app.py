@@ -264,7 +264,7 @@ def send_email():
                     f"""
                     <tr style="background-color: #fff;">
                         <td style="padding: 8px; color:#00208E;">{pack['title']}</td>
-                        <td style="padding: 8px;color:#00208E;">₹{pack['price']}</td>
+                        <td style="padding: 8px;color:#00208E;">&#8377;{pack['price']}</td>
                         <td style="padding: 8px;color:#00208E;"><a href="{pack['url']}" style="color: #0033A0;  text-decoration: underline;">BUY NOW</a></td>
                     </tr>
                     """ for pack in care_packs
@@ -385,3 +385,4 @@ def allow_iframe(response):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port, debug=True)
+
