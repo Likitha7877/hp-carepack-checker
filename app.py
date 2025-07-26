@@ -249,6 +249,17 @@ def send_email():
         else:
             warranty_message = f"<p>The warranty will start from the date of expiry: <strong>{result.get('end_date')}</strong></p>"
 
+        # ✅ Generate care pack rows safely
+        rows = ""
+        for pack in care_packs:
+            rows += (
+                f"<tr style='background-color: #fff;'>"
+                f"<td style='padding: 8px; color:#00208E;'>{pack['title']}</td>"
+                f"<td style='padding: 8px; color:#00208E;'>&#8377;{pack['price']}</td>"
+                f"<td style='padding: 8px; color:#00208E;'><a href='{pack['url']}' style='color: #0033A0; text-decoration: underline;'>BUY NOW</a></td>"
+                f"</tr>"
+            )
+
         care_pack_html = f"""
         <h3 style="color: #1F48F0; font-size: 16px; margin-top: 30px;">Compatible Care Packs:</h3>
         <table cellpadding="10" cellspacing="0" border="1" style="border-collapse: collapse; width: 100%; font-size: 14px; border:1px solid #BAC3FF; font-family: Roboto Slab, sans-serif;">
@@ -260,15 +271,7 @@ def send_email():
                 </tr>
             </thead>
             <tbody>
-                {''.join([
-                    f"""
-                    <tr style="background-color: #fff;">
-                        <td style="padding: 8px; color:#00208E;">{pack['title']}</td>
-                        <td style="padding: 8px;color:#00208E;">&#8377;{pack['price']}</td>
-                        <td style="padding: 8px;color:#00208E;"><a href="{pack['url']}" style="color: #0033A0;  text-decoration: underline;">BUY NOW</a></td>
-                    </tr>
-                    """ for pack in care_packs
-                ])}
+                {rows}
             </tbody>
         </table>
         """
@@ -285,9 +288,9 @@ def send_email():
           <div style="background-color: #FBFBFF; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #d0dfff;">
             <h4 style="margin: 0 0 10px; color: #00115A;">User Details</h4>
             <table style="width: 100%; font-size: 14px;">
-              <tr><td style="padding: 4px 0;  color:#00115A;">Name</td><td>: {name}</td></tr>
-              <tr><td style="padding: 4px 0;  color:#00115A;">Email</td><td>: {email}</td></tr>
-              <tr><td style="padding: 4px 0;  color:#00115A;">Phone Number</td><td>: {number}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Name</td><td>: {name}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Email</td><td>: {email}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Phone Number</td><td>: {number}</td></tr>
             </table>
           </div>
 
@@ -299,7 +302,7 @@ def send_email():
               <tr><td style="padding: 4px 0; color:#00115A;">Start Date</td><td>: {result.get("start_date")}</td></tr>
               <tr><td style="padding: 4px 0; color:#00115A;">End Date</td><td>: {result.get("end_date")}</td></tr>
               <tr><td style="padding: 4px 0; color:#00115A;">Serial Number</td><td>: {result.get("serial")}</td></tr>
-              <tr><td style="padding: 4px 0; color:#00115A;;">Product Number</td><td>: {result.get("product_number")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Product Number</td><td>: {result.get("product_number")}</td></tr>
             </table>
           </div>
 
