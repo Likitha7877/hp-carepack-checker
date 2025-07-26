@@ -241,89 +241,107 @@ def send_email():
         if not (name and email and number and result):
             return jsonify({"message": "❌ Missing data"}), 400
 
-        # Check if any care pack title includes "post warranty"
         care_packs = result.get("care_packs", [])
         is_post_warranty = any("post warranty" in pack.get("title", "").lower() for pack in care_packs)
 
         if is_post_warranty:
-            warranty_message = f"""<p>The warranty will start from the date of purchase</p>"""
+            warranty_message = "<p>The warranty will start from the date of purchase.</p>"
         else:
-            warranty_message = f"""<p>The warranty will start from the date of expiry: <strong>{result.get("end_date")}</strong></p>"""
+            warranty_message = f"<p>The warranty will start from the date of expiry: <strong>{result.get('end_date')}</strong></p>"
 
-        html_content = f"""
-        <h2>Hi {name},</h2>
-        <p>Thank you for contacting <strong>ARM Infoserve India</strong>, the authorised HP Warranty Extension partner.</p>
-        <p>We are delighted to support you with the warranty extension of your <strong>{result.get("product_name")}</strong>.</p>
-        <hr />
-        <h3>HP Warranty Quotation</h3>
-        <p><strong>Name:</strong> {name}</p>
-        <p><strong>Mobile Number:</strong> {number}</p>
-        <p><strong>Serial Number:</strong> {result.get("serial")}</p>
-        <p><strong>Product Number:</strong> {result.get("product_number")}</p>
-        <p><strong>Warranty Start Date:</strong> {result.get("start_date")}</p>
-        <p><strong>Warranty End Date:</strong> {result.get("end_date")}</p>
-        <p><strong>Product Name:</strong> {result.get("product_name")}</p>
-        <p><strong>Status:</strong> {result.get("status")}</p>
-
-        <p><strong>Compatible Care Packs:</strong></p>
-        <table border="1" cellpadding="8" cellspacing="0">
-            <thead style="background-color: #0033A0; color: white; text-align:left">
-                <tr>
-                    <th>Product Name</th>
-                    <th>Serial Number</th>
-                    <th>Plan</th>
-                    <th>Price</th>
-                    <th>Buy Now</th>
+        care_pack_html = f"""
+        <h3 style="color: #1F48F0; font-size: 16px; margin-top: 30px;">Compatible Care Packs:</h3>
+        <table cellpadding="10" cellspacing="0" border="1" style="border-collapse: collapse; width: 100%; font-size: 14px; border:1px solid #BAC3FF; font-family: Roboto Slab, sans-serif;">
+            <thead>
+                <tr style="background-color: #F0EFFF; color: #0033A0; text-align: left;">
+                    <th style="padding: 8px;">Plan</th>
+                    <th style="padding: 8px;">Price</th>
+                    <th style="padding: 8px;">Buy Now</th>
                 </tr>
             </thead>
             <tbody>
                 {''.join([
-                    f"<tr><td>{result.get('product_name')}</td><td>{result.get('serial')}</td><td>{pack['title']}</td><td>₹{pack['price']}</td><td><a href='{pack['url']}'>Buy Now</a></td></tr>"
-                    for pack in care_packs
+                    f"""
+                    <tr style="background-color: #fff;">
+                        <td style="padding: 8px; color:#00208E;">{pack['title']}</td>
+                        <td style="padding: 8px;color:#00208E;">₹{pack['price']}</td>
+                        <td style="padding: 8px;color:#00208E;"><a href="{pack['url']}" style="color: #0033A0;  text-decoration: underline;">BUY NOW</a></td>
+                    </tr>
+                    """ for pack in care_packs
                 ])}
             </tbody>
         </table>
+        """
 
-        {warranty_message}
+        html_content = f"""
+        <div style="max-width: 700px; margin: auto; font-family: Roboto Slab, sans-serif; color: #000; line-height: 1.5; border: 1px solid #ddd; padding: 20px;">
+          <h3 style="margin-bottom: 5px;">Hi {name},</h3>
+          <p style="padding-bottom:8px;font-size:16px;font-family: Poppins,sans-serif">
+            Thank you for contacting <strong>ARM Infoserve India</strong>, the authorised HP Warranty Extension partner.<br>
+            We are delighted to support you with the warranty extension of your <strong>{result.get("product_name")}</strong>.
+          </p>
 
-        <h3>Terms and Conditions</h3>
-        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
-            <li>To avail ON-SITE support, please log a complaint at the HP Service Toll-free number <strong>18002587170</strong>.</li>
-            <li>The warranty extension covers all hardware parts except the battery, adapter, and physical damage (unless accidental damage protection is included).</li>
-            <li>In the case of accidental damage protection, physical damage is also covered except for battery and adapter.</li>
-            <li>Care Pack certificate will be issued by HP within <strong>2 to 3 days</strong> of order confirmation.</li>
-            <li>Full advance payment is required.</li>
-            <li>Pay in favour of <strong>ARM Infoserve India Pvt. Ltd.</strong></li>
-            <li>HP provides the warranty support.</li>
-        </ul>
+          <!-- User Details Block -->
+          <div style="background-color: #FBFBFF; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #d0dfff;">
+            <h4 style="margin: 0 0 10px; color: #00115A;">User Details</h4>
+            <table style="width: 100%; font-size: 14px;">
+              <tr><td style="padding: 4px 0;  color:#00115A;">Name</td><td>: {name}</td></tr>
+              <tr><td style="padding: 4px 0;  color:#00115A;">Email</td><td>: {email}</td></tr>
+              <tr><td style="padding: 4px 0;  color:#00115A;">Phone Number</td><td>: {number}</td></tr>
+            </table>
+          </div>
 
-        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
-            <li>Damage due to improper use, site conditions, or unauthorized maintenance is not covered.</li>
-            <li>Failures due to non-HP software or products are also excluded.</li>
-        </ul>
+          <!-- Warranty Info Block -->
+          <div style="background-color: #FBFBFF; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #ddd;">
+             <table style="width: 100%; font-size: 14px;">
+              <tr><td style="padding: 4px 0; color:#00115A;">Product Status</td><td>: {result.get("status")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Product Name</td><td>: {result.get("product_name")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Start Date</td><td>: {result.get("start_date")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">End Date</td><td>: {result.get("end_date")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;">Serial Number</td><td>: {result.get("serial")}</td></tr>
+              <tr><td style="padding: 4px 0; color:#00115A;;">Product Number</td><td>: {result.get("product_number")}</td></tr>
+            </table>
+          </div>
 
-        <p style="font-family: Arial, sans-serif;">
-            For questions, contact <strong>info@arminfoserve.com</strong> or <strong>9560207904</strong>.
-        </p>
+          {care_pack_html}
+          {warranty_message}
 
-        <h3>Alternative Payment Options:</h3>
-        <ul style="font-family: Arial, sans-serif; line-height: 1.6;">
-            <li>UPI/Cards/Netbanking: <a href="https://rzp.io/l/BHvzhDKEeb" target="_blank">https://rzp.io/l/BHvzhDKEeb</a></li>
-            <li><strong>Bank Transfer:</strong><br>
-                Bank: ICICI Bank<br>
-                Account Name: <strong>ARM INFOSERVE INDIA PVT. LTD.</strong><br>
-                Account No.: 054251000009<br>
-                Type: CURRENT ACCOUNT/OD ACCOUNT<br>
-                IFSC: ICIC0000542
-            </li>
-            <li><strong>UPI:</strong> MSARMINFOSERVEINDIAPVTLTD.eazypay@icici (QR Code attached)</li>
-        </ul>
+          <h3>Terms and Conditions</h3>
+          <ul style="font-family: Poppins, sans-serif; line-height: 1.6;">
+              <li>To avail ON-SITE support, please log a complaint at the HP Service Toll-free number <strong>18002587170</strong>.</li>
+              <li>The warranty extension covers all hardware parts except the battery, adapter, and physical damage (unless accidental damage protection is included).</li>
+              <li>In the case of accidental damage protection, physical damage is also covered except for battery and adapter.</li>
+              <li>Care Pack certificate will be issued by HP within <strong>2 to 3 days</strong> of order confirmation.</li>
+              <li>Full advance payment is required.</li>
+              <li>Pay in favour of <strong>ARM Infoserve India Pvt. Ltd.</strong></li>
+              <li>HP provides the warranty support.</li>
+              <li>Damage due to improper use, site conditions, or unauthorized maintenance is not covered.</li>
+              <li>Failures due to non-HP software or products are also excluded.</li>
+          </ul>
+
+          <p style="font-family: Roboto Slab, sans-serif;">
+              For questions, contact <strong>info@arminfoserve.com</strong> or <strong>9560207904</strong>.
+          </p>
+
+          <h3>Alternative Payment Options:</h3>
+          <ul style="font-family: Poppins, sans-serif; line-height: 1.6;">
+              <li>UPI/Cards/Netbanking: <a href="https://rzp.io/l/BHvzhDKEeb" target="_blank">https://rzp.io/l/BHvzhDKEeb</a></li>
+              <li><strong>Bank Transfer:</strong><br>
+                  Bank: ICICI Bank<br>
+                  Account Name: <strong>ARM INFOSERVE INDIA PVT. LTD.</strong><br>
+                  Account No.: 054251000009<br>
+                  Type: CURRENT ACCOUNT/OD ACCOUNT<br>
+                  IFSC: ICIC0000542
+              </li>
+              <li><strong>UPI:</strong> MSARMINFOSERVEINDIAPVTLTD.eazypay@icici (QR Code attached)</li>
+          </ul>
+        </div>
         """
 
         msg = Message(
             subject="Quotation for warranty extension.",
             recipients=[email],
-            cc=["aayushi@arminfoserve.com,abhay@arminfoserve.com"],
+            cc=["aayushi@arminfoserve.com", "abhay@arminfoserve.com"],
             html=html_content
         )
 
@@ -331,12 +349,9 @@ def send_email():
         base_dir = os.path.dirname(os.path.abspath(__file__))
         qr_path = os.path.join(base_dir, "static", "ARM QR Code.jpg")
 
-        print("QR Path:", qr_path)
         if os.path.exists(qr_path):
             with open(qr_path, "rb") as f:
-                content = f.read()
-                print("✅ QR File size:", len(content))
-                msg.attach("ARM QR Code.jpg", "image/jpeg", content)
+                msg.attach("ARM QR Code.jpg", "image/jpeg", f.read())
         else:
             print("❌ QR file not found")
 

@@ -755,7 +755,7 @@ html {
   <div id="compatible-packs" style="display: none; margin-top: 0;"></div>
   <section class="product-id-section">
   <div class="content-wrapper">
-    <h2>Find Your HP Serial Number</h2>
+    <h2>Find Your HP Product Number</h2>
     <p>Your HP device serial number is on the underside of your laptop, behind your desktop, or on the back of your printer.</p>
 
     <div class="product-id-grid">
@@ -970,7 +970,9 @@ window.latestWarrantyResult = { ...data, serial };
                   </a>
                 </h3>
                 <div class="price-cart">
-                  <p class="price">₹${pack.price ?? "—"}</p>
+                  <p class="price">
+  ${pack.part === "U9WX1E" ? "SELECT THE MODEL" : `₹${pack.price ?? "—"}`}
+</p>
                   <a class="buy-link" href="${pack.url}" target="_blank">
                     PROCEED TO BUY
                   </a>
@@ -981,82 +983,77 @@ window.latestWarrantyResult = { ...data, serial };
         </div>`;
         packsEl.innerHTML = carePackHTML;
       } else {
-        const productName = data.product_name || "This Product";
-        const eoslDate = data.eosl_date;
-        let daysToEOSL = null;
+    // ⏳ Step 2: EOSL & Post-Warranty Check
+    const productName = data.product_name || "This Product";
+    const eoslDate = data.eosl_date;
+    let daysToEOSL = null;
+    let showPostWarrantyHeading = false;
 
-        if (eoslDate && eoslDate !== "Unknown") {
-          const today = new Date();
-          const eosl = new Date(eoslDate.split("-").reverse().join("-")); // convert DD-MM-YYYY to YYYY-MM-DD
-          daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
-        }
+    // Parse EOSL date
+    // if (eoslDate && eoslDate !== "Unknown") {
+    //   const today = new Date();
+    //   const eosl = new Date(eoslDate.split("-").reverse().join("-"));
+    //   daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
+    // }
 
-        const actualServiceLevel = (data.actual_service_level || "").toLowerCase();
-        const showPostWarrantyHeading = actualServiceLevel.includes("next coverage day");
+    // 🚩 Match Post-Warranty Plan Active Rule
+    const actualServiceLevel = (data.actual_service_level || "").toLowerCase();
+    const hasNextCoverageDay = actualServiceLevel.includes("next coverage day");
+    const coverageType = (data.coverage_type || "").toLowerCase();
 
+    if (hasNextCoverageDay && coverageType === "care pack" && data.start_date && data.end_date) {
+      const start = new Date(data.start_date.split("-").reverse().join("-"));
+      const end = new Date(data.end_date.split("-").reverse().join("-"));
+      const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
 
-        // Case 1: EOSL is valid and more than 365 days left
-        console.log("✅ Debug Output:");
-        console.log("→ eoslDate:", eoslDate); // Should be "31-01-2028"
-        console.log("→ daysToEOSL:", daysToEOSL); // Should be > 365
-        console.log("→ actual_service_level:", actualServiceLevel); // Should include "next coverage day"
-        console.log("→ showPostWarrantyHeading:", showPostWarrantyHeading); // Should be true
-        console.log("🧪 actual_service_level from backend:", data.actual_service_level);
-
-
-        if (daysToEOSL !== null && daysToEOSL > 365) {
-          packsEl.innerHTML = `
-      <h1 class="reminder-heading">
-        ${showPostWarrantyHeading ? "Post Warranty Plan is Active" : "All Set For Now"}
-      </h1>
-      <div class="reminder-wrapper">
-  <div class="reminder-form-box">
-    <p>Nothing to see here, No products found for now.</p>
-    <p>But before you go, please share your details, so we can remind you to extend the warranty in time.</p>
-
-            <form id="reminder-form">
-              <input type="hidden" id="headingText" name="headingText" value="${showPostWarrantyHeading ? "Post Warranty Plan is Active" : "All Set For Now"}" />
-  <input type="text" id="name" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-  <input type="tel" id="phone" placeholder="Phone Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-  <input type="text" id="serialNum" placeholder="Serial Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
-  <button type="submit" id="submit-btn" style="width: 100%; padding: 14px; background-color: #1A45EF; color: white; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; letter-spacing: 1px;">SUBMIT</button>
-</form>
-<p id="email-status" style="font-family:Poppins; font-size:14px; margin-top: 8px;"></p>
-        </div>
-
-
-        <div class="reminder-image">
-    <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image">
-  </div>
-      </div>
-    `;
-
-          // Case 2 & 3: EOSL is missing or within 365 days
-        } else {
-          let eoslLine = '';
-          if (eoslDate) {
-            eoslLine = `
-      <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:16px 0px">
-        Unfortunately, your device <strong>${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
-      </p>
-    `;
-          }
-
-          packsEl.innerHTML = `
-    <div class="no-plan-wrapper">
-      <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
-      ${eoslLine}
-      <img src="https://arminfoserve.com/wp-content/uploads/2025/06/Group-1000003714.png" alt="Product Not Found" style="width: 329px; height: 240px; max-width: 100%; margin: 20px auto; display:grid" />
-      
-      <a href="https://wa.link/zpjo1y" target="_blank" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
-        Chat with us
-      </a>
-    </div>
-  `;
-        }
-
-
+      if (totalMonths >= 11 && totalMonths <= 13) {
+        showPostWarrantyHeading = true;
       }
+    }
+
+    // ✅ Case: Post Warranty Plan is Active
+    if (showPostWarrantyHeading) {
+      packsEl.innerHTML = `
+        <h1 class="reminder-heading">Post Warranty Plan is Active</h1>
+        <div class="reminder-wrapper">
+          <div class="reminder-form-box">
+            <p>No compatible plans available.</p>
+            <p>But before you go, please share your details so we can remind you to extend the warranty in time.</p>
+            <form id="reminder-form">
+              <input type="hidden" id="headingText" name="headingText" value="Post Warranty Plan is Active" />
+              <input type="text" id="name" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+              <input type="tel" id="phone" placeholder="Phone Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+              <input type="text" id="serialNum" placeholder="Serial Number" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
+              <button type="submit" id="submit-btn" style="width: 100%; padding: 14px; background-color: #1A45EF; color: white; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer;">SUBMIT</button>
+            </form>
+            <p id="email-status" style="font-family:Poppins; font-size:14px; margin-top: 8px;"></p>
+          </div>
+          <div class="reminder-image">
+            <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image">
+          </div>
+        </div>`;
+    } else {
+      // ❌ Case: EOSL expired or no match
+      let eoslLine = "";
+      if (eoslDate && daysToEOSL !== null && daysToEOSL <= 0) {
+        eoslLine = `
+          <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:16px 0px">
+            Unfortunately, your device <strong>${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
+          </p>`;
+      }
+
+      packsEl.innerHTML = `
+        <div class="no-plan-wrapper">
+          <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
+          ${eoslLine}
+          <img src="https://arminfoserve.com/wp-content/uploads/2025/06/Group-1000003714.png" alt="Product Not Found" style="width: 329px; height: 240px; max-width: 100%; margin: 20px auto; display:grid" />
+          <a href="https://wa.link/zpjo1y" target="_blank" style="display: grid; background-color: #1A45EF; color: #fff; font-weight: 500; font-family: 'Poppins', sans-serif; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 16px auto; width:360px;text-align:center;">
+            Chat with us
+          </a>
+        </div>`;
+    }
+  }
+
 
 
       // 2. Inject main result card
