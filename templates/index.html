@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HP Warranty Checker</title>
   <link
-   href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
-    
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap"
+    rel="stylesheet">
+
 
   <style>
     * {
@@ -389,329 +390,576 @@
     .no-plan-wrapper {
       width: 1140px;
     }
+
     .warranty-form {
-    background: #F3F4FE;
-    padding: 24px;
-    border-radius: 8px;
-  }
-  .product-id-section {
-  background-color: #F0EFFF;
-  padding: 40px 20px;
-  width: 100%;
-}
+      background: #F3F4FE;
+      padding: 24px;
+      border-radius: 8px;
+    }
 
-.content-wrapper {
-  max-width: 1140px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
+    .product-id-section {
+      background-color: #F0EFFF;
+      padding: 40px 20px;
+      width: 100%;
+    }
 
-.product-id-section h2{
-  font-size: 61px;
-  color: #333;
-  text-align: left;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 100;
-  line-height: normal;
-}
+    .content-wrapper {
+      max-width: 1140px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.product-id-section p {
-  font-size: 16px;
-  color: #555;
-  margin: 28px 0px;
-  text-align: left;
-    font-family: 'Roboto Slab', serif;
-color:#00115A;
-}
+    .product-id-section h2 {
+      font-size: 61px;
+      color: #333;
+      text-align: left;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 100;
+      line-height: normal;
+    }
 
-.product-id-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-}
+    .product-id-section p {
+      font-size: 16px;
+      color: #555;
+      margin: 28px 0px;
+      text-align: left;
+      font-family: 'Roboto Slab', serif;
+      color: #00115A;
+    }
 
-.product-id-box {
-  text-align: center;
-}
+    .product-id-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
 
-.product-id-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    .product-id-box {
+      text-align: center;
+    }
 
-.product-id-box h4 {
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-  text-align: left;
-  margin-bottom: 8px;
-  font-family: Poppins;
-}
-.carepack-header{
+    .product-id-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-id-box h4 {
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      text-align: left;
+      margin-bottom: 8px;
+      font-family: Poppins;
+    }
+
+    .carepack-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center !important;
+    }
+
+    .carepack-header h2 {
+      color: #1A45EF;
+      font-family: 'Roboto Slab', serif;
+      font-size: 48px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .reminder-heading {
+      color: #1A45EF;
+      font-family: 'Roboto Slab', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .reminder-wrapper {
+      display: flex;
+      align-items: center;
+      max-width: 1140px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 0px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .reminder-form-box {
+      flex: 0 0 60%;
+      padding: 24px;
+      border-radius: 8px;
+      background: #FBFBFF;
+      border: 1px solid #eee;
+      font-family: Poppins, sans-serif;
+    }
+
+    .reminder-form-box p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #00072E;
+      margin-bottom: 12px;
+    }
+
+    .reminder-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .reminder-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #result {
+      scroll-margin-top: 40px;
+    }
+
+    .container1 {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container1 h3 {
+      text-align: left;
+      color: #1a40ff;
+      font-size: 34px;
+      margin-bottom: 16px;
+      font-family: 'Poppins', serif;
+    }
+
+    .container-email {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .image-box {
+      flex: 1;
+      max-width: 260px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+    }
+
+    .form-box {
+      flex: 1;
+      max-width: 381px;
+      width: 100%;
+    }
+
+    .form-box input {
+      width: 100%;
+      margin-bottom: 16px;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 12px;
+      border: none;
+      background: #f0efff !important;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      font-family: 'Poppins', sans-serif;
+      background: #1a40ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0px;
+    }
+.skeleton-wrapper {
   display: flex;
-   justify-content: space-between;
-    align-items: center !important;
-}
-.carepack-header h2{
-  color: #1A45EF;
-   font-family: 'Roboto Slab', serif;
-    font-size:48px; 
-    font-weight:400;
-     margin: 0;
-}
-.reminder-heading {
-  color: #1A45EF;
-  font-family: 'Roboto Slab', serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.reminder-wrapper {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  max-width: 1140px;
+  padding: 0px 0px 16px 0px;
   width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 0px;
+    margin: 0px auto;
+
+}
+
+.skeleton-container {
+  width: 100%;
+  max-width: 1140px;
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 0px auto;
+  animation: pulse 1.5s infinite ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.skeleton-header {
+  display: flex;
+  align-items: flex-start;
   gap: 20px;
+  margin-bottom: 24px;
+}
+
+.skeleton-thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeleton-header-lines {
+  flex: 1;
+}
+
+.skeleton-line {
+  height: 20px;
+  background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.skeleton-line.short {
+  width: 70%;
+}
+
+.skeleton-line.xshort {
+  width: 40%;
+  height: 14px;
+}
+
+.skeleton-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
-.reminder-form-box {
-  flex: 0 0 60%;
-  padding: 24px;
+.skeleton-box {
+  flex: 1 1 22%;
+  height: 80px;
   border-radius: 8px;
-  background: #FBFBFF;
-  border: 1px solid #eee;
-  font-family: Poppins, sans-serif;
+  background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  min-width: 150px;
 }
 
-.reminder-form-box p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #00072E;
-  margin-bottom: 12px;
-}
-
-.reminder-image {
-  flex: 1;
-  text-align: center;
-}
-
-.reminder-image img {
-  max-width: 100%;
-  height: auto;
-}
-html {
-    scroll-behavior: smooth;
+/* Animation */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
   }
-
-  #result {
-    scroll-margin-top: 40px;
+  100% {
+    background-position: -200% 0;
   }
-
+}
 
 
     @media (max-width: 480px) {
       .container {
-      flex-direction: column; /* stack items vertically */
-      align-items: center;
-      background-color: #F0EFFF;
-      padding: 21px;
-      border-radius: 0px !important;
-    }
-    .form-section h2 {
-      color: #1a40ff;
-      font-size: 26px;
-      font-family: 'Roboto Slab', serif;
-      margin-bottom: 16px;
-      font-weight: 400;
-    }
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        background-color: #F0EFFF;
+        padding: 21px;
+        border-radius: 0px !important;
+      }
 
-    .form-section,
-    .image-section {
-      width: 100%; /* take full width */
-    }
-     .warranty-form {
-    background:none;
-    padding: 0;
-    border-radius: 0px;
-  }
+      .form-section h2 {
+        color: #1a40ff;
+        font-size: 26px;
+        font-family: 'Roboto Slab', serif;
+        margin-bottom: 16px;
+        font-weight: 400;
+      }
 
-    .form-section {
-     
-      order: 2; /* form appears below */
-    }
+      .form-section,
+      .image-section {
+        width: 100%;
+        /* take full width */
+      }
 
-    .image-section {
-      order: 1; /* image appears on top */
-    }
-    .product-info-flex{
-      padding:0 !important;
-      display: block;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    padding: 16px;
-    width: 100%;
-    background-color: white;
-    }
-    .product-serial-flex {
-      display: block;
-    }
-    .product-text{
-      width:100%;
-    }
-    .care-pack-wrapper{
-      width:100%;
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .product-image{
-      width: 100%;
-     
-    }
-    .product-image img{
-       width: 318px;
-      height:238px;
-      display: block;
-      margin:0px auto;
+      .warranty-form {
+        background: none;
+        padding: 0;
+        border-radius: 0px;
+      }
 
-    }
-    #result{
-      padding:21px;
-      margin: 0px;
-    }
-    .warranty-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 0px;
-}
-.box {
-  width: calc(50% - 10px); /* two boxes per row with gap */
-  background: #eef;
-  padding: 16px;
-  box-sizing: border-box;
-  flex: none;
-}
-.box .blue{
-    color: #1F48F0;
-    font-weight: 600;
-    font-family: 'Roboto Slab', serif;
-    font-size: 14px;
-}
-.box p {
-    margin: 0;
-    font-size: 12px;
-    color: #00115A;
-    font-family: 'poppins', serif;
-}
-#compatible-packs{
-  padding: 21px;
-  width:100%;
-  background-color: #FBFBFF;
-}
-  .product-id-section {
-    padding: 30px 16px;
-    background-color: #F0EFFF;
-  }
+      .form-section {
 
-  .product-id-section h2 {
-    font-size: 24px;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
+        order: 2;
+        /* form appears below */
+      }
 
-  .product-id-section p {
-    font-size: 14px;
-    margin: 16px 0px;
-  }
+      .image-section {
+        order: 1;
+        /* image appears on top */
+      }
 
-  .product-id-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 20px;
-  }
+      .product-info-flex {
+        padding: 0 !important;
+        display: block;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+        background-color: white;
+      }
 
-  .product-id-box img {
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
+      .product-serial-flex {
+        display: block;
+      }
 
-  .product-id-box h4 {
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  .carepack-header{
-  display: flex;
-  flex-direction: column;
-   justify-content: space-between;
-    align-items: unset !important;
-}
-.carepack-header h2{
-  color: #1A45EF;
-   font-family: 'Roboto Slab', serif;
-    font-size:26px; 
-    font-weight:400;
-     margin: 0;
-}
-.reminder-wrapper {
-    flex-direction: column;
-    margin: 0px !important;
-    gap:0px
-  }
+      .product-text {
+        width: 100%;
+      }
 
-  .reminder-form-box, .reminder-image {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+      .care-pack-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+      }
 
-  .reminder-heading {
-    font-size: 24px;
-    text-align: left;
-  }
+      .product-image {
+        width: 100%;
 
-  .reminder-form-box p {
-    font-size: 14px;
-  }
-   #openModalBtn {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100% !important;
-    border-radius: 0;
-    padding: 16px;
-    font-size: 16px;
-    z-index: 9999;
-    text-align: center;
-    font-family: poppins !important;
-  }
- html {
-    scroll-behavior: smooth;
-  }
+      }
 
-  #result {
-    scroll-margin-top: 40px;
-  }
-  
+      .product-image img {
+        width: 318px;
+        height: 238px;
+        display: block;
+        margin: 0px auto;
 
-  
+      }
+
+      #result {
+        padding: 21px;
+        margin: 0px;
+      }
+
+      .warranty-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 0px;
+      }
+
+      .box {
+        width: calc(50% - 10px);
+        /* two boxes per row with gap */
+        background: #eef;
+        padding: 16px;
+        box-sizing: border-box;
+        flex: none;
+      }
+
+      .box .blue {
+        color: #1F48F0;
+        font-weight: 600;
+        font-family: 'Roboto Slab', serif;
+        font-size: 14px;
+      }
+
+      .box p {
+        margin: 0;
+        font-size: 12px;
+        color: #00115A;
+        font-family: 'poppins', serif;
+      }
+
+      #compatible-packs {
+        padding: 21px;
+        width: 100%;
+        background-color: #FBFBFF;
+      }
+
+      .product-id-section {
+        padding: 30px 16px;
+        background-color: #F0EFFF;
+      }
+
+      .product-id-section h2 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+      }
+
+      .product-id-section p {
+        font-size: 14px;
+        margin: 16px 0px;
+      }
+
+      .product-id-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on mobile */
+        gap: 20px;
+      }
+
+      .product-id-box img {
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .product-id-box h4 {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
+      .carepack-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: unset !important;
+      }
+
+      .carepack-header h2 {
+        color: #1A45EF;
+        font-family: 'Roboto Slab', serif;
+        font-size: 26px;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .reminder-wrapper {
+        flex-direction: column;
+        margin: 0px !important;
+        gap: 0px
+      }
+
+      .reminder-form-box,
+      .reminder-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .reminder-heading {
+        font-size: 24px;
+        text-align: left;
+      }
+
+      .reminder-form-box p {
+        font-size: 14px;
+      }
+
+      #openModalBtn {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100% !important;
+        border-radius: 0;
+        padding: 16px;
+        font-size: 16px;
+        z-index: 9999;
+        text-align: center;
+        font-family: poppins !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #result {
+        scroll-margin-top: 40px;
+      }
+
+      .no-plan-wrapper {
+        width: auto;
+      }
+
+      .container1 {
+        max-width: 318px;
+        margin: auto;
+      }
+
+      .container1 h3 {
+        text-align: left;
+        color: #1a40ff;
+        font-size: 27px;
+        margin-bottom: 16px;
+        font-family: 'Poppins', serif;
+      }
+
+      .container-email {
+        gap: 20px;
+        display: block;
+
+      }
+
+      .image-box {
+        flex: 1;
+        max-width: 260px;
+        margin: 0px auto;
+      }
+
+      .image-box img {
+        width: 100%;
+        height: auto;
+      }
+
+      .form-box {
+        flex: 1;
+        max-width: 381px;
+        width: 100%;
+      }
+
+      .form-box input {
+        width: 100%;
+        margin-bottom: 16px !important;
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 12px;
+        border: none;
+        background: #f0efff !important;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .form-box button {
+        width: 100%;
+        padding: 12px;
+        font-family: 'Poppins', sans-serif;
+        background: #1a40ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0px;
+      }
+
+
+
     }
   </style>
 </head>
 
 <body>
-  
+
   <div class="container">
     <div class="form-section">
       <h2>Check your Warranty</h2>
-      <form class="warranty-form"
-        onsubmit="event.preventDefault(); checkWarranty();">
+      <form class="warranty-form" onsubmit="event.preventDefault(); checkWarranty();">
         <label>Enter Your HP Device Serial Number</label>
 
         <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
@@ -734,13 +982,12 @@ html {
           ">
         </div>
 
-        <button type="submit">Show Warranty Plans</button>
-<a href="https://arminfoserve.com/care-pack-product/"
- target="_blank"
-   style="display: block; font-size: 14px;font-weight: 500;font-family: poppins; text-decoration: none; margin: 8px auto 0; color: #1F48F0; text-align: center;">
-  I dont have serial number
-</a>
-        <div id="loader" style="display:none;">🔍 Checking warranty… Please wait.</div>
+        <button type="submit" id="submitBtn">Show Warranty Plans</button>
+        <a href="https://arminfoserve.com/care-pack-product/" target="_blank"
+          style="display: block; font-size: 14px;font-weight: 500;font-family: poppins; text-decoration: none; margin: 8px auto 0; color: #1F48F0; text-align: center;">
+          I dont have serial number
+        </a>
+        <!-- <div id="loader" style="display:none;">🔍 Checking warranty… Please wait.</div> -->
       </form>
     </div>
 
@@ -749,196 +996,277 @@ html {
         alt="Warranty Check Illustration">
     </div>
   </div>
+ <div id="loader" class="skeleton-wrapper" style="display: none;">
+  <div class="skeleton-container">
+    <div class="skeleton-header">
+      <div class="skeleton-thumbnail"></div>
+      <div class="skeleton-header-lines">
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line xshort"></div>
+        <div class="skeleton-line xshort"></div>
+      </div>
+    </div>
+    <div class="skeleton-line"></div>
+    <div class="skeleton-grid">
+      <div class="skeleton-box"></div>
+      <div class="skeleton-box"></div>
+      <div class="skeleton-box"></div>
+      <div class="skeleton-box"></div>
+    </div>
+  </div>
+</div>
+
+
+  
 
   <!-- Warranty Result Output Below Container -->
   <div id="result" style="display: none; margin-top: 0;"></div>
   <div id="compatible-packs" style="display: none; margin-top: 0;"></div>
   <section class="product-id-section">
-  <div class="content-wrapper">
-    <h2>Find Your HP Product Number</h2>
-    <p>Your HP device serial number is on the underside of your laptop, behind your desktop, or on the back of your printer.</p>
+    <div class="content-wrapper">
+      <h2>Find Your HP Product Number</h2>
+      <p>Your HP device serial number is on the underside of your laptop, behind your desktop, or on the back of your
+        printer.</p>
 
-    <div class="product-id-grid">
-      <div class="product-id-box">
-        <h4>Laptop Product ID</h4>
-        <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482389.png" alt="Laptop Product ID">
-      </div>
-      <div class="product-id-box">
-        <h4>Desktop Product ID</h4>
-        <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482390.png" alt="Desktop Product ID">
-      </div>
-      <div class="product-id-box">
-        <h4>Monitor Product ID</h4>
-        <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482391.png" alt="Monitor Product ID">
-      </div>
-      <div class="product-id-box">
-        <h4>Printer Product ID</h4>
-        <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482392.png" alt="Printer Product ID">
+      <div class="product-id-grid">
+        <div class="product-id-box">
+          <h4>Laptop Product ID</h4>
+          <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482389.png" alt="Laptop Product ID">
+        </div>
+        <div class="product-id-box">
+          <h4>Desktop Product ID</h4>
+          <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482390.png" alt="Desktop Product ID">
+        </div>
+        <div class="product-id-box">
+          <h4>Monitor Product ID</h4>
+          <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482391.png" alt="Monitor Product ID">
+        </div>
+        <div class="product-id-box">
+          <h4>Printer Product ID</h4>
+          <img src="https://arminfoserve.com/wp-content/uploads/2024/10/Group-482392.png" alt="Printer Product ID">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div id="emailModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
   background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:9999;">
-  <div style="background:white;font-family:poppins; padding:20px; width:300px; border-radius:8px; position:relative; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-    <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:18px;">✖</span>
-    <h3 style="margin-bottom:20px;">Send details to my email</h3>
-    <input type="text" id="name" placeholder="Your Name"
-      style="width:100%;font-family: poppins; margin-bottom:16px;font-size: 14px; border-radius:5px; padding:10px; border:none; background:#ebefff !important; box-sizing:border-box;" />
-    <input type="tel" id="number" placeholder="Your Number"
-      style="width:100%; margin-bottom:16px;font-size:14px; border-radius:5px; padding:10px; border:none; background:#ebefff !important; box-sizing:border-box;" />
-        
-    <input type="email" id="email" placeholder="Your Email"
-      style="width:100%; margin-bottom:16px;font-size: 14px; border-radius:5px; padding:10px; border:none; background:#ebefff; box-sizing:border-box;font-family:poppins" />
-    <button onclick="sendReport()"
-      style="width:100%; padding:10px;font-family:Poppins; background:#1a40ff; color:white; border:none; border-radius:5px; cursor:pointer;">
-      Send!
-    </button>
+    <div
+      style="background:white;font-family:poppins; padding:20px; border-radius:8px; position:relative; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      <span onclick="closeModal()"
+        style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:18px;">✖</span>
+      <div class="container1">
+        <h3>Send details to my email</h3>
+
+        <div class="container-email">
+
+          <div class="image-box">
+            <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Group-1116599938.png"
+              alt="Laptop illustration">
+          </div>
+
+          <div class="form-box">
+            <input type="text" id="name" placeholder="Name">
+            <input type="tel" id="number" placeholder="Phone Number">
+            <input type="email" id="email" placeholder="Email Address">
+            <button onclick="sendReport()">Send!</button>
+          </div>
+
+        </div>
+
+
+
+        <script>
+          function sendReport() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const number = document.getElementById("number").value;
+            const result = window.latestWarrantyResult;
+
+            if (!name || !email || !result) {
+              alert("❌ Please fill all fields and run a warranty check first.");
+              return;
+            }
+
+            console.log("📨 Sending report:", { name, email, result }); // Optional debug
+
+            fetch("/send_email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, number, result })
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                alert(data.message);
+                closeModal();
+              })
+              .catch(() => alert("❌ Failed to send email"));
+          }
+          function getU9WX1EPrice(productName, productNumber) {
+            const name = (productName || productNumber || "").toLowerCase();
+
+            if (name.includes("spectre")) return "₹18,500";
+            if (name.includes("omen") || name.includes("envy")) return "₹12,500";
+            if (name.includes("pavilion") || name.includes("victus")) return "₹10,500";
+            if (name.includes("14") || name.includes("15") || name.includes("chromebook")) return "₹8,500";
+
+            return "SELECT THE MODEL";
+          }
+
+
+
+          let latestResult = null; // store latest result
+
+
+          function openModal() {
+            document.getElementById("emailModal").style.display = "flex";
+          }
+
+          function closeModal() {
+            document.getElementById("emailModal").style.display = "none";
+          }
+
+          // Event delegation since button is dynamically injected
+          document.addEventListener("click", function (e) {
+            if (e.target && e.target.id === "openModalBtn") {
+              openModal();
+            }
+          });
+
+          function checkWarranty() {
+            const serial = document.getElementById('serial').value.trim();
+            const product = document.getElementById('product').value.trim();
+            const button = document.getElementById("submitBtn");
+    // button.disabled = true;
+
+    // // Change color on submit
+    // button.style.backgroundColor = "#E5E2E1";
+    // button.style.color = "#ADAAAA";
+    // button.textContent = "Checking...";
+
+    // Simulate request delay (remove this when integrating with real function)
     
+  
 
-</div>
+            // Add your validation or AJAX logic here.
+            console.log('Checking for', serial, product);
+          }
+          function getTagClass(tag) {
+            switch ((tag || "").toLowerCase()) {
+              case "essentials": return "tag-essentials";
+              case "smart pick": return "tag-smart";
+              case "customer favourite": return "tag-customer";
+              default: return "";
+            }
+          }
 
 
 
-  <script>
-  function sendReport() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const number = document.getElementById("number").value;
-  const result = window.latestWarrantyResult;
+          async function submitForm(event) {
+  event.preventDefault();
 
-  if (!name || !email || !result) {
-    alert("❌ Please fill all fields and run a warranty check first.");
+  const loader = document.getElementById("loader");
+  const resultEl = document.getElementById("result");
+  const packsEl = document.getElementById("compatible-packs");
+  const errorEl = document.getElementById("serial-error");
+  const button = document.getElementById("submitBtn");
+
+  // 👉 Button loading state
+  button.disabled = true;
+  button.style.backgroundColor = "#E5E2E1";
+  button.style.color = "#6F797A";
+  // button.textContent = "Checking..."; // Optional
+
+  loader.style.display = "block";
+  resultEl.innerHTML = "";
+  packsEl.innerHTML = "";
+  errorEl.innerHTML = "";
+
+  const serial = document.getElementById("serial").value.trim();
+  const product = document.getElementById("product").value.trim();
+  const serialRegex = /^[A-Za-z0-9]{10}$/;
+
+  if (!serialRegex.test(serial)) {
+    loader.style.display = "none";
+    errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+      Verify that your serial number is entered correctly.
+    </p>`;
+
+    // 👉 Reset button if validation fails
+    button.disabled = false;
+    button.style.backgroundColor = ""; // reset to original
+    button.style.color = ""; // reset to original
     return;
   }
 
-  console.log("📨 Sending report:", { name, email, result }); // Optional debug
+  try {
+    const resp = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ serial, product })
+    });
 
-  fetch("/send_email", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email,number, result })
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert(data.message);
-      closeModal();
-    })
-    .catch(() => alert("❌ Failed to send email"));
-}
+    if (!resp.ok) throw new Error(await resp.text());
+    const data = await resp.json();
+    loader.style.display = "none";
 
+    if (data.error) {
+      if (data.error.toLowerCase().includes("product number")) {
+        document.getElementById("product-container").style.display = "block";
+      }
 
-let latestResult = null; // store latest result
-
-
-function openModal() {
-  document.getElementById("emailModal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("emailModal").style.display = "none";
-}
-
-// Event delegation since button is dynamically injected
-document.addEventListener("click", function(e) {
-  if (e.target && e.target.id === "openModalBtn") {
-    openModal();
+      errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+        ${data.error}
+      </p>`;
+    } else {
+      renderResult(data, serial);
+    }
+  } catch (err) {
+    loader.style.display = "none";
+    errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
+      Something went wrong: ${err.message}
+    </p>`;
+  } finally {
+    // 👉 Reset button state after everything
+    button.disabled = false;
+    button.style.backgroundColor = ""; // Or original like "#1F48F0"
+    button.style.color = ""; // Or original like "#fff"
+    // button.textContent = "Show Warranty Plans"; // Optional if you had changed it
   }
-});
 
-    function checkWarranty() {
-      const serial = document.getElementById('serial').value.trim();
-      const product = document.getElementById('product').value.trim();
+  document.getElementById("result").style.display = "block";
+  document.getElementById("compatible-packs").style.display = "block";
 
-      // Add your validation or AJAX logic here.
-      console.log('Checking for', serial, product);
-    }
-    function getTagClass(tag) {
-      switch ((tag || "").toLowerCase()) {
-        case "essentials": return "tag-essentials";
-        case "smart pick": return "tag-smart";
-        case "customer favourite": return "tag-customer";
-        default: return "";
-      }
-    }
-    
-    
+  const resultSection = document.getElementById("result");
+  if (resultSection) {
+    resultSection.scrollIntoView({ behavior: "smooth" });
+  }
 
-    async function submitForm(event) {
-      event.preventDefault();
-      const loader = document.getElementById("loader");
-      const resultEl = document.getElementById("result");
-      const packsEl = document.getElementById("compatible-packs");
-      const errorEl = document.getElementById("serial-error");
-      loader.style.display = "block";
-      resultEl.innerHTML = "";
-      packsEl.innerHTML = "";
-      errorEl.innerHTML = "";
 
-      const serial = document.getElementById("serial").value.trim();
-      const product = document.getElementById("product").value.trim();
-      const serialRegex = /^[A-Za-z0-9]{10}$/;
-      if (!serialRegex.test(serial)) {
-        loader.style.display = "none";
-        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
-        Verify that your serial number is entered correctly.
-      </p>`;
-        return;
-      }
-
-      try {
-        const resp = await fetch(
-          "/",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ serial, product })
+            document.getElementById("compatible-packs").style.marginTop = "0px"; // only if neede
           }
-        );
-        if (!resp.ok) throw new Error(await resp.text());
-        const data = await resp.json();
-        loader.style.display = "none";
-
-        if (data.error) {
-          if (data.error.toLowerCase().includes("product number")) {
-            document.getElementById("product-container").style.display = "block";
-          }
-          errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
-          ${data.error}
-        </p>`;
-        } else {
-          renderResult(data, serial);
-        }
-      } catch (err) {
-        loader.style.display = "none";
-        errorEl.innerHTML = `<p style="color:#FF5544;font-size:10px">
-        Something went wrong: ${err.message}
-      </p>`;
-      }
-      document.getElementById("result").style.display = "block";
-document.getElementById("compatible-packs").style.display = "block";
-
-// ✅ Scroll smoothly to result section
-const resultSection = document.getElementById("result");
-if (resultSection) {
-  resultSection.scrollIntoView({ behavior: "smooth" });
-}
-  document.getElementById("compatible-packs").style.marginTop = "0px"; // only if neede
-    }
 
 
-    function renderResult(data, serial) {
-window.latestWarrantyResult = { ...data, serial };
+          function renderResult(data, serial) {
+            window.latestWarrantyResult = { ...data, serial };
 
 
-      const resultEl = document.getElementById("result");
-      const packsEl = document.getElementById("compatible-packs");
+            const resultEl = document.getElementById("result");
+            const packsEl = document.getElementById("compatible-packs");
+            // 💡 Helper: Dynamic pricing for U9WX1E
+            // function getU9WX1EPrice(productName) {
+            //   const name = (productName || "").toLowerCase();
+            //   if (name.includes("spectre")) return "₹12,500";
+            //   if (name.includes("omen") || name.includes("envy")) return "₹10,500";
+            //   if (name.includes("pavilion") || name.includes("victus")) return "₹9,500";
+            //   if (name.includes("14") || name.includes("15") || name.includes("chromebook")) return "₹8,599";
+            //   return "SELECT THE MODEL";
+            // }
 
 
-      // 1. Inject compatible care packs
-      if (data.care_packs && data.care_packs.length) {
-        const carePackHTML = `
+            // 1. Inject compatible care packs
+            if (data.care_packs && data.care_packs.length) {
+              const carePackHTML = `
 
 
 <div class="carepack-header">
@@ -946,21 +1274,21 @@ window.latestWarrantyResult = { ...data, serial };
     Compatible Care Packs
   </h2>
   <button id="openModalBtn"
-    style="padding: 10px 20px;width:auto; background: #1a40ff;font-family: 'Roboto Slab', serif; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    style="padding: 10px 20px;width:auto; background: #1a40ff;font-family: 'Poppins', serif; color: white; border: none; border-radius: 5px; cursor: pointer;">
     Send details to my email
   </button>
 </div>
         <div class="care-pack-wrapper">
           ${data.care_packs
-            .map(pack => `
+                  .map(pack => `
               <div class="care-pack-card">
                 <div class="img-wrapper">
                   ${pack.tag
-                ? `<div class="tag-label ${getTagClass(pack.tag)}">
+                      ? `<div class="tag-label ${getTagClass(pack.tag)}">
                            ${pack.tag}
                          </div>`
-                : ""
-              }
+                      : ""
+                    }
                   <img src="${pack.image}" alt="${pack.title}" />
                 </div>
                 <p class="sku">SKU: ${pack.part}</p>
@@ -970,55 +1298,69 @@ window.latestWarrantyResult = { ...data, serial };
                   </a>
                 </h3>
                 <div class="price-cart">
-                  <p class="price">
-  ${pack.part === "U9WX1E" ? "SELECT THE MODEL" : `₹${pack.price ?? "—"}`}
-</p>
+<p class="price">
+${pack.part === "U9WX1E"
+                      ? getU9WX1EPrice(data.product_name, data.product_number)
+                      : `₹${pack.price ?? "—"}`}
+        </p>
                   <a class="buy-link" href="${pack.url}" target="_blank">
                     PROCEED TO BUY
                   </a>
                 </div>
               </div>
             `)
-            .join("")}
+                  .join("")}
         </div>`;
-        packsEl.innerHTML = carePackHTML;
-      } else {
-    // ⏳ Step 2: EOSL & Post-Warranty Check
-    const productName = data.product_name || "This Product";
-    const eoslDate = data.eosl_date;
-    let daysToEOSL = null;
-    let showPostWarrantyHeading = false;
+              packsEl.innerHTML = carePackHTML;
+            } else {
+              const productName = data.product_name || "This Product";
+              const eoslDate = data.eosl_date;
+              let daysToEOSL = null;
+              let showPostWarrantyHeading = false;
+              let showAllSetForNowForm = false;
 
-    // Parse EOSL date
-    // if (eoslDate && eoslDate !== "Unknown") {
-    //   const today = new Date();
-    //   const eosl = new Date(eoslDate.split("-").reverse().join("-"));
-    //   daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
-    // }
+              // ✅ Parse EOSL date and calculate days
+              if (eoslDate && eoslDate !== "Unknown") {
+                const today = new Date();
+                const eosl = new Date(eoslDate.split("-").reverse().join("-"));
+                daysToEOSL = Math.floor((eosl - today) / (1000 * 60 * 60 * 24));
+              }
 
-    // 🚩 Match Post-Warranty Plan Active Rule
-    const actualServiceLevel = (data.actual_service_level || "").toLowerCase();
-    const hasNextCoverageDay = actualServiceLevel.includes("next coverage day");
-    const coverageType = (data.coverage_type || "").toLowerCase();
+              // ✅ Check Post-Warranty Active Rule
+              const actualServiceLevel = (data.actual_service_level || "").toLowerCase();
+              const hasNextCoverageDay = actualServiceLevel.includes("next coverage day");
+              const coverageType = (data.coverage_type || "").toLowerCase();
 
-    if (hasNextCoverageDay && coverageType === "care pack" && data.start_date && data.end_date) {
-      const start = new Date(data.start_date.split("-").reverse().join("-"));
-      const end = new Date(data.end_date.split("-").reverse().join("-"));
-      const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+              if (hasNextCoverageDay && coverageType === "care pack" && data.start_date && data.end_date) {
+                const start = new Date(data.start_date.split("-").reverse().join("-"));
+                const end = new Date(data.end_date.split("-").reverse().join("-"));
+                const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
 
-      if (totalMonths >= 11 && totalMonths <= 13) {
-        showPostWarrantyHeading = true;
-      }
-    }
+                if (totalMonths >= 11 && totalMonths <= 13) {
+                  showPostWarrantyHeading = true;
+                }
+              }
 
-    // ✅ Case: Post Warranty Plan is Active
-    if (showPostWarrantyHeading) {
-      packsEl.innerHTML = `
-        <h1 class="reminder-heading">Post Warranty Plan is Active</h1>
-        <div class="reminder-wrapper">
-          <div class="reminder-form-box">
-            <p>No compatible plans available.</p>
-            <p>But before you go, please share your details so we can remind you to extend the warranty in time.</p>
+              // ✅ Check EOSL future condition (> 90 days)
+              if (!showPostWarrantyHeading && eoslDate && eoslDate !== "Unknown" && daysToEOSL > 90) {
+                showAllSetForNowForm = true;
+              }
+
+
+
+              // ✅ Case: Post Warranty Plan is Active
+              if (showPostWarrantyHeading || showAllSetForNowForm) {
+                const headingText = showPostWarrantyHeading
+                  ? "Post Warranty Plan is Active"
+                  : "All Set For Now";
+                packsEl.innerHTML = `
+        <h1 style="color:#1A45EF; font-family:'Roboto Slab', serif; font-size:36px; margin-bottom:20px;">
+        ${showPostWarrantyHeading ? "Post Warranty Plan is Active" : "All Set For Now"}
+      </h1>
+      <div style="display: flex; align-items: center; max-width: 1140px; width: 100%; border-radius: 10px; overflow: hidden; margin-top: 30px; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 0 0 60%; padding: 24px; border-radius: 8px; background:#FBFBFF; border: 1px solid #eee;">
+          <p style="font-family:Poppins;font-size:16px; line-height: 1.5; color: #00072E;">Nothing to see here, No products found for now.</p>
+          <p style="font-family:Poppins;margin-bottom:16px; line-height: 1.5; color: #00072E;font-size:16px;">But before you go, please share your details, so we can remind you to extend the warranty in time.</p>
             <form id="reminder-form">
               <input type="hidden" id="headingText" name="headingText" value="Post Warranty Plan is Active" />
               <input type="text" id="name" placeholder="Name" required style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;" />
@@ -1032,17 +1374,17 @@ window.latestWarrantyResult = { ...data, serial };
             <img src="https://arminfoserve.com/wp-content/uploads/2025/07/Webinar-rafiki-1.png" alt="Reminder Image">
           </div>
         </div>`;
-    } else {
-      // ❌ Case: EOSL expired or no match
-      let eoslLine = "";
-      if (eoslDate && daysToEOSL !== null && daysToEOSL <= 0) {
-        eoslLine = `
+              } else {
+                // ❌ Case: EOSL expired or no match
+                let eoslLine = "";
+                if (eoslDate && daysToEOSL !== null && daysToEOSL <= 0) {
+                  eoslLine = `
           <p style="font-family: 'Poppins', sans-serif; font-size: 14px; text-align:left; padding:16px 0px">
             Unfortunately, your device <strong>${productName}</strong> reached End-of-Support-Life on <strong>${eoslDate}</strong> and is no longer eligible for a warranty extension.
           </p>`;
-      }
+                }
 
-      packsEl.innerHTML = `
+                packsEl.innerHTML = `
         <div class="no-plan-wrapper">
           <h2 style="color: #1A45EF; font-family: 'Roboto Slab', serif; font-size: 36px;">No Products found</h2>
           ${eoslLine}
@@ -1051,42 +1393,42 @@ window.latestWarrantyResult = { ...data, serial };
             Chat with us
           </a>
         </div>`;
-    }
-  }
+              }
+            }
 
 
 
-      // 2. Inject main result card
-      resultEl.innerHTML = `
+            // 2. Inject main result card
+            resultEl.innerHTML = `
       <div class="result-card">
         <div class="product-info-flex">
           <div class="product-image">
             ${data.image_url
-          ? `<img src="${data.image_url}" alt="${data.product_name}"
+                ? `<img src="${data.image_url}" alt="${data.product_name}"
                      />`
-          : ""
-        }
+                : ""
+              }
           </div>
           <div class="product-text">
           <h2>${data.product_name}</h2>
           <div class="product-serial-flex">
-<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
+<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
 
 
-            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number:<span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
+            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
 
 
 
 
           </div>
           <div class="status-box ${data.status === 'Active' ? 'status-active-border'
-          : data.status === 'Coverage expiring' ? 'status-expiring-border'
-            : 'status-expired-border'}">
+                : data.status === 'Coverage expiring' ? 'status-expiring-border'
+                  : 'status-expired-border'}">
             <p><strong><span class="${data.status === 'Active' ? 'status-active'
-          : data.status === 'Coverage expiring' ? 'status-expiring'
-            : 'status-expired'}">Status:</span> – <span class="${data.status === 'Active' ? 'status-active'
-              : data.status === 'Coverage expiring' ? 'status-expiring'
-                : 'status-expired'}">${data.status}</span></strong></p>
+                : data.status === 'Coverage expiring' ? 'status-expiring'
+                  : 'status-expired'}">Status:</span> <span class="${data.status === 'Active' ? 'status-active'
+                    : data.status === 'Coverage expiring' ? 'status-expiring'
+                      : 'status-expired'}">${data.status}</span></strong></p>
             <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
   <strong>Add-on –</strong> ${data.addon}
 </p>
@@ -1116,73 +1458,73 @@ window.latestWarrantyResult = { ...data, serial };
           </div>
         </div>
       </div>`;
-    }
+          }
 
 
 
-    document
-      .querySelector("form")
-      .addEventListener("submit", submitForm);
-    document.addEventListener("DOMContentLoaded", () => {
-      const parent = document.querySelector("#compatible-packs");
+          document
+            .querySelector("form")
+            .addEventListener("submit", submitForm);
+          document.addEventListener("DOMContentLoaded", () => {
+            const parent = document.querySelector("#compatible-packs");
 
-      if (!parent) return;
+            if (!parent) return;
 
-      const formObserver = new MutationObserver(() => {
-        const heading = parent.querySelector("h1")?.innerText.trim();
-        const form = document.querySelector("#reminder-form");
+            const formObserver = new MutationObserver(() => {
+              const heading = parent.querySelector("h1")?.innerText.trim();
+              const form = document.querySelector("#reminder-form");
 
-        if (
-          form &&
-          (heading === "Post Warranty Plan is Active" || heading === "All Set For Now") &&
-          !form.dataset.listenerAttached
-        ) {
-          form.dataset.listenerAttached = "true";
+              if (
+                form &&
+                (heading === "Post Warranty Plan is Active" || heading === "All Set For Now") &&
+                !form.dataset.listenerAttached
+              ) {
+                form.dataset.listenerAttached = "true";
 
-          form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            const headingText = document.getElementById("headingText")?.value.trim();
+                form.addEventListener("submit", async function (e) {
+                  e.preventDefault();
+                  const headingText = document.getElementById("headingText")?.value.trim();
 
 
-            const name = document.getElementById("name")?.value.trim();
-            const phone = document.getElementById("phone")?.value.trim();
-            const serial = document.getElementById("serialNum")?.value.trim();
-            const submitBtn = document.getElementById("submit-btn");
-            const statusMsg = document.getElementById("email-status");
+                  const name = document.getElementById("name")?.value.trim();
+                  const phone = document.getElementById("phone")?.value.trim();
+                  const serial = document.getElementById("serialNum")?.value.trim();
+                  const submitBtn = document.getElementById("submit-btn");
+                  const statusMsg = document.getElementById("email-status");
 
-            if (!name || !phone || !serial) {
-              statusMsg.textContent = "❗ All fields are required.";
-              return;
-            }
+                  if (!name || !phone || !serial) {
+                    statusMsg.textContent = "❗ All fields are required.";
+                    return;
+                  }
 
-            submitBtn.disabled = true;
-            submitBtn.innerText = "⏳ Sending...";
-            statusMsg.textContent = "";
+                  submitBtn.disabled = true;
+                  submitBtn.innerText = "⏳ Sending...";
+                  statusMsg.textContent = "";
 
-            try {
-              const res = await fetch("/submit-form", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, phone, serial, headingText })
-              });
+                  try {
+                    const res = await fetch("/submit-form", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ name, phone, serial, headingText })
+                    });
 
-              const data = await res.json();
-              statusMsg.textContent = data.message || "✅ Thank you!";
-            } catch (error) {
-              console.error("❌ Failed to send email", error);
-              statusMsg.textContent = "❌ Something went wrong. Please try again.";
-            }
+                    const data = await res.json();
+                    statusMsg.textContent = data.message || "✅ Thank you!";
+                  } catch (error) {
+                    console.error("❌ Failed to send email", error);
+                    statusMsg.textContent = "❌ Something went wrong. Please try again.";
+                  }
 
-            submitBtn.disabled = false;
-            submitBtn.innerText = "SUBMIT";
+                  submitBtn.disabled = false;
+                  submitBtn.innerText = "SUBMIT";
+                });
+              }
+            });
+
+            formObserver.observe(parent, { childList: true, subtree: true });
           });
-        }
-      });
 
-      formObserver.observe(parent, { childList: true, subtree: true });
-    });
-
-  </script>
+        </script>
 
 </body>
 

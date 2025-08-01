@@ -2019,7 +2019,7 @@ product_title_mapping = {
     "price": "13900",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HWADP-2.webp",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"5 year"
   },
   "U0A83E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
@@ -2723,9 +2723,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 try:
                     lbl = it.find_element(By.CLASS_NAME, "label").text.strip()
                     val = it.find_element(By.CLASS_NAME, "text").text.strip()
-                    data[lbl] = val
+                    if lbl:
+                        data[lbl] = val
+                        print("🔍 Label:", lbl, "| Value:", val)
                 except Exception as e:
-                    print("Error while extracting info-item:", e)
+                        print("⚠️ Failed to extract info-item:", e)
+                
+
 
 
             cov = data.get("Coverage type", "").lower()
@@ -2811,6 +2815,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         
         result = {}
         def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date,actual_service_level,coverage_type,result,):
+            eosl_ok = False
+            adp_ok = False
             dur = str(duration_str).strip().lower()
             has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
@@ -2898,16 +2904,16 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
                     if days_to_2yr < 0: 
-                        eosl_ok = False
-                        eosl_str = eosl_data.get(product_number)
-                        if eosl_str:
-                            try:
-                                eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
-                                days_to_eosl = (eosl_date - today).days
-                                eosl_ok = days_to_eosl >= 365
-                            except Exception as e:
-                                print(f"⚠️ EOSL parse error in post-warranty block: {e}")
-                                return dur == "1 year" and cov == "post-warranty" and eosl_ok
+                        # eosl_ok = False
+                        # eosl_str = eosl_data.get(product_number)
+                        # if eosl_str:
+                        #     try:
+                        #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                        #         days_to_eosl = (eosl_date - today).days
+                        #         eosl_ok = days_to_eosl >= 365
+                        #     except Exception as e:
+                        #         print(f"⚠️ EOSL parse error in post-warranty block: {e}")
+                        return dur == "1 year" and cov == "post-warranty" 
                         # more than a year away from 2-year mark
 
                 return False
@@ -3166,7 +3172,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"]
             },
             {
-              "includes": ["(?i)HP Laptop|chromebook 15"],
+              "includes": ["(?i)HP Laptop|chromebook 15s"],
               "excludes": ["(?i)14|Pavilion|Victus|Omen|Envy|Spectre"],
               "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
             },
@@ -3199,7 +3205,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
             },
             {
-                "includes": ["spectre"],
+                "includes": ["HP Spectre x360|spectre"],
                 "excludes": ["all-"],
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E"],
             },
@@ -3240,18 +3246,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "excludes": ["(?i)All|MFP"],
                 "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
-            # {
-            #     "includes": ["(?i)HP all-in-one|slim|Desktop PC M|280"],
-            #     "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
-            #     "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
-
-            # },
             {
-                "includes": [ "(?i)elitedesk|prodesk|Microtower"],
-                "excludes": ["(?i)200|Victus|Omen|Envy|Spectre|printer"],
-                "parts": ["UJ217E", "U4813PE"],
-
+                "includes": ["(?i)elitedesk|prodesk|Microtower"],
+                "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
+               "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
             },
+           
             {
                 "includes": ["(?i)Pavilion all|Pavilion 3|pavilion gaming d"],
                 "excludes": [],
