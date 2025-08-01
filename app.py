@@ -274,7 +274,7 @@ def send_email():
         msg = Message(
             subject="Quotation for warranty extension.",
             recipients=[email],
-            cc=["vemulalikitha2002@gmail.com"],
+            cc=["aayushi@arminfoserve.com","abhay@arminfoserve.com"],
             html=html_content
         )
 
