@@ -1363,6 +1363,7 @@ product_page_mapping = {
     "U0H93PE": "u0h93pe-hp-pavilion-1-year-post-warranty",
     "UN006E": "un006e-hp-pavilion-1-year-additional-warranty-extension",
     "UB5R3E": "ub5r3e-hp-pavilion-2-years-additional-warranty-with-one-time-battery-replacement",
+    "UB5R3E-U9WX1E":"ub5r3e-u9wx1e-hp-pavilion-victus-by-hp-2-years-additional-warranty-with-one-time-battery-replacement-and-adp/",
     "U6WD2E": "u6wd2e-hp-envy-omen-2-years-additional-warranty-extension-with-accidental-damage-protection-adp",
     "UN010E": "un010e-hp-envy-omen-1-year-additional-warranty-extension-with-accidental-damage-protection-adp",
     "U0H91E": "u0h91e-hp-envy-omen-2-years-additional-warranty-extension",
@@ -1376,7 +1377,7 @@ product_page_mapping = {
     "UN011E": "un011e-hp-spectre-1-year-additional-warranty-extension-with-accidental-damage-protection",
     "UB5R5E": "ub5r5e-hp-spectre-2-years-additional-warranty-extension-with-one-time-battery-replacement",
     "U0H94PE": "u0h94pe-hp-spectre-1-year-post-warranty-extension",
-    "UB5R4E-U9WX1E-1": "ub5r4e-u9wx1e-1-hp-spectre-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
+    "UB5R5E-U9WX1E": "ub5r5e-u9wx1e-hp-spectre-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
     "UM952E": "um952e-hp-spectre-1-year-additional-warranty-extension",
     "U6WD0E": "u6wd0e-hp-spectre-factory-warranty-add-on-with-accidental-damage-protection",
     "U02BVE": "u02bve-hp-zbook-g7-g8-g9-factory-warranty-add-on-3-years",
@@ -1593,6 +1594,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
+   
   "U0H90E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty Extension",
     "price": "9000",
@@ -1706,6 +1708,13 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
+   "UB5R4E-U9WX1E": {
+    "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+    "price": "30999",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Envy-2ADPBATT.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
   "U9WX1E": {
     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
     # "price": "SELECT THE MODEL",
@@ -1765,7 +1774,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-   "UB5R4E-U9WX1E-1": {
+   "UB5R5E-U9WX1E": {
     "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
     "price": "32999",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Pavilion-2ADPBATT.png",
@@ -2880,16 +2889,27 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
             print(f"📦 Plan: {sku} | dur: {dur} | cov: {cov} | status: {sts} | addon: {addon_text}")
             if 11 <= total_months < 15:
-                
-
-                # Active/expiring: only in-warranty plans, any of 1/2/3 year
                 if sts in ("active", "coverage expiring"):
-                    if cov !="in-warranty":
+                    if cov != "in-warranty":
                         return False
-                    return dur in ("1 year","2 year","3 year")
+                    if sku == "U9WX1E":
+                        return False
+                    return dur in ("1 year", "2 year", "3 year")
 
                 # Expired: now allow post-warranty or 3-year based on 2-yr anniversary proximity
                 if sts == "expired":
+                    # eosl_str = eosl_data.get(product_number)
+                    # eosl_ok = False
+                    # if eosl_str:
+                    #     try:
+                    #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                    #         days_to_eosl = (eosl_date - today).days
+                    #         eosl_ok = days_to_eosl >= 365
+                    #     except Exception as e:
+                    #         print(f"⚠️ EOSL parse error in expired block: {e}")
+                    #         if not eosl_ok:
+                    #             print("❌ Blocked: EOSL < 365 days for expired device")
+                    #             return False
                     # time until 2-year mark
                     two_year_ann = end_date + timedelta(days=730)
                     days_to_2yr  = (two_year_ann - today).days
@@ -2904,8 +2924,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
                     if days_to_2yr < 0: 
-                        # eosl_ok = False
                         # eosl_str = eosl_data.get(product_number)
+                        # eosl_ok = False
                         # if eosl_str:
                         #     try:
                         #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
@@ -2913,7 +2933,11 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         #         eosl_ok = days_to_eosl >= 365
                         #     except Exception as e:
                         #         print(f"⚠️ EOSL parse error in post-warranty block: {e}")
-                        return dur == "1 year" and cov == "post-warranty" 
+                        #         if not eosl_ok:
+                        #             print("❌ Blocked: EOSL < 365 days for expired device in post-warranty check")
+                        #             return False
+                        return dur == "1 year" and cov == "post-warranty"
+                        # return dur == "1 year" and cov == "post-warranty" 
                         # more than a year away from 2-year mark
 
                 return False
@@ -3169,45 +3193,45 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["HP Laptop| x360 14|chromebook 11|14s"],
                 "excludes": ["pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"]
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
               "excludes": ["(?i)14|Pavilion|Victus|Omen|Envy|Spectre"],
-              "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
+              "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
             },
             {
                 "includes": ["pavilion"],
                 "excludes": ["All-", "Desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"]
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
             },
              
             {
                 "includes": ["victus"],
                 "excludes": ["all-"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
                     
             }, 
             {
                 "includes": ["omen"],
                 "excludes": ["All|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E"], 
             },
             {
                 "includes": ["omnibook"],
                 "excludes": ["All|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","UB5R3E-U9WX1E"], 
             },
             
             {
                 "includes": ["envy"],
                 "excludes": ["all-"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E","UB5R4E-U9WX1E"], 
             },
             {
                 "includes": ["HP Spectre x360|spectre"],
                 "excludes": ["all-"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
                 "includes": ["(?:hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g)"],
