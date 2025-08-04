@@ -2224,7 +2224,7 @@ product_title_mapping = {
   },
   "UG337E": {
     "title": "HP Multi-function Printer 2 years Additional Warranty",
-    "price": "5167",
+    "price": "3500",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
