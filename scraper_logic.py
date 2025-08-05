@@ -3191,7 +3191,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         name = product_name.lower().strip()
         rules = [
             {
-                "includes": ["HP Laptop| x360 14|chromebook 11|14s"],
+                "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
                 "excludes": ["pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
             },
@@ -3234,7 +3234,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
-                "includes": ["(?:hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g)"],
+                "includes": ["hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g|inch"],
                 "excludes": ["All|14s|15s|Victus|Pro"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
