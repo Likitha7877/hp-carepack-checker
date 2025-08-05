@@ -1355,7 +1355,7 @@ product_page_mapping = {
     "U9WX1E": "u9wx1e-hp-3-year-adp",
     "U8LH3E": "u8lh3e-hp14-15-2-year-warranty-extension",
     "UN008E": "un008e-hp-laptop-14-15-series-1-year-additional-warranty-extension-with-accidental-damage-protection",
-    "UB5R2E-U9WX1E": "ub5r2e-u9wx1e-hp-14-15-series-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
+    "UB5R2E-U9WX2E": "ub5r2e-u9wx1e-hp-14-15-series-2-years-additional-warranty-with-one-time-battery-replacement-and-adp",
     "U0H90E": "u0h90e-hp-pavilion-2-years-additional-warranty-extension",
     "U0H96E": "u0h96e-hp-pavilion-factory-warranty-add-on-accidental-damage-protection",
     "UN009E": "un009e-hp-pavilion-1-year-warranty-extension-adp",
@@ -1423,13 +1423,13 @@ product_page_mapping = {
     "UJ217E" :"uj217e-hp-desktop-a-i-o-2-years-additional-warranty",
     "U4813PE" :"u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     # "U4813PE" : "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
-    "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
-    "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    # "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UN062PE": "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
     "U11BWE": "u11bwe-hp-all-in-one-business-pc-2-years-additional-warranty-extension-with-defective-media-retention-3-year-base-warranty/",
     "U11BTE": "u11bte-hp-desktop-3-year-defective-media-retention-on-factory-warranty/",
     # "U4813PE": "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
-    "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
+    # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UA055E":"ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UN062PE" : "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
     "U4925PE" :"u4925pe-tft-monitor-2-year-additional-warranty-extension-copy",
@@ -1560,7 +1560,7 @@ product_title_mapping = {
   },
   "UB5R2E-U9WX1E" : {
     "title":"HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "9500",
+    "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/14-15s-2HWBATT.webp",
     "coverage": "in-warranty",
     "duration":"3 year"
@@ -1658,7 +1658,7 @@ product_title_mapping = {
   },
     "UB5R3E-U9WX1E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "20999",
+    "price": "19000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Pavilion-2ADPBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1710,7 +1710,7 @@ product_title_mapping = {
   },
    "UB5R4E-U9WX1E": {
     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "30999",
+    "price": "28000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/04/Envy-2ADPBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -3085,7 +3085,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"\bhp\s?250\b", r"\bhp\s?255\b",
                 r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
                 r"\belitedesk\b", r"\bprodesk\b", r"\bmicrotower\b",
-                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b"
+                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b",r"\bpavilion\b"
                 ]
             for pattern in keyword_patterns:
                 if re.search(pattern, name):
@@ -3192,17 +3192,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         rules = [
             {
                 "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
-                "excludes": ["pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
+                "excludes": ["all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
-              "excludes": ["(?i)14|Pavilion|Victus|Omen|Envy|Spectre"],
+              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre"],
               "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
             },
             {
                 "includes": ["pavilion"],
-                "excludes": ["All-", "Desktop"],
+                "excludes": ["all-", "desktop"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
             },
              
@@ -3214,12 +3214,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             }, 
             {
                 "includes": ["omen"],
-                "excludes": ["All|desktop"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E"], 
             },
             {
                 "includes": ["omnibook"],
-                "excludes": ["All|desktop"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","UB5R3E-U9WX1E"], 
             },
             
@@ -3229,13 +3229,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E","UB5R4E-U9WX1E"], 
             },
             {
-                "includes": ["HP Spectre x360|spectre"],
-                "excludes": ["all-"],
+                "includes": ["x360 |spectre"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
-                "includes": ["hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g|inch"],
-                "excludes": ["All|14s|15s|Victus|Pro"],
+                "includes": ["hp 240 g|hp 245 g|hp 255 g |notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
+                "excludes": ["all|14s|15s|victus|pro"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
             {
@@ -3261,7 +3261,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
                
             {
-                "includes": ["(?i)HP all-in-one|slim|Desktop PC M|HP 27"],
+                "includes": ["(?i)hp all-in-one|slim|Desktop PC M|HP 27"],
                 "excludes": ["victus", "omen", "envy", "spectre", "printer"],
                 "parts": ["UJ217E","U4813PE"]
             },
@@ -3277,13 +3277,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
            
             {
-                "includes": ["(?i)Pavilion all|Pavilion 3|pavilion gaming d"],
+                "includes": ["bundle pc|Pavilion all |Pavilion 3|pavilion gaming d"],
                 "excludes": [],
                 "parts": ["U4813PE", "UA055E"],
             },
             {
                 "includes": ["(?i)Envy all|gaming desktop"],
-                "excludes": ["(?i)Pavilion|Victus"],
+                "excludes": ["(?i)pavilion|victus"],
                 "parts": ["UA055E", "UN062PE"],
             },
             {
