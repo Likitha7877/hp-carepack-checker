@@ -3193,12 +3193,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
                 "excludes": ["all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
+                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E",]
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
-              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre"],
-              "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E","UB5R2E-U9WX1E"]
+              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
+              "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
             },
             {
                 "includes": ["pavilion"],
@@ -3225,17 +3225,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             
             {
                 "includes": ["envy"],
-                "excludes": ["all-"],
+                "excludes": ["all-|desktop"],
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E","UB5R4E-U9WX1E"], 
             },
             {
-                "includes": ["x360 |spectre"],
+                "includes": ["spectre"],
                 "excludes": ["all|desktop"],
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
-                "includes": ["hp 240 g|hp 245 g|hp 255 g |notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
-                "excludes": ["all|14s|15s|victus|pro"],
+                "includes": ["hp 240 g|hp 245 g|hp 255 g|notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
+                "excludes": ["all|14s|15s|victus|pro|elitebook"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
             {
@@ -3255,14 +3255,14 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E"],
             },
             {
-                "includes": ["(?i)Elitebook 1|EliteBook x360 1030"],
-                "excludes": ["(?i)All|MFP"],
+                "includes": ["hp elitebook x360|elitebook 1"],
+                "excludes": ["all|mfp"],
                 "parts": ["UB0E2E", "UB0E6E"],
             },
                
             {
                 "includes": ["(?i)hp all-in-one|slim|Desktop PC M|HP 27"],
-                "excludes": ["victus", "omen", "envy", "spectre", "printer"],
+                "excludes": ["victus", "omen", "envy", "spectre", "printer""14s","15s","pavilion"],
                 "parts": ["UJ217E","U4813PE"]
             },
             {
@@ -3276,9 +3276,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
             },
            
-            {
+             {
                 "includes": ["bundle pc|Pavilion all |Pavilion 3|pavilion gaming d"],
-                "excludes": [],
+                "excludes": ["all-in-one"],
                 "parts": ["U4813PE", "UA055E"],
             },
             {
