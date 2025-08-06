@@ -3235,7 +3235,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": ["hp 240 g|hp 245 g|hp 255 g|notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
-                "excludes": ["all|14s|15s|victus|pro|elitebook"],
+                "excludes": ["all|14s|15s|victus|pro|elitebook|pavilion"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
             {
@@ -3277,8 +3277,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
            
              {
-                "includes": ["bundle pc|Pavilion all |Pavilion 3|pavilion gaming d"],
-                "excludes": ["all-in-one"],
+                "includes": ["inch|Pavilion all |Pavilion 3|pavilion gaming d"],
+                "excludes": ["255"],
                 "parts": ["U4813PE", "UA055E"],
             },
             {
