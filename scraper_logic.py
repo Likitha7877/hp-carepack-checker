@@ -1715,9 +1715,30 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "U9WX1E": {
+  "U9WX1E-Spectre": {
     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-    # "price": "SELECT THE MODEL",
+    "price": "18500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+    "coverage": "in-warranty",
+    "duration":"3 year"
+  },
+  "U9WX1E-Omen/Envy": {
+    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+    "price": "12500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+    "coverage": "in-warranty",
+    "duration":"3 year"
+  },
+  "U9WX1E-14s/15s": {
+    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+    "price": "8500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+    "coverage": "in-warranty",
+    "duration":"3 year"
+  },
+  "U9WX1E-Pavilion/Victus": {
+    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+    "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
     "coverage": "in-warranty",
     "duration":"3 year"
@@ -2898,19 +2919,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
                 # Expired: now allow post-warranty or 3-year based on 2-yr anniversary proximity
                 if sts == "expired":
-                    # eosl_str = eosl_data.get(product_number)
-                    # eosl_ok = False
-                    # if eosl_str:
-                    #     try:
-                    #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
-                    #         days_to_eosl = (eosl_date - today).days
-                    #         eosl_ok = days_to_eosl >= 365
-                    #     except Exception as e:
-                    #         print(f"⚠️ EOSL parse error in expired block: {e}")
-                    #         if not eosl_ok:
-                    #             print("❌ Blocked: EOSL < 365 days for expired device")
-                    #             return False
-                    # time until 2-year mark
                     two_year_ann = end_date + timedelta(days=730)
                     days_to_2yr  = (two_year_ann - today).days
                     if 90 < days_to_2yr < 365:
@@ -2924,21 +2932,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
                     if days_to_2yr < 0: 
-                        # eosl_str = eosl_data.get(product_number)
-                        # eosl_ok = False
-                        # if eosl_str:
-                        #     try:
-                        #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
-                        #         days_to_eosl = (eosl_date - today).days
-                        #         eosl_ok = days_to_eosl >= 365
-                        #     except Exception as e:
-                        #         print(f"⚠️ EOSL parse error in post-warranty block: {e}")
-                        #         if not eosl_ok:
-                        #             print("❌ Blocked: EOSL < 365 days for expired device in post-warranty check")
-                        #             return False
+                       
                         return dur == "1 year" and cov == "post-warranty"
-                        # return dur == "1 year" and cov == "post-warranty" 
-                        # more than a year away from 2-year mark
+                        
 
                 return False
               
@@ -2972,9 +2968,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                             and dur == "1 year"
                             ):
                             eosl_ok = True
-            # if sku == "U9WX1E" and sts == "expired":
-            #     print(f"❌ Blocked: U9WX1E is expired, skipping add-on plan.")
-            #     return False
+           
             adp_ok = (
                 (not has_adp)
                 and sku == "U9WX1E"
@@ -3085,7 +3079,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"\bhp\s?250\b", r"\bhp\s?255\b",
                 r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
                 r"\belitedesk\b", r"\bprodesk\b", r"\bmicrotower\b",
-                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b",r"\bpavilion\b"
+                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b"
                 ]
             for pattern in keyword_patterns:
                 if re.search(pattern, name):
@@ -3208,7 +3202,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
              
             {
                 "includes": ["victus"],
-                "excludes": ["all-"],
+                "excludes": ["all-","desktop"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
                     
             }, 
