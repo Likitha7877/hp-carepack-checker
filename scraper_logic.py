@@ -3272,7 +3272,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
            
              {
                 "includes": ["inch|Pavilion all |Pavilion 3|pavilion gaming d"],
-                "excludes": ["255"],
+                "excludes": ["255","probook"],
                 "parts": ["U4813PE", "UA055E"],
             },
             {
