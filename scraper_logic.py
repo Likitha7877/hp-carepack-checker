@@ -1613,7 +1613,7 @@ product_title_mapping = {
   },
   "UN006E": {
     "title": "HP Pavilion/Victus by HP 1-Year Additional Warranty Extension",
-    "price": "5500",
+    "price": "Out Of Stock",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Pavilion-1HW.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
@@ -1837,6 +1837,30 @@ product_title_mapping = {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension",
     "price": "10556",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HW.webp",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+
+  },
+    "U02BSE": {
+    "title": "HP ZBook Mobile WKS G7/G8/G9 2 years Additional Warranty (3 years Base Warranty)",
+    "price": "22420 ",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/ZBook-2HW-1.webp",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+
+  },
+    "U02BVE": {
+    "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
+    "price": "12500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/12/ZBook-ADP.png",
+    "duration":"5 year",
+    "coverage":"in-warranty"
+
+  },
+    "U10KHE": {
+    "title": "HP Z-Book 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "price": "25500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/01/ZBook-2HWADP.webp",
     "duration":"5 year",
     "coverage":"in-warranty"
 
@@ -2919,6 +2943,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
                 # Expired: now allow post-warranty or 3-year based on 2-yr anniversary proximity
                 if sts == "expired":
+                    
                     two_year_ann = end_date + timedelta(days=730)
                     days_to_2yr  = (two_year_ann - today).days
                     if 90 < days_to_2yr < 365:
@@ -2931,12 +2956,19 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     if days_to_2yr >= 365:
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
-                    if days_to_2yr < 0: 
-                       
-                        return dur == "1 year" and cov == "post-warranty"
-                        
+                    if days_to_2yr < 0:
+                        # eosl_ok = False
+                        # eosl_str = eosl_data.get(product_number)
+                        # if eosl_str:
+                        #     try:
+                        #         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                        #         days_to_eosl = (eosl_date - today).days
+                        #         eosl_ok = days_to_eosl >= 365
+                        #     except Exception as e:
+                        #         print(f"⚠️ EOSL parse error in post-warranty block: {e}")
+                            return dur == "1 year" and cov == "post-warranty"
+                            return False
 
-                return False
               
 
             # 15–23 months: 2- and 3-year plans (never add-on)
@@ -2957,6 +2989,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
                     except Exception:
                         pass
+                    
                     else:
                          days_to_eosl = (eosl_date - today).days
                          days_remaining = (end_date - today).days
@@ -3002,6 +3035,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 if sts in ("active", "coverage expiring"):
                     return dur in ("3year", "5year")
                 if sts == "expired":
+                    
                     two_year_ann = end_date + timedelta(days=730)
                     days_to_2yr = (two_year_ann - today).days
                     if days_to_2yr > 0:
@@ -3191,12 +3225,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
-              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
+              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop|255"],
               "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
             },
             {
                 "includes": ["pavilion"],
-                "excludes": ["all-", "desktop"],
+                "excludes": [ "all-","desktop","pavilion aio","bundle aio","aio","all in one"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
             },
              
@@ -3228,12 +3262,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
-                "includes": ["hp 240 g|hp 245 g|hp 255 g|notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
-                "excludes": ["all|14s|15s|victus|pro|elitebook|pavilion"],
+                "includes": ["hp 240 g|hp 245 g|hp 255 g|notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g| pc"],
+                "excludes": ["all|14s|15s|victus|pro|elitebook|pavilion|laptop|15"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
             {
-                "includes": ["zbook"],
+                "includes": ["zbook|firefly"],
                 "excludes": ["All|MFP"],
                 "parts": ["U02BVE", "U02BSE", "U10KHE"]
             },
@@ -3271,8 +3305,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
            
              {
-                "includes": ["inch|Pavilion all |Pavilion 3|pavilion gaming d"],
-                "excludes": ["255","probook"],
+                "includes": ["pavilion aio|inch|Pavilion all |Pavilion 3|pavilion gaming d|bundle aio"],
+                "excludes": [  "255","probook","notebook", "laptop","chromebook,zbook"],
                 "parts": ["U4813PE", "UA055E"],
             },
             {

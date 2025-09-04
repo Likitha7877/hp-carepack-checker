@@ -1102,16 +1102,7 @@
               })
               .catch(() => alert("❌ Failed to send email"));
           }
-          function getU9WX1EPrice(productName, productNumber) {
-            const name = (productName || productNumber || "").toLowerCase();
-
-            if (name.includes("spectre")) return "₹18,500";
-            if (name.includes("omen") || name.includes("envy")) return "₹12,500";
-            if (name.includes("pavilion") || name.includes("victus")) return "₹10,500";
-            if (name.includes("14") || name.includes("15") || name.includes("chromebook")) return "₹8,500";
-
-            return "SELECT THE MODEL";
-          }
+         
 
 
 
@@ -1279,8 +1270,10 @@
   </button>
 </div>
         <div class="care-pack-wrapper">
-          ${data.care_packs
-                  .map(pack => `
+           ${data.care_packs
+      // ✅ Hide packs with price "Out Of Stock"
+      .filter(pack => pack.price && pack.price !== "Out Of Stock")
+      .map(pack => `
               <div class="care-pack-card">
                 <div class="img-wrapper">
                   ${pack.tag
@@ -1341,10 +1334,23 @@ ${pack.part === "U9WX1E"
                 }
               }
 
-              // ✅ Check EOSL future condition (> 90 days)
-              if (!showPostWarrantyHeading && eoslDate && eoslDate !== "Unknown" && daysToEOSL > 90) {
-                showAllSetForNowForm = true;
-              }
+             // ✅ Check EOSL future condition (> 365 days) AND Time Remaining > 100 days
+if (
+  !showPostWarrantyHeading &&
+  eoslDate &&
+  eoslDate !== "Unknown" &&
+  daysToEOSL > 365
+) {
+  if (data.start_date && data.end_date) {
+    const end = new Date(data.end_date.split("-").reverse().join("-"));
+    const today = new Date();
+    const timeRemainingDays = Math.floor((end - today) / (1000 * 60 * 60 * 24));
+
+    if (timeRemainingDays > 100) {
+      showAllSetForNowForm = true;
+    }
+  }
+}
 
 
 
