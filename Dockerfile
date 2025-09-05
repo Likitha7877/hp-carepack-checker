@@ -29,3 +29,4 @@ RUN pip install --upgrade pip \
 
 # Run your app (no xvfb needed since it's headless)
 CMD ["gunicorn", "-w", "1", "-k", "gevent", "-t", "120", "-b", "0.0.0.0:5000", "app:app"]
+
