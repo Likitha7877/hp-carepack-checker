@@ -1,30 +1,35 @@
 FROM python:3.11-slim
 
-# Install system deps + Chrome + matching ChromeDriver
-RUN apt-get update && apt-get install -y --no-install-recommends \
-       wget unzip curl gnupg2 ca-certificates fonts-liberation \
-       libnss3 libxss1 libappindicator3-1 libasound2 libatk-bridge2.0-0 \
-       libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 \
-       libnspr4 libx11-xcb1 libxcomposite1 libxdamage1 \
-       libxrandr2 xdg-utils \
-    && wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google.gpg \
-    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google.gpg] http://dl.google.com/linux/chrome/deb/ stable main" \
-       > /etc/apt/sources.list.d/google-chrome.list \
-    && apt-get update && apt-get install -y google-chrome-stable \
-    && CHROME_VERSION=$(google-chrome-stable --version | awk '{print $3}' | cut -d'.' -f1) \
-    && DRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}") \
-    && wget -q "https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip" \
-    && unzip chromedriver_linux64.zip -d /usr/local/bin/ \
-    && rm chromedriver_linux64.zip \
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    wget unzip curl gnupg2 ca-certificates xvfb \
+    fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libcups2 \
+    libdbus-1-3 libgdk-pixbuf2.0-0 libnspr4 libnss3 libxcomposite1 \
+    libxdamage1 libxrandr2 xdg-utils libx11-xcb1 \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Google Chrome stable
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
+     > /etc/apt/sources.list.d/google-chrome.list \
+  && apt-get update \
+  && apt-get install -y google-chrome-stable chromium-driver \
+  && rm -rf /var/lib/apt/lists/*
+
+# Env vars for Selenium
 ENV CHROME_BIN=/usr/bin/google-chrome-stable
-ENV PATH="/usr/local/bin:${PATH}"
+ENV CHROMEDRIVER=/usr/bin/chromedriver
 
+# Set workdir and copy app
 WORKDIR /app
-COPY . .
+COPY . /app
 
+# Install Python dependencies
 RUN pip install --upgrade pip \
- && pip install -r requirements.txt
+ && pip install --no-cache-dir -r requirements.txt
 
-CMD ["gunicorn", "-w", "1", "-k", "gevent", "-t", "120", "-b", "0.0.0.0:5000", "app:app"]
+# Expose port (Render doesn't require EXPOSE but it's okay)
+EXPOSE 5000
+
+# Run app with Gunicorn + xvfb (virtual display for Chrome)
+CMD ["sh", "-c", "xvfb-run -a gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:${PORT:-5000} app:app"]
