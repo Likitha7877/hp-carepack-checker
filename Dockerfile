@@ -1,32 +1,35 @@
 FROM python:3.11-slim
 
-# Install system dependencies needed by Chrome
-RUN apt-get update && apt-get install -y \
-    wget unzip curl gnupg2 ca-certificates fonts-liberation \
-    libnss3 libxss1 libasound2 libatk-bridge2.0-0 \
-    libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 \
-    libnspr4 xdg-utils \
+# Switch to root just in case
+USER root
+
+# Install system dependencies needed by Chrome and xvfb
+RUN apt-get update && apt-get upgrade -y \
+ && apt-get install -y --no-install-recommends \
+       wget unzip curl gnupg2 ca-certificates fonts-liberation \
+       libnss3 libxss1 libappindicator3-1 libasound2 libatk-bridge2.0-0 \
+       libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 \
+       libnspr4 libx11-xcb1 libxcomposite1 libxdamage1 libxrandr2 \
+       xdg-utils xvfb chromium-driver apt-transport-https \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Google Chrome stable
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
  && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
-    > /etc/apt/sources.list.d/google-chrome.list \
- && apt-get update \
- && apt-get install -y google-chrome-stable \
+      > /etc/apt/sources.list.d/google-chrome.list \
+ && apt-get update && apt-get install -y google-chrome-stable \
  && rm -rf /var/lib/apt/lists/*
 
-# Environment variable to point Selenium at Chrome
+# Set environment variable for Selenium
 ENV CHROME_BIN=/usr/bin/google-chrome-stable
 
-# Set workdir
+# Set working directory
 WORKDIR /app
 COPY . .
 
-# Install Python deps
+# Install Python dependencies
 RUN pip install --upgrade pip \
  && pip install -r requirements.txt
 
-# Run your app (no xvfb needed since it's headless)
-CMD ["gunicorn", "-w", "1", "-k", "gevent", "-t", "120", "-b", "0.0.0.0:5000", "app:app"]
-
+# Use virtual X server for headless Chrome
+CMD ["sh", "-c", "xvfb-run -a gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:${PORT:-5000} app:app"]
