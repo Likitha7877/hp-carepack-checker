@@ -2705,7 +2705,7 @@ def calculate_remaining_days(end_date_str):
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     service = Service(ChromeDriverManager().install())
@@ -3231,7 +3231,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["pavilion"],
                 "excludes": [ "all-","desktop","pavilion aio","bundle aio","aio","all in one"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
+                "parts": ["U0H90E", "U6WD1E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
             },
              
             {
