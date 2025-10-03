@@ -1272,8 +1272,7 @@
         <div class="care-pack-wrapper">
            ${data.care_packs
       // ✅ Hide packs with price "Out Of Stock"
-      .filter(pack => pack.price && pack.price !== "Out Of Stock")
-      .map(pack => `
+            .map(pack => `
               <div class="care-pack-card">
                 <div class="img-wrapper">
                   ${pack.tag

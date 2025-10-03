@@ -1597,7 +1597,7 @@ product_title_mapping = {
    
   "U0H90E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty Extension",
-    "price": "9000",
+    "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Pavilion-2HW.webp",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -1613,7 +1613,7 @@ product_title_mapping = {
   },
   "UN006E": {
     "title": "HP Pavilion/Victus by HP 1-Year Additional Warranty Extension",
-    "price": "Out Of Stock",
+    "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/Pavilion-1HW.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
@@ -1642,7 +1642,7 @@ product_title_mapping = {
   },
   "U0H93PE": {
     "title": "HP Pavilion/Victus by HP 1 year Post Warranty",
-    "price": "8200",
+    "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/14-15s-PW.webp",
     "coverage":"post-warranty",
     "duration":"1 year"
@@ -3231,7 +3231,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["pavilion"],
                 "excludes": [ "all-","desktop","pavilion aio","bundle aio","aio","all in one"],
-                "parts": ["U0H90E", "U6WD1E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
             },
              
             {
