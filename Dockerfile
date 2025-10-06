@@ -5,6 +5,8 @@ FROM python:3.11-slim
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV CHROME_BIN=/usr/bin/google-chrome-stable
+ENV PORT=5000 
+ # default for local testing, Render will override
 
 # Install system dependencies and Chrome dependencies safely
 RUN apt-get update && \
@@ -36,5 +38,5 @@ COPY . .
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# Run Flask app with Gunicorn
-CMD ["gunicorn", "-w", "1", "-k", "gevent", "-t", "120", "-b", "0.0.0.0:${PORT:-5000}", "app:app"]
+# Run Flask app with Gunicorn (shell form CMD to expand $PORT)
+CMD gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:$PORT app:app
