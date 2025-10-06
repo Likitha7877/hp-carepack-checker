@@ -28,4 +28,4 @@ RUN pip install --upgrade pip \
  && pip install -r requirements.txt
 
 # Launch under virtual X server
-CMD ["sh", "-c", "xvfb-run -a gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:${PORT:-5000} app:app"]
+CMD ["gunicorn", "-w", "1", "-k", "gevent", "-t", "120", "-b", "0.0.0.0:${PORT:-5000}", "app:app"]
