@@ -2704,11 +2704,25 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         sn_input = wait.until(EC.presence_of_element_located((By.ID, "inputtextpfinder")))
         sn_input.clear()
         sn_input.send_keys(serial_number)
+        submit = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "button-box")))
 
-        submit = driver.find_element(By.CLASS_NAME, "button-box")
+# Enable button if disabled
         driver.execute_script("arguments[0].removeAttribute('disabled')", submit)
+
+# Scroll into view
+        driver.execute_script("arguments[0].scrollIntoView(true);", submit)
+
+# Wait until it's clickable
+        wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-box")))
+
+# Refetch element in case it re-rendered
+        submit = driver.find_element(By.CLASS_NAME, "button-box")
+
+# Click once
         submit.click()
+
         time.sleep(5)
+
         
         need_pn = driver.find_elements(By.XPATH,
             "//p[contains(@class,'errorTxt') and contains(text(),'cannot be identified')]"
