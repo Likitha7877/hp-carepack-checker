@@ -2681,37 +2681,34 @@ def calculate_remaining_days(end_date_str):
 def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless=new")  # More stable headless
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--window-size=1920,1080")  # Prevent hidden elements
-    options.add_argument("--disable-gpu")
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    wait = WebDriverWait(driver, 20)
+    driver  = webdriver.Chrome(service=service, options=options)
+
+    wait = WebDriverWait(driver, 7)
 
     try:
-        btn = wait.until(EC.element_to_be_clickable(
-            (By.XPATH, "//button[contains(text(),'Accept All Cookies')]")
+        driver.get("https://support.hp.com/in-en/check-warranty")
+
+        try:
+            btn = wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//button[contains(text(),'Accept All Cookies')]")
             ))
-        driver.execute_script("arguments[0].scrollIntoView(true);", btn)  # 👈 Added
-        time.sleep(0.5)
-        driver.execute_script("arguments[0].click();", btn)  # 👈 Changed click to JS click
-    except Exception as e:
-        print("Error while selecting cookies:", e)
+            btn.click()
+        except Exception as e:
+            print("Error while selecting cookies:", e)
 
 
         sn_input = wait.until(EC.presence_of_element_located((By.ID, "inputtextpfinder")))
-        driver.execute_script("arguments[0].scrollIntoView(true);", sn_input)  # 👈 Added
         sn_input.clear()
         sn_input.send_keys(serial_number)
 
-
-        submit = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-box")))
-        driver.execute_script("arguments[0].scrollIntoView(true);", submit)  # 👈 Added
+        submit = driver.find_element(By.CLASS_NAME, "button-box")
         driver.execute_script("arguments[0].removeAttribute('disabled')", submit)
-        driver.execute_script("arguments[0].click();", submit)  # 👈 Changed click to JS click
-        time.sleep(9)
+        submit.click()
+        time.sleep(5)
         
         need_pn = driver.find_elements(By.XPATH,
             "//p[contains(@class,'errorTxt') and contains(text(),'cannot be identified')]"
