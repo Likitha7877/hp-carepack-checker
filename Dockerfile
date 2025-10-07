@@ -1,38 +1,34 @@
-FROM python:3.10-slim
+# Use Python 3.11 slim base
+FROM python:3.11-slim-bullseye
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    chromium-driver \
-    chromium \
-    xvfb \
-    fonts-liberation \
-    libappindicator3-1 \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libcups2 \
-    libdbus-1-3 \
-    libgdk-pixbuf2.0-0 \
-    libnspr4 \
-    libnss3 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxrandr2 \
-    xdg-utils \
-    && rm -rf /var/lib/apt/lists/*
+# Install essential dependencies for headless Chrome
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget curl unzip gnupg2 ca-certificates fonts-liberation \
+    libnss3 libxss1 libasound2 libatk-bridge2.0-0 \
+    libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 \
+    libnspr4 libx11-xcb1 xvfb \
+ && rm -rf /var/lib/apt/lists/*
 
-ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEDRIVER=/usr/bin/chromedriver
+# Install Google Chrome stable
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
+    | gpg --dearmor -o /usr/share/keyrings/google-linux-signing-key.gpg \
+ && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-linux-signing-key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" \
+    > /etc/apt/sources.list.d/google-chrome.list \
+ && apt-get update \
+ && apt-get install -y google-chrome-stable \
+ && rm -rf /var/lib/apt/lists/*
 
-# Copy app files
-COPY . /app
+# Set Chrome binary path for Selenium
+ENV CHROME_BIN=/usr/bin/google-chrome-stable
+
+# Set working directory and copy app code
 WORKDIR /app
+COPY . .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python dependencies and webdriver-manager
+RUN pip install --upgrade pip \
+ && pip install -r requirements.txt \
+ && pip install webdriver-manager
 
-# Expose port (optional, Render doesn’t require EXPOSE)
-EXPOSE 5000
-
-# 🔧 FIX: Bind Gunicorn to dynamic PORT for Render
+# Run app headless with Gunicorn
 CMD ["sh", "-c", "xvfb-run -a gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:${PORT:-5000} app:app"]
