@@ -1,12 +1,13 @@
 FROM python:3.11-slim
 
+# Environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV PORT=5000
 ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
-# Install Chromium + dependencies
+# Install minimal dependencies + Chromium + unzip + curl
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         python3-dev build-essential \
@@ -17,10 +18,11 @@ RUN apt-get update && \
         libxrandr2 xdg-utils && \
     rm -rf /var/lib/apt/lists/*
 
-# Download matching ChromeDriver
-RUN CHROME_VERSION=$(chromium --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+') && \
+# Get Chromium version and download matching ChromeDriver
+RUN CHROME_VERSION=$(chromium --version | awk '{print $2}') && \
     MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d. -f1) && \
     DRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$MAJOR_VERSION") && \
+    echo "Chromium: $CHROME_VERSION, ChromeDriver: $DRIVER_VERSION" && \
     wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$DRIVER_VERSION/chromedriver_linux64.zip" && \
     unzip /tmp/chromedriver.zip -d /usr/bin/ && \
     chmod +x /usr/bin/chromedriver && \
@@ -33,5 +35,5 @@ COPY . .
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Run Flask app
+# Run Flask app with Gunicorn
 CMD gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:$PORT app:app
