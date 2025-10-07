@@ -4,26 +4,18 @@ FROM python:3.11-slim
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV PORT=5000
-ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
-# Install dependencies + Chromium + unzip + libraries
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        bash curl wget unzip chromium \
+# Install system dependencies + Chromium + required libraries
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        python3-dev build-essential \
+        wget curl gnupg2 ca-certificates \
+        fonts-liberation \
+        chromium chromium-driver \
         libnss3 libxss1 libasound2 libatk-bridge2.0-0 \
         libnspr4 libx11-xcb1 libxcomposite1 libxdamage1 \
-        libxrandr2 xdg-utils fonts-liberation python3-dev build-essential && \
+        libxrandr2 xdg-utils && \
     rm -rf /var/lib/apt/lists/*
-
-# Install ChromeDriver matching Chromium version
-RUN bash -c '\
-    CHROME_VERSION=$(chromium --version | grep -o "[0-9]*\.[0-9]*\.[0-9]*") && \
-    CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d"." -f1) && \
-    CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR) && \
-    wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
-    unzip /tmp/chromedriver.zip -d /usr/bin/ && \
-    chmod +x /usr/bin/chromedriver && \
-    rm /tmp/chromedriver.zip'
 
 # Set working directory
 WORKDIR /app
@@ -33,5 +25,9 @@ COPY . .
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# Run Flask app with Gunicorn
+# Make sure Chrome/Chromium uses the right path
+ENV CHROME_BIN=/usr/bin/chromium
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+
+# Run Flask app with Gunicorn (shell form for $PORT expansion)
 CMD gunicorn -w 1 -k gevent -t 120 -b 0.0.0.0:$PORT app:app
