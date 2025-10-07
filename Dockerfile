@@ -6,8 +6,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget curl unzip gnupg2 ca-certificates fonts-liberation \
     libnss3 libxss1 libasound2 libatk-bridge2.0-0 \
     libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 \
-    libnspr4 libx11-xcb1 xvfb \
+    libnspr4 libx11-xcb1 xvfb xauth \
  && rm -rf /var/lib/apt/lists/*
+
 
 # Install Google Chrome stable
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
