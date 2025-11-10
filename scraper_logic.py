@@ -1513,6 +1513,9 @@ product_page_mapping = {
     "UZ275E": "uz275e-hp-officejet-pro-9720-wf-aio-4-years-additional-warranty",
     "UG348E": "ug348e-hp-officejet-printers-2-years-additional-warranty-2",
     "UZ276E": "uz276e-hp-officejet-pro-9730-wf-aio-5-years-additional-warranty",
+    "U10N7E":"hp-all-in-one-business-pc-2-years-additional-warranty-extension-3-year-base-warranty/",
+    "U10N3E":"hp-pro-2xx-4xx-dt-2-years-additional-warranty-1-year-base-warranty/",
+    "U10N2PE":"hp-prodesk-1-year-pw/",
     # Add other parts mapping here...
 
 
@@ -1520,23 +1523,45 @@ product_page_mapping = {
 }
 
 product_title_mapping = {
-      "UJ217E": {
+    "U10N7E": {
+    "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (3 Year Base Warranty)",
+    "price": "5500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    "U10N3E": {
+    "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (1 Year Base Warranty)",
+    "price": "5500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "U10N2PE": {
+    "title": "HP 2xx/4xx Desktop 1 year Post Warranty",
+    "price": "4000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-PW.webp",
+    "coverage":"post-warranty",
+    "duration":"1 year"
+  },
+    
+    "UJ217E": {
     "title": "HP Desktop/All-In-One 2 Years Additional Warranty",
-    "price": "7500",
+    "price": "7250",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U4813PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
-    "price": "5000",
+    "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
    "U8LH8E": {
     "title": "HP Laptop 14/15 Series 2 Years Additional Warranty Extension",
-    "price": "6000",
+    "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
     "tag"  : "Essentials",
     "coverage":"in-warranty",
@@ -1553,7 +1578,7 @@ product_title_mapping = {
   },
   "U8LH3E": {
     "title": "HP Laptop 14/15 Series 1 year Additional Warranty Extension",
-    "price": "4000",
+    "price": "4500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/14-15s-1HW-3.webp",
     "coverage": "in-warranty",
     "duration":"2 year"
@@ -1590,7 +1615,7 @@ product_title_mapping = {
   },
   "U8LH7PE": {
     "title": "HP 14/15 Series 1 year Post Warranty",
-    "price": "5500",
+    "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/14-15s-PW.webp",
     "coverage":"post-warranty",
     "duration":"1 year"
@@ -1853,7 +1878,7 @@ product_title_mapping = {
   },
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
-    "price": "5556",
+    "price": "4000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-PW.webp",
     "coverage":"post-warranty",
     "duration":"1 year"
@@ -3269,7 +3294,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["(?i)elitedesk|prodesk|Microtower"],
                 "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
-               "parts": ["U5864PE", "U6578E", "U7899E", "U0A84E", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
+               "parts": ["U10N7E","U10N3E","U5864PE", "U6578E", "U7899E", "U0A84E","U10N2PE", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
             },
            
              {
