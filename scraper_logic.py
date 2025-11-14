@@ -1348,6 +1348,8 @@ printer_mapping = {
   
 
 product_page_mapping = {
+    "UG482E":"hp-colour-laserjet-pro-3xxx-2-years-additional-warranty",
+    "UZ260E":"hp-colour-laserjet-pro-3xxx-4-years-additional-warranty/",
     "U8LH8E": "u8lh8e-hp-laptop-14-15-series-2-years-additional-warranty-extension",
     "U8LJ4E": "u8lj4e-hp-laptop-14-15-series-2-years-additional-warranty-extension-adp",
     "U8LH7PE": "u8lh7pe-hp-14-15-series-1-year-post-warranty",
@@ -1444,6 +1446,7 @@ product_page_mapping = {
     "U1G24PE": "u1g24pe-hp-workstation-1-year-post-warranty",
     "UA5C0E": "ua5c0e-hp-smart-tank-aio-2-years-additional-warranty",
     "U35PFE": "u35pfe-hp-smart-tank-790-aio-printer-2-years-additional-warranty",
+    "UZ295E":"uz295e-hp-officejet-printers-4-years-additional-warranty/",
     "U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
     "U57D7E": "u57d7e-hp-smart-tank-210-aio-2-years-additional-warranty",
     "UG337E": "ug337e-hp-deskjet-2-years-additional-warranty",
@@ -1523,6 +1526,36 @@ product_page_mapping = {
 }
 
 product_title_mapping = {
+    "UG482E": {
+    "title": "HP Colour LaserJet Pro 3xxx 2 years Additional Warranty",
+    "price": "7800",
+    "image": "https://wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    
+    "UZ260E": {
+    "title": "HP Colour LaserJet Pro 3xxx 4 years Additional Warranty",
+    "price": "11700",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    
+    "UZ287E": {
+    "title": "HP OfficeJet Pro 9016 AiO Printer 4 years Additional Warranty",
+    "price": "12700",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    "UZ299E": {
+    "title": "HP OfficeJet Pro 9010 4 years Additional Warranty",
+    "price": "8200",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
     "U10N7E": {
     "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (3 Year Base Warranty)",
     "price": "5500",
@@ -2175,7 +2208,7 @@ product_title_mapping = {
     
     "U1G24PE": {
     "title": "HP WorkStation 1 Year Post Warranty",
-    "price": "13899",
+    "price": "13900",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-PW-2.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
@@ -2220,6 +2253,28 @@ product_title_mapping = {
    
   
 # printers
+    "UZ295E": {
+    "title": "HP Officejet Printers 4 years Additional Warranty",
+    "price": "6300",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+    "UZ303E": {
+    "title": "HP Multi-function Printer 4 years Additional Warranty",
+    "price": "7700",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+    "U04SME": {
+    "title": "HP LaserJet Tank Printers 2 years Additional Warranty",
+    "price": "6100",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+    
     "UA5C0E": {
     "title": "HP Smart Tank AiO 2 years Additional Warranty",
     "price": "4000",
@@ -2243,21 +2298,21 @@ product_title_mapping = {
   },
   "U9NR3PE": {
     "title": "HP Smart Tank AiO 1 year Post Warranty",
-    "price": "3611",
+    "price": "4400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
     "duration": "1 year",
-    "coverage":"post-warranty",
+    "coverage":"post-warranty"
   },
   "UG361E": {
     "title": "HP LaserJet Pro Printers 2 years Additional Warranty",
-    "price": "4444",
+    "price": "4400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "UQ463E": {
     "title": "HP LaserJet Printers 4 years Additional Warranty",
-    "price": "6111",
+    "price": "6100",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2271,7 +2326,7 @@ product_title_mapping = {
   },
   "UG337E": {
     "title": "HP Multi-function Printer 2 years Additional Warranty",
-    "price": "3500",
+    "price": "5300",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2285,63 +2340,63 @@ product_title_mapping = {
   },
   "UG062E": {
     "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
-    "price": "4667",
+    "price": "4700",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG334E": {
     "title": "HP Deskjet 1112, 1212 2 years Additional Warranty",
-    "price": "4222",
+    "price": "4200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG338E": {
     "title": "HP DeskJet IA 50XX AiO Printer 2 years Additional Warranty",
-    "price": "4444",
+    "price": "4400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "UZ304E": {
     "title": "HP DeskJet IA 50XX AiO Printer 4 years Additional Warranty",
-    "price": "5913",
+    "price": "5900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U6M72E": {
     "title": "HP OfficeJet Pro High 2 years Additional Warranty",
-    "price": "7222",
+    "price": "7200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "U6M74E": {
     "title": "HP OfficeJet Pro High 4 years Additional Warranty",
-    "price": "11113",
+    "price": "12900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UG346E": {
     "title": "HP Officejet Printers 2 years Additional Warranty",
-    "price": "4667",
+    "price": "4700",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG350E": {
     "title": "HP OJ Pro 9010 2 years Additional Warranty",
-    "price": "6222",
+    "price": "6200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U6M85E": {
     "title": "HP OfficeJet Pro Printer (Ultra High) 2 years Additional Warranty",
-    "price": "8889",
+    "price": "10200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2349,28 +2404,28 @@ product_title_mapping = {
   
   "UG470E": {
     "title": "HP OfficeJet Pro 9016 AiO Printer 2 years Additional Warranty",
-    "price": "6556",
+    "price": "6600",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG349E": {
     "title": "HP OJ Pro 802X, 812X 2 years Additional Warranty",
-    "price": "5889",
+    "price": "5900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG348E": {
     "title": "HP Officejet Printers 2 years Additional Warranty",
-    "price": "5167",
+    "price": "5200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG347E": {
     "title": "HP OJ Pro 7720 2 years Additional Warranty",
-    "price": "5167",
+    "price": "5200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2385,84 +2440,84 @@ product_title_mapping = {
   },
   "UB4V5E": {
     "title": "HP Laser 10x and 13x MFP 2 years Additional Warranty",
-    "price": "4833",
+    "price": "4800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration":"3 year",
     "coverage":"in-warranty"
   },
   "UB4W7E": {
     "title": "HP Color Laser 15x and 17x MFP 2 years Additional Warranty",
-    "price": "7778",
+    "price": "7800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB4X9E": {
     "title": "HP Neverstop Laser MFP 1200nw 2 years Additional Warranty",
-    "price": "6889",
+    "price": "6900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB4Z1E": {
     "title": "HP Neverstop Laser 1xxx 2 years Additional Warranty",
-    "price": "6222",
+    "price": "6200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UH773E": {
     "title": "HP Consumer LaserJet 2 years Additional Warranty",
-    "price": "5556",
+    "price": "5600",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UZ298E": {
     "title": "HP OJ Pro 802X, 812X 4 years Additional Warranty",
-    "price": "7427",
+    "price": "7400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ297E": {
     "title": "HP Officejet Printers 4 years Additional Warranty",
-    "price": "7427",
+    "price": "7400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ296E": {
     "title": "HP OfficeJet Pro 7720 Wide Format 4 years Additional Warranty",
-    "price": "6670",
+    "price": "6700",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4Y1E": {
     "title": "HP Laser 10x and 13x MFP 4 years Additional Warranty",
-    "price": "7427",
+    "price": "7400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration":"5 year",
     "coverage":"in-warranty"
   },
   "UC4X9E": {
     "title": "HP Color Laser 15x and 17x MFP 4 years Additional Warranty",
-    "price": "11440",
+    "price": "13300",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4X7E": {
     "title": "HP Neverstop Laser MFP 1200nw 4 years Additional Warranty",
-    "price": "11267",
+    "price": "13100",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4X5E": {
     "title": "HP Neverstop Laser 1xxx 4 years Additional Warranty",
-    "price": "10176",
+    "price": "11700",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2476,7 +2531,7 @@ product_title_mapping = {
   },
   "UZ272E": {
     "title": "HP LaserJet Printer 4 years Additional Warranty",
-    "price": "6822",
+    "price": "6800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2490,42 +2545,42 @@ product_title_mapping = {
   },
   "U04THE": {
     "title": "HP LaserJet Tank MFP 4 years Additional Warranty",
-    "price": "12567",
+    "price": "14800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
     "duration":"5 year",
     "coverage":"in-warranty"
   },
   "U04TKE": {
     "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
-    "price": "6,667",
+    "price": "6,900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
     "duration":"3 year",
     "coverage":"in-warranty"
   },
   "U04SKE": {
     "title": "HP LASERJET TANK 1020W 4 years Additional Warranty",
-    "price": "11307",
+    "price": "13200",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U62F5E": {
     "title": "HP Laser 100x and 11xx MFP 4 years Additional Warranty",
-    "price": "7427",
+    "price": "7400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U62F3E": {
     "title": "HP Laser 100x and 11xx MFP 2 years Additional Warranty",
-    "price": "4833",
+    "price": "4800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U8TM2E": {
     "title": "HP LaserJet M402 2 years Additional Warranty",
-    "price": "8120",
+    "price": "8100",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2540,7 +2595,7 @@ product_title_mapping = {
   },
   "U8TQ9E": {
     "title": "HP LaserJet M42x Multi-Function 2 years Additional Warranty",
-    "price": "17369",
+    "price": "17400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2562,7 +2617,7 @@ product_title_mapping = {
   },
   "U5AD9E": {
     "title": "HP LaserJet MFP 4 years Additional Warranty with Defective Media Retention",
-    "price": "40540",
+    "price": "53500",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2616,14 +2671,14 @@ product_title_mapping = {
   },
   "UG467E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 2 years Additional Warranty",
-    "price": "8444",
+    "price": "8400",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG468E": {
     "title": "HP OfficeJet Pro 9730 WF AiO 2 years Additional Warranty",
-    "price": "9278",
+    "price": "10600",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -2631,14 +2686,14 @@ product_title_mapping = {
   },
   "UZ275E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 4 years Additional Warranty",
-    "price": "16889",
+    "price": "16900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
    "UZ276E": {
     "title": "HP OfficeJet Pro 9730 WF AiO 4 years Additional Warranty",
-    "price": "19444",
+    "price": "20600",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2646,7 +2701,7 @@ product_title_mapping = {
   },
   "UZ277E": {
     "title": "HP OfficeJet Pro 8120 AiO 4 year Additional Warranty",
-    "price": "16111",
+    "price": "16100",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
     "duration": "5 year",
     "coverage":"in-warranty"
@@ -2670,7 +2725,7 @@ product_title_mapping = {
   },
   "U9MW4PE": {
     "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
-    "price": "20963",
+    "price": "22600",
     "image":"https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
     "duration": "1 year",
     "coverage":"post-warranty"
