@@ -28,10 +28,15 @@ mail = Mail(app)
 def ping():
     return 'pong'
 
-
 @app.route('/')
 def index():
-    return render_template("index.html")
+    serial = request.args.get("serial")
+    product = request.args.get("product")
+    return render_template("index.html", serial=serial, product=product)
+
+# @app.route('/')
+# def index():
+#     return render_template("index.html")
 
 
 @app.route('/', methods=['POST'])
