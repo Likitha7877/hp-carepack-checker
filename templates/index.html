@@ -1077,6 +1077,38 @@
 
 
         <script>
+
+
+          ///////////////////////////////////////////////////////////////////////////////
+// 🔵 STEP 4 — RECEIVE SERIAL FROM WORDPRESS & AUTO-SUBMIT
+///////////////////////////////////////////////////////////////////////////////
+window.addEventListener("message", function (event) {
+
+    if (event.data.serial && !serialAlreadyProcessed) {
+        serialAlreadyProcessed = true;
+
+        const serial = event.data.serial;
+
+        const input = document.getElementById("serial");
+        if (input) input.value = serial;
+
+        if (typeof submitForm === "function") {
+            submitForm({ preventDefault: () => {} });
+        }
+    }
+});
+
+
+///////////////////////////////////////////////////////////////////////////////
+// 🟢 STEP 5 — SEND SERIAL BACK TO WORDPRESS AFTER WARRANTY RESULT LOADS
+///////////////////////////////////////////////////////////////////////////////
+function notifyParentAfterResult(serial) {
+    window.parent.postMessage(
+        { serialDone: true, serial: serial },
+        "*"
+    );
+}
+          
           function sendReport() {
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
@@ -1238,12 +1270,15 @@
           }
 
 
+
           function renderResult(data, serial) {
             window.latestWarrantyResult = { ...data, serial };
 
 
             const resultEl = document.getElementById("result");
             const packsEl = document.getElementById("compatible-packs");
+                notifyParentAfterResult(serial);
+
             // 💡 Helper: Dynamic pricing for U9WX1E
             // function getU9WX1EPrice(productName) {
             //   const name = (productName || "").toLowerCase();
