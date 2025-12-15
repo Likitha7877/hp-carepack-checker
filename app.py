@@ -23,7 +23,6 @@ app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
 mail = Mail(app)
 
-
 @app.route('/ping')
 def ping():
     return 'pong'
@@ -39,6 +38,7 @@ def index():
 #     return render_template("index.html")
 
 
+
 @app.route('/', methods=['POST'])
 def check_warranty():
     try:
@@ -47,30 +47,62 @@ def check_warranty():
 
         serial = data.get("serial")
         product = data.get("product")
-        print(f"🔧 Serial: {serial}, Product: {product}")
+        role = data.get("role", "guest")  # ⭐ role from JS
+
+        print(f"🔧 Serial: {serial}, Product: {product}, Role: {role}")
 
         result = run_warranty_check(serial, product)
         print("✅ Warranty check result:", result)
 
-        # 🧱 Prevent further processing if an error occurred
+        # 🧱 Stop if error
         if "error" in result:
             return jsonify(result)
 
+        # ⭐ PARTNER PRICE MAP
+        PARTNER_PRICES = {
+            "UJ217E": 6490,
+            "U4813PE": 5310,
+            "U6417E": 8732,
+            "U8LH8E": 5310,
+            "U8LJ4E": 10148,
+            "UN008E": 6962,
+            "UB5R2E": 8260,
+            "U8LH3E": 4130,
+        }
+
+        # ⭐ APPLY PARTNER PRICES
+        for pack in result.get("care_packs", []):
+            sku = pack.get("part")
+
+            try:
+                regular_price = int(pack.get("price", 0))
+            except ValueError:
+                regular_price = 0
+
+            final_price = regular_price
+            is_partner_price = False
+
+            if role == "hp_partner" and sku in PARTNER_PRICES:
+                final_price = PARTNER_PRICES[sku]
+                is_partner_price = True
+
+            pack["regular_price"] = regular_price
+            pack["price"] = final_price
+            pack["is_partner_price"] = is_partner_price
+
+        # EOSL logic (unchanged)
         final_product = result.get("product_number") or product
         product_clean = final_product.strip().upper() if final_product else None
 
         if product_clean:
-            eosl_date = eosl_data.get(product_clean)
-            result['eosl_date'] = eosl_date
+            result["eosl_date"] = eosl_data.get(product_clean)
         else:
-            result['eosl_date'] = None
-            print("⚠️ Product number not provided or found. EOSL not set.")
+            result["eosl_date"] = None
 
         return jsonify(result)
 
     except Exception as e:
         print("❌ Error during warranty check:", e)
-    
         return jsonify({"error": str(e)}), 500
 
 
