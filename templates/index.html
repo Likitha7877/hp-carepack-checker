@@ -1079,28 +1079,6 @@
         <script>
           
 
-/* ===============================
-   🔑 USER ROLE (FROM WORDPRESS)
-================================ */
-const USER_ROLE =
-  window.loggedInUserRole ||
-  window.parent?.loggedInUserRole ||
-  "guest";
-
-console.log("🔑 User Role Detected:", USER_ROLE);
-
-/* ===============================
-   💰 PARTNER PRICE LIST
-================================ */
-const PARTNER_PRICES = {
-  "U8LH8E": 4500,
-  "UN008E": 5900,
-  "U8LJ4E": 8600,
-  "UB5R2E": 7000,
-  "U8LH3E": 3500,
-  "U8LH9E": 2500,
-  "U8LH7PE": 3500
-};
 
 
          ///////////////////////////////////////////////////////////////////////////////
@@ -1256,7 +1234,12 @@ function notifyParentAfterResult(serial) {
     const resp = await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ serial, product })
+body: JSON.stringify({
+  serial,
+  product,
+  role: window.USER_ROLE || "guest"
+})
+
     });
 
     if (!resp.ok) throw new Error(await resp.text());
@@ -1356,25 +1339,29 @@ function notifyParentAfterResult(serial) {
                 </h3>
                 <div class="price-cart">
 <p class="price">
-${
-  USER_ROLE === "subscriber" && PARTNER_PRICES[pack.part]
-    ? `
-      <span style="font-size:18px; color:#00115A; font-weight:600;">
-        ₹${PARTNER_PRICES[pack.part].toLocaleString("en-IN")}
-      </span>
-      <span style="
-        text-decoration: line-through;
-        color: #888;
-        font-size: 14px;
-        margin-left: 6px;
-      ">
-        ₹${Number(pack.price).toLocaleString("en-IN")}
-      </span>
-    `
-    : pack.part === "U9WX1E"
-      ? getU9WX1EPrice(data.product_name, data.product_number)
+  ${
+    pack.is_partner_price
+      ? `
+        <span style="text-decoration: line-through; color:#9AA0A6; font-size:13px;">
+          ₹${pack.regular_price}
+        </span><br>
+        <span style="color:#1A45EF; font-weight:600; font-size:16px;">
+          ₹${pack.price}
+        </span>
+        <span style="
+          display:inline-block;
+          margin-top:4px;
+          background:#E8F0FF;
+          color:#1A45EF;
+          font-size:11px;
+          padding:2px 6px;
+          border-radius:4px;
+        ">
+          Partner Price
+        </span>
+      `
       : `₹${pack.price ?? "—"}`
-}
+  }
 </p>
 
                   <a class="buy-link" href="${pack.url}" target="_blank">
@@ -1610,6 +1597,8 @@ if (
 
             formObserver.observe(parent, { childList: true, subtree: true });
           });
+          console.log("🔐 User Role:", window.HP_USER_ROLE);
+
 
         </script>
 
