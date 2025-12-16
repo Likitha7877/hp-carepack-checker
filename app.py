@@ -47,18 +47,17 @@ def check_warranty():
 
         serial = data.get("serial")
         product = data.get("product")
-        role = data.get("role", "guest")  # ⭐ role from JS
+        role = data.get("role", "guest")  # guest | customer | hp_partner
 
         print(f"🔧 Serial: {serial}, Product: {product}, Role: {role}")
 
+        # ✅ CALL ONLY ONCE
         result = run_warranty_check(serial, product)
-        print("✅ Warranty check result:", result)
 
-        # 🧱 Stop if error
         if "error" in result:
             return jsonify(result)
 
-        # ⭐ PARTNER PRICE MAP
+        # ✅ PARTNER PRICE MAP
         PARTNER_PRICES = {
             "UJ217E": 6490,
             "U4813PE": 5310,
@@ -70,7 +69,7 @@ def check_warranty():
             "U8LH3E": 4130,
         }
 
-        # ⭐ APPLY PARTNER PRICES
+        # ✅ APPLY PARTNER PRICING
         for pack in result.get("care_packs", []):
             sku = pack.get("part")
 
@@ -90,7 +89,7 @@ def check_warranty():
             pack["price"] = final_price
             pack["is_partner_price"] = is_partner_price
 
-        # EOSL logic (unchanged)
+        # ✅ EOSL LOGIC (UNCHANGED)
         final_product = result.get("product_number") or product
         product_clean = final_product.strip().upper() if final_product else None
 
@@ -104,7 +103,6 @@ def check_warranty():
     except Exception as e:
         print("❌ Error during warranty check:", e)
         return jsonify({"error": str(e)}), 500
-
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
