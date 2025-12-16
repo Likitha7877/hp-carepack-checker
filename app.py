@@ -67,6 +67,8 @@ def check_warranty():
             "UN008E": 6962,
             "UB5R2E": 8260,
             "U8LH3E": 4130,
+            "U8LH9E": 2950,
+            
         }
 
         # ✅ APPLY PARTNER PRICING
