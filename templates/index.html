@@ -1300,13 +1300,6 @@ body: JSON.stringify({
             document.getElementById("compatible-packs").style.marginTop = "0px"; // only if neede
           }
 
-function buildProductUrl(packUrl, serial, productNumber, endDate) {
-  const url = new URL(packUrl);
-  url.searchParams.set("serial", serial);
-  url.searchParams.set("pn", productNumber);
-  url.searchParams.set("end", endDate);
-  return url.toString();
-}
 
 
           function renderResult(data, serial) {
@@ -1347,7 +1340,6 @@ notifyParentAfterResult(
   </button>
 </div>
         <div class="care-pack-wrapper">
-          
            ${data.care_packs
       // ✅ Hide packs with price "Out Of Stock"
       
@@ -1364,15 +1356,9 @@ notifyParentAfterResult(
                 </div>
                 <p class="sku">SKU: ${pack.part}</p>
                 <h3 class="title">
-                   <a href="${buildProductUrl(
-        pack.url,
-        serial,
-        data.product_number,
-        data.end_date
-      )}" target="_blank">
-        ${pack.title}
-      </a>
-
+                  <a href="${pack.url}" target="_blank">
+                    ${pack.title}
+                  </a>
                 </h3>
                <div class="price-cart">
   <p class="price" style="display: ruby;">
@@ -1412,17 +1398,9 @@ notifyParentAfterResult(
 
 </p>
 
-                <a class="buy-link"
-         href="${buildProductUrl(
-           pack.url,
-           serial,
-           data.product_number,
-           data.end_date
-         )}"
-         target="_blank">
-        PROCEED TO BUY
-      </a>
-
+                  <a class="buy-link" href="${pack.url}" target="_blank">
+                    PROCEED TO BUY
+                  </a>
                 </div>
               </div>
             `)
