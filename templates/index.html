@@ -1349,30 +1349,42 @@ body: JSON.stringify({
                     ${pack.title}
                   </a>
                 </h3>
-                <div class="price-cart">
-<p class="price" style="display: ruby;">
-  ${
-    pack.is_partner_price
-      ? `
-        <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
-          ₹${pack.regular_price}
-        </span><br>
-        <span style="color:#00115A;font-weight:600;font-size:16px;">
-          ₹${pack.price}
-        </span>
-        <span style="
-          display:none;
-          margin-top:4px;
-          background:#E8F0FF;
-          color:#00115A;
-          font-size:11px;
-          padding:2px 6px;
-          border-radius:4px;">
-          Partner Price
-        </span>
-      `
-      : `₹${pack.price ?? "—"}`
-  }
+               <div class="price-cart">
+  <p class="price" style="display: ruby;">
+    ${
+      pack.is_partner_price
+        ? `
+          <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
+            ₹${pack.regular_price
+              ? new Intl.NumberFormat("en-IN").format(pack.regular_price)
+              : "-"}
+          </span><br>
+
+          <span style="color:#00115A;font-weight:600;font-size:16px;">
+            ₹${pack.price
+              ? new Intl.NumberFormat("en-IN").format(pack.price)
+              : "-"}
+          </span>
+
+          <span style="
+            display:none;
+            margin-top:4px;
+            background:#E8F0FF;
+            color:#00115A;
+            font-size:11px;
+            padding:2px 6px;
+            border-radius:4px;">
+            Partner Price
+          </span>
+        `
+        : `
+          ₹${pack.price
+            ? new Intl.NumberFormat("en-IN").format(pack.price)
+            : "—"}
+        `
+    }
+  
+
 </p>
 
                   <a class="buy-link" href="${pack.url}" target="_blank">
