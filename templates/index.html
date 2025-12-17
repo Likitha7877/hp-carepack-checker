@@ -1355,9 +1355,14 @@ notifyParentAfterResult(
                 </div>
                 <p class="sku">SKU: ${pack.part}</p>
                 <h3 class="title">
-                  <a href="${pack.url}" target="_blank">
-                    ${pack.title}
-                  </a>
+                 <a href="${pack.url}
+  ?serial=${encodeURIComponent(serial)}
+  &pn=${encodeURIComponent(data.product_number)}
+  &end=${encodeURIComponent(data.end_date)}"
+   target="_blank">
+  ${pack.title}
+</a>
+
                 </h3>
                <div class="price-cart">
   <p class="price" style="display: ruby;">
@@ -1397,9 +1402,15 @@ notifyParentAfterResult(
 
 </p>
 
-                  <a class="buy-link" href="${pack.url}" target="_blank">
-                    PROCEED TO BUY
-                  </a>
+                  <a class="buy-link"
+   href="${pack.url}
+     ?serial=${encodeURIComponent(serial)}
+     &pn=${encodeURIComponent(data.product_number)}
+     &end=${encodeURIComponent(data.end_date)}"
+   target="_blank">
+  PROCEED TO BUY
+</a>
+
                 </div>
               </div>
             `)
