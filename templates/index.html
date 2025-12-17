@@ -1123,12 +1123,18 @@ window.addEventListener("message", function (event) {
 ///////////////////////////////////////////////////////////////////////////////
 // 🟢 STEP 5 — SEND SERIAL BACK TO WORDPRESS AFTER WARRANTY RESULT LOADS
 ///////////////////////////////////////////////////////////////////////////////
-function notifyParentAfterResult(serial) {
-    window.parent.postMessage(
-        { serialDone: true, serial: serial },
-        "*"
-    );
+function notifyParentAfterResult(serial, productNumber, endDate) {
+  window.parent.postMessage(
+    {
+      serialDone: true,
+      serial: serial,
+      productNumber: productNumber,
+      endDate: endDate
+    },
+    "*"
+  );
 }
+
           
           function sendReport() {
             const name = document.getElementById("name").value.trim();
@@ -1302,7 +1308,11 @@ body: JSON.stringify({
 
             const resultEl = document.getElementById("result");
             const packsEl = document.getElementById("compatible-packs");
-                notifyParentAfterResult(serial);
+notifyParentAfterResult(
+  serial,
+  data.product_number,
+  data.end_date
+);
 
             // 💡 Helper: Dynamic pricing for U9WX1E
             // function getU9WX1EPrice(productName) {
