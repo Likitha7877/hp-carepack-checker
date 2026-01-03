@@ -1863,7 +1863,7 @@ product_title_mapping = {
   },
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
-    "price": "5556",
+    "price": "5500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-2HW-1.webp",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -1894,7 +1894,7 @@ product_title_mapping = {
   },
   "U9EE8E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension",
-    "price": "10556",
+    "price": "11000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/200-4HW.webp",
     "duration":"5 year",
     "coverage":"in-warranty"
