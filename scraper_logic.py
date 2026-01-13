@@ -3269,17 +3269,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
                 "excludes": ["all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook"],
-                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E",]
+                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E",],
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
               "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
-              "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"]
+              "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"],
             },
             {
                 "includes": ["pavilion"],
                 "excludes": ["all-", "desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"]
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
             },
              
             {
@@ -3294,10 +3294,31 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E"], 
             },
             {
-                "includes": ["omnibook"],
+                "includes": ["omnibook 3"],
                 "excludes": ["all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","UB5R3E-U9WX1E"], 
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
             },
+            {
+                "includes": ["omnibook 5"],
+                "excludes": ["all|desktop"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E"],
+            },
+            {
+                "includes": ["omnibook 7"],
+                "excludes": ["all|desktop"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
+            },
+            {
+                "includes": ["omnibook x"],
+                "excludes": ["all|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+            },
+            {
+                "includes": ["omnibook ultra"],
+                "excludes": ["all|desktop"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE"],
+            },
+            
             
             {
                 "includes": ["envy"],
