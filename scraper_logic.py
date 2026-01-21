@@ -3305,17 +3305,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": ["omnibook 7"],
-                "excludes": ["all|desktop|14s|14"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
             },
             {
                 "includes": ["omnibook x"],
-                "excludes": ["all|desktop|14s|14"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
             },
             {
                 "includes": ["omnibook ultra"],
-                "excludes": ["all|desktop|14s|14"],
+                "excludes": ["all|desktop"],
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE"],
             },
             
