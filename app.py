@@ -62,7 +62,7 @@ def check_warranty():
             "UJ217E": 6490,
             "U4813PE": 5310,
             "U6417E": 8732,
-            "U8LH8E": 5310,
+            "U8LH8E": 4750,
             "U8LJ4E": 10148,
             "UN008E": 6962,
             "UB5R2E": 8260,
@@ -91,7 +91,7 @@ def check_warranty():
             "U6WD0E": 7080,
             "UB5R5E": 21830,
             "U0H94PE": 20650,
-            "U9WX1E": 6962,
+            # "U9WX1E": 6962,
             "UN062PE": 7552,
             "UB5R2E-U9WX1E": 14041,
             "UB5R3E-U9WX1E": 16401,
@@ -331,7 +331,7 @@ def send_email():
         product_name = result.get("product_name", "").lower()
         for pack in care_packs:
             title = pack.get("title", "")
-            price = pack.get("price", "")
+            price = pack.get("price")
             url = pack.get("url", "")
             if "accidental damage protection add on for 3 years extended warranty" in title.lower():
                 if "pavilion" in product_name:
@@ -344,6 +344,11 @@ def send_email():
                     price = "12500"
                 elif "spectre" in product_name:
                     price = "18500"
+                
+                
+
+
+                
             note_html = ""
             if (
                 'accidental damage protection' in title.lower()
