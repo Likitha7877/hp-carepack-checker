@@ -1096,11 +1096,12 @@
 
 
 // 🔐 Store role received from WordPress
-window.USER_ROLE = "guest";
-
 window.addEventListener("message", function (event) {
 
-  if (event.origin !== "https://arminfoserve.com") return;
+  console.log("Incoming message from:", event.origin);
+
+  // ✅ Allow both www and non-www
+  if (!event.origin.includes("arminfoserve.com")) return;
 
   if (event.data?.type === "USER_ROLE") {
     window.USER_ROLE = event.data.role || "guest";
@@ -1108,6 +1109,7 @@ window.addEventListener("message", function (event) {
   }
 
 });
+
 
          ///////////////////////////////////////////////////////////////////////////////
 // 🔵 REQUIRED — Add this at TOP to enable auto-run correctly
@@ -1374,10 +1376,10 @@ notifyParentAfterResult(
 </div>
         <div class="care-pack-wrapper">
           
-          ${data.care_packs
+        ${data.care_packs
   .map(pack => {
 
-    // 🔥 Dynamic override for U9WX1E
+    // 🔥 STEP 1 — Dynamic override for U9WX1E SKU + URL
     if (pack.part === "U9WX1E") {
 
       const dynamicPrice = getU9WX1EPrice(
@@ -1385,25 +1387,22 @@ notifyParentAfterResult(
         data.product_number
       );
 
-      // If price is ₹8,500 → change SKU + URL
       if (dynamicPrice === "₹8,500") {
         pack.part = "U9WX1E-14s/15s";
         pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-14s-15s/";
       }
-       else if (dynamicPrice === "₹10,500") {
-    pack.part = "U9WX1E-Pavilion/Victus";
-    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-pavilion-victus/";
-  }
-
-  else if (dynamicPrice === "₹12,500") {
-    pack.part = "U9WX1E-Omen/Envy";
-    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-omen-envy/";
-  }
-
-  else if (dynamicPrice === "₹18,500") {
-    pack.part = "U9WX1E-Spectre";
-    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-spectre/";
-  }
+      else if (dynamicPrice === "₹10,500") {
+        pack.part = "U9WX1E-Pavilion/Victus";
+        pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-pavilion-victus/";
+      }
+      else if (dynamicPrice === "₹12,500") {
+        pack.part = "U9WX1E-Omen/Envy";
+        pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-omen-envy/";
+      }
+      else if (dynamicPrice === "₹18,500") {
+        pack.part = "U9WX1E-Spectre";
+        pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-spectre/";
+      }
     }
 
     return `
@@ -1433,44 +1432,49 @@ notifyParentAfterResult(
 
         <div class="price-cart">
           <p class="price" style="display:ruby;">
-            ${
-  pack.part.startsWith("U9WX1E")
-                ? `
-                <span style="color:#00115A;font-weight:600;font-size:16px;">
-                  ${
-                    getU9WX1EPrice(
-                      data.product_name,
-                      data.product_number
-                    ) || "SELECT THE MODEL"
-                  }
-                </span>
-              `
-                : pack.is_partner_price
-                ? `
-                <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
-                  ₹${
-                    pack.regular_price != null
-                      ? new Intl.NumberFormat("en-IN").format(Number(pack.regular_price))
-                      : "-"
-                  }
-                </span><br>
 
-                <span style="color:#00115A;font-weight:600;font-size:16px;">
+            ${
+              // ✅ 1. Partner price FIRST (highest priority)
+              pack.is_partner_price
+                ? `
+                  <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
+                    ₹${
+                      pack.regular_price != null
+                        ? new Intl.NumberFormat("en-IN").format(Number(pack.regular_price))
+                        : "-"
+                    }
+                  </span><br>
+
+                  <span style="color:#00115A;font-weight:600;font-size:16px;">
+                    ₹${
+                      pack.price != null
+                        ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
+                        : "-"
+                    }
+                  </span>
+                `
+                // ✅ 2. Dynamic U9WX1E pricing
+                : pack.part.startsWith("U9WX1E")
+                ? `
+                  <span style="color:#00115A;font-weight:600;font-size:16px;">
+                    ${
+                      getU9WX1EPrice(
+                        data.product_name,
+                        data.product_number
+                      ) || "SELECT THE MODEL"
+                    }
+                  </span>
+                `
+                // ✅ 3. Normal pricing
+                : `
                   ₹${
                     pack.price != null
                       ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
-                      : "-"
+                      : "—"
                   }
-                </span>
-              `
-                : `
-                ₹${
-                  pack.price != null
-                    ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
-                    : "—"
-                }
-              `
+                `
             }
+
           </p>
 
           <a class="buy-link"
@@ -1489,6 +1493,7 @@ notifyParentAfterResult(
     `;
   })
   .join("")}
+
 
         </div>`;
               packsEl.innerHTML = carePackHTML;
