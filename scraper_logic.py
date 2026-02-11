@@ -1425,6 +1425,7 @@ product_page_mapping = {
     "U7925E": "u7925e-hp-all-in-one-business-pc-4-years-additional-warranty-extension",
     "UJ217E" :"uj217e-hp-desktop-a-i-o-2-years-additional-warranty",
     "U4813PE" :"u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
+    "UD075PE" : "ud075pe-hp-desktop-all-in-one-1-year-post-warranty/",
     # "U4813PE" : "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     # "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
@@ -1519,6 +1520,7 @@ product_page_mapping = {
     "U10N7E":"hp-all-in-one-business-pc-2-years-additional-warranty-extension-3-year-base-warranty/",
     "U10N3E":"hp-pro-2xx-4xx-dt-2-years-additional-warranty-1-year-base-warranty/",
     "U10N2PE":"hp-prodesk-1-year-pw/",
+    "U9WX1E-14s15s":"hp-3-year-accidental-damage-protection-only-service-on-notebooks-14s-15s/",
     # Add other parts mapping here...
 
 
@@ -1586,6 +1588,13 @@ product_title_mapping = {
     "duration":"3 year"
   },
   "U4813PE": {
+    "title": "HP Desktop/All-In-One 1 Year Post Warranty",
+    "price": "6500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "coverage":"post-warranty",
+    "duration":"1 year"
+  },
+  "UD075PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
     "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
@@ -1774,34 +1783,41 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "U9WX1E-Spectre": {
-    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-    "price": "18500",
+#   "U9WX1E-Spectre": {
+#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+#     "price": "18500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
+#   },
+#   "U9WX1E-Omen/Envy": {
+#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+#     "price": "12500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
+#   },
+  "U9WX1E": {
+    "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
+    "price":"select the model",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
     "coverage": "in-warranty",
     "duration":"3 year"
   },
-  "U9WX1E-Omen/Envy": {
-    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-    "price": "12500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-    "coverage": "in-warranty",
-    "duration":"3 year"
-  },
-  "U9WX1E-14s/15s": {
-    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-    "price": "8500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-    "coverage": "in-warranty",
-    "duration":"3 year"
-  },
-  "U9WX1E-Pavilion/Victus": {
-    "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-    "price": "10500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-    "coverage": "in-warranty",
-    "duration":"3 year"
-  },
+#   "U9WX1E-14s15s": {
+#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+#     "price":"8500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
+#   },
+#   "U9WX1E-Pavilion/Victus": {
+#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
+#     "price": "10500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
+#   },
    "U0H92E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
     "price": "18250",
@@ -3268,8 +3284,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         rules = [
             {
                 "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
-                "excludes": ["all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook","omnibook 7","omnibook x","omnibook ultra","omnibook 3","omnibook 5"],
-                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E",],
+                "excludes": ["probook,all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook","omnibook 7","omnibook x","omnibook ultra","omnibook 3","omnibook 5","ProBook 440","ProBook 445","ProBook 455","ProBook 450","ProBook 430"],
+                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
             },
             {
               "includes": ["(?i)HP Laptop|chromebook 15s"],
@@ -3278,7 +3294,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": ["pavilion"],
-                "excludes": ["all-", "desktop"],
+                "excludes": ["all-", "desktop","aio"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
             },
              
@@ -3291,7 +3307,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["omen"],
                 "excludes": ["all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E","U9WX1E"], 
             },
             {
                 "includes": ["omnibook 3"],
@@ -3301,22 +3317,22 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": ["omnibook 5"],
                 "excludes": ["all|desktop"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
             },
             {
                 "includes": ["omnibook 7"],
                 "excludes": ["all|desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"],
             },
             {
                 "includes": ["omnibook x"],
                 "excludes": ["all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"], 
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
             },
             {
                 "includes": ["omnibook ultra"],
                 "excludes": ["all|desktop"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E"],
             },
             
             
@@ -3363,8 +3379,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["UJ217E","U4813PE"]
             },
             {
-                "includes": ["(?i)ProBook 440|ProBook 445|ProBook 455|ProBook 450|ProBook 430"],
-                "excludes": ["(?i)All|MFP"],
+                "includes": ["(?i)HP PB440G10 i5|PB 440|ProBook 440|g10|ProBook 445|ProBook 455|ProBook 450|ProBook 430|i5|133u|512 pc|16gb"],
+                "excludes": ["(?i)All|MFP|"],
                 "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
             {
@@ -3374,7 +3390,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
            
              {
-                "includes": ["inch|Pavilion all |Pavilion 3|pavilion gaming d"],
+                "includes": ["32|inch|Pavilion all |Pavilion 3|pavilion gaming d"],
                 "excludes": ["255","probook"],
                 "parts": ["U4813PE", "UA055E"],
             },

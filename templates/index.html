@@ -1177,10 +1177,21 @@ function notifyParentAfterResult(serial, productNumber, endDate) {
               .catch(() => alert("❌ Failed to send email"));
           }
          
+          function getU9WX1EPrice(productName, productNumber) {
+            const name = (productName || productNumber || "").toLowerCase();
+
+            if (name.includes("spectre")) return "₹18,500";
+            if (name.includes("omen") || name.includes("envy")) return "₹12,500";
+            if (name.includes("pavilion") || name.includes("victus")) return "₹10,500";
+            if (name.includes("14") || name.includes("15") || name.includes("chromebook")) return "₹8,500";
+
+            return "SELECT THE MODEL";
+          }
 
 
 
-          let latestResult = null; // store latest result
+          let latestResult = null;
+           // store latest result
 
 
           function openModal() {
@@ -1363,85 +1374,122 @@ notifyParentAfterResult(
 </div>
         <div class="care-pack-wrapper">
           
-           ${data.care_packs
-      // ✅ Hide packs with price "Out Of Stock"
-      
-            .map(pack => `
-              <div class="care-pack-card">
-                <div class="img-wrapper">
-                  ${pack.tag
-                      ? `<div class="tag-label ${getTagClass(pack.tag)}">
-                           ${pack.tag}
-                         </div>`
-                      : ""
-                    }
-                  <img src="${pack.image}" alt="${pack.title}" />
-                </div>
-                <p class="sku">SKU: ${pack.part}</p>
-                <h3 class="title">
-                   <a href="${buildProductUrl(
-        pack.url,
-        serial,
-        data.product_number,
-        data.end_date
-      )}" target="_blank">
-        ${pack.title}
-      </a>
+          ${data.care_packs
+  .map(pack => {
 
-                </h3>
-               <div class="price-cart">
-  <p class="price" style="display: ruby;">
-    ${
-      pack.is_partner_price
-        ? `
-          <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
-            ₹${pack.regular_price
-              ? new Intl.NumberFormat("en-IN").format(pack.regular_price)
-              : "-"}
-          </span><br>
+    // 🔥 Dynamic override for U9WX1E
+    if (pack.part === "U9WX1E") {
 
-          <span style="color:#00115A;font-weight:600;font-size:16px;">
-            ₹${pack.price
-              ? new Intl.NumberFormat("en-IN").format(pack.price)
-              : "-"}
-          </span>
+      const dynamicPrice = getU9WX1EPrice(
+        data.product_name,
+        data.product_number
+      );
 
-          <span style="
-            display:none;
-            margin-top:4px;
-            background:#E8F0FF;
-            color:#00115A;
-            font-size:11px;
-            padding:2px 6px;
-            border-radius:4px;">
-            Partner Price
-          </span>
-        `
-        : `
-          ₹${pack.price
-            ? new Intl.NumberFormat("en-IN").format(pack.price)
-            : "—"}
-        `
+      // If price is ₹8,500 → change SKU + URL
+      if (dynamicPrice === "₹8,500") {
+        pack.part = "U9WX1E-14s/15s";
+        pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-14s-15s/";
+      }
+       else if (dynamicPrice === "₹10,500") {
+    pack.part = "U9WX1E-Pavilion/Victus";
+    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-pavilion-victus/";
+  }
+
+  else if (dynamicPrice === "₹12,500") {
+    pack.part = "U9WX1E-Omen/Envy";
+    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-omen-envy/";
+  }
+
+  else if (dynamicPrice === "₹18,500") {
+    pack.part = "U9WX1E-Spectre";
+    pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-spectre/";
+  }
     }
-  
 
-</p>
+    return `
+      <div class="care-pack-card">
+        <div class="img-wrapper">
+          ${pack.tag
+            ? `<div class="tag-label ${getTagClass(pack.tag)}">
+                 ${pack.tag}
+               </div>`
+            : ""
+          }
+          <img src="${pack.image}" alt="${pack.title}" />
+        </div>
 
-                <a class="buy-link"
-         href="${buildProductUrl(
-           pack.url,
-           serial,
-           data.product_number,
-           data.end_date
-         )}"
-         target="_blank">
-        PROCEED TO BUY
-      </a>
+        <p class="sku">SKU: ${pack.part}</p>
 
-                </div>
-              </div>
-            `)
-                  .join("")}
+        <h3 class="title">
+          <a href="${buildProductUrl(
+            pack.url,
+            serial,
+            data.product_number,
+            data.end_date
+          )}" target="_blank">
+            ${pack.title}
+          </a>
+        </h3>
+
+        <div class="price-cart">
+          <p class="price" style="display:ruby;">
+            ${
+  pack.part.startsWith("U9WX1E")
+                ? `
+                <span style="color:#00115A;font-weight:600;font-size:16px;">
+                  ${
+                    getU9WX1EPrice(
+                      data.product_name,
+                      data.product_number
+                    ) || "SELECT THE MODEL"
+                  }
+                </span>
+              `
+                : pack.is_partner_price
+                ? `
+                <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
+                  ₹${
+                    pack.regular_price != null
+                      ? new Intl.NumberFormat("en-IN").format(Number(pack.regular_price))
+                      : "-"
+                  }
+                </span><br>
+
+                <span style="color:#00115A;font-weight:600;font-size:16px;">
+                  ₹${
+                    pack.price != null
+                      ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
+                      : "-"
+                  }
+                </span>
+              `
+                : `
+                ₹${
+                  pack.price != null
+                    ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
+                    : "—"
+                }
+              `
+            }
+          </p>
+
+          <a class="buy-link"
+            href="${buildProductUrl(
+              pack.url,
+              serial,
+              data.product_number,
+              data.end_date
+            )}"
+            target="_blank">
+            PROCEED TO BUY
+          </a>
+
+        </div>
+      </div>
+    `;
+  })
+  .join("")}
+
         </div>`;
               packsEl.innerHTML = carePackHTML;
             } else {
