@@ -1181,6 +1181,12 @@ function notifyParentAfterResult(serial, productNumber, endDate) {
          
           function getU9WX1EPrice(productName, productNumber) {
             const name = (productName || productNumber || "").toLowerCase();
+            
+  if (name.includes("omnibook 3")) return "₹8,500";
+  if (name.includes("omnibook 5")) return "₹8,500";
+  if (name.includes("omnibook 7")) return "₹10,500";
+  if (name.includes("omnibook x")) return "₹12,500";
+  if (name.includes("omnibook ultra")) return "₹18,500";
 
             if (name.includes("spectre")) return "₹18,500";
             if (name.includes("omen") || name.includes("envy")) return "₹12,500";
@@ -1456,7 +1462,7 @@ notifyParentAfterResult(
                 // ✅ 2. Dynamic U9WX1E pricing
                 : pack.part.startsWith("U9WX1E")
                 ? `
-                  <span style="color:#00115A;font-weight:600;font-size:16px;">
+                  <span style="color:#00115A;font-weight:400;font-size:16px;">
                     ${
                       getU9WX1EPrice(
                         data.product_name,
