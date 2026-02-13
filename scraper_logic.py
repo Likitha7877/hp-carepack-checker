@@ -1965,7 +1965,7 @@ product_title_mapping = {
     "price": "8111",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/ProB-ADP.webp",
     "coverage":"in-warranty",
-    "duration":"5 year"
+    "duration":"1 year"
   },
   "UB8B3E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
@@ -3176,8 +3176,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             keyword_patterns = [
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"\bhp\s?250\b", r"\bhp\s?255\b",
                 r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
-                r"\belitedesk\b", r"\bprodesk\b", r"\bmicrotower\b",
-                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b"
+                r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
+                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
                 ]
             for pattern in keyword_patterns:
                 if re.search(pattern, name):
@@ -3380,7 +3380,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": ["(?i)HP PB440G10 i5|PB 440|ProBook 440|g10|ProBook 445|ProBook 455|ProBook 450|ProBook 430|i5|133u|512 pc|16gb"],
-                "excludes": ["(?i)All|MFP|"],
+                "excludes": ["(?i)All|MFP"],
                 "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
             {
