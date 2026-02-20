@@ -3174,7 +3174,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_commercial_model(name: str) -> bool:
             name = name.lower()
             keyword_patterns = [
-                r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"\bhp\s?250\b", r"\bhp\s?255\b",
+                r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b",r"hp\s?250", r"\bhp\s?255\b",
                 r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
                 r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
                 r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
@@ -3293,7 +3293,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
               "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"],
             },
             {
-                "includes": ["pavilion"],
+                "includes": ["(?i)pav|pavilion"],
                 "excludes": ["all-", "desktop","aio"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
             },
@@ -3347,7 +3347,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
             },
             {
-                "includes": ["hp 240 g|hp 245 g|hp 255 g|notebook|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
+                "includes": ["250rg10|hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
                 "excludes": ["all|14s|15s|victus|pro|elitebook|pavilion"],
                 "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
             },
@@ -3380,7 +3380,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": ["(?i)HP PB440G10 i5|PB 440|ProBook 440|g10|ProBook 445|ProBook 455|ProBook 450|ProBook 430|i5|133u|512 pc|16gb"],
-                "excludes": ["(?i)All|MFP"],
+                "excludes": ["(?i)All|MFP|250|240|245|255|345|355"],
                 "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
             {
