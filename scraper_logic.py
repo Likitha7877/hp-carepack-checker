@@ -3282,16 +3282,16 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             remaining_days = None
         name = product_name.lower().strip()
         rules = [
-            {
-                "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
-                "excludes": ["probook,all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook","omnibook 7","omnibook x","omnibook ultra","omnibook 3","omnibook 5","ProBook 440","ProBook 445","ProBook 455","ProBook 450","ProBook 430"],
-                "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
-            },
-            {
-              "includes": ["(?i)HP Laptop|chromebook 15s"],
-              "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
-              "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"],
-            },
+            # {
+            #     "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
+            #     "excludes": ["probook,all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook","omnibook 7","omnibook x","omnibook ultra","omnibook 3","omnibook 5","ProBook 440","ProBook 445","ProBook 455","ProBook 450","ProBook 430"],
+            #     "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
+            # },
+            # {
+            #   "includes": ["(?i)HP Laptop|chromebook 15s"],
+            #   "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
+            #   "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"],
+            # },
             {
                 "includes": ["(?i)pav|pavilion"],
                 "excludes": ["all-", "desktop","aio"],
