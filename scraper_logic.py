@@ -1631,7 +1631,7 @@ product_title_mapping = {
     "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/14-15s-2HWBATT.webp",
     "coverage": "in-warranty",
-    "duration":"3 year"
+    "duration":"3year"
 
   },
   "UN008E": {
@@ -3282,141 +3282,137 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             remaining_days = None
         name = product_name.lower().strip()
         rules = [
-            # {
-            #     "includes": ["HP Laptop| x360 14|chromebook 11|14s|14"],
-            #     "excludes": ["probook,all-", "desktop","pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook","omnibook 7","omnibook x","omnibook ultra","omnibook 3","omnibook 5","ProBook 440","ProBook 445","ProBook 455","ProBook 450","ProBook 430"],
-            #     "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
-            # },
-            # {
-            #   "includes": ["(?i)HP Laptop|chromebook 15s"],
-            #   "excludes": ["(?i)14|pavilion|victus|omen|envy|spectre|all|desktop"],
-            #   "parts": ["UB5R2E-U9WX1E","U8LH7PE", "U8LH8E", "U8LJ4E","UB5R2E", "UN008E",  "U8LH3E", "U8LH9E","U9WX1E"],
-            # },
-            {
-                "includes": ["(?i)pav|pavilion"],
-                "excludes": ["all-", "desktop","aio"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
-            },
-             
-            {
-                "includes": ["victus"],
-                "excludes": ["all-","desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
-                    
-            }, 
-            {
-                "includes": ["omen"],
-                "excludes": ["all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"," UB5R4E-U9WX1E","U9WX1E"], 
-            },
-            {
-                "includes": ["omnibook 3"],
-                "excludes": ["all|desktop"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
-            },
-            {
-                "includes": ["omnibook 5"],
-                "excludes": ["all|desktop"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E","U9WX1E"],
-            },
-            {
-                "includes": ["omnibook 7"],
-                "excludes": ["all|desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE","U9WX1E"],
-            },
-            {
-                "includes": ["omnibook x"],
-                "excludes": ["all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E"], 
-            },
-            {
-                "includes": ["omnibook ultra"],
-                "excludes": ["all|desktop"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E"],
-            },
-            
-            
-            {
-                "includes": ["envy"],
-                "excludes": ["all-|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U9WX1E","UB5R4E-U9WX1E"], 
-            },
-            {
-                "includes": ["spectre"],
-                "excludes": ["all|desktop"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE","U9WX1E","UB5R5E-U9WX1E"],
-            },
-            {
-                "includes": ["250rg10|hp 240 g|hp 245 g|hp 255 g|hp 250 g|hp 340 g|hp 345 g|hp 350 g|hp 355 g"],
-                "excludes": ["all|14s|15s|victus|pro|elitebook|pavilion"],
-                "parts": ["U9BA7E", "U9BA3E", "U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE","U22N8E"],
-            },
-            {
-                "includes": ["zbook"],
-                "excludes": ["All|MFP"],
-                "parts": ["U02BVE", "U02BSE", "U10KHE"]
-            },
+           # ✅ FIXED Rule 1 — 14/15 series plain laptops only
+{
+    "includes": [r"(?i)hp\s?laptop", r"(?i)14s|chromebook\s?11|x360\s?14"],
+    "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
+    "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U8LH9E","U9WX1E"],
+},
 
+# ✅ FIXED Rule 2 — 15s plain laptops
+{
+    "includes": [r"(?i)hp\s?laptop|chromebook\s?15s"],
+    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop"],
+    "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UB5R2E","UN008E","U8LH3E","U8LH9E","U9WX1E"],
+},
+
+# ✅ Rule 3 stays the same — already works correctly
+{
+    "includes": [r"(?i)pav|pavilion"],
+    "excludes": [r"(?i)all-in-one|desktop|aio"],
+    "parts": ["U0H90E","U6WD1E","UN009E","UB5R3E","UN006E","U0H96E","U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
+},
+           {
+                "includes": [r"(?i)victus"],
+                "excludes": [r"(?i)all-in-one|desktop"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE", "U9WX1E", "UB5R3E-U9WX1E"],
+            },
             {
-                "includes": ["(?i)chromebook"],
+                "includes": [r"(?i)omen"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)omnibook\s?3"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)omnibook\s?5"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)omnibook\s?7"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)omnibook\s?x"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)omnibook\s?ultra"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE", "U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)envy"],
+                "excludes": [r"(?i)all-in-one|desktop"],
+                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)spectre"],
+                "excludes": [r"(?i)all|desktop"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE", "U9WX1E", "UB5R5E-U9WX1E"],
+            },
+            {
+                "includes": [r"(?i)250rg10|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g"],
+                "excludes": [r"(?i)all|14s|15s|victus|pro|elitebook|pavilion"],
+                "parts": ["U9BA7E", "U9BA3E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E"],
+            },
+            {
+                "includes": [r"(?i)zbook"],
+                "excludes": [r"(?i)all|mfp|g10"],
+                "parts": ["U02BVE", "U02BSE", "U10KHE"],
+            },
+            {
+                "includes": [r"(?i)chromebook"],
                 "excludes": [],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E"],
             },
             {
-                "includes": ["(?i)Elitebook 8|Elitebook 7"],
-                "excludes": ["(?i)All|MFP"],
+                "includes": [r"(?i)elitebook\s?[87]"],
+                "excludes": [r"(?i)all|mfp"],
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E"],
             },
             {
-                "includes": ["hp elitebook x360|elitebook 1"],
-                "excludes": ["all|mfp"],
+                "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
+                "excludes": [r"(?i)all|mfp"],
                 "parts": ["UB0E2E", "UB0E6E"],
             },
-               
             {
-                "includes": ["(?i)hp all-in-one|slim|Desktop PC M|HP 27"],
-                "excludes": ["victus", "omen", "envy", "spectre", "printer""14s","15s","pavilion"],
-                "parts": ["UJ217E","U4813PE"]
+                "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
+                # FIX: was "printer""14s" — missing comma, now fixed
+                "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion"],
+                "parts": ["UJ217E", "U4813PE"],
             },
             {
-                "includes": ["(?i)HP PB440G10 i5|PB 440|ProBook 440|g10|ProBook 445|ProBook 455|ProBook 450|ProBook 430|i5|133u|512 pc|16gb"],
-                "excludes": ["(?i)All|MFP|250|240|245|255|345|355"],
-                "parts": ["UK703E","U86DXE","UK744E", "UK726E","U86E0E","U86DVE","UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
+                "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|i5|133u|512\s?pc|16gb"],
+                "excludes": [r"(?i)all|mfp|250|240|245|255|345|355"],
+                "parts": ["UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
             },
             {
-                "includes": ["(?i)elitedesk|prodesk|Microtower"],
-                "excludes": ["(?i)Victus|Omen|Envy|Spectre|printer"],
-               "parts": ["U10N7E","U10N3E","U5864PE", "U6578E", "U7899E", "U0A84E","U10N2PE", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
+                "includes": [r"(?i)elitedesk|prodesk|microtower"],
+                "excludes": [r"(?i)victus|omen|envy|spectre|printer"],
+                "parts": ["U10N7E", "U10N3E", "U5864PE", "U6578E", "U7899E", "U0A84E", "U10N2PE", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
             },
-           
-             {
-                "includes": ["32|inch|Pavilion all |Pavilion 3|pavilion gaming d"],
-                "excludes": ["255","probook"],
-                "parts": ["U4813PE", "UA055E"],
-            },
+           {
+    "includes": [r"(?i)\b32\s*(inch|\")?|pavilion\s?all|pavilion\s?3|pavilion\s?gaming\s?d"],
+    "excludes": [r"(?i)255|probook|laptop|15s|14s|notebook"],
+    "parts": ["U4813PE", "UA055E"],
+},
+{
+    "includes": [r"(?i)envy\s?all|gaming\s?desktop"],
+    "excludes": [r"(?i)pavilion|victus|laptop|notebook"],
+    "parts": ["UA055E", "UN062PE"],
+},
             {
-                "includes": ["(?i)Envy all|gaming desktop"],
-                "excludes": ["(?i)pavilion|victus"],
-                "parts": ["UA055E", "UN062PE"],
-            },
-            {
-                "includes": ["zbook g10"],
-                "excludes": ["all-"],
+                "includes": [r"(?i)zbook\s?g10"],
+                "excludes": [r"(?i)all-in-one"],
                 "parts": ["U60ZBE", "U60ZCE", "U60ZWE", "U60ZXE", "U61E2E"],
             },
             {
-                "includes": [ "(?i)HP P2|HP e2"],
+                "includes": [r"(?i)hp\s?p2|hp\s?e2"],
                 "excludes": [],
                 "parts": ["U7935E", "U4925PE", "U7937E", "U4936PE"],
             },
             {
-                "includes": ["workstation 600", "workstation 400"],
-                "excludes": ["pavilion", "victus", "omen", "envy", "spectre", "x360", "chromebook", "notebook", "hp laptop", "15", "15s", "desktop", "all-in-one", "zbook", "monitor"],
-                "parts": ["U7944E", "U7942E", "U1G57E", "U1G39E", "U1G37E"]             
-            }
-
-
-
+                "includes": [r"(?i)workstation\s?600|workstation\s?400"],
+                "excludes": [r"(?i)pavilion|victus|omen|envy|spectre|x360|chromebook|notebook|hp\s?laptop|15s?|desktop|all-in-one|zbook|monitor"],
+                "parts": ["U7944E", "U7942E", "U1G57E", "U1G39E", "U1G37E"],
+            },
         ]
         
 
