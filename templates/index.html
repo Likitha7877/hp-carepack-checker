@@ -17,6 +17,26 @@
       padding: 0;
     }
 
+     .credential-strip {
+  max-width: 1140px; width: 100%;
+  background: #EEF4FF; border: 1px solid #BAC3FF;
+  border-radius: 8px; padding: 16px 24px; margin: 20px 0;
+  text-align: center; font-family: 'Poppins', sans-serif;
+  font-size: 14px; color: #00115A; line-height: 1.6;
+}
+.post-result-copy {
+  background: #FFF8E1; border-left: 4px solid #F5A623;
+  border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; font-size: 14px;
+  color: #00115A; line-height: 1.6;
+}
+.bottom-cta-box {
+  max-width: 1140px; width: 100%;
+  background: #F3F4FE; border-left: 4px solid #1A40FF;
+  border-radius: 6px; padding: 16px 24px; margin: 24px 0;
+  font-family: 'Poppins', sans-serif; font-size: 15px;
+  color: #00115A; line-height: 1.6;
+}
     body {
       background-color: #fff;
       display: flex;
@@ -292,19 +312,19 @@
 
     .img-wrapper {
       text-align: center;
-      background: #F0EFFF;
-      padding: 16px;
-      border-radius: 8px 8px 0px 0px;
+      height: 234px;
+      width: 100%;
+      overflow: hidden;
       position: relative;
 
 
     }
 
     .img-wrapper img {
-      max-width: 220PX;
-      height: auto;
-
-      border-radius: 8PX;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     }
 
     .sku {
@@ -970,7 +990,19 @@
 </head>
 
 <body>
+  <h2 style="color: #1f48f0;
+    font-size: 54px;
+    padding: 30px 10%;
+    font-family: 'Roboto Slab';
+    font-weight: 500;">Check Your HP Warranty Status — Then Extend It in One Step</h2>
+  <p style="padding: 0px 10%;
+    font-size: 16px;
+    font-family: 'Poppins';">Enter your HP serial number below to check your current warranty expiry date. If your warranty is expiring soon — or has already expired — ARM Infoserve India can extend it with a genuine HP Care Pack. As an HP Power Services Partner (Gold), we offer 163+ HP Care Pack plans starting from ₹3,200, with onsite service across India.</p>
 
+  <!-- #5 CREDENTIAL STRIP — ABOVE WARRANTY CHECKER TOOL -->
+  <div class="credential-strip">
+    This warranty checker is operated by <strong>ARM Infoserve India</strong>, an <strong>HP Power Services Partner (Gold)</strong> and <strong>HP Amplify Partner</strong>. Care Pack plans found here are genuine HP products, directly registered with HP.
+  </div>
   <div class="container">
     <div class="form-section">
       <h2>Check your Warranty</h2>
@@ -1037,6 +1069,9 @@
   <!-- Warranty Result Output Below Container -->
   <div id="result" style="display: none; margin-top: 0;"></div>
   <div id="compatible-packs" style="display: none; margin-top: 0;"></div>
+  <div class="bottom-cta-box">
+    Not sure which Care Pack fits your device? Our team of HP-certified experts will find the right plan for you — <strong>free of charge</strong>.
+  </div>
   <section class="product-id-section">
     <div class="content-wrapper">
       <h2>Find Your HP Product Number</h2>
