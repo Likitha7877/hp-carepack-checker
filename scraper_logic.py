@@ -1642,7 +1642,7 @@ product_title_mapping = {
     "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
     "coverage": "in-warranty",
-    "duration":"3year"
+    "duration":"3 year"
 
   },
   "UN008E": {
@@ -2328,7 +2328,7 @@ product_title_mapping = {
     "UA5C0E": {
     "title": "HP Smart Tank AiO 2 years Additional Warranty",
     "price": "4000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
@@ -2349,7 +2349,7 @@ product_title_mapping = {
   "U9NR3PE": {
     "title": "HP Smart Tank AiO 1 year Post Warranty",
     "price": "4400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
     "coverage":"post-warranty"
   },
@@ -3325,7 +3325,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
 # ✅ FIXED Rule 2 — 15s plain laptops
  {
-    "includes": [r"(?i)(hp\s?laptop\s+15s|hp\s?laptop\s+14s|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)"],
+    "includes": [r"(?i)(hp\s?laptop\s+15s|hp\s?laptop\s+14s|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)|15"],
     "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook"],
     "parts": ["UB5R2E-U9WX1E", "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E", "U8LH9E", "U9WX1E"],
 },
