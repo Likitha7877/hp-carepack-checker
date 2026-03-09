@@ -1632,7 +1632,7 @@ product_title_mapping = {
   "U8LH3E": {
     "title": "HP Laptop 14/15 Series 1 year Additional Warranty Extension",
     "price": "4500",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage": "in-warranty",
     "duration":"2 year"
     
@@ -1662,7 +1662,7 @@ product_title_mapping = {
   "UB5R2E": {
     "title": "HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement",
     "price": "10000",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -1693,7 +1693,7 @@ product_title_mapping = {
   "UN006E": {
     "title": "HP Pavilion/Victus by HP 1-Year Additional Warranty Extension",
     "price": "6000",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
@@ -1715,7 +1715,7 @@ product_title_mapping = {
   "UB5R3E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement",
     "price": "12500",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -1746,7 +1746,7 @@ product_title_mapping = {
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
     "price": "8500",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
@@ -1776,7 +1776,7 @@ product_title_mapping = {
   "UB5R4E": {
     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement",
     "price": "23000",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -1848,7 +1848,7 @@ product_title_mapping = {
   "UM952E": {
     "title": "HP Spectre 1 year Additional Warranty Extension",
     "price": "12000",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
@@ -1870,7 +1870,7 @@ product_title_mapping = {
   "UB5R5E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with One time Battery Replacement",
     "price": "27500",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -1990,7 +1990,7 @@ product_title_mapping = {
   "UK749E": {
     "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection",
     "price": "8111",
-    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
