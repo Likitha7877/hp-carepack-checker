@@ -1524,7 +1524,8 @@ product_page_mapping = {
     "U9WX1E-14s15s":"hp-3-year-accidental-damage-protection-only-service-on-notebooks-14s-15s/",
     "U86DVE": "hp-probook-g11-laptop-2-years-additional-warranty-extension-1-year-factory-warranty/",
     "U86E0E":"u86e0e-hp-probook-g11-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection-1-year-base-warranty/",
-    "U86E7E":"hp-probook-g11-laptop-2-years-additional-warranty-with-global-coverage-1-year-factory-warranty/"
+    "U86E7E":"hp-probook-g11-laptop-2-years-additional-warranty-with-global-coverage-1-year-factory-warranty/",
+    "U9AZ7E":"hp-200-300-series-factory-warranty-accidental-damage-protection-add-on/",
     # Add other parts mapping here...
 
 
@@ -1780,6 +1781,13 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+  "U38B38": {
+    "title": "HP Envy/Omen Battery Replacement ONLY",
+    "price": "12500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
   "UN082PE": {
     "title": "HP Envy/Omen 1 year Post Warranty",
     "price": "14000",
@@ -1794,20 +1802,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-#   "U9WX1E-Spectre": {
-#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-#     "price": "18500",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
-#   },
-#   "U9WX1E-Omen/Envy": {
-#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-#     "price": "12500",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
-#   },
+
   "U9WX1E": {
     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
     "price":"select the model",
@@ -1815,20 +1810,7 @@ product_title_mapping = {
     "coverage": "in-warranty",
     "duration":"3 year"
   },
-#   "U9WX1E-14s15s": {
-#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-#     "price":"8500",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
-#   },
-#   "U9WX1E-Pavilion/Victus": {
-#     "title": "Accidental Damage Protection Add on for 3 years Extended Warranty",
-#     "price": "10500",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
-#   },
+
    "U0H92E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
     "price": "18250",
@@ -1940,6 +1922,14 @@ product_title_mapping = {
     "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration":"5 year",
+    "coverage":"in-warranty"
+
+  },
+  "U9AZ7E": {
+    "title": "HP 200/300 Series Factory Warranty Accidental Damage Protection Add-on",
+    "price": "5500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/1ADP.png?fit=591%2C591&ssl=1",
+    "duration":"1 year",
     "coverage":"in-warranty"
 
   },
@@ -2602,7 +2592,7 @@ product_title_mapping = {
   },
   "U04TKE": {
     "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
-    "price": "6,900",
+    "price": "6900",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
     "duration":"3 year",
     "coverage":"in-warranty"
@@ -2979,6 +2969,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date,actual_service_level,coverage_type,result,):
             eosl_ok = False
             adp_ok = False
+            product_number = str(product_number).upper()
+            if not product_number.endswith(("PA", "AA")):
+                print("❌ This product is not purchased from India.")
+                return False
             dur = str(duration_str).strip().lower()
             has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
@@ -3344,7 +3338,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omen"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
+                "parts": ["U0H91E","U38B38","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
@@ -3374,7 +3368,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)envy"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
+                "parts": ["U0H91E","U38B38","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
             },
             {
                 "includes": [r"(?i)spectre"],
@@ -3384,7 +3378,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)250rg10|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g"],
                 "excludes": [r"(?i)all|14s|15s|victus|pro|elitebook|pavilion"],
-                "parts": ["U9BA7E", "U9BA3E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
+                "parts": ["U9BA7E", "U9BA3E","U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
             },
             {
                 "includes": [r"(?i)zbook"],
