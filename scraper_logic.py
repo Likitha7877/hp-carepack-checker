@@ -41,6 +41,26 @@ printer_mapping = {
         },
         "1 yr PW": {}
     },
+     "Y5S50A": {
+        "2 yr add WE": {
+           
+        },
+        "4 yr add WE": {
+        },
+        "1 yr PW": {
+            "Part": "UH770PE"
+            }
+    },
+     "Y5S50A": {
+        "2 yr add WE": {
+            "part": "UH757E"
+        },
+        "4 yr add WE": {
+            "part": "UZ267E"
+            
+        },
+        "1 yr PW": {}
+    },
     "Y5S54A": {
         "2 yr add WE": {
             "part": "UH773E"
@@ -897,6 +917,7 @@ printer_mapping = {
         },
         "1 yr PW": {}
     },
+    
     "4ZB85A": {
         "2 yr add WE": {
             "part": "UB4V5E"
@@ -1140,6 +1161,15 @@ printer_mapping = {
         },
         "1 yr PW": {}
     },
+     "5QK15A": {
+        "2 yr add WE": {
+            
+        },
+        "4 yr add WE": {
+            "part": "U36LGE"
+        },
+        "1 yr PW": {}
+    },
     "3D4L3A": {
         "2 yr add WE": {
             "part": "U57D7E"
@@ -1325,6 +1355,16 @@ printer_mapping = {
         "4 yr add WE": {},
         "1 yr PW": {}
     },
+    "2ZN50A": {
+        "2 yr add WE": {
+            "part": "U9VU5E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9VV5PE"
+            }
+    },
+    
     "499M6A": {
         "2 yr add WE": {
             "part": "UG482E"
@@ -1334,6 +1374,252 @@ printer_mapping = {
         },
         "1 yr PW": {}
     },
+    "A8P80A": {
+        "2 yr add WE": {
+        },
+        "4 yr add WE": {
+            "part": "U5AD9E"
+        },
+        "1 yr PW": {}
+    },
+    "A8P79A": {
+        "2 yr add WE": {
+        },
+        "4 yr add WE": {
+            "part": "U5AD9E"
+        },
+        "1 yr PW": {}
+    },
+    "Z4B04A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z4B53A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z11A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z13A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "7ZV78A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z95A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z97A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1TJ09A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4SB24A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4SR29A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "3YW70A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU46A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU47A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3W3A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8S4A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3W2A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8R9A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3Y4A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8D9A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3Y2A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8D4A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU48A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "28C12A": {
+    "2 yr add WE": { "part": "UG062E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+   "Z4B04A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z4B53A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z11A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z13A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "7ZV78A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z95A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "Z6Z97A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1TJ09A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4SB24A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4SR29A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "3YW70A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU46A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU47A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3W3A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8S4A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3W2A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8R9A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3Y4A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8D9A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "1F3Y2A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "4A8D4A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "6UU48A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
+  "28C12A": {
+    "2 yr add WE": { "part": "UG457E" },
+    "4 yr add WE": {},
+    "1 yr PW": {}
+  },
     "499N4A": {
         "2 yr add WE": {
             "part": "UH773E"
@@ -1348,6 +1634,14 @@ printer_mapping = {
   
 
 product_page_mapping = {
+    "UG457E":"hp-deskjet-2-years-additional-warranty/",
+    "UG062E":"ug062e-hp-deskjet-ia-ultra-4826-aio-printer-2-years-additional-warranty/",
+    "UH770PE":"hp-consumer-laserjet-1-year-post-warranty",
+    "U9VV5PE":"hp-laserjet-m726xx-mfp-1-year-post-warranty/",
+    "UZ267E":"hp-consumer-laserjet-4-years-additional-warranty-uz267e/",
+    "UH757E":"hp-consumer-laserjet-2-years-additional-warranty",
+    "U9VU5E":"hp-laserjet-m726xx-mfp-2-year-additional-warranty/",
+    "U36LGE":"hp-color-laserjet-managed-mfp-e785xx-4-year-additional-warranty/",
     "UG482E":"hp-colour-laserjet-pro-3xxx-2-years-additional-warranty",
     "UZ260E":"hp-colour-laserjet-pro-3xxx-4-years-additional-warranty/",
     "U8LH8E": "u8lh8e-hp-laptop-14-15-series-2-years-additional-warranty-extension",
@@ -1398,6 +1692,7 @@ product_page_mapping = {
     "UK726E": "uk726e-hp-probook-400-laptop-2-years-additional-warranty-extension-with-accidental-damage-protection-on-1-year-base-warranty",
     "UK718E": "uk718e-hp-probook-400-laptop-4-years-additional-warranty-extension",
     "UK749E": "uk749e-hp-probook-400-laptop-factory-warranty-add-on-accidental-damage-protection",
+    "U85N2E": "hp-probook-g11-3-years-factory-warranty-accidental-damage-protection/",
     "UB8B3E": "ub8b3e-hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
     "UK738PE": "uk738pe-hp-probook-400-laptop-1-year-post-warranty-carepack",
     "U86DXE": "u86dxe-hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty/",
@@ -1426,6 +1721,7 @@ product_page_mapping = {
     "UJ217E" :"uj217e-hp-desktop-a-i-o-2-years-additional-warranty",
     "U4813PE" :"u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     "UD075PE" : "ud075pe-hp-desktop-all-in-one-1-year-post-warranty/",
+    "UN085E" : "/hp-omnistudio-desktop-2-years-additional-warranty/",
     # "U4813PE" : "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     # "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
@@ -1526,6 +1822,17 @@ product_page_mapping = {
     "U86E0E":"u86e0e-hp-probook-g11-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection-1-year-base-warranty/",
     "U86E7E":"hp-probook-g11-laptop-2-years-additional-warranty-with-global-coverage-1-year-factory-warranty/",
     "U9AZ7E":"hp-200-300-series-factory-warranty-accidental-damage-protection-add-on/",
+    "U38B3B":"hp-envy-omen-battery-replacement-only/",
+    "U86DYE":"hp-probook-g11-laptop-2-years-additional-warranty-with-adp-1-year-factory-warranty/",
+    "UD0P5PE":"hp-zbook-g11-1-year-post-warranty",
+    "U85S0E":"hp-zbook-g11-factory-warranty-add-on-3-years-bw",
+    "U02CDE":"hp-zbook-mobile-wks-g7-g8-g9-2y-additional-warranty-w-travel-coverage-3y-bw",
+    "U61BRE":"hp-zbook-mws-g10-2-years-additional-warranty-3y-bw",
+    "UB3G4E":"hp-z-book-1-year-additional-warranty-extension-with-battery-replacement",
+    "U76MBE":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty-2",
+    "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
+    "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty"
+    
     # Add other parts mapping here...
 
 
@@ -1533,10 +1840,48 @@ product_page_mapping = {
 }
 
 product_title_mapping = {
+    "UZ267E": {
+    "title": "HP Consumer LaserJet 4 years Additional Warranty – UZ267E",
+    "price": "6812",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    
+    
+    "U36LGE": {
+    "title": "HP Colour LaserJet Pro 3xxx 4 years Additional Warranty",
+    "price": "50000",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    
     "UG482E": {
     "title": "HP Colour LaserJet Pro 3xxx 2 years Additional Warranty",
     "price": "7800",
-    "image": "https://wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "UG062E": {
+    "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
+    "price": "4700",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "UG457E": {
+    "title": "HP Deskjet 2 years Additional Warranty",
+    "price": "4000",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "U9VU5E": {
+    "title": "HP LaserJet M726xx MFP 2 year Additional Warranty",
+    "price": "24500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -1544,7 +1889,7 @@ product_title_mapping = {
     "UZ260E": {
     "title": "HP Colour LaserJet Pro 3xxx 4 years Additional Warranty",
     "price": "11700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
@@ -1552,42 +1897,42 @@ product_title_mapping = {
     "UZ287E": {
     "title": "HP OfficeJet Pro 9016 AiO Printer 4 years Additional Warranty",
     "price": "12700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "UZ299E": {
     "title": "HP OfficeJet Pro 9010 4 years Additional Warranty",
     "price": "8200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "U10N7E": {
     "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (3 Year Base Warranty)",
     "price": "5500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "U10NFE": {
     "title": "HP Pro 2XX/4XX DT 4 Years Additional Warranty (1 Year Base Warranty)",
     "price": "10500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/4-HW-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "U10N3E": {
     "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (1 Year Base Warranty)",
     "price": "5500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
     "U10N2PE": {
     "title": "HP 2xx/4xx Desktop 1 year Post Warranty",
     "price": "4000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-PW.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
@@ -1595,21 +1940,29 @@ product_title_mapping = {
     "UJ217E": {
     "title": "HP Desktop/All-In-One 2 Years Additional Warranty",
     "price": "7250",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-2HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "UN085E": {
+    "title": "HP OmniStudio Desktop 2 Years Additional Warranty",
+    "price": "14500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U4813PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
     "price": "6500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
+  
   "UD075PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
     "price": "6500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
@@ -1781,7 +2134,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "U38B38": {
+  "U38B3B": {
     "title": "HP Envy/Omen Battery Replacement ONLY",
     "price": "12500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png?fit=591%2C591&ssl=1",
@@ -1870,6 +2223,63 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+   "U02BVE": {
+    "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
+    "price": "12500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "U02BSE": {
+    "title": "HP ZBook MWS G7/G8/G9 2 years Additional Warranty (3 years Base Warranty)",
+    "price": "22420",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+   "U10KHE": {
+    "title": "HP Z-Book 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "price": "25500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "UD0P5PE": {
+    "title": "HP ZBook G11 1 year Post Warranty",
+    "price": "15500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
+    "coverage":"in-warranty",
+    "duration":"1 year"
+  },
+   "U85S0E": {
+    "title": "HP ZBook G11 Factory Warranty Add-on (3 years)",
+    "price": "15500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "U02CDE": {
+    "title": "HP ZBook Mobile WKS G7/G8/G9 2y Additional Warranty w/Travel Coverage (3Y BW)",
+    "price": "23000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+   "U61BRE": {
+    "title": "HP ZBook MWS G10 2 years Additional Warranty (3Y BW)",
+    "price": "22500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    "UB3G4E": {
+    "title": "HP Z-Book 1 Year Additional Warranty Extension with Battery Replacement",
+    "price": "16500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWBATT.png",
+    "coverage":"in-warranty",
+    "duration":"1 year"
+  },
+   
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
     "price": "5500",
@@ -1982,7 +2392,14 @@ product_title_mapping = {
     "price": "8111",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
-    "duration":"1 year"
+    "duration":"3 year"
+  },
+  "U85N2E": {
+    "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection",
+    "price": "8111",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
   },
   "UB8B3E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
@@ -2012,6 +2429,14 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
+  "UK724E": {
+    "title": "HP ProBook 4XX Factory Warranty Accidental Damage Protection Add-on (1 year)",
+    "price": "7500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/1ADP.png" ,
+    "coverage":"in-warranty",
+    "duration":"1 year"
+  },
+  
   "U86E0E":{
     "title": "HP ProBook G11 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
     "price": "17000",
@@ -2023,6 +2448,13 @@ product_title_mapping = {
     "title": "HP ProBook G11 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
     "price": "8000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png" ,
+    "coverage":"in-warranty",
+    "duration":"3 year"
+    },
+  "U86DYE":{
+    "title": "HP ProBook G11 laptop 2 years Additional Warranty with ADP (1 year factory warranty)",
+    "price": "15500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png?fit=591%2C591&ssl=1" ,
     "coverage":"in-warranty",
     "duration":"3 year"
     },
@@ -2069,6 +2501,27 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
+  "U76MBE": {
+    "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "11500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U84Z0E": {
+    "title": "HP EliteBook 10xx G11 2 years additional warranty (3 year base warranty)",
+    "price": "20000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U80MME": {
+    "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "11500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
   "U7861E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
     "price": "12222",
@@ -2076,6 +2529,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
+  
   "UB5T7E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
     "price": "19889",
@@ -2096,28 +2550,28 @@ product_title_mapping = {
   "U5864PE": {
     "title": "HP All-in-One Business PC 1 year Post Warranty",
     "price": "5850",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
   "U6578E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (1 Year Base Warranty)",
     "price": "5600",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HW.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U7899E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (3 Year Base Warranty)",
     "price": "4667",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U0A84E": {
     "title": "HP All-in-One Business PC Factory Warranty Add-on Accidental Damage Protection",
     "price": "9445",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-ADP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/ADP-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
@@ -2125,63 +2579,63 @@ product_title_mapping = {
   "U7897E": {
     "title": "HP All-in-One Business PC 1 year Additional Warranty Extension",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HW.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/1-HW-dektop.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "U0A85E": {
     "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Accidental Damage Protection",
     "price": "7250",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HWADP.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/1HWADP-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "U11BVE": {
     "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Defective Media Retention",
     "price": "6944",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-1HWDMR.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/1HWDMR.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "UF236E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
     "price": "13900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HWADP-2.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U0A83E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
     "price": "8500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HWADP.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UF360E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Defective Media Retention (1 Year Base Warranty)",
     "price": "7800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HWDMR.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U7923E": {
     "title": "HP All-in-One Business PC 3 Years Additional Warranty Extension",
     "price": "8500",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/AIO-3HW.webp?fit=520%2C400&ssl=1",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/3-HW.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
    "U7925E": {
     "title": "HP All-in-One Business PC 4 Years Additional Warranty Extension",
     "price": "9800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-4HW.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/4-HW-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "UF361E": {
     "title": "HP All-in-One Business PC 3 Years Additional Warranty Extension with Defective Media Retention",
     "price": "10500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-3HWDMR.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/3HWDMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2202,7 +2656,7 @@ product_title_mapping = {
    "UA055E": {
     "title": "HP Envy/Pavilion/Victus by HP/Omen by HP/Pro Desktop 2 Years Additional Warranty",
     "price": "13500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/AIO-2HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2210,7 +2664,7 @@ product_title_mapping = {
    "UN062PE": {
     "title": "HP Envy/Omen Desktop/All-In-One 1 Year Post Warranty",
     "price": "9850",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
@@ -2218,14 +2672,14 @@ product_title_mapping = {
    "U11BWE": {
     "title": "HP Desktop 2 Years Additional Warranty Extension with DMR (3 Year Factory Warranty)",
     "price": "7222",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-2HWDMR-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
    "U11BTE": {
     "title": "HP Desktop 3 year Defective Media Retention on Factory Warranty",
     "price": "6556",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/11/AIO-3DMR.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/07/3-DMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2233,16 +2687,23 @@ product_title_mapping = {
     "U4925PE": {
     "title": "TFT Monitor 1-year Post Warranty",
     "price": "3500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-PW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
     "U7935E": {
     "title": "Up to 24in TFT Monitor 2-year Additional Warranty Extension",
     "price": "4500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/TFT-2HW.png",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
+  },
+    "UE370E": {
+    "title": "HP Business Monitor 2 years Additional Warranty on 3 years Factory Warranty",
+    "price": "10500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
   },
     #workstation 6xx-8xx/hp workstation 4xx
     
@@ -2256,7 +2717,7 @@ product_title_mapping = {
     "U7944E": {
     "title": "WorkStation 600/800 SERIES 2-year Additional Warranty Extension",
     "price": "12500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HW-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2277,7 +2738,7 @@ product_title_mapping = {
    "U1G57E": {
     "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension with Defective Media Retention",
     "price": "11500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HWDMR.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2285,7 +2746,7 @@ product_title_mapping = {
    "U1G39E": {
     "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension",
     "price": "10000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-2HW-1-1.webp",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
@@ -2296,21 +2757,28 @@ product_title_mapping = {
     "UZ295E": {
     "title": "HP Officejet Printers 4 years Additional Warranty",
     "price": "6300",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
     "UZ303E": {
     "title": "HP Multi-function Printer 4 years Additional Warranty",
     "price": "7700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
     "U04SME": {
     "title": "HP LaserJet Tank Printers 2 years Additional Warranty",
     "price": "6100",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+    "UH757E": {
+    "title": "HP Consumer LaserJet 2 years Additional Warranty",
+    "price": "5556",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
@@ -2325,14 +2793,14 @@ product_title_mapping = {
   "U35PFE": {
     "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U57D7E": {
     "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
@@ -2346,98 +2814,92 @@ product_title_mapping = {
   "UG361E": {
     "title": "HP LaserJet Pro Printers 2 years Additional Warranty",
     "price": "4400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "UQ463E": {
     "title": "HP LaserJet Printers 4 years Additional Warranty",
     "price": "6100",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
-  "UH769E": {
-    "title": "HP 3-Year Pickup and Return for Consumer LaserJet - Entry Service",
-    "price": "5075",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
-    "duration": "5 year",
-    "coverage":"in-warranty"
-  },
+  
   "UG337E": {
     "title": "HP Multi-function Printer 2 years Additional Warranty",
     "price": "5300",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "hhttps://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UZ303E": {
     "title": "HP Multi-function Printer 4 years Additional Warranty",
     "price": "6000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UG062E": {
     "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
     "price": "4700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG334E": {
     "title": "HP Deskjet 1112, 1212 2 years Additional Warranty",
     "price": "4200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG338E": {
     "title": "HP DeskJet IA 50XX AiO Printer 2 years Additional Warranty",
     "price": "4400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "UZ304E": {
     "title": "HP DeskJet IA 50XX AiO Printer 4 years Additional Warranty",
     "price": "5900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U6M72E": {
     "title": "HP OfficeJet Pro High 2 years Additional Warranty",
     "price": "7200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
    "U6M74E": {
     "title": "HP OfficeJet Pro High 4 years Additional Warranty",
     "price": "12900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UG346E": {
     "title": "HP Officejet Printers 2 years Additional Warranty",
     "price": "4700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG350E": {
     "title": "HP OJ Pro 9010 2 years Additional Warranty",
     "price": "6200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U6M85E": {
     "title": "HP OfficeJet Pro Printer (Ultra High) 2 years Additional Warranty",
     "price": "10200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
@@ -2445,28 +2907,28 @@ product_title_mapping = {
   "UG470E": {
     "title": "HP OfficeJet Pro 9016 AiO Printer 2 years Additional Warranty",
     "price": "6600",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG349E": {
     "title": "HP OJ Pro 802X, 812X 2 years Additional Warranty",
     "price": "5900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG348E": {
     "title": "HP Officejet Printers 2 years Additional Warranty",
     "price": "5200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG347E": {
     "title": "HP OJ Pro 7720 2 years Additional Warranty",
     "price": "5200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
@@ -2474,161 +2936,161 @@ product_title_mapping = {
   "U35PFE": {
     "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB4V5E": {
     "title": "HP Laser 10x and 13x MFP 2 years Additional Warranty",
     "price": "4800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"3 year",
     "coverage":"in-warranty"
   },
   "UB4W7E": {
     "title": "HP Color Laser 15x and 17x MFP 2 years Additional Warranty",
     "price": "7800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB4X9E": {
     "title": "HP Neverstop Laser MFP 1200nw 2 years Additional Warranty",
     "price": "6900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB4Z1E": {
     "title": "HP Neverstop Laser 1xxx 2 years Additional Warranty",
     "price": "6200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UH773E": {
     "title": "HP Consumer LaserJet 2 years Additional Warranty",
     "price": "5600",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UZ298E": {
     "title": "HP OJ Pro 802X, 812X 4 years Additional Warranty",
     "price": "7400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ297E": {
     "title": "HP Officejet Printers 4 years Additional Warranty",
     "price": "7400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-AIO.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ296E": {
     "title": "HP OfficeJet Pro 7720 Wide Format 4 years Additional Warranty",
     "price": "6700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4Y1E": {
     "title": "HP Laser 10x and 13x MFP 4 years Additional Warranty",
     "price": "7400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"5 year",
     "coverage":"in-warranty"
   },
   "UC4X9E": {
     "title": "HP Color Laser 15x and 17x MFP 4 years Additional Warranty",
     "price": "13300",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4X7E": {
     "title": "HP Neverstop Laser MFP 1200nw 4 years Additional Warranty",
     "price": "13100",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC4X5E": {
     "title": "HP Neverstop Laser 1xxx 4 years Additional Warranty",
     "price": "11700",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ289E": {
     "title": "HP Consumer LaserJet 4 years Additional Warranty",
     "price": "6812",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UZ272E": {
     "title": "HP LaserJet Printer 4 years Additional Warranty",
     "price": "6800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
    "UG481E": {
     "title": "HP LaserJet Printer 2 years Additional Warranty",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laserjet-pro-MFP-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U04THE": {
     "title": "HP LaserJet Tank MFP 4 years Additional Warranty",
     "price": "14800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"5 year",
     "coverage":"in-warranty"
   },
   "U04TKE": {
     "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
     "price": "6900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"3 year",
     "coverage":"in-warranty"
   },
   "U04SKE": {
     "title": "HP LASERJET TANK 1020W 4 years Additional Warranty",
     "price": "13200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U62F5E": {
     "title": "HP Laser 100x and 11xx MFP 4 years Additional Warranty",
     "price": "7400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "U62F3E": {
     "title": "HP Laser 100x and 11xx MFP 2 years Additional Warranty",
     "price": "4800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U8TM2E": {
     "title": "HP LaserJet M402 2 years Additional Warranty",
     "price": "8100",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "U8TN1E": {
     "title": "HP Color LaserJet M452 2 years Additional Warranty",
     "price": "10199",
-    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
 
@@ -2636,29 +3098,22 @@ product_title_mapping = {
   "U8TQ9E": {
     "title": "HP LaserJet M42x Multi-Function 2 years Additional Warranty",
     "price": "17400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
       
   },
-  "U9JT1E": {
-    "title": "HP Installation Service with network configuration for Personal Scanner and Printer (1 unit)",
-    "price": "5850",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png"
+#   "U9JT1E": {
+#     "title": "HP Installation Service with network configuration for Personal Scanner and Printer (1 unit)",
+#     "price": "5850",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png"
       
-  },
-  "U6Z65E": {
-    "title": "HP 2 years Additional Next Business Day + Defective Media Retention",
-    "price": "33125",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-     
-  },
+#   },
+  
   "U5AD9E": {
     "title": "HP LaserJet MFP 4 years Additional Warranty with Defective Media Retention",
     "price": "53500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HWDMR-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
       
@@ -2666,21 +3121,21 @@ product_title_mapping = {
   "UB9R9E": {
     "title": "HP LaserJet Pro MFP M429fdn, M429fdw 4 years Additional Warranty",
     "price": "21599",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UB9R7E": {
     "title": "HP LaserJet Pro MFP M429dw, M329dn, M329dw 2 years Additional Warranty",
     "price": "10200",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UB9S8E": {
     "title": "HP Color LaserJet Pro MFP M479 4 years Additional Warranty",
     "price": "25047",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP-1.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
       
@@ -2688,7 +3143,7 @@ product_title_mapping = {
   "UB9S6E": {
     "title": "HP 2 years Additional Warranty for Color LaserJet Pro MFP M479",
     "price": "19000",
-    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
       
@@ -2696,7 +3151,7 @@ product_title_mapping = {
     "U8TP0E": {
     "title": "HP 2 years Additional Color LaserJet Multi Function Printer",
     "price": "24500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
       
@@ -2704,7 +3159,15 @@ product_title_mapping = {
   "U57D7E": {
     "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
     "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Smart-tank-AIO-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "duration": "3 year",
+    "coverage":"in-warranty"
+      
+  },
+  "U57D7E": {
+    "title": "HP Smart Tank AiO 2 years Additional Warranty",
+    "price": "3500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
       
@@ -2712,14 +3175,14 @@ product_title_mapping = {
   "UG467E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 2 years Additional Warranty",
     "price": "8400",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UG468E": {
     "title": "HP OfficeJet Pro 9730 WF AiO 2 years Additional Warranty",
     "price": "10600",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
   
@@ -2727,14 +3190,14 @@ product_title_mapping = {
   "UZ275E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 4 years Additional Warranty",
     "price": "16900",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
    "UZ276E": {
     "title": "HP OfficeJet Pro 9730 WF AiO 4 years Additional Warranty",
     "price": "20600",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
   
@@ -2742,7 +3205,7 @@ product_title_mapping = {
   "UZ277E": {
     "title": "HP OfficeJet Pro 8120 AiO 4 year Additional Warranty",
     "price": "16100",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Office-jet-Pro-1.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "5 year",
     "coverage":"in-warranty"
     
@@ -2751,7 +3214,7 @@ product_title_mapping = {
   "U42GXPE": {
     "title": "HP Neverstop Laser MFP 1200nw 1 year Post Warranty",
     "price": "7500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Neverstop-Laser-MFP.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
     "coverage":"post-warranty"
     
@@ -2759,14 +3222,28 @@ product_title_mapping = {
   "U34XRE": {
     "title": "HP Scan jet 2600 2 years Warranty Extension",
     "price": "11800",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/12/HP-Scanjet-2600.png",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
+  },
+   "U9VV5PE": {
+    "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
+    "price": "16800",
+    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
+    "duration": "1 year",
+    "coverage":"post-warranty"
+  },
+    "UH770PE": {
+    "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
+    "price": "4500",
+    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
+    "duration": "1 year",
+    "coverage":"post-warranty"
   },
   "U9MW4PE": {
     "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
     "price": "22600",
-    "image":"https://arminfoserve.com/wp-content/uploads/2023/12/LaserJet.png",
+    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
     "coverage":"post-warranty"
   }
@@ -3338,7 +3815,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omen"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H91E","U38B38","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
+                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
@@ -3368,7 +3845,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)envy"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U0H91E","U38B38","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
+                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
             },
             {
                 "includes": [r"(?i)spectre"],
@@ -3383,7 +3860,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)zbook"],
                 "excludes": [r"(?i)all|mfp|g10"],
-                "parts": ["U02BVE", "U02BSE", "U10KHE"],
+                "parts": ["U02BVE", "U02BSE", "U10KHE","UD0P5PE","U85S0E","U02CDE","U61BRE","UB3G4E"],
             },
             {
                 "includes": [r"(?i)chromebook"],
@@ -3398,17 +3875,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
                 "excludes": [r"(?i)all|mfp"],
-                "parts": ["UB0E2E", "UB0E6E"],
+                "parts": ["UB0E2E", "UB0E6E","U76MBE","U80MME","U84Z0E"],
             },
              {
         "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
-        "parts": ["UJ217E", "U4813PE"],
+        "parts": ["UJ217E", "U4813PE","UD075PE"],
     },
         {
         "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
         "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook"],
-        "parts": ["U86E7E", "U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
+        "parts": ["U86E7E","UK724E","U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
     },
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
@@ -3418,12 +3895,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
            {
         "includes": [r"(?i)\b32\s*(inch|\")|pavilion\s?all|pavilion\s?3|pavilion\s?gaming\s?d"],
         "excludes": [r"(?i)255|probook|laptop|15s|14s|notebook"],
-        "parts": ["U4813PE", "UA055E"],
+        "parts": ["U4813PE", "UA055E","UN085E","UD075PE"],
     },
 {
     "includes": [r"(?i)envy\s?all|gaming\s?desktop"],
     "excludes": [r"(?i)pavilion|victus|laptop|notebook"],
-    "parts": ["UA055E", "UN062PE"],
+    "parts": ["UA055E", "UN062PE","UN085E"],
 },
             {
                 "includes": [r"(?i)zbook\s?g10"],
@@ -3433,12 +3910,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)hp\s?p2|hp\s?e2"],
                 "excludes": [],
-                "parts": ["U7935E", "U4925PE", "U7937E", "U4936PE"],
+                "parts": ["U7935E", "U4925PE", "U7937E"],
             },
             {
                 "includes": [r"(?i)workstation\s?600|workstation\s?400"],
                 "excludes": [r"(?i)pavilion|victus|omen|envy|spectre|x360|chromebook|notebook|hp\s?laptop|15s?|desktop|all-in-one|zbook|monitor"],
-                "parts": ["U7944E", "U7942E", "U1G57E", "U1G39E", "U1G37E"],
+                "parts": ["U7944E", "U7942E", "U1G57E", "U1G39E", "U1G37E","U1G24PE"],
             },
         ]
         
