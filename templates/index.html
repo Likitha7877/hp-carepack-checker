@@ -710,6 +710,15 @@
 
 
     @media (max-width: 480px) {
+      .img-wrapper {
+      text-align: center;
+      height: 220px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+
+    }
       .container {
         flex-direction: column;
         /* stack items vertically */
@@ -1153,7 +1162,14 @@ Not sure which Care Pack fits your device? Our team of HP-certified experts will
 
 
 
+
+
+
+
+
         <script>
+          // Price calculations for hp_partner
+
           
 
 
@@ -1442,10 +1458,18 @@ notifyParentAfterResult(
     Send details to my email
   </button>
 </div>
-        <div class="care-pack-wrapper">
+       <section class="care-pack-wrapper" role="list" aria-label="HP Care Pack Warranty Plans">
           
-        ${data.care_packs
+${data.care_packs
   .map(pack => {
+    const packPrice = Number(pack.price);
+const packRegular = Number(pack.regular_price);
+const isPartner = window.USER_ROLE === "hp_partner";
+const hasDiscount = isPartner && packPrice < packRegular;
+
+const priceFormatted = new Intl.NumberFormat("en-IN").format(packPrice);
+const regularFormatted = new Intl.NumberFormat("en-IN").format(packRegular);
+const priceBeforeTax = new Intl.NumberFormat("en-IN").format(Math.round(packPrice / 1.18));
 
     // 🔥 STEP 1 — Dynamic override for U9WX1E SKU + URL
     if (pack.part === "U9WX1E") {
@@ -1474,7 +1498,8 @@ notifyParentAfterResult(
     }
 
     return `
-      <div class="care-pack-card">
+      <article class="care-pack-card" role="listitem">
+
         <div class="img-wrapper">
           ${pack.tag
             ? `<div class="tag-label ${getTagClass(pack.tag)}">
@@ -1482,7 +1507,12 @@ notifyParentAfterResult(
                </div>`
             : ""
           }
-          <img src="${pack.image}" alt="${pack.title}" />
+
+          <img 
+            src="${pack.image}" 
+            alt="${pack.title} HP Care Pack Warranty Plan"
+            loading="lazy"
+          />
         </div>
 
         <p class="sku">SKU: ${pack.part}</p>
@@ -1493,74 +1523,71 @@ notifyParentAfterResult(
             serial,
             data.product_number,
             data.end_date
-          )}" target="_blank">
+          )}" 
+          target="_blank"
+           rel="noopener noreferrer"
+          title="Buy ${pack.title} HP Care Pack Warranty Plan">
             ${pack.title}
           </a>
         </h3>
 
-        <div class="price-cart">
-          <p class="price" style="display:ruby;">
+       <div style="padding:16px;">
 
-            ${
-              // ✅ 1. Partner price FIRST (highest priority)
-              pack.is_partner_price
-                ? `
-                  <span style="text-decoration:line-through;color:#9AA0A6;font-size:13px;">
-                    ₹${
-                      pack.regular_price != null
-                        ? new Intl.NumberFormat("en-IN").format(Number(pack.regular_price))
-                        : "-"
-                    }
-                  </span><br>
+  <!-- Top row -->
+  <!-- Top row -->
+<div style="display:flex; justify-content:space-between; align-items:center; 
+            padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #E0E0E0;">
+  <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+    Price before tax
+  </p>
+  <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+    ${hasDiscount ? `₹${priceBeforeTax}` : `₹${priceFormatted}`}
+  </p>
+</div>
 
-                  <span style="color:#00115A;font-weight:600;font-size:16px;">
-                    ₹${
-                      pack.price != null
-                        ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
-                        : "-"
-                    }
-                  </span>
-                `
-                // ✅ 2. Dynamic U9WX1E pricing
-                : pack.part.startsWith("U9WX1E")
-                ? `
-                  <span style="color:#00115A;font-weight:400;font-size:16px;">
-                    ${
-                      getU9WX1EPrice(
-                        data.product_name,
-                        data.product_number
-                      ) || "SELECT THE MODEL"
-                    }
-                  </span>
-                `
-                // ✅ 3. Normal pricing
-                : `
-                  ₹${
-                    pack.price != null
-                      ? new Intl.NumberFormat("en-IN").format(Number(pack.price))
-                      : "—"
-                  }
-                `
-            }
+  <!-- Bottom row -->
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div>
+      ${hasDiscount ? `
+        <!-- Partner: big price + Incl.GST -->
+        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:Roboto Slab; line-height:1;">
+          ₹${priceFormatted} 
+          <span style="font-size:13px; font-weight:400; color:#00115A;">Incl.GST</span>
+        </p>
+        <!-- ARM Price strikethrough below -->
+        <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
+          ARM Price 
+          <span style="text-decoration:line-through;">₹${regularFormatted}</span>
+        </p>
+      ` : `
+        <!-- Normal user: big price -->
+        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:Roboto Slab; line-height:1;">
+          ₹${priceFormatted}
+        </p>
+        <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
+          Incl. all taxes
+        </p>
+      `}
+    </div>
 
-          </p>
+    <a href="${buildProductUrl(pack.url, serial, data.product_number, data.end_date)}" 
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Proceed to buy ${pack.title}"
+       style="font-family:Poppins; background:#1A40FF; color:#fff; padding:12px 20px; 
+              border-radius:6px; font-weight:600; font-size:13px; text-decoration:none;
+              white-space:nowrap;">
+      PROCEED TO BUY
+    </a>
+  </div>
 
-          <a class="buy-link"
-            href="${buildProductUrl(
-              pack.url,
-              serial,
-              data.product_number,
-              data.end_date
-            )}"
-            target="_blank">
-            PROCEED TO BUY
-          </a>
-
-        </div>
-      </div>
+</div>
+      </article>
     `;
   })
   .join("")}
+</section>
+  
 
 
         </div>`;
