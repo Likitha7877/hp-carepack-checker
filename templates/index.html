@@ -1531,37 +1531,33 @@ const priceBeforeTax = new Intl.NumberFormat("en-IN").format(Math.round(packPric
           </a>
         </h3>
 
-       <div style="padding:16px;">
+    <div style="padding:16px;">
 
   <!-- Top row -->
-  <!-- Top row -->
-<div style="display:flex; justify-content:space-between; align-items:center; 
-            padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #E0E0E0;">
-  <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
-    Price before tax
-  </p>
-  <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
-    ${hasDiscount ? `₹${priceBeforeTax}` : `₹${priceFormatted}`}
-  </p>
-</div>
+  <div style="display:flex; justify-content:space-between; align-items:center; 
+              padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #E0E0E0;">
+    <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+      Price before tax
+    </p>
+    <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+      ₹${priceBeforeTax}
+    </p>
+  </div>
 
   <!-- Bottom row -->
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <div>
       ${hasDiscount ? `
-        <!-- Partner: big price + Incl.GST -->
-        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:Roboto Slab; line-height:1;">
-          ₹${priceFormatted} 
+        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
+          ₹${priceFormatted}
           <span style="font-size:13px; font-weight:400; color:#00115A;">Incl.GST</span>
         </p>
-        <!-- ARM Price strikethrough below -->
         <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
-          ARM Price 
+          ARM Price
           <span style="text-decoration:line-through;">₹${regularFormatted}</span>
         </p>
       ` : `
-        <!-- Normal user: big price -->
-        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:Roboto Slab; line-height:1;">
+        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
           ₹${priceFormatted}
         </p>
         <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
