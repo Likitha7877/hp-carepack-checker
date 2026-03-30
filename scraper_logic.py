@@ -3235,10 +3235,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date,actual_service_level,coverage_type,result,):
             eosl_ok = False
             adp_ok = False
-            product_number = str(product_number).upper()
-            if not product_number.endswith(("PA", "AA")):
-                print("❌ This product is not purchased from India.")
-                return False
+            # product_number = str(product_number).upper()
+            # if not product_number.endswith(("PA", "AA")):
+            #     print("❌ This product is not purchased from India.")
+            #     return False
             dur = str(duration_str).strip().lower()
             has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
@@ -3568,6 +3568,24 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         years, months = carepack_duration(actual_start_date, actual_end_date)
         if years is None or months is None:
             return {"error": "Warranty dates could not be parsed."}
+        product_number = str(extracted_product_number).upper()
+        is_out_of_india = not product_number.endswith(("PA", "AA"))
+        if is_out_of_india:
+            print("🚫 OUT OF INDIA PRODUCT DETECTED")
+            return {
+                "out_of_india": True,
+                "product_number": product_number,
+                "product_name": product_name,
+                "image_url": image_url,
+                "status": warranty_data.get("Status"),
+                "start_date": warranty_data.get("Start date"),
+                "end_date": warranty_data.get("End date"),
+                "coverage_type": warranty_data.get("Coverage type"),
+                "remaining_days": calculate_remaining_days(warranty_data.get("End date")),
+                "addon": addon_text,
+                # "out_of_india": is_out_of_india,   # ✅ FLAG ONLY
+                "care_packs": []
+                }
     
             
         if warranty_data and warranty_data.get("End date"):

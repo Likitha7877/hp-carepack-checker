@@ -707,7 +707,76 @@
     background-position: -200% 0;
   }
 }
+.out-india-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  width:1140px;
+}
 
+.out-india-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.out-india-content h1 {
+  color: #964900;
+  font-size: 48px;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 10px;
+}
+
+.out-india-content .desc {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  color: #00072E;
+  line-height: 1.5;
+}
+
+.out-india-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.out-india-form button {
+  width: 100%;
+  padding: 14px;
+  background: #BC5D00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.out-india-form button:hover {
+  background: #6f351f;
+}
+
+.out-india-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.out-india-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* mobile version */
 
     @media (max-width: 480px) {
       .img-wrapper {
@@ -1018,6 +1087,13 @@
         padding: 0px 21px 30px 21px !important;
 
       }
+      .out-india-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+  width:100%;
+}
 
 
 
@@ -1432,19 +1508,107 @@ notifyParentAfterResult(
   data.product_number,
   data.end_date
 );
+   resultEl.innerHTML = `
+      <div class="result-card">
+        <div class="product-info-flex">
+          <div class="product-image">
+            ${data.image_url
+                ? `<img src="${data.image_url}" alt="${data.product_name}"
+                     />`
+                : ""
+              }
+          </div>
+          <div class="product-text">
+          <h2>${data.product_name}</h2>
+          <div class="product-serial-flex">
+<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
 
-            // 💡 Helper: Dynamic pricing for U9WX1E
-            // function getU9WX1EPrice(productName) {
-            //   const name = (productName || "").toLowerCase();
-            //   if (name.includes("spectre")) return "₹12,500";
-            //   if (name.includes("omen") || name.includes("envy")) return "₹10,500";
-            //   if (name.includes("pavilion") || name.includes("victus")) return "₹9,500";
-            //   if (name.includes("14") || name.includes("15") || name.includes("chromebook")) return "₹8,599";
-            //   return "SELECT THE MODEL";
-            // }
+
+            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
 
 
-            // 1. Inject compatible care packs
+
+
+          </div>
+          <div class="status-box ${data.status === 'Active' ? 'status-active-border'
+                : data.status === 'Coverage expiring' ? 'status-expiring-border'
+                  : 'status-expired-border'}">
+            <p><strong><span class="${data.status === 'Active' ? 'status-active'
+                : data.status === 'Coverage expiring' ? 'status-expiring'
+                  : 'status-expired'}">Status:</span> <span class="${data.status === 'Active' ? 'status-active'
+                    : data.status === 'Coverage expiring' ? 'status-expiring'
+                      : 'status-expired'}">${data.status}</span></strong></p>
+            <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
+  <strong>Add-on –</strong> ${data.addon}
+</p>
+
+
+          </div>
+        </div>
+      </div>
+
+        </div>
+        <div class="warranty-boxes">
+          <div class="box">
+            <p>Warranty Start Date</p>
+            <strong class="blue">${data.start_date}</strong>
+          </div>
+          <div class="box">
+            <p>Warranty End Date</p>
+            <strong class="blue">${data.end_date}</strong>
+          </div>
+          <div class="box">
+            <p>Coverage Type</p>
+            <strong class="blue">${data.coverage_type}</strong>
+          </div>
+          <div class="box">
+            <p>Time Remaining</p>
+            <strong class="blue">${data.remaining_days}</strong>
+          </div>
+        </div>
+      </div>`;
+
+
+ 
+  
+
+
+if (data.out_of_india) {
+
+  packsEl.innerHTML = ""; // ✅ clear old content first
+
+  packsEl.innerHTML = `
+   <div class="out-india-wrapper">
+
+  <!-- LEFT CONTENT -->
+  <div class="out-india-content">
+    <h1>Out of India Device</h1>
+
+    <p class="desc">
+      It appears the product you intend to extend the warranty for was not sold by HP India.
+      To explore global travel plans, connect with an Expert:
+    </p>
+
+    <form class="out-india-form">
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email address" required />
+      <input type="text" value="${serial}" placeholder="Serial Number" />
+
+      <button type="submit">CONSULT AN EXPERT</button>
+    </form>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="out-india-image">
+    <img src="https://arminfoserve.com/wp-content/uploads/2026/03/out-of-india-product.png" alt="Out of India Product" />
+  </div>
+
+</div>
+  `;
+
+  return; // ✅ perfect
+}            // 1. Inject compatible care packs
             if (data.care_packs && data.care_packs.length) {
               const carePackHTML = `
 
@@ -1688,66 +1852,7 @@ if (
 
 
             // 2. Inject main result card
-            resultEl.innerHTML = `
-      <div class="result-card">
-        <div class="product-info-flex">
-          <div class="product-image">
-            ${data.image_url
-                ? `<img src="${data.image_url}" alt="${data.product_name}"
-                     />`
-                : ""
-              }
-          </div>
-          <div class="product-text">
-          <h2>${data.product_name}</h2>
-          <div class="product-serial-flex">
-<p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Serial Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${serial}</span></p>
-
-
-            <p style="color:#00115A; font-size:14px; font-family:'poppins',serif;">Product Number: <span style="color: #1f48f0; font-size:16px; font-family:'poppins',serif;">${data.product_number}</span></p>
-
-
-
-
-          </div>
-          <div class="status-box ${data.status === 'Active' ? 'status-active-border'
-                : data.status === 'Coverage expiring' ? 'status-expiring-border'
-                  : 'status-expired-border'}">
-            <p><strong><span class="${data.status === 'Active' ? 'status-active'
-                : data.status === 'Coverage expiring' ? 'status-expiring'
-                  : 'status-expired'}">Status:</span> <span class="${data.status === 'Active' ? 'status-active'
-                    : data.status === 'Coverage expiring' ? 'status-expiring'
-                      : 'status-expired'}">${data.status}</span></strong></p>
-            <p style="color: #00115A; font-size: 14px; font-family: 'Poppins', sans-serif;">
-  <strong>Add-on –</strong> ${data.addon}
-</p>
-
-
-          </div>
-        </div>
-      </div>
-
-        </div>
-        <div class="warranty-boxes">
-          <div class="box">
-            <p>Warranty Start Date</p>
-            <strong class="blue">${data.start_date}</strong>
-          </div>
-          <div class="box">
-            <p>Warranty End Date</p>
-            <strong class="blue">${data.end_date}</strong>
-          </div>
-          <div class="box">
-            <p>Coverage Type</p>
-            <strong class="blue">${data.coverage_type}</strong>
-          </div>
-          <div class="box">
-            <p>Time Remaining</p>
-            <strong class="blue">${data.remaining_days}</strong>
-          </div>
-        </div>
-      </div>`;
-          }
+                   }
 
 
 

@@ -165,6 +165,7 @@ def check_warranty():
             "U85S0E": 3540,
             "U7936E": 3245,
             "U7934E": 1947,
+            "U10NFE": 5015,
             "UC9A2E": 7670,
             "UD0N9E": 21240,
             "UC9A5E": 11210,
@@ -275,6 +276,7 @@ def submit_form():
         name = data.get("name")
         phone = data.get("phone")
         serial = data.get("serial")
+        email = data.get("email")
         heading = data.get("headingText", "Not specified")
 
         if not (name and phone and serial):
