@@ -2581,7 +2581,7 @@ product_title_mapping = {
   },
   "U35PFE": {
     "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
-    "price": "5000",
+    "price": "5750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration": "3 year",
     "coverage":"in-warranty"
@@ -3114,6 +3114,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
         name_el = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.product-info-text h2")))
         product_name = driver.execute_script("return arguments[0].innerText;", name_el).strip()
+        
 
         try:
             info = driver.find_element(By.CSS_SELECTOR, "div.serial-product-no")
@@ -3569,7 +3570,21 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         if years is None or months is None:
             return {"error": "Warranty dates could not be parsed."}
         product_number = str(extracted_product_number).upper()
-        is_out_of_india = not product_number.endswith(("PA", "AA"))
+        product_name_lower = product_name.lower().strip()
+        is_consumer = any(x in product_name_lower for x in [
+            "pavilion", "victus", "envy", "spectre", "omen",
+            "laptop", "notebook", "x360"
+            ])
+        is_200_300_series = any(x in product_name_lower for x in [
+            "hp 200", "hp 300", "200 g", "300 g"
+            ])
+        if is_consumer:
+            is_out_of_india = not product_number.endswith(("PA", "AA"))
+        elif is_200_300_series:
+            is_out_of_india = not product_number.endswith(("PA", "AV", "PT", "AT"))
+        else:
+            is_out_of_india = False  # other products ignore
+        
         if is_out_of_india:
             print("🚫 OUT OF INDIA PRODUCT DETECTED")
             return {
