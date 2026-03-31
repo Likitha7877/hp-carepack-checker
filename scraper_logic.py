@@ -2143,7 +2143,7 @@ product_title_mapping = {
   },
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
-    "price": "4000",
+    "price": "4500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
     "coverage":"post-warranty",
     "duration":"1 year"
