@@ -1948,7 +1948,7 @@ product_title_mapping = {
   "U9WX1E": {
     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
     "price":"select the model",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/09/14-15s-2HW-1-2.webp",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
     "coverage": "in-warranty",
     "duration":"3 year"
   },
@@ -2116,7 +2116,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
 
   },
-  "U9EE8E": {
+  "U9EE7E": {
     "title": "HP 200/300 Series 3 years Additional Warranty Extension",
     "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
@@ -3470,7 +3470,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             name = name.lower()
             keyword_patterns = [
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b",r"hp\s?250", r"\bhp\s?255\b",
-                r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
+                r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",r"\b200\s?pro\b",
                 r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
                 r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
                 ]
@@ -3573,15 +3573,15 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         product_name_lower = product_name.lower().strip()
         is_consumer = any(x in product_name_lower for x in [
             "pavilion", "victus", "envy", "spectre", "omen",
-            "laptop", "notebook", "x360"
+            "laptop", "x360","15s","chromebook","omnibook 3","omnibook 5","omnibook 7","omnibook X","omnibook Z"
             ])
         is_200_300_series = any(x in product_name_lower for x in [
-            "hp 200", "hp 300", "200 g", "300 g"
+            "hp 200", "hp 300", "200 g", "300 g","hp 240g","hp 245g","hp 250g","hp 240"
             ])
         if is_consumer:
             is_out_of_india = not product_number.endswith(("PA", "AA"))
         elif is_200_300_series:
-            is_out_of_india = not product_number.endswith(("PA", "AV", "PT", "AT"))
+            is_out_of_india = not product_number.endswith(("PA", "AV", "PT"))
         else:
             is_out_of_india = False  # other products ignore
         
@@ -3615,13 +3615,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
     "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U8LH9E","U9WX1E"],
 },
-
-# ✅ FIXED Rule 2 — 15s plain laptops
- {
+{
     "includes": [r"(?i)(hp\s?laptop\s+15s|hp\s?laptop\s+14s|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)|15"],
-    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook"],
+    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250"],
     "parts": ["UB5R2E-U9WX1E", "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E", "U8LH9E", "U9WX1E"],
 },
+
+
 
 # ✅ Rule 3 stays the same — already works correctly
 {
@@ -3674,11 +3674,16 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "excludes": [r"(?i)all|desktop"],
                 "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE", "U9WX1E", "UB5R5E-U9WX1E"],
             },
-            {
-                "includes": [r"(?i)250rg10|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g"],
-                "excludes": [r"(?i)all|14s|15s|victus|pro|elitebook|pavilion"],
-                "parts": ["U9BA7E", "U9BA3E","U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
-            },
+        
+ {
+    "includes": [
+        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|hp\s?200\s?pro\s?g\d"
+    ],
+    "excludes": [
+        r"(?i)all|14s|15s|victus|elitebook|pavilion"
+    ],
+    "parts": ["U9BA7E", "U9BA3E","U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
+},
             {
                 "includes": [r"(?i)zbook"],
                 "excludes": [r"(?i)all|mfp|g10"],
@@ -3706,7 +3711,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     },
         {
         "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
-        "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook"],
+        "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200"],
         "parts": ["U86E7E","UK724E","U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
     },
             {
@@ -3745,6 +3750,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         for rule in rules:
             includes_match = all(re.search(kw, name) for kw in rule.get("includes", []))
             excludes_match = any(re.search(exc, name) for exc in rule["excludes"])
+            print(f"🔎 Rule includes: {rule['includes']} → match: {includes_match}")
+            print(f"🔎 Rule excludes: {rule['excludes']} → match: {excludes_match}")
             if includes_match and not excludes_match:
                 try:
                     start_date_str = warranty_data.get("Start date")
