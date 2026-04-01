@@ -3470,7 +3470,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             name = name.lower()
             keyword_patterns = [
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b",r"hp\s?250", r"\bhp\s?255\b",
-                r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",r"\b200\s?pro\b",
+                r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
                 r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
                 r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
                 ]
@@ -3677,7 +3677,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         
  {
     "includes": [
-        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|hp\s?200\s?pro\s?g\d"
+        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g"
     ],
     "excludes": [
         r"(?i)all|14s|15s|victus|elitebook|pavilion"
