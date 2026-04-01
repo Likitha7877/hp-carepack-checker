@@ -3581,7 +3581,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         if is_consumer:
             is_out_of_india = not product_number.endswith(("PA", "AA"))
         elif is_200_300_series:
-            is_out_of_india = not product_number.endswith(("PA", "AV", "PT"))
+            is_out_of_india = not product_number.endswith(("PA", "AV", "PT","AT"))
         else:
             is_out_of_india = False  # other products ignore
         
