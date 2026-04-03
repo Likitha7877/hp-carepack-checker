@@ -1119,8 +1119,8 @@
   <div class="container">
     <div class="form-section">
       <h2>Check your Warranty</h2>
-      <form class="warranty-form" onsubmit="event.preventDefault(); checkWarranty();">
-        <label>Enter Your HP Device Serial Number</label>
+<form class="warranty-form" onsubmit="submitForm(event)">
+          <label>Enter Your HP Device Serial Number</label>
 
         <input type="text" id="serial" placeholder="Eg: 5CD137LZF9" required oninput="
           let rawSerial = this.value.replace(/\s/g, ''); // remove whitespaces
@@ -1589,14 +1589,18 @@ if (data.out_of_india) {
       To explore global travel plans, connect with an Expert:
     </p>
 
-    <form class="out-india-form">
-      <input type="text" placeholder="Name" required />
-      <input type="text" placeholder="Phone Number" required />
-      <input type="email" placeholder="Email address" required />
-      <input type="text" value="${serial}" placeholder="Serial Number" />
+   <form id="out-india-form">
 
-      <button type="submit">CONSULT AN EXPERT</button>
-    </form>
+  <input type="text" id="oi-name" placeholder="Name" required />
+  <input type="text" id="oi-phone" placeholder="Phone Number" required />
+  <input type="email" id="oi-email" placeholder="Email address" required />
+  <input type="text" id="oi-serial" value="${serial}" placeholder="Serial Number" />
+
+  <button type="submit" id="oi-submit-btn">CONSULT AN EXPERT</button>
+
+  <p id="oi-status"></p>
+
+</form>
   </div>
 
   <!-- RIGHT IMAGE -->
@@ -1626,36 +1630,51 @@ if (data.out_of_india) {
           
 ${data.care_packs
   .map(pack => {
-    const packPrice = Number(pack.price);
-const packRegular = Number(pack.regular_price);
-const isPartner = window.USER_ROLE === "hp_partner";
-const hasDiscount = isPartner && packPrice < packRegular;
 
-const priceFormatted = new Intl.NumberFormat("en-IN").format(packPrice);
-const regularFormatted = new Intl.NumberFormat("en-IN").format(packRegular);
-const priceBeforeTax = new Intl.NumberFormat("en-IN").format(Math.round(packPrice / 1.18));
+    const isPartner = window.USER_ROLE === "hp_partner";
 
-    // 🔥 STEP 1 — Dynamic override for U9WX1E SKU + URL
-    if (pack.part === "U9WX1E") {
+    // ✅ Handle U9WX1E special pricing FIRST
+    const isSpecialSku = pack.part === "U9WX1E";
+    const dynamicPriceStr = isSpecialSku 
+      ? getU9WX1EPrice(data.product_name, data.product_number) 
+      : null;
 
-      const dynamicPrice = getU9WX1EPrice(
-        data.product_name,
-        data.product_number
-      );
+    // Strip ₹ and commas to get raw number for calculations
+    const dynamicPriceNum = dynamicPriceStr 
+      ? Number(dynamicPriceStr.replace(/[₹,]/g, "")) 
+      : null;
 
-      if (dynamicPrice === "₹8,500") {
+    const packPrice = isSpecialSku && dynamicPriceNum 
+      ? dynamicPriceNum 
+      : Number(pack.price);
+
+    const packRegular  = Number(pack.regular_price);
+    const hasDiscount  = isPartner && packPrice < packRegular;
+
+    const priceFormatted = isSpecialSku && dynamicPriceStr && dynamicPriceStr !== "SELECT THE MODEL"
+      ? dynamicPriceStr.replace("₹", "")
+      : new Intl.NumberFormat("en-IN").format(packPrice);
+
+    const regularFormatted = new Intl.NumberFormat("en-IN").format(packRegular);
+    const priceBeforeTax   = isSpecialSku && dynamicPriceNum
+      ? new Intl.NumberFormat("en-IN").format(Math.round(dynamicPriceNum / 1.18))
+      : new Intl.NumberFormat("en-IN").format(Math.round(packPrice / 1.18));
+
+    // 🔥 Dynamic override for U9WX1E SKU + URL (no duplicate call)
+    if (isSpecialSku) {
+      if (dynamicPriceStr === "₹8,500") {
         pack.part = "U9WX1E-14s/15s";
         pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-14s-15s/";
       }
-      else if (dynamicPrice === "₹10,500") {
+      else if (dynamicPriceStr === "₹10,500") {
         pack.part = "U9WX1E-Pavilion/Victus";
         pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-pavilion-victus/";
       }
-      else if (dynamicPrice === "₹12,500") {
+      else if (dynamicPriceStr === "₹12,500") {
         pack.part = "U9WX1E-Omen/Envy";
         pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-omen-envy/";
       }
-      else if (dynamicPrice === "₹18,500") {
+      else if (dynamicPriceStr === "₹18,500") {
         pack.part = "U9WX1E-Spectre";
         pack.url = "https://arminfoserve.com/product/hp-3-year-accidental-damage-protection-only-service-on-notebooks-spectre/";
       }
@@ -1671,7 +1690,6 @@ const priceBeforeTax = new Intl.NumberFormat("en-IN").format(Math.round(packPric
                </div>`
             : ""
           }
-
           <img 
             src="${pack.image}" 
             alt="${pack.title} HP Care Pack Warranty Plan"
@@ -1682,71 +1700,72 @@ const priceBeforeTax = new Intl.NumberFormat("en-IN").format(Math.round(packPric
         <p class="sku">SKU: ${pack.part}</p>
 
         <h3 class="title">
-          <a href="${buildProductUrl(
-            pack.url,
-            serial,
-            data.product_number,
-            data.end_date
-          )}" 
-          target="_blank"
-           rel="noopener noreferrer"
-          title="Buy ${pack.title} HP Care Pack Warranty Plan">
+          <a href="${buildProductUrl(pack.url, serial, data.product_number, data.end_date)}" 
+             target="_blank"
+             rel="noopener noreferrer"
+             title="Buy ${pack.title} HP Care Pack Warranty Plan">
             ${pack.title}
           </a>
         </h3>
 
-    <div style="padding:16px;">
+        <div style="padding:16px;">
 
-  <!-- Top row -->
-  <div style="display:flex; justify-content:space-between; align-items:center; 
-              padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #E0E0E0;">
-    <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
-      Price before tax
-    </p>
-    <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
-      ₹${priceBeforeTax}
-    </p>
-  </div>
+          <!-- Top row -->
+          <div style="display:flex; justify-content:space-between; align-items:center; 
+                      padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #E0E0E0;">
+            <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+              Price before tax
+            </p>
+            <p style="color:#96A5FF; font-size:14px; margin:0; font-family:Poppins;">
+              ${isSpecialSku && dynamicPriceStr === "SELECT THE MODEL"
+                ? `Select the model`
+                : `₹${priceBeforeTax}`
+              }
+            </p>
+          </div>
 
-  <!-- Bottom row -->
-  <div style="display:flex; justify-content:space-between; align-items:center;">
-    <div>
-      ${hasDiscount ? `
-        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
-          ₹${priceFormatted}
-          <span style="font-size:13px; font-weight:400; color:#00115A;">Incl.GST</span>
-        </p>
-        <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
-          ARM Price
-          <span style="text-decoration:line-through;">₹${regularFormatted}</span>
-        </p>
-      ` : `
-        <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
-          ₹${priceFormatted}
-        </p>
-        <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
-          Incl. all taxes
-        </p>
-      `}
-    </div>
+          <!-- Bottom row -->
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              ${hasDiscount ? `
+                <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
+                  ₹${priceFormatted}
+                  <span style="font-size:13px; font-weight:400; color:#00115A;">Incl.GST</span>
+                </p>
+                <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
+                  ARM Price
+                  <span style="text-decoration:line-through;">₹${regularFormatted}</span>
+                </p>
+              ` : `
+                <p style="color:#00115A; font-size:20px; font-weight:600; margin:0; font-family:'Roboto Slab'; line-height:1;">
+                  ${isSpecialSku && dynamicPriceStr === "SELECT THE MODEL"
+                    ? `<span style="font-size:14px; color:#888;">Select the model</span>`
+                    : `₹${priceFormatted}`
+                  }
+                </p>
+                <p style="color:#96A5FF; font-size:12px; margin:4px 0 0 0; font-family:Poppins;">
+                  Incl. all taxes
+                </p>
+              `}
+            </div>
 
-    <a href="${buildProductUrl(pack.url, serial, data.product_number, data.end_date)}" 
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Proceed to buy ${pack.title}"
-       style="font-family:Poppins; background:#1A40FF; color:#fff; padding:12px 20px; 
-              border-radius:6px; font-weight:600; font-size:13px; text-decoration:none;
-              white-space:nowrap;">
-      PROCEED TO BUY
-    </a>
-  </div>
+            <a href="${buildProductUrl(pack.url, serial, data.product_number, data.end_date)}" 
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Proceed to buy ${pack.title}"
+               style="font-family:Poppins; background:#1A40FF; color:#fff; padding:12px 20px; 
+                      border-radius:6px; font-weight:600; font-size:13px; text-decoration:none;
+                      white-space:nowrap;">
+              PROCEED TO BUY
+            </a>
+          </div>
 
-</div>
+        </div>
       </article>
     `;
   })
   .join("")}
-</section>
+  </section>
   
 
 
@@ -1856,9 +1875,9 @@ if (
 
 
 
-          document
-            .querySelector("form")
-            .addEventListener("submit", submitForm);
+//           document.querySelectorAll("form").forEach(form => {
+//   form.addEventListener("submit", submitForm);
+// });
           document.addEventListener("DOMContentLoaded", () => {
             const parent = document.querySelector("#compatible-packs");
 
@@ -1917,6 +1936,55 @@ if (
 
             formObserver.observe(parent, { childList: true, subtree: true });
           });
+          document.addEventListener("submit", async function (e) {
+
+  if (e.target.id === "out-india-form") {
+    e.preventDefault();
+
+    const name = document.getElementById("oi-name").value.trim();
+    const phone = document.getElementById("oi-phone").value.trim();
+    const email = document.getElementById("oi-email").value.trim();
+    const serial = document.getElementById("oi-serial").value.trim();
+
+    const submitBtn = document.getElementById("oi-submit-btn");
+    const statusMsg = document.getElementById("oi-status");
+
+    if (!name || !phone || !email) {
+      statusMsg.textContent = "❗ All fields are required.";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerText = "⏳ Sending...";
+    statusMsg.textContent = "";
+
+    try {
+      const res = await fetch("/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          serial,
+          headingText: "Out of India Device"   // 🔥 IMPORTANT
+        })
+      });
+
+      const data = await res.json();
+      statusMsg.textContent = data.message || "✅ Submitted!";
+
+    } catch (err) {
+      statusMsg.textContent = "❌ Submission failed";
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerText = "CONSULT AN EXPERT";
+  }
+
+});
 
         </script>
 

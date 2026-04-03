@@ -3573,7 +3573,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         product_name_lower = product_name.lower().strip()
         is_consumer = any(x in product_name_lower for x in [
             "pavilion", "victus", "envy", "spectre", "omen",
-            "laptop", "x360","15s","chromebook","omnibook 3","omnibook 5","omnibook 7","omnibook X","omnibook Z"
+            "laptop","15s","chromebook","omnibook 3","omnibook 5","omnibook 7","omnibook X","omnibook Z"
             ])
         is_200_300_series = any(x in product_name_lower for x in [
             "hp 200", "hp 300", "200 g", "300 g","hp 240g","hp 245g","hp 250g","hp 240"
