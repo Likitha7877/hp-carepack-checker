@@ -1932,7 +1932,7 @@ product_title_mapping = {
   },
   "UN082PE": {
     "title": "HP Envy/Omen 1 year Post Warranty",
-    "price": "14000",
+    "price": "17000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
     "coverage":"post-warranty",
     "duration":"1 year"
