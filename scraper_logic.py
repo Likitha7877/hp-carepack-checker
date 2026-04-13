@@ -1850,7 +1850,7 @@ product_title_mapping = {
   },
   "U0H96E": {
     "title": "HP Pavilion/Victus by HP Factory Warranty Add-On Accidental Damage Protection",
-    "price": "4500",
+    "price": "5500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
     "duration":"1 year"
