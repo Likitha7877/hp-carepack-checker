@@ -1795,13 +1795,13 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"2 year"
   },
-  "U8LH9E": {
-    "title": "HP Laptop 14/15 Series Factory Warranty add-on Accidental Damage Protection",
-    "price": "4500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
-    "coverage":"in-warranty",
-    "duration":"1 year"
-  },
+#   "U8LH9E": {
+#     "title": "HP Laptop 14/15 Series Factory Warranty add-on Accidental Damage Protection",
+#     "price": "4500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
+#     "coverage":"in-warranty",
+#     "duration":"1 year"
+#   },
   "UB5R2E": {
     "title": "HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement",
     "price": "10000",
