@@ -1420,8 +1420,8 @@ printer_mapping = {
     }
 }
 
-  
 
+  
 product_page_mapping = {
     "UG457E":"hp-deskjet-2-years-additional-warranty/",
     "UG062E":"ug062e-hp-deskjet-ia-ultra-4826-aio-printer-2-years-additional-warranty/",
@@ -3338,20 +3338,36 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
                     if days_to_2yr < 0:
-                       eosl_str = eosl_data.get(product_number)
-                       days_to_eosl = -1
-                       if eosl_str:
-                           try:
-                               eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
-                               days_to_eosl = (eosl_date - today).days
-                           except Exception as e:
-                               print(f"⚠️ EOSL parse error: {e}")
-                               days_to_eosl = -1
-                               if days_to_eosl < 0:
-                                   print(f"❌ Blocked: EOSL has already passed (days_to_eosl={days_to_eosl})")
-                                   return False
-                               print(f"✅ EOSL still valid ({days_to_eosl} days remaining), allowing post-warranty")
-                               return dur == "1 year" and cov == "post-warranty"
+                        eosl_str = eosl_data.get(product_number)
+                        days_to_eosl = -1
+                        if eosl_str:
+                            try:
+                                eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                                days_to_eosl = (eosl_date - today).days
+                            except Exception as e:
+                                print(f"⚠️ EOSL parse error: {e}")
+                                days_to_eosl = -1
+
+                        if days_to_eosl < 365:
+                            print(f"❌ Blocked: EOSL too close or passed (days_to_eosl={days_to_eosl})")
+                            return False
+                        print(f"✅ EOSL still valid ({days_to_eosl} days remaining), allowing post-warranty")
+                        return dur == "1 year" and cov == "post-warranty"
+                    # if days_to_2yr < 0:
+                    #    eosl_str = eosl_data.get(product_number)
+                    #    days_to_eosl = -1
+                    #    if eosl_str:
+                    #        try:
+                    #            eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                    #            days_to_eosl = (eosl_date - today).days
+                    #        except Exception as e:
+                    #            print(f"⚠️ EOSL parse error: {e}")
+                    #            days_to_eosl = -1
+                    #            if days_to_eosl < 0:
+                    #                print(f"❌ Blocked: EOSL has already passed (days_to_eosl={days_to_eosl})")
+                    #                return False
+                    #            print(f"✅ EOSL still valid ({days_to_eosl} days remaining), allowing post-warranty")
+                    #            return dur == "1 year" and cov == "post-warranty"
               
 
             elif 15 <= total_months < 23:

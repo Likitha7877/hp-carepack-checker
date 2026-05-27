@@ -1651,6 +1651,13 @@ if (data.out_of_india) {
           
 ${data.care_packs
   .map(pack => {
+  // Hide U04TKE for HP Partners
+if (
+    window.USER_ROLE === "hp_partner" &&
+    pack.part === "U04TKE"
+) {
+    return "";
+}
 
     const isPartner = window.USER_ROLE === "hp_partner";
 
