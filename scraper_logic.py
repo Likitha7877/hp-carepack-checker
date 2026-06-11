@@ -1945,13 +1945,13 @@ product_title_mapping = {
     "duration":"3 year"
   },
 
-  "U9WX1E": {
-    "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
-    "price":"select the model",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
-    "coverage": "in-warranty",
-    "duration":"3 year"
-  },
+#   "U9WX1E": {
+#     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
+#     "price":"select the model",
+#     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
+#   },
 
    "U0H92E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
@@ -3330,10 +3330,24 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     if 90 < days_to_2yr < 365:
                         # more than a year away from 2-year mark
                         return dur in ("3 year")
-
                     if 0 < days_to_2yr < 90:
-                        # within 3 months of 2-year mark
-                        return dur in ("2 year", "3 year") or (cov == "post-warranty")
+                        if cov == "post-warranty":
+                            eosl_str = eosl_data.get(product_number)
+                            if not eosl_str:
+                                print("❌ No EOSL found")
+                                return False
+                            eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                            days_to_eosl = (eosl_date - today).days
+                            if days_to_eosl < 365:
+                                print(f"❌ EOSL too close ({days_to_eosl} days)")
+                                return False
+                            print(f"✅ Post-warranty allowed, EOSL={days_to_eosl} days")
+                            return True
+                        return dur in ( "3 year")
+
+                    # if 0 < days_to_2yr < 90:
+                    #     # within 3 months of 2-year mark
+                    #     return dur in ("2 year", "3 year") or (cov == "post-warranty")
                     if days_to_2yr >= 365:
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
