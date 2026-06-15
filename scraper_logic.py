@@ -880,7 +880,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+
         }
     },
     "4WF66A": {
