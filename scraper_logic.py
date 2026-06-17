@@ -1780,14 +1780,14 @@ product_title_mapping = {
     "duration":"2 year"
     
   },
-  "UB5R2E-U9WX1E" : {
-    "title":"HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "16500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-    "coverage": "in-warranty",
-    "duration":"3 year"
+#   "UB5R2E-U9WX1E" : {
+#     "title":"HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+#     "price": "16500",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
+#     "coverage": "in-warranty",
+#     "duration":"3 year"
 
-  },
+#   },
   "UN008E": {
     "title": "HP Laptop 14/15 Series 1 Year Additional Warranty Extension with Accidental Damage Protection",
     "price": "7500",
@@ -1878,13 +1878,13 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-    "UB5R3E-U9WX1E": {
-    "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "19000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-    "coverage":"in-warranty",
-    "duration":"3 year"
-  },
+#     "UB5R3E-U9WX1E": {
+#     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+#     "price": "19000",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
+#     "coverage":"in-warranty",
+#     "duration":"3 year"
+#   },
   
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
@@ -1937,13 +1937,13 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-   "UB5R4E-U9WX1E": {
-    "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "28000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-    "coverage":"in-warranty",
-    "duration":"3 year"
-  },
+#    "UB5R4E-U9WX1E": {
+#     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+#     "price": "28000",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
+#     "coverage":"in-warranty",
+#     "duration":"3 year"
+#   },
 
 #   "U9WX1E": {
 #     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
@@ -2005,13 +2005,13 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-   "UB5R5E-U9WX1E": {
-    "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-    "price": "32999",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-    "coverage":"in-warranty",
-    "duration":"3 year"
-  },
+#    "UB5R5E-U9WX1E": {
+#     "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
+#     "price": "32999",
+#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
+#     "coverage":"in-warranty",
+#     "duration":"3 year"
+#   },
    "U02BVE": {
     "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
     "price": "12500",
