@@ -3664,12 +3664,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)hp\s?laptop", r"(?i)14s|chromebook\s?11|x360\s?14"],
     "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
-    "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U8LH9E","U9WX1E"],
+    "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U9WX1E"],
 },
 {
     "includes": [r"(?i)(hp\s?laptop\s+15s|hp\s?laptop\s+14s|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)|15"],
     "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250"],
-    "parts": ["UB5R2E-U9WX1E", "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E", "U8LH9E", "U9WX1E"],
+    "parts": ["UB5R2E-U9WX1E", "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
 
 
@@ -3693,12 +3693,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omnibook\s?3"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E", "U9WX1E"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E",  "U9WX1E"],
             },
             {
                 "includes": [r"(?i)omnibook\s?5"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E", "U9WX1E"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U9WX1E"],
             },
             {
                 "includes": [r"(?i)omnibook\s?7"],
@@ -3743,7 +3743,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)chromebook"],
                 "excludes": [],
-                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E", "U8LH9E"],
+                "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E"],
             },
             {
                 "includes": [r"(?i)elitebook\s?[87]"],
