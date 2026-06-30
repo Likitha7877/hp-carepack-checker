@@ -3523,7 +3523,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b",r"hp\s?250", r"\bhp\s?255\b",
                 r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
                 r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
-                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
+                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",  r"\bvictus\s?15l\b",r"\btg02\b",
                 ]
             for pattern in keyword_patterns:
                 if re.search(pattern, name):
@@ -3682,7 +3682,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
            {
                 "includes": [r"(?i)victus"],
-                "excludes": [r"(?i)all-in-one|desktop"],
+                "excludes": [r"(?i)all-in-one|desktop|15l|tg02"],
                 "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE", "U9WX1E", "UB5R3E-U9WX1E"],
             },
             {
@@ -3787,6 +3787,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         "excludes": [r"(?i)255|probook|laptop|15s|14s|notebook"],
         "parts": ["U4813PE", "UA055E","UN085E","UD075PE"],
     },
+    {
+    "includes": [
+        r"(?i)victus\s?15l|tg02"
+    ],
+    "excludes": [],
+    "parts": ["U4813PE", "UA055E","UN085E","UD075PE"],
+},
 {
     "includes": [r"(?i)envy\s?all|gaming\s?desktop"],
     "excludes": [r"(?i)pavilion|victus|laptop|notebook"],
