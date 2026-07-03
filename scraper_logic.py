@@ -1804,7 +1804,7 @@ product_title_mapping = {
 #   },
   "UB5R2E": {
     "title": "HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement",
-    "price": "10000",
+    "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1842,7 +1842,7 @@ product_title_mapping = {
   },
   "UN009E": {
     "title": "HP Pavilion/Victus by HP 1-Year Warranty Extension with Accidental Damage Protection (ADP)",
-    "price": "9500",
+    "price": "9600",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "tag":"Customer favourite",
     "coverage":"in-warranty",
@@ -1888,7 +1888,7 @@ product_title_mapping = {
   
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
-    "price": "8500",
+    "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
@@ -1937,13 +1937,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-#    "UB5R4E-U9WX1E": {
-#     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "28000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"3 year"
-#   },
+
 
 #   "U9WX1E": {
 #     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
@@ -1986,7 +1980,7 @@ product_title_mapping = {
   },
   "U6WD0E": {
     "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
-    "price": "8500",
+    "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
     "duration":"2 year"
@@ -2005,13 +1999,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-#    "UB5R5E-U9WX1E": {
-#     "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "32999",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"3 year"
-#   },
+
    "U02BVE": {
     "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
     "price": "12500",
@@ -2192,7 +2180,7 @@ product_title_mapping = {
   },
   "UB8B3E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-    "price": "18778",
+    "price": "17000",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2434,14 +2422,6 @@ product_title_mapping = {
   
    #hp aio desk
 
-  #pavilion aio/desk,#envy aio/desk
-#    "U4813PE": {
-#     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
-#     "price": "5000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
-#     "coverage":"in-warranty",
-#     "duration":"2 year"
-#   },
    "UA055E": {
     "title": "HP Envy/Pavilion/Victus by HP/Omen by HP/Pro Desktop 2 Years Additional Warranty",
     "price": "13500",
@@ -2526,7 +2506,7 @@ product_title_mapping = {
   },
    "U1G57E": {
     "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension with Defective Media Retention",
-    "price": "11500",
+    "price": "11550",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2622,13 +2602,7 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
-  "UZ303E": {
-    "title": "HP Multi-function Printer 4 years Additional Warranty",
-    "price": "6000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "5 year",
-    "coverage":"in-warranty"
-  },
+  
   "UG062E": {
     "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
     "price": "4700",
@@ -2722,13 +2696,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
   },
  
-  "U35PFE": {
-    "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
-    "price": "5000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-  },
+  
   "UB4V5E": {
     "title": "HP Laser 10x and 13x MFP 2 years Additional Warranty",
     "price": "4800",
@@ -2843,7 +2811,7 @@ product_title_mapping = {
   },
   "U04TKE": {
     "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
-    "price": "6900",
+    "price": "6700",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"3 year",
     "coverage":"in-warranty"
@@ -2892,12 +2860,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
       
   },
-#   "U9JT1E": {
-#     "title": "HP Installation Service with network configuration for Personal Scanner and Printer (1 unit)",
-#     "price": "5850",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2023/12/Laser-JET-MFP.png"
-      
-#   },
+
   
   "U5AD9E": {
     "title": "HP LaserJet MFP 4 years Additional Warranty with Defective Media Retention",
@@ -2945,22 +2908,8 @@ product_title_mapping = {
     "coverage":"in-warranty"
       
   },
-  "U57D7E": {
-    "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
-    "price": "5000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-      
-  },
-  "U57D7E": {
-    "title": "HP Smart Tank AiO 2 years Additional Warranty",
-    "price": "3500",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-      
-  },
+ 
+  
   "UG467E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 2 years Additional Warranty",
     "price": "8400",
