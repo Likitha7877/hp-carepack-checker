@@ -1780,14 +1780,7 @@ product_title_mapping = {
     "duration":"2 year"
     
   },
-#   "UB5R2E-U9WX1E" : {
-#     "title":"HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "16500",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
 
-#   },
   "UN008E": {
     "title": "HP Laptop 14/15 Series 1 Year Additional Warranty Extension with Accidental Damage Protection",
     "price": "10500",
@@ -1795,13 +1788,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"2 year"
   },
-#   "U8LH9E": {
-#     "title": "HP Laptop 14/15 Series Factory Warranty add-on Accidental Damage Protection",
-#     "price": "5000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"1 year"
-#   },
+
   "UB5R2E": {
     "title": "HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement",
     "price": "12500",
@@ -1878,14 +1865,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-#     "UB5R3E-U9WX1E": {
-#     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "19000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"3 year"
-#   },
-  
+
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
     "price": "11800",
@@ -1937,21 +1917,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-#    "UB5R4E-U9WX1E": {
-#     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "28000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"3 year"
-#   },
 
-#   "U9WX1E": {
-#     "title": "HP 3-Year Accidental Damage Protection Only Service on Notebooks",
-#     "price":"select the model",
-#     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
-#     "coverage": "in-warranty",
-#     "duration":"3 year"
-#   },
 
    "U0H92E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
@@ -2005,13 +1971,7 @@ product_title_mapping = {
     "coverage":"post-warranty",
     "duration":"1 year"
   },
-#    "UB5R5E-U9WX1E": {
-#     "title": "HP Spectre 2 Years Additional Warranty with One-Time Battery Replacement and ADP",
-#     "price": "32999",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATTADP.png",
-#     "coverage":"in-warranty",
-#     "duration":"3 year"
-#   },
+
    "U02BVE": {
     "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
     "price": "7250",
@@ -2434,14 +2394,7 @@ product_title_mapping = {
   
    #hp aio desk
 
-  #pavilion aio/desk,#envy aio/desk
-#    "U4813PE": {
-#     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
-#     "price": "5000",
-#     "image": "https://arminfoserve.com/wp-content/uploads/2023/10/AIO-PW-1.webp",
-#     "coverage":"in-warranty",
-#     "duration":"2 year"
-#   },
+
    "UA055E": {
     "title": "HP Envy/Pavilion/Victus by HP/Omen by HP/Pro Desktop 2 Years Additional Warranty",
     "price": "13500",
@@ -2721,13 +2674,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
   },
  
-  "U35PFE": {
-    "title": "HP Smart Tank 790 AiO Printer 2 years Additional Warranty",
-    "price": "5000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-  },
+ 
   "UB4V5E": {
     "title": "HP Laser 10x and 13x MFP 2 years Additional Warranty",
     "price": "4800",
@@ -3663,12 +3610,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)hp\s?laptop", r"(?i)14s|chromebook\s?11|x360\s?14"],
     "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
-    "parts": ["UB5R2E-U9WX1E","U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U9WX1E"],
+    "parts": ["U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U9WX1E"],
 },
 {
     "includes": [r"(?i)(hp\s?laptop\s+15s|hp\s?laptop\s+14s|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)|15"],
     "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250"],
-    "parts": ["UB5R2E-U9WX1E", "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
+    "parts": [ "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
 
 
@@ -3677,17 +3624,17 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)pav|pavilion"],
     "excludes": [r"(?i)all-in-one|desktop|aio"],
-    "parts": ["U0H90E","U6WD1E","UN009E","UB5R3E","UN006E","U0H96E","U0H93PE","U9WX1E","UB5R3E-U9WX1E"],
+    "parts": ["U0H90E","U6WD1E","UN009E","UB5R3E","UN006E","U0H96E","U0H93PE"],
 },
            {
                 "includes": [r"(?i)victus"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE", "U9WX1E", "UB5R3E-U9WX1E"],
+                "parts": ["U0H90E", "U6WD1E", "UN009E", "UB5R3E", "UN006E", "U0H96E", "U0H93PE"],
             },
             {
                 "includes": [r"(?i)omen"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "UB5R4E-U9WX1E", "U9WX1E"],
+                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
@@ -3717,12 +3664,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)envy"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E", "UB5R4E-U9WX1E"],
+                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
             },
             {
                 "includes": [r"(?i)spectre"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE", "U9WX1E", "UB5R5E-U9WX1E"],
+                "parts": ["U0H92E", "U6WD3E", "UM952E", "UN011E", "U6WD0E", "UB5R5E", "U0H94PE", "U9WX1E"],
             },
         
  {
