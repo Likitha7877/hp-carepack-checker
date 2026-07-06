@@ -6,6 +6,8 @@ from scraper_logic import run_warranty_check
 from eosl_data import eosl_data
 from dotenv import load_dotenv
 import os
+import traceback
+
 
 # Load environment variables from .env
 load_dotenv()
@@ -99,7 +101,7 @@ def check_warranty():
             "U9BB1PE": 3835,
   "U9BA3E": 2360,
   "U9BA7E": 3481,
-  "U9BA9E": 6490,
+  "U9BA9E": 7080,
   "U9EE7E": 6490,
   "U9EF3E": 9440,
   "U9EE8E": 9145,
@@ -133,7 +135,7 @@ def check_warranty():
   "UB5T7E": 14750,
   "U80MRE": 11682,
   "U84Z1E": 7316,
-  "U76MBE": 0,
+#   "U76MBE": 0,
   "U84Z0E": 16225,
   "U84Z3E": 20355,
   "UA6A1E": 4897,
@@ -160,7 +162,7 @@ def check_warranty():
   "U10N2PE": 3835,
   "UK738PE": 4956,
   "UK703E": 3894,
-  "UK726E": 6785,
+  "UK726E": 7080,
   "UL653E": 6490,
   "UK716E": 8496,
   "UK748E": 9204,
@@ -173,7 +175,7 @@ def check_warranty():
   "UK753E": 12390,
   "UB8B6E": 11210,
   "U86DVE": 4307,
-  "U86DYE": 6785,
+  "U86DYE": 7080,
   "U86E1E": 5605,
   "U86DZE": 8496,
   "U85M3E": 11682,
@@ -208,8 +210,10 @@ def check_warranty():
   "U85S7E": 5841,
   "U85SHE": 10030,
   "U85SME": 20650,
-  "U61E2E": 13629,
-            
+  "U61E2E": 7493,
+  "U85R3E" : 15930,
+"UD0P2E" : 7670,
+
             "U8TQ9E": 14221,
             "UA5C0E": 3245,
             "U5AD9E": 43133,
@@ -280,8 +284,9 @@ def check_warranty():
             sku = pack.get("part")
 
             try:
+                # regular_price = int(pack.get("price"))
                 regular_price = int(pack.get("price", 0))
-            except ValueError:
+            except (ValueError, TypeError):
                 regular_price = 0
 
             final_price = regular_price
@@ -307,8 +312,11 @@ def check_warranty():
         return jsonify(result)
 
     except Exception as e:
-        print("❌ Error during warranty check:", e)
-        return jsonify({"error": str(e)}), 500
+        traceback.print_exc()
+        return jsonify({
+            "error": str(e),
+            "traceback": traceback.format_exc()
+        }), 500
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
