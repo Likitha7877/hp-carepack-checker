@@ -1699,28 +1699,28 @@ product_title_mapping = {
   },
     "U10N7E": {
     "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (3 Year Base Warranty)",
-    "price": "5500",
+    "price": "6150",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "U10NFE": {
     "title": "HP Pro 2XX/4XX DT 4 Years Additional Warranty (1 Year Base Warranty)",
-    "price": "10500",
+    "price": "7250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/4-HW-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
     "U10N3E": {
     "title": "HP Pro 2XX/4XX DT 2 Years Additional Warranty (1 Year Base Warranty)",
-    "price": "5500",
+    "price": "4950",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
     "U10N2PE": {
     "title": "HP 2xx/4xx Desktop 1 year Post Warranty",
-    "price": "4000",
+    "price": "6250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"post-warranty",
     "duration":"1 year"
@@ -1728,7 +1728,7 @@ product_title_mapping = {
     
     "UJ217E": {
     "title": "HP Desktop/All-In-One 2 Years Additional Warranty",
-    "price": "7250",
+    "price": "7750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1750,14 +1750,14 @@ product_title_mapping = {
   
   "UD075PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
-    "price": "6500",
+    "price": "5750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
    "U8LH8E": {
     "title": "HP Laptop 14/15 Series 2 Years Additional Warranty Extension",
-    "price": "6500",
+    "price": "8000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "tag"  : "Essentials",
     "coverage":"in-warranty",
@@ -1765,7 +1765,7 @@ product_title_mapping = {
   },
   "U8LJ4E": {
     "title": "HP Laptop 14/15 Series 2 Years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "11500",
+    "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag"  :"Smart Pick",
     "coverage":"in-warranty",
@@ -1774,7 +1774,7 @@ product_title_mapping = {
   },
   "U8LH3E": {
     "title": "HP Laptop 14/15 Series 1 year Additional Warranty Extension",
-    "price": "4500",
+    "price": "5000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage": "in-warranty",
     "duration":"2 year"
@@ -1790,21 +1790,25 @@ product_title_mapping = {
 #   },
   "UN008E": {
     "title": "HP Laptop 14/15 Series 1 Year Additional Warranty Extension with Accidental Damage Protection",
-    "price": "7500",
+    "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
 #   "U8LH9E": {
 #     "title": "HP Laptop 14/15 Series Factory Warranty add-on Accidental Damage Protection",
-#     "price": "4500",
+#     "price": "5000",
 #     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
 #     "coverage":"in-warranty",
 #     "duration":"1 year"
 #   },
   "UB5R2E": {
     "title": "HP 14/15 Series 2 Years Additional Warranty with One-Time Battery Replacement",
+<<<<<<< HEAD
     "price": "9500",
+=======
+    "price": "12500",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1819,7 +1823,7 @@ product_title_mapping = {
    
   "U0H90E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty Extension",
-    "price": "9500",
+    "price": "12500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -1827,7 +1831,7 @@ product_title_mapping = {
   },
   "U6WD1E": {
     "title": "HP Pavilion/Victus by HP 2-Year Warranty with Accidental Damage Protection (ADP)",
-    "price": "15500",
+    "price": "20400",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Smart Pick",
     "coverage":"in-warranty",
@@ -1835,14 +1839,18 @@ product_title_mapping = {
   },
   "UN006E": {
     "title": "HP Pavilion/Victus by HP 1-Year Additional Warranty Extension",
-    "price": "6000",
+    "price": "7000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "UN009E": {
     "title": "HP Pavilion/Victus by HP 1-Year Warranty Extension with Accidental Damage Protection (ADP)",
+<<<<<<< HEAD
     "price": "9600",
+=======
+    "price": "11800",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "tag":"Customer favourite",
     "coverage":"in-warranty",
@@ -1850,14 +1858,14 @@ product_title_mapping = {
   },
   "U0H96E": {
     "title": "HP Pavilion/Victus by HP Factory Warranty Add-On Accidental Damage Protection",
-    "price": "5500",
+    "price": "6000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
   "UB5R3E": {
     "title": "HP Pavilion/Victus by HP 2 Years Additional Warranty with One-Time Battery Replacement",
-    "price": "12500",
+    "price": "17500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1872,7 +1880,7 @@ product_title_mapping = {
   },
    "U0H91E": {
     "title": "HP Envy/Omen 2 Years Additional Warranty Extension",
-    "price": "15500",
+    "price": "21750",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -1888,14 +1896,18 @@ product_title_mapping = {
   
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
+<<<<<<< HEAD
     "price": "9500",
+=======
+    "price": "11800",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "U6WD2E": {
     "title": "HP Envy/Omen 2 Years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "24500",
+    "price": "31270",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"3 year",
@@ -1903,7 +1915,7 @@ product_title_mapping = {
   },
   "UN010E": {
     "title": "HP Envy/Omen 1-year Additional Warranty Extension with Accidental Damage Protection",
-    "price": "12500",
+    "price": "16750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "coverage":"in-warranty",
     "duration":"2 year",
@@ -1918,7 +1930,7 @@ product_title_mapping = {
   },
   "UB5R4E": {
     "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement",
-    "price": "23000",
+    "price": "27500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -1932,7 +1944,7 @@ product_title_mapping = {
   },
   "UN082PE": {
     "title": "HP Envy/Omen 1 year Post Warranty",
-    "price": "17000",
+    "price": "14500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
     "coverage":"post-warranty",
     "duration":"1 year"
@@ -1949,7 +1961,7 @@ product_title_mapping = {
 
    "U0H92E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension",
-    "price": "18250",
+    "price": "25750",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -1957,7 +1969,7 @@ product_title_mapping = {
   },
   "U6WD3E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "26000",
+    "price": "37500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Smart Pick",
     "coverage":"in-warranty",
@@ -1972,7 +1984,7 @@ product_title_mapping = {
   },
   "UN011E": {
     "title": "HP Spectre 1 year Additional Warranty Extension with Accidental Damage Protection",
-    "price": "17100",
+    "price": "19500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "tag":"Customer favourite",
     "coverage":"in-warranty",
@@ -1980,14 +1992,18 @@ product_title_mapping = {
   },
   "U6WD0E": {
     "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
+<<<<<<< HEAD
     "price": "10500",
+=======
+    "price": "9500",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "UB5R5E": {
     "title": "HP Spectre 2 Years Additional Warranty Extension with One time Battery Replacement",
-    "price": "27500",
+    "price": "30500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2002,21 +2018,21 @@ product_title_mapping = {
 
    "U02BVE": {
     "title": "HP ZBook G7/G8/G9 Factory Warranty Add-on (3 years)",
-    "price": "12500",
+    "price": "7250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
    "U02BSE": {
     "title": "HP ZBook MWS G7/G8/G9 2 years Additional Warranty (3 years Base Warranty)",
-    "price": "22420",
+    "price": "12500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
    "U10KHE": {
     "title": "HP Z-Book 2 Years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "25500",
+    "price": "19000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2030,7 +2046,7 @@ product_title_mapping = {
   },
    "U85S0E": {
     "title": "HP ZBook G11 Factory Warranty Add-on (3 years)",
-    "price": "15500",
+    "price": "7250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2044,7 +2060,7 @@ product_title_mapping = {
   },
    "U61BRE": {
     "title": "HP ZBook MWS G10 2 years Additional Warranty (3Y BW)",
-    "price": "22500",
+    "price": "19250",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2059,7 +2075,7 @@ product_title_mapping = {
    
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
-    "price": "5500",
+    "price": "6300",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "tag":"Essentials",
     "coverage":"in-warranty",
@@ -2067,7 +2083,7 @@ product_title_mapping = {
   },
   "U22N8E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension on 3 year Care Pack",
-    "price": "10500",
+    "price": "11750",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"0 year"
@@ -2075,14 +2091,14 @@ product_title_mapping = {
   
   "U9BA3E": {
     "title": "HP 200/300 Series 1 Year Additional Warranty Extension",
-    "price": "3000",
+    "price": "5000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "U9BA9E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "10556",
+    "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Customer favourite",
     "coverage":"in-warranty",
@@ -2090,7 +2106,7 @@ product_title_mapping = {
   },
   "U9EE8E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension",
-    "price": "11000",
+    "price": "10750",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration":"5 year",
     "coverage":"in-warranty"
@@ -2098,7 +2114,7 @@ product_title_mapping = {
   },
   "U9EF3E": {
     "title": "HP 200/300 Series 3 years Additional Warranty Extension with ADP",
-    "price": "9500",
+    "price": "14000",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration":"5 year",
     "coverage":"in-warranty"
@@ -2106,7 +2122,7 @@ product_title_mapping = {
   },
   "U9EE7E": {
     "title": "HP 200/300 Series 3 years Additional Warranty Extension",
-    "price": "9500",
+    "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration":"5 year",
     "coverage":"in-warranty"
@@ -2123,7 +2139,7 @@ product_title_mapping = {
   
   "UB5U0E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "15000",
+    "price": "11500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
     "tag":"Smart Pick",
     "duration":"5 year",
@@ -2131,77 +2147,81 @@ product_title_mapping = {
   },
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
-    "price": "4500",
+    "price": "6250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
   "UK744E": {
     "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (3 year factory warranty)",
-    "price": "10556",
+    "price": "9250",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "UK726E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-    "price": "10556",
+    "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UK718E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension (1 year Base Warranty)",
-    "price": "14000",
+    "price": "11200",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U86DXE":{
     "title": "HP ProBook G11 4 years Additional Warranty Extension (1 year Base Warranty)",
-    "price": "14000",
+    "price": "12750",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
       },
   "UK749E": {
     "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "8111",
+    "price": "6450",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U85N2E": {
     "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "8111",
+    "price": "6450",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UB8B3E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+<<<<<<< HEAD
     "price": "17000",
+=======
+    "price": "14750",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "UK738PE": {
     "title": "HP ProBook 400 laptop 1 year Post Warranty Care Pack",
-    "price": "8111",
+    "price": "7200",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
     "coverage":"post-warranty",
     "duration":"1 year"
   },
   "UK703E": {
     "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
-    "price": "8111",
+    "price": "6450",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UB8B6E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "15000",
+    "price": "13500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png" ,
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2216,21 +2236,21 @@ product_title_mapping = {
   
   "U86E0E":{
     "title": "HP ProBook G11 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-    "price": "17000",
+    "price": "16750",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png" ,
     "coverage":"in-warranty",
     "duration":"5 year"
     },
   "U86DVE":{
     "title": "HP ProBook G11 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
-    "price": "8000",
+    "price": "6650",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png" ,
     "coverage":"in-warranty",
     "duration":"3 year"
     },
   "U86DYE":{
     "title": "HP ProBook G11 laptop 2 years Additional Warranty with ADP (1 year factory warranty)",
-    "price": "15500",
+    "price": "9300",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png?fit=591%2C591&ssl=1" ,
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2245,63 +2265,63 @@ product_title_mapping = {
   
   "U7876E": {
     "title": "HP Elitebook 7xx/8xx 4 years additional warranty (1 year base warranty)",
-    "price": "32500",
+    "price": "22500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC279E":{
     "title": "HP EliteBook 3-year Accidental Damage Protection on Factory Warranty",
-    "price": "10,556",
+    "price": "8750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     
   },
   "UC282E":{
     "title": "HP EliteBook 3 year Accidental Damage Protection on 1 year Factory Warranty",
-    "price": "18,778",
+    "price": "14500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"   
   },
   "UB0E2E": {
     "title": "HP EliteBook 10xx 2 years additional warranty (3 year base warranty)",
-    "price": "16000",
+    "price": "11500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "UB0E6E": {
     "title": "HP EliteBook 10xx 2 years additional warranty with Accidental Damage Protection (3 year base warranty)",
-    "price": "23000",
+    "price": "17500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U76MBE": {
     "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "11500",
+    "price": "3000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U84Z0E": {
     "title": "HP EliteBook 10xx G11 2 years additional warranty (3 year base warranty)",
-    "price": "20000",
+    "price": "18250",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U80MME": {
     "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "11500",
+    "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U7861E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
-    "price": "12222",
+    "price": "9300",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2309,7 +2329,7 @@ product_title_mapping = {
   
   "UB5T7E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "19889",
+    "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2317,7 +2337,7 @@ product_title_mapping = {
   
   "U4391E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "12222",
+    "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2326,28 +2346,28 @@ product_title_mapping = {
   #hp aio bussines
   "U5864PE": {
     "title": "HP All-in-One Business PC 1 year Post Warranty",
-    "price": "5850",
+    "price": "6250",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
     "coverage":"in-warranty",
     "duration":"1 year"
   },
   "U6578E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "5600",
+    "price": "5550",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U7899E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension (3 Year Base Warranty)",
-    "price": "4667",
+    "price": "5950",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U0A84E": {
     "title": "HP All-in-One Business PC Factory Warranty Add-on Accidental Damage Protection",
-    "price": "9445",
+    "price": "5200",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/ADP-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"1 year"
@@ -2369,28 +2389,28 @@ product_title_mapping = {
   },
   "U11BVE": {
     "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Defective Media Retention",
-    "price": "6944",
+    "price": "7000",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/11/1HWDMR.png",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
   "UF236E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "13900",
+    "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U0A83E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-    "price": "8500",
+    "price": "7500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UF360E": {
     "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Defective Media Retention (1 Year Base Warranty)",
-    "price": "7800",
+    "price": "7000",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2404,7 +2424,7 @@ product_title_mapping = {
   },
    "U7925E": {
     "title": "HP All-in-One Business PC 4 Years Additional Warranty Extension",
-    "price": "9800",
+    "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/4-HW-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2440,14 +2460,14 @@ product_title_mapping = {
    #HP Business Desktop
    "U11BWE": {
     "title": "HP Desktop 2 Years Additional Warranty Extension with DMR (3 Year Factory Warranty)",
-    "price": "7222",
+    "price": "7500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
    "U11BTE": {
     "title": "HP Desktop 3 year Defective Media Retention on Factory Warranty",
-    "price": "6556",
+    "price": "5500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/07/3-DMR.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2478,35 +2498,39 @@ product_title_mapping = {
     
     "U1G24PE": {
     "title": "HP WorkStation 1 Year Post Warranty",
-    "price": "13900",
+    "price": "8200",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/07/AIO-PW-2.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
     "U7944E": {
     "title": "WorkStation 600/800 SERIES 2-year Additional Warranty Extension",
-    "price": "12500",
+    "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
     "U7942E": {
     "title": "WorkStation 600/800 SERIES 1-year Additional Warranty Extension",
-    "price": "8500",
+    "price": "7500",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-1HW-1.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
     "U1G37E": {
     "title": "WorkStation 400 SERIES 1 year Additional Warranty Extension",
-    "price": "7650",
+    "price": "6800",
     "image": "https://arminfoserve.com/wp-content/uploads/2023/11/WS-1HW-1-1.webp",
     "coverage":"in-warranty",
     "duration":"2 year"
   },
    "U1G57E": {
     "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension with Defective Media Retention",
+<<<<<<< HEAD
     "price": "11550",
+=======
+    "price": "11100",
+>>>>>>> 2c0562b (updated the prices new for customers)
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/12/2HWDMR-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2514,7 +2538,7 @@ product_title_mapping = {
 
    "U1G39E": {
     "title": "WorkStation 400 SERIES 2-year Additional Warranty Extension",
-    "price": "10000",
+    "price": "8750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
