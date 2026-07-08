@@ -156,7 +156,7 @@ def check_warranty():
     "U85DXE": 11210,
     "U85DVE": 9794,
     "U85DYE": 14750,
-    "U80MME": 7670,
+    "U80MME": 8732,
     "UJ0R9E": 5546,
     "U61CXE": 11682,
     "U10N2PE": 3835,

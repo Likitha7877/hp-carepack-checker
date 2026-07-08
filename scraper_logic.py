@@ -2266,7 +2266,7 @@ product_title_mapping = {
   },
   "U80MME": {
     "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "9500",
+    "price": "10400",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2574,20 +2574,8 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
-  "UZ303E": {
-    "title": "HP Multi-function Printer 4 years Additional Warranty",
-    "price": "6000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "5 year",
-    "coverage":"in-warranty"
-  },
-  "UG062E": {
-    "title": "HP DeskJet IA Ultra 4826 AiO Printer 2 years Additional Warranty",
-    "price": "4700",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-  },
+  
+ 
   "UG334E": {
     "title": "HP Deskjet 1112, 1212 2 years Additional Warranty",
     "price": "4200",
@@ -2891,22 +2879,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
       
   },
-  "U57D7E": {
-    "title": "HP Smart Tank 210 AiO 2 years Additional Warranty",
-    "price": "5000",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-      
-  },
-  "U57D7E": {
-    "title": "HP Smart Tank AiO 2 years Additional Warranty",
-    "price": "3500",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "3 year",
-    "coverage":"in-warranty"
-      
-  },
+ 
   "UG467E": {
     "title": "HP OfficeJet Pro 9720 WF AiO 2 years Additional Warranty",
     "price": "8400",
