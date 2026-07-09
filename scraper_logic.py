@@ -1890,8 +1890,8 @@ product_title_mapping = {
     "duration":"1 year"
   },
   "UB5R4E": {
-    "title": "HP Envy/Omen 2 Years Additional Warranty" ,
-    "price": "27500",
+    "title": "HP Envy/Omen 2 Years Additional Warranty",
+    "price": "21750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
     "duration":"3 year"
