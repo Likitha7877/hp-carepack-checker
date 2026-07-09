@@ -1857,14 +1857,7 @@ product_title_mapping = {
     "duration":"1 year"
     
   },
-   "U0H91E": {
-    "title": "HP Envy/Omen 2 Years Additional Warranty Extension",
-    "price": "21750",
-    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
-    "tag":"Essentials",
-    "coverage":"in-warranty",
-    "duration":"3 year"
-  },
+   
 
   "UN007E": {
     "title": "HP Envy/Omen 1 Year Additional Warranty Extension",
@@ -1897,7 +1890,7 @@ product_title_mapping = {
     "duration":"1 year"
   },
   "UB5R4E": {
-    "title": "HP Envy/Omen 2 Years Additional Warranty with One-Time Battery Replacement",
+    "title": "HP Envy/Omen 2 Years Additional Warranty" ,
     "price": "27500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
@@ -3607,7 +3600,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omen"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
+                "parts": ["U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
@@ -3627,7 +3620,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omnibook\s?x"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U0H91E", "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E"],
+                "parts": [ "U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE", "U9WX1E"],
             },
             {
                 "includes": [r"(?i)omnibook\s?ultra"],
@@ -3637,7 +3630,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)envy"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U0H91E","U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
+                "parts": ["U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
             },
             {
                 "includes": [r"(?i)spectre"],
