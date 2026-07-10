@@ -60,7 +60,7 @@ def check_warranty():
             return jsonify(result)
 
         # ✅ PARTNER PRICE MAP
-        PARTNER_PRICES = {           
+      PARTNER_PRICES = {
     "UJ217E": 7375,
     "U4813PE": 5310,
     "UA055E": 13570,
@@ -271,8 +271,8 @@ def check_warranty():
     "UG361E": 1735,
     "UG334E": 1518,
     "U9NR3PE": 1558,
+    
 }
-
         # ✅ APPLY PARTNER PRICING
         for pack in result.get("care_packs", []):
             sku = pack.get("part")
