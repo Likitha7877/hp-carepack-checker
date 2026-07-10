@@ -1,0 +1,150 @@
+import sys
+import io
+import os
+os.environ['WDM_LOCAL'] = '1'
+os.environ['WDM_SSL_VERIFY'] = '0'
+import contextlib
+sys.stdout.reconfigure(encoding='utf-8')
+from scraper_logic import run_warranty_check
+
+PARTNER_PRICES = {
+    "UJ217E": 6490, "U4813PE": 5310, "UA055E": 10030,
+    "U8LH8E": 5192, "U8LJ4E": 10148, "UN008E": 6962,
+    "U8LH9E": 2950, "UB5R2E": 8260, "U8LH3E": 4130,
+    "U8LH7PE": 5310, "U0H90E": 8909, "U6WD1E": 13570,
+    "UN009E": 8496, "UB5R3E": 10620, "UN006E": 5310,
+    "U0H96E": 3540, "U0H93PE": 7965, "U0H91E": 13924,
+    "UN007E": 7080, "U6WD2E": 20650, "UN010E": 12390,
+    "U6WC9E": 4720, "UB5R4E": 18880, "UN082PE": 15930,
+    "U0H92E": 17110, "U6WD3E": 24190, "UM952E": 8850,
+    "UN011E": 15930, "U6WD0E": 7080, "UB5R5E": 21830,
+    "U0H94PE": 20650, "UB5R2E-U9WX1E": 14041, "UB5R3E-U9WX1E": 16401,
+    "UB5R4E-U9WX1E": 23482, "UB5R5E-U9WX1E": 25842,
+    "UN062PE": 7552, "U9BB1PE": 3835, "U9BA3E": 2360,
+    "U9BA7E": 3481, "U9BA9E": 7080, "U9EE7E": 6490,
+    "U9EF3E": 9440, "U9EE8E": 9145, "U22N8E": 9735,
+    "U9EF4E": 12980, "UB5U0E": 10030, "U5864PE": 3835,
+    "U10NDE": 3776, "U0A83E": 5310, "U10N3E": 1947,
+    "U6578E": 3009, "UF360E": 4720, "U10NFE": 5015,
+    "U7925E": 6490, "U11C2E": 8850, "U0A84E": 2596,
+    "U11BTE": 2950, "U10N6E": 2301, "U11BVE": 4720,
+    "UF236E": 6490, "U10N7E": 3481, "U7899E": 3481,
+    "U11BWE": 5310, "UD0N7E": 7670, "UC9A2E": 7670,
+    "UD0N9E": 21240, "UC9A5E": 11210, "U4416PE": 7670,
+    "UB0E2E": 10030, "UB0E6E": 15930, "UB5T7E": 14750,
+    "U80MRE": 11682, "U84Z1E": 7316, "U84Z0E": 16225,
+    "U84Z3E": 20355, "UA6A1E": 4897, "UA6H3E": 4484,
+    "UA6H1E": 7434, "U85GKE": 7493, "U4391E": 5369,
+    "UC282E": 12390, "U7876E": 18290, "U7875E": 11505,
+    "UC279E": 6785, "U7861E": 7434, "U85BQE": 6490,
+    "U85BTE": 11505, "U85DTE": 5369, "U85BVE": 15340,
+    "U85DWE": 7316, "U85DXE": 11210, "U85DVE": 9794,
+    "U85DYE": 14750, "U80MME": 7670, "UJ0R9E": 5546,
+    "U61CXE": 11682, "U10N2PE": 3835, "UK738PE": 4956,
+    "UK703E": 3894, "UK726E": 7080, "UL653E": 6490,
+    "UK716E": 8496, "UK748E": 9204, "UK718E": 9676,
+    "UM237E": 13570, "UB8B3E": 12685, "UK749E": 4071,
+    "UK743E": 4189, "UK744E": 6490, "UK753E": 12390,
+    "UB8B6E": 11210, "U86DVE": 4307, "U86DYE": 7080,
+    "U86E1E": 5605, "U86DZE": 8496, "U85M3E": 11682,
+    "U86DXE": 9676, "U86E0E": 13216, "U86E6E": 19470,
+    "U85N2E": 4071, "U85N5E": 2124, "U85N8E": 7316,
+    "U85N3E": 8024, "U1G24PE": 6136, "U1G39E": 6785,
+    "U1G57E": 9558, "U7942E": 5310, "U7944E": 8850,
+    "U1G37E": 4484, "UB0E4E": 7375, "U60ZBE": 7670,
+    "U60ZCE": 12980, "U60ZWE": 15930, "U60ZXE": 25370,
+    "U02BVE": 5782, "U02BSE": 10030, "U10KHE": 15930,
+    "U02BXE": 19470, "U85SJE": 17110, "U61B6E": 5015,
+    "U61BQE": 10030, "U61BRE": 17305, "U85QTE": 7316,
+    "U85S0E": 5015, "U85S7E": 5841, "U85SHE": 10030,
+    "U85SME": 20650, "U61E2E": 7493, "U85R3E": 15930,
+    "UD0P2E": 7670, "U8TQ9E": 14221, "UA5C0E": 3245,
+    "U5AD9E": 43133, "UZ276E": 16305, "UZ277E": 12749,
+    "UZ275E": 13270, "UG467E": 6411, "U04THE": 11091,
+    "UZ299E": 6071, "UC4X9E": 9800, "U04SKE": 9648,
+    "UC4X7E": 9601, "U6M74E": 9426, "UZ287E": 9274,
+    "UC4X5E": 8353, "UB4W7E": 5538, "UZ260E": 8326,
+    "UG482E": 5495, "UZ298E": 5204, "UZ297E": 5204,
+    "UC4Y1E": 5204, "U62F5E": 5204, "UZ289E": 5204,
+    "UG468E": 7327, "U6M72E": 4987, "U6M85E": 6938,
+    "U42GXPE": 5109, "UZ272E": 4510, "UB4X9E": 4515,
+    "U04TKE": 4357, "UZ296E": 4337, "UG470E": 4215,
+    "U9MW4PE": 14408, "U8TM2E": 5140, "UG350E": 3864,
+    "UZ295E": 3903, "UZ303E": 4770, "U34XRE": 7200,
+    "UB4Z1E": 3772, "U04SME": 3630, "UG349E": 3469,
+    "UZ304E": 3469, "UH267E": 4119, "UH773E": 3154,
+    "UQ463E": 3469, "UG348E": 2602, "UG347E": 2602,
+    "UG337E": 2602, "U35PFE": 3829, "UG481E": 2313,
+    "U57D7E": 2313, "U62F3E": 2207, "UB4V5E": 2206,
+    "UG062E": 1995, "UG346E": 1995, "UG338E": 1735,
+    "UG361E": 1735, "UG334E": 1518, "U9NR3PE": 1558,
+    "UH757E": 3154, "UZ267E": 5204, "UH770PE": 3154,
+}
+
+def format_price(price):
+    try:
+        p = int(price)
+        return "{:,}".format(p)
+    except:
+        return str(price)
+
+def check_serial(serial, product="", is_partner=False):
+    f = io.StringIO()
+    with contextlib.redirect_stdout(f):
+        result = run_warranty_check(serial, product)
+
+    if "error" in result:
+        return "Sorry, we could not find warranty information for serial number " + serial + ". Please check the number and try again."
+
+    start_date = result.get('start_date', 'N/A')
+    end_date = result.get('end_date', 'N/A')
+
+    if start_date == end_date:
+        return "*" + result.get('product_name', 'Your Product') + "*\n\nThis product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
+
+    care_packs = result.get('care_packs', [])
+
+    if is_partner:
+        # Partner format: SKU | Plan | Price+GST
+        msg = "*" + result.get('product_name', 'Your Product') + "*\n\n"
+        if care_packs:
+            msg += "*Available Care Packs:*\n"
+            for cp in care_packs:
+                sku = cp.get('part', '')
+                title = cp.get('title', '')
+                partner_price = PARTNER_PRICES.get(sku)
+                if partner_price:
+                    price_ex_gst = round(partner_price / 1.18)
+                    price_str = "Rs." + format_price(price_ex_gst) + "+GST"
+                else:
+                    price_str = "Price on request"
+                msg += sku + " | " + title + " | " + price_str + "\n"
+
+            has_post_warranty = any("post warranty" in cp.get('title', '').lower() for cp in care_packs)
+            if has_post_warranty:
+                msg += "\nThe warranty will start from the date of purchase."
+            else:
+                msg += "\nCare Pack Start Date: " + str(end_date)
+        else:
+            msg += "This product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
+
+    else:
+        # Customer format: full info with links
+        msg = "*Warranty Information for " + result.get('product_name', 'Your Product') + "*\n\n"
+        msg += "Start Date: " + str(start_date) + "\n"
+        msg += "End Date: " + str(end_date) + "\n"
+        msg += "Status: " + str(result.get('status', 'N/A')) + "\n"
+        msg += "Remaining Days: " + str(result.get('remaining_days', 'N/A')) + "\n\n"
+        if care_packs:
+            msg += "*Available Care Packs:*\n"
+            for cp in care_packs:
+                msg += "- " + cp.get('title', '') + ": " + cp.get('url', '') + "\n"
+        else:
+            msg += "This product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
+
+    return msg
+
+if __name__ == "__main__":
+    serial = sys.argv[1]
+    is_partner = len(sys.argv) > 2 and sys.argv[2] == "partner"
+    print(check_serial(serial, is_partner=is_partner))
