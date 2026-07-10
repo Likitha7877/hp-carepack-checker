@@ -6,6 +6,8 @@ from scraper_logic import run_warranty_check
 from eosl_data import eosl_data
 from dotenv import load_dotenv
 import os
+import traceback
+
 
 # Load environment variables from .env
 load_dotenv()
@@ -276,8 +278,9 @@ def check_warranty():
             sku = pack.get("part")
 
             try:
+                # regular_price = int(pack.get("price"))
                 regular_price = int(pack.get("price", 0))
-            except ValueError:
+            except (ValueError, TypeError):
                 regular_price = 0
 
             final_price = regular_price
@@ -303,8 +306,11 @@ def check_warranty():
         return jsonify(result)
 
     except Exception as e:
-        print("❌ Error during warranty check:", e)
-        return jsonify({"error": str(e)}), 500
+        traceback.print_exc()
+        return jsonify({
+            "error": str(e),
+            "traceback": traceback.format_exc()
+        }), 500
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
