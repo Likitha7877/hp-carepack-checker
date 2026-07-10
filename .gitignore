@@ -5,3 +5,5 @@ static.zip
 .git-broken/
 hp-carepack-checker.git-old/
 *.pyc
+hp-carepack-checker.git/
+diff_*.txt
