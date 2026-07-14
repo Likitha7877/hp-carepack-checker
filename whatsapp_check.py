@@ -23,6 +23,7 @@ def no_packs_message(result, eosl_date):
 
     status = str(result.get('status', '')).lower()
     remaining = result.get('remaining_days')
+
     if 'active' in status:
         msg = "Good news - your warranty is currently *Active*"
         if remaining not in (None, '', 'N/A'):
@@ -30,6 +31,13 @@ def no_packs_message(result, eosl_date):
         msg += " (valid until " + str(result.get('end_date', 'N/A')) + ")."
         msg += "\n\nNo additional Care Packs are needed right now. If you need any assistance, feel free to contact us!"
         return msg
+
+    if 'expir' in status:
+        # Coverage expiring/expired but EOSL date unknown - post-warranty
+        # eligibility cannot be determined automatically.
+        return ("Your coverage is expiring soon (valid until " + str(result.get('end_date', 'N/A')) + "). "
+                "The EOSL date for this product is not available in our data yet, so our team will "
+                "check the post-warranty Care Pack options for you and get back to you soon.")
 
     return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 
