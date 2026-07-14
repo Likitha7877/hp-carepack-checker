@@ -7,6 +7,7 @@ import contextlib
 sys.stdout.reconfigure(encoding='utf-8')
 from scraper_logic import run_warranty_check
 from partner_prices import PARTNER_PRICES
+from eosl_data import eosl_data
 
 def format_price(price):
     try:
@@ -14,6 +15,23 @@ def format_price(price):
         return "{:,}".format(p)
     except:
         return str(price)
+
+def no_packs_message(result, eosl_date):
+    """Message when no care packs are available - picks the right reason."""
+    if eosl_date:
+        return "This product has reached End of Service Life (EOSL: " + str(eosl_date) + ") and is no longer eligible for a warranty extension."
+
+    status = str(result.get('status', '')).lower()
+    remaining = result.get('remaining_days')
+    if 'active' in status:
+        msg = "Good news - your warranty is currently *Active*"
+        if remaining not in (None, '', 'N/A'):
+            msg += " with *" + str(remaining) + " days* remaining"
+        msg += " (valid until " + str(result.get('end_date', 'N/A')) + ")."
+        msg += "\n\nNo additional Care Packs are needed right now. If you need any assistance, feel free to contact us!"
+        return msg
+
+    return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 
 def check_serial(serial, product="", is_partner=False):
     f = io.StringIO()
@@ -25,6 +43,11 @@ def check_serial(serial, product="", is_partner=False):
 
     start_date = result.get('start_date', 'N/A')
     end_date = result.get('end_date', 'N/A')
+
+    # EOSL lookup - same as website (app.py)
+    final_product = result.get("product_number") or product
+    product_clean = final_product.strip().upper() if final_product else None
+    eosl_date = eosl_data.get(product_clean) if product_clean else None
 
     if start_date == end_date:
         return "*" + result.get('product_name', 'Your Product') + "*\n\nThis product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
@@ -52,8 +75,10 @@ def check_serial(serial, product="", is_partner=False):
                 msg += "\nThe warranty will start from the date of purchase."
             else:
                 msg += "\nCare Pack Start Date: " + str(end_date)
+            if eosl_date:
+                msg += "\nEOSL Date: " + str(eosl_date)
         else:
-            msg += "No compatible Care Packs are currently available for this product. Please contact us for assistance."
+            msg += no_packs_message(result, eosl_date)
 
     else:
         # Customer format: full info with links
@@ -61,13 +86,16 @@ def check_serial(serial, product="", is_partner=False):
         msg += "Start Date: " + str(start_date) + "\n"
         msg += "End Date: " + str(end_date) + "\n"
         msg += "Status: " + str(result.get('status', 'N/A')) + "\n"
-        msg += "Remaining Days: " + str(result.get('remaining_days', 'N/A')) + "\n\n"
+        msg += "Remaining Days: " + str(result.get('remaining_days', 'N/A')) + "\n"
+        if eosl_date:
+            msg += "EOSL Date: " + str(eosl_date) + "\n"
+        msg += "\n"
         if care_packs:
             msg += "*Available Care Packs:*\n"
             for cp in care_packs:
                 msg += "- " + cp.get('title', '') + ": " + cp.get('url', '') + "\n"
         else:
-            msg += "No compatible Care Packs are currently available for this product. Please contact us for assistance."
+            msg += no_packs_message(result, eosl_date)
 
     return msg
 
