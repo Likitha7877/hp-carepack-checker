@@ -1468,7 +1468,6 @@ product_page_mapping = {
     "U9EE8E": "u9ee8e-hp-200-300-series-4-years-additional-warranty-extension",
     "U9BA7E": "u9ba7e-hp-200-300-series-2-years-additional-warranty-extension",
     "U9BA9E": "u9ba9e-hp-200-300-series-2-years-additional-warranty-extension-with-accidental-damage-protection",
-    "U9BA3E": "u9ba3e-hp-200-300-series-1-year-additional-warranty-extension",
     "UB5U0E": "ub5u0e-hp-200-300-series-4-years-additional-warranty-extension-with-accidental-damage-protection-2-claims",
     "U9BB1PE": "u9bb1pe-hp-200-300-series-1-year-post-warranty",
     "U22N8E":"u22n8e-hp-200-300-series-2-years-additional-warranty-extension-on-3-year-care-pack",
@@ -1605,7 +1604,6 @@ product_page_mapping = {
     "U86DVE": "hp-probook-g11-laptop-2-years-additional-warranty-extension-1-year-factory-warranty/",
     "U86E0E":"u86e0e-hp-probook-g11-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection-1-year-base-warranty/",
     "U86E7E":"hp-probook-g11-laptop-2-years-additional-warranty-with-global-coverage-1-year-factory-warranty/",
-    "U9AZ7E":"hp-200-300-series-factory-warranty-accidental-damage-protection-add-on/",
     "U38B3B":"hp-envy-omen-battery-replacement-only/",
     "U86DYE":"hp-probook-g11-laptop-2-years-additional-warranty-with-adp-1-year-factory-warranty/",
     "UD0P5PE":"hp-zbook-g11-1-year-post-warranty",
@@ -2033,13 +2031,7 @@ product_title_mapping = {
     "duration":"0 year"
   },
   
-  "U9BA3E": {
-    "title": "HP 200/300 Series 1 Year Additional Warranty Extension",
-    "price": "5000",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HW.png",
-    "coverage":"in-warranty",
-    "duration":"2 year"
-  },
+
   "U9BA9E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension with Accidental Damage Protection",
     "price": "9000",
@@ -2072,14 +2064,7 @@ product_title_mapping = {
     "coverage":"in-warranty"
 
   },
-  "U9AZ7E": {
-    "title": "HP 200/300 Series Factory Warranty Accidental Damage Protection Add-on",
-    "price": "5500",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/1ADP.png?fit=591%2C591&ssl=1",
-    "duration":"1 year",
-    "coverage":"in-warranty"
 
-  },
   
   "UB5U0E": {
     "title": "HP 200/300 Series 4 years Additional Warranty Extension with Accidental Damage Protection",
@@ -3640,7 +3625,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "excludes": [
         r"(?i)all|14s|15s|victus|elitebook|pavilion"
     ],
-    "parts": ["U9BA7E", "U9BA3E","U9AZ7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
+    "parts": ["U9BA7E","U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
 },
             {
                 "includes": [r"(?i)zbook"],
