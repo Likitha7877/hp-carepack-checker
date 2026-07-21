@@ -3006,6 +3006,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
         name_el = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.product-info-text h2")))
         product_name = driver.execute_script("return arguments[0].innerText;", name_el).strip()
+        print("🖥️ Product Name:", product_name)
         
 
         try:
@@ -3553,8 +3554,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         name = product_name.lower().strip()
         rules = [
            # ✅ FIXED Rule 1 — 14/15 series plain laptops only
+
 {
-    "includes": [r"(?i)hp\s?laptop", r"(?i)14s|chromebook\s?11|x360\s?14"],
+    "includes": [r"(?i)hp\s?laptop","(?i)\b14\b|14-|14s|chromebook\s?11|x360\s?14"],
     "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
     "parts": ["U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U9WX1E"],
 },
