@@ -1,3 +1,4 @@
+$content = @'
 import sys
 import io
 import os
@@ -111,3 +112,8 @@ if __name__ == "__main__":
     product = sys.argv[2] if len(sys.argv) > 2 else ""
     is_partner = len(sys.argv) > 3 and sys.argv[3] == "partner"
     print(check_serial(serial, product=product, is_partner=is_partner))
+'@
+
+[System.IO.File]::WriteAllText("$PWD\whatsapp_check.py", $content)
+Write-Host "File written. Verifying..."
+Select-String -Path whatsapp_check.py -Pattern "sys.argv\[2\]|enter the product number|def check_serial"
