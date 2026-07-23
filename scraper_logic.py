@@ -3556,12 +3556,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
            # ✅ FIXED Rule 1 — 14/15 series plain laptops only
 
 {
-    "includes": [r"(?i)hp\s?laptop","(?i)\b14\b|14-|14s|chromebook\s?11|x360\s?14"],
+    "includes": [r"(?i)hp\s?laptop",r"(?i)\b14\b|14-|14s|chromebook\s?11|x360\s?14"],
     "excludes": [r"(?i)probook|all-in-one|desktop|pavilion|pav|victus|omen|envy|spectre|x360|chromebook|notebook|omnibook"],
     "parts": ["U8LH7PE","U8LH8E","U8LJ4E","UN008E","UB5R2E","U8LH3E","U9WX1E"],
 },
 {
-    "includes": [r"(?i)\b15\b|15s|15-|hp\s?laptop\s+15s|hp\s?laptop|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s)|15"],
+    "includes": [r"(?i)\b15\b|15s|15-|hp\s?laptop\s+15s|hp\s?laptop|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s|15"],
     "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250"],
     "parts": [ "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
