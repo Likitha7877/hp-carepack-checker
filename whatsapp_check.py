@@ -25,7 +25,7 @@ def no_packs_message(result, eosl_date):
     remaining = result.get('remaining_days')
 
     if 'active' in status:
-        msg = "Good news! Your warranty is currently *Active* until " + str(result.get('end_date', 'N/A'))
+        msg = "Good news! Your warranty is currently Active until " + str(result.get('end_date', 'N/A'))
         if remaining not in (None, '', 'N/A'):
             msg += " (" + str(remaining) + " remaining)"
         msg += ". You currently do not have any additional Care Pack options right now. "
@@ -35,9 +35,10 @@ def no_packs_message(result, eosl_date):
     if 'expir' in status:
         # Coverage expiring/expired but EOSL date unknown - post-warranty
         # eligibility cannot be determined automatically.
-        return ("Thank you for your enquiry! Our team is checking the available Care Pack "
-                "plans and pricing for your device and will get back to you shortly via "
-                "WhatsApp, email or phone.")
+        return ("We currently do not have any product for your device. "
+                "The End Of Support date for your HP product is not available in our data yet. "
+                "Please give us a moment to check the Care Pack eligibility for you. "
+                "Once we have the data, our team will contact you via email, whatsapp or phone.")
 
     return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 
@@ -47,9 +48,6 @@ def check_serial(serial, product="", is_partner=False):
         result = run_warranty_check(serial, product)
 
     if "error" in result:
-        error_text = str(result.get("error", "")).lower()
-        if "enter the product number" in error_text:
-            return "Please also share the product number to check this device (e.g. Product: C20N1PA)."
         return "Sorry, we could not find warranty information for serial number " + serial + ". Please check the number and try again."
 
     start_date = result.get('start_date', 'N/A')
@@ -61,15 +59,15 @@ def check_serial(serial, product="", is_partner=False):
     eosl_date = eosl_data.get(product_clean) if product_clean else None
 
     if start_date == end_date:
-        return "*" + result.get('product_name', 'Your Product') + "*\n\nThis product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
+        return "" + result.get('product_name', 'Your Product') + "\n\nThis product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
 
     care_packs = result.get('care_packs', [])
 
     if is_partner:
         # Partner format: SKU | Plan | Price+GST
-        msg = "*" + result.get('product_name', 'Your Product') + "*\n\n"
+        msg = "" + result.get('product_name', 'Your Product') + "\n\n"
         if care_packs:
-            msg += "*Available Care Packs:*\n"
+            msg += "Available Care Packs:\n"
             for cp in care_packs:
                 sku = cp.get('part', '')
                 title = cp.get('title', '')
@@ -91,13 +89,13 @@ def check_serial(serial, product="", is_partner=False):
 
     else:
         # Customer format: full info with links
-        msg = "*Warranty Information for " + result.get('product_name', 'Your Product') + "*\n\n"
+        msg = "Warranty Information for " + result.get('product_name', 'Your Product') + "\n\n"
         msg += "Start Date: " + str(start_date) + "\n"
         msg += "End Date: " + str(end_date) + "\n"
         msg += "Status: " + str(result.get('status', 'N/A')) + "\n"
         msg += "Remaining Days: " + str(result.get('remaining_days', 'N/A')) + "\n\n"
         if care_packs:
-            msg += "*Available Care Packs:*\n"
+            msg += "Available Care Packs:\n"
             for cp in care_packs:
                 msg += "- " + cp.get('title', '') + ": " + cp.get('url', '') + "\n"
         else:
@@ -106,8 +104,6 @@ def check_serial(serial, product="", is_partner=False):
     return msg
 
 if __name__ == "__main__":
-    # Fixed argument order: serial, product (may be empty string), partner/customer flag
     serial = sys.argv[1]
-    product = sys.argv[2] if len(sys.argv) > 2 else ""
-    is_partner = len(sys.argv) > 3 and sys.argv[3] == "partner"
-    print(check_serial(serial, product=product, is_partner=is_partner))
+    is_partner = len(sys.argv) > 2 and sys.argv[2] == "partner"
+    print(check_serial(serial, is_partner=is_partner))
