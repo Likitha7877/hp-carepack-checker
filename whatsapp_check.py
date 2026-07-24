@@ -33,11 +33,10 @@ def no_packs_message(result, eosl_date):
         return msg
 
     if 'expir' in status:
-        # Coverage expiring/expired but EOSL date unknown - post-warranty
-        # eligibility cannot be determined automatically.
-        return ("Thank you for your enquiry! Our team is checking the available Care Pack "
-                "plans and pricing for your device and will get back to you shortly via "
-                "WhatsApp, email or phone.")
+        return ("We currently do not have any product for your device. "
+                "The End Of Support date for your HP product is not available in our data yet. "
+                "Please give us a moment to check the Care Pack eligibility for you. "
+                "Once we have the data, our team will contact you via email, whatsapp or phone.")
 
     return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 
@@ -55,7 +54,6 @@ def check_serial(serial, product="", is_partner=False):
     start_date = result.get('start_date', 'N/A')
     end_date = result.get('end_date', 'N/A')
 
-    # EOSL lookup - same as website (app.py)
     final_product = result.get("product_number") or product
     product_clean = final_product.strip().upper() if final_product else None
     eosl_date = eosl_data.get(product_clean) if product_clean else None
@@ -66,7 +64,6 @@ def check_serial(serial, product="", is_partner=False):
     care_packs = result.get('care_packs', [])
 
     if is_partner:
-        # Partner format: SKU | Plan | Price+GST
         msg = "*" + result.get('product_name', 'Your Product') + "*\n\n"
         if care_packs:
             msg += "*Available Care Packs:*\n"
@@ -90,7 +87,6 @@ def check_serial(serial, product="", is_partner=False):
             msg += no_packs_message(result, eosl_date)
 
     else:
-        # Customer format: full info with links
         msg = "*Warranty Information for " + result.get('product_name', 'Your Product') + "*\n\n"
         msg += "Start Date: " + str(start_date) + "\n"
         msg += "End Date: " + str(end_date) + "\n"
@@ -106,7 +102,6 @@ def check_serial(serial, product="", is_partner=False):
     return msg
 
 if __name__ == "__main__":
-    # Fixed argument order: serial, product (may be empty string), partner/customer flag
     serial = sys.argv[1]
     product = sys.argv[2] if len(sys.argv) > 2 else ""
     is_partner = len(sys.argv) > 3 and sys.argv[3] == "partner"
