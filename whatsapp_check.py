@@ -9,6 +9,9 @@ from scraper_logic import run_warranty_check
 from partner_prices import PARTNER_PRICES
 from eosl_data import eosl_data
 
+PRINTER_KEYWORDS = ["laserjet", "officejet", "deskjet", "inkjet", "printer", "mfp", "smart tank", "envy photo", "neverstop"]
+SUPPORT_TAG_NUMBER = "919000812136"
+
 def format_price(price):
     try:
         p = int(price)
@@ -16,8 +19,15 @@ def format_price(price):
     except:
         return str(price)
 
-def no_packs_message(result, eosl_date):
-    """Message when no care packs are available - picks the right reason."""
+def is_printer(product_name):
+    name = str(product_name or "").lower()
+    return any(kw in name for kw in PRINTER_KEYWORDS)
+
+def no_packs_message(result, eosl_date, is_partner=False):
+    """Message when no care packs are available - picks the right reason.
+    Returns plain text, except for the printer+partner+expiring case, which
+    appends a TAG:: marker line the bridge can detect and turn into a real
+    WhatsApp @mention (only in the groups it chooses to honor it)."""
     if eosl_date:
         return "This product has reached End of Service Life (EOSL: " + str(eosl_date) + ") and is no longer eligible for a warranty extension."
 
@@ -33,10 +43,13 @@ def no_packs_message(result, eosl_date):
         return msg
 
     if 'expir' in status:
-        return ("We currently do not have any product for your device. "
+        base_msg = ("We currently do not have any product for your device. "
                 "The End Of Support date for your HP product is not available in our data yet. "
                 "Please give us a moment to check the Care Pack eligibility for you. "
                 "Once we have the data, our team will contact you via email, whatsapp or phone.")
+        if is_partner and is_printer(result.get('product_name')):
+            base_msg += "\nTAG::" + SUPPORT_TAG_NUMBER
+        return base_msg
 
     return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 
@@ -84,8 +97,7 @@ def check_serial(serial, product="", is_partner=False):
             else:
                 msg += "\nCare Pack Start Date: " + str(end_date)
         else:
-            msg += no_packs_message(result, eosl_date)
-
+            msg += no_packs_message(result, eosl_date, is_partner=True)
     else:
         msg = "*Warranty Information for " + result.get('product_name', 'Your Product') + "*\n\n"
         msg += "Start Date: " + str(start_date) + "\n"
@@ -97,7 +109,7 @@ def check_serial(serial, product="", is_partner=False):
             for cp in care_packs:
                 msg += "- " + cp.get('title', '') + ": " + cp.get('url', '') + "\n"
         else:
-            msg += no_packs_message(result, eosl_date)
+            msg += no_packs_message(result, eosl_date, is_partner=False)
 
     return msg
 
