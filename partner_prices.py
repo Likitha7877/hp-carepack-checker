@@ -44,7 +44,7 @@ PARTNER_PRICES = {
     "U9BB1PE": 3835,
     "U9BA3E": 2360,
     "U9BA7E": 3894,
-    "U9BA9E": 7080,
+    "U9BA9E": 7434,
     "U9EE7E": 6490,
     "U9EF3E": 12390,
     "U9EE8E": 9145,
