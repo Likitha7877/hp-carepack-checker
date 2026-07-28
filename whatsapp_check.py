@@ -9,7 +9,7 @@ from scraper_logic import run_warranty_check
 from partner_prices import PARTNER_PRICES
 from eosl_data import eosl_data
 
-PRINTER_KEYWORDS = ["laserjet", "officejet", "deskjet", "inkjet", "printer", "mfp", "smart tank", "envy photo", "neverstop"]
+PRINTER_KEYWORDS = ["laserjet", "officejet","color laser","laser","lasejet pro", "deskjet", "inkjet", "printer", "mfp", "smart tank", "envy photo", "neverstop"]
 SUPPORT_TAG_NUMBER = "919560207904"
 def format_price(price):
     try:
