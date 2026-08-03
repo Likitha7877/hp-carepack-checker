@@ -12,7 +12,6 @@ from dateutil.relativedelta import relativedelta
 from eosl_data import eosl_data
 from datetime import datetime, date
 
-
 printer_mapping = {
       "Y5S43A": {
         "2 yr add WE": {
@@ -20,8 +19,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UQ463E"
-        },
-        "1 yr PW": {}
+        }
     },
     "Y5S47A": {
         "2 yr add WE": {
@@ -30,7 +28,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "Y5S50A": {
         "2 yr add WE": {
@@ -38,18 +38,14 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
      "Y5S50A": {
         "2 yr add WE": {
            
         },
         "4 yr add WE": {
-        },
-        "1 yr PW": {
-            "Part": "UH770PE"
-            }
+        }
     },
      "Y5S50A": {
         "2 yr add WE": {
@@ -58,8 +54,7 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ267E"
             
-        },
-        "1 yr PW": {}
+        }
     },
     "Y5S54A": {
         "2 yr add WE": {
@@ -68,7 +63,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "C6N21A": {
         "2 yr add WE": {
@@ -77,7 +74,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "CC418A": {
         "2 yr add WE": {
@@ -86,7 +85,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "CE655A": {
         "2 yr add WE": {
@@ -95,7 +96,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "G3Q37A": {
         "2 yr add WE": {
@@ -104,7 +107,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "G3Q39A": {
         "2 yr add WE": {
@@ -112,8 +117,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UQ463E"
-        },
-        "1 yr PW": {}
+        }
     },
     "G3Q46A": {
         "2 yr add WE": {
@@ -122,7 +126,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "G3Q47A": {
         "2 yr add WE": {
@@ -131,7 +137,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "G3Q50A": {
         "2 yr add WE": {
@@ -140,7 +148,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "T6B51A": {
         "2 yr add WE": {
@@ -149,7 +159,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U27BRE"
+        }
     },
     "T6B52A": {
         "2 yr add WE": {
@@ -158,7 +170,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U27BRE"
+        }
     },
     "T6B59A": {
         "2 yr add WE": {
@@ -167,7 +181,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "T6B60A": {
         "2 yr add WE": {
@@ -176,7 +192,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "7KW48A": {
         "2 yr add WE": {
@@ -185,7 +203,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "7KW49A": {
         "2 yr add WE": {
@@ -194,7 +214,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "7KW63A": {
         "2 yr add WE": {
@@ -203,7 +225,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "7KW64A": {
         "2 yr add WE": {
@@ -212,7 +236,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UQ463E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "C6N23A": {
         "2 yr add WE": {
@@ -221,7 +247,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "CB376A": {
         "2 yr add WE": {
@@ -229,8 +257,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
     "CE849A": {
         "2 yr add WE": {
@@ -238,8 +265,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
     "CZ175A": {
         "2 yr add WE": {
@@ -248,7 +274,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "G3Q62A": {
         "2 yr add WE": {
@@ -257,7 +285,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "G3Q66A": {
         "2 yr add WE": {
@@ -265,8 +295,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
     "G3Q74A": {
         "2 yr add WE": {
@@ -275,7 +304,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "G3Q75A": {
         "2 yr add WE": {
@@ -284,7 +315,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "G3Q68A": {
         "2 yr add WE": {
@@ -292,8 +325,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
     "G3Q79A": {
         "2 yr add WE": {
@@ -302,7 +334,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "G3Q76A": {
         "2 yr add WE": {
@@ -310,8 +344,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ289E"
-        },
-        "1 yr PW": {}
+        }
     },
     "T6B70A": {
         "2 yr add WE": {
@@ -320,7 +353,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "T6B71A": {
         "2 yr add WE": {
@@ -329,7 +364,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "7KW54A": {
         "2 yr add WE": {
@@ -338,7 +375,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "7KW56A": {
         "2 yr add WE": {
@@ -347,7 +386,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "F5S29B": {
         "2 yr add WE": {
@@ -356,7 +397,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "F5S41D": {
         "2 yr add WE": {
@@ -365,7 +408,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "F5S42D": {
         "2 yr add WE": {
@@ -374,7 +419,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "F5S66A": {
         "2 yr add WE": {
@@ -383,7 +430,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "K4U05B": {
         "2 yr add WE": {
@@ -392,14 +441,18 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "K7B87D": {
         "2 yr add WE": {
             "part": "UG334E"
         },
         "4 yr add WE": {},
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "V1N02B": {
         "2 yr add WE": {
@@ -407,8 +460,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ303E"
-        },
-        "1 yr PW": {}
+        }
     },
     "Y5H67D": {
         "2 yr add WE": {
@@ -417,7 +469,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "Y5H68D": {
         "2 yr add WE": {
@@ -426,7 +480,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "Y5H69D": {
         "2 yr add WE": {
@@ -434,8 +490,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ303E"
-        },
-        "1 yr PW": {}
+        }
     },
     "Y5Z03B": {
         "2 yr add WE": {
@@ -444,7 +499,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "Y5Z04B": {
         "2 yr add WE": {
@@ -453,7 +510,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "F5S31B": {
         "2 yr add WE": {
@@ -462,7 +521,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7WN46D": {
         "2 yr add WE": {
@@ -471,14 +532,18 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7WN07D": {
         "2 yr add WE": {
             "part": "UG334E"
         },
         "4 yr add WE": {},
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7WN44D": {
         "2 yr add WE": {
@@ -487,7 +552,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7WQ06B": {
         "2 yr add WE": {
@@ -496,7 +563,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FT02B": {
         "2 yr add WE": {
@@ -505,7 +574,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FR27B": {
         "2 yr add WE": {
@@ -514,7 +585,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FR21B": {
         "2 yr add WE": {
@@ -523,7 +596,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FR53D": {
         "2 yr add WE": {
@@ -532,7 +607,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FR54D": {
         "2 yr add WE": {
@@ -541,7 +618,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7WQ08B": {
         "2 yr add WE": {
@@ -550,7 +629,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "7FS80D": {
         "2 yr add WE": {
@@ -559,7 +640,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "25R72A": {
         "2 yr add WE": {
@@ -568,7 +651,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "M2U76B": {
         "2 yr add WE": {
@@ -576,8 +661,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ303E"
-        },
-        "1 yr PW": {}
+        }
     },
     "25R69A": {
         "2 yr add WE": {
@@ -586,7 +670,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "M2U86B": {
         "2 yr add WE": {
@@ -594,8 +680,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ304E"
-        },
-        "1 yr PW": {}
+        }
     },
     "M2U88B": {
         "2 yr add WE": {
@@ -603,8 +688,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ304E"
-        },
-        "1 yr PW": {}
+        }
     },
     "5SE26B": {
         "2 yr add WE": {
@@ -613,7 +697,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG427PE"
+        }
     },
     "D9L20A": {
         "2 yr add WE": {
@@ -622,7 +708,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U6M74E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U6M78PE"
+        }
     },
     "D9L63A": {
         "2 yr add WE": {
@@ -631,7 +719,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ295E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG436PE"
+        }
     },
     "E3E03A": {
         "2 yr add WE": {
@@ -640,7 +730,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ295E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG436PE"
+        }
     },
     "T0G56A": {
         "2 yr add WE": {
@@ -648,8 +740,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "U6M74E"
-        },
-        "1 yr PW": {}
+        }
     },
     "3UK97D": {
         "2 yr add WE": {
@@ -658,14 +749,18 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ299E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG612PE"
+        }
     },
     "3UK98D": {
         "2 yr add WE": {
             "part": "U6M85E"
         },
         "4 yr add WE": {},
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U6M83E"
+        }
     },
     "3UK90D": {
         "2 yr add WE": {
@@ -674,7 +769,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ287E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG440PE"
+        }
     },
     "5LJ20D": {
         "2 yr add WE": {
@@ -682,8 +779,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ298E"
-        },
-        "1 yr PW": {}
+        }
     },
     "4KJ64D": {
         "2 yr add WE": {
@@ -692,7 +788,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ298E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG439PE"
+        }
     },
     "CR768A": {
         "2 yr add WE": {
@@ -700,8 +798,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ297E"
-        },
-        "1 yr PW": {}
+        }
     },
     "G1X85A": {
         "2 yr add WE": {
@@ -709,8 +806,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ297E"
-        },
-        "1 yr PW": {}
+        }
     },
     "G5J38A": {
         "2 yr add WE": {
@@ -719,7 +815,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ297E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG438PE"
+        }
     },
     "CZ993A": {
         "2 yr add WE": {
@@ -728,7 +826,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ297E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG438PE"
+        }
     },
     "N4L17A": {
         "2 yr add WE": {
@@ -737,7 +837,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ297E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG438PE"
+        }
     },
     "Y0S18A": {
         "2 yr add WE": {
@@ -746,7 +848,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ296E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG437PE"
+        }
     },
     "Y0S19A": {
         "2 yr add WE": {
@@ -755,7 +859,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ297E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG438PE"
+        }
     },
     "Z4B55A": {
         "2 yr add WE": {
@@ -764,7 +870,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
     },
     "Z4B04A": {
         "2 yr add WE": {
@@ -833,62 +941,43 @@ printer_mapping = {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "4SB24A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "4SR29A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "3YW70A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "6UU46A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "6UU47A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-
-        }
+        "4 yr add WE": {}
     },
     "4WF66A": {
         "2 yr add WE": {
             "part": "U35PFE"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {}
+        "4 yr add WE": {}
     },
     "4ZB79A": {
         "2 yr add WE": {
@@ -897,7 +986,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB80A": {
         "2 yr add WE": {
@@ -906,7 +997,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB81A": {
         "2 yr add WE": {
@@ -915,7 +1008,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     
     "4ZB85A": {
@@ -925,7 +1020,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB86A": {
         "2 yr add WE": {
@@ -934,7 +1031,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB87A": {
         "2 yr add WE": {
@@ -943,7 +1042,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB91A": {
         "2 yr add WE": {
@@ -952,7 +1053,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB92A": {
         "2 yr add WE": {
@@ -961,7 +1064,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4Y1E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GQPE"
+        }
     },
     "4ZB94A": {
         "2 yr add WE": {
@@ -970,7 +1075,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X9E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GSPE"
+        }
     },
     "4ZB95A": {
         "2 yr add WE": {
@@ -979,7 +1086,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X9E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GSPE"
+        }
     },
     "4ZB96A": {
         "2 yr add WE": {
@@ -988,7 +1097,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X9E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GSPE"
+        }
     },
     "4ZB97A": {
         "2 yr add WE": {
@@ -997,7 +1108,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X9E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GSPE"
+        }
     },
     "4QD21A": {
         "2 yr add WE": {
@@ -1006,7 +1119,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X7E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GXPE"
+        }
     },
     "4RY26A": {
         "2 yr add WE": {
@@ -1015,7 +1130,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X7E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GXPE"
+        }
     },
     "4RY22A": {
         "2 yr add WE": {
@@ -1024,7 +1141,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GVPE"
+        }
     },
     "4RY23A": {
         "2 yr add WE": {
@@ -1033,7 +1152,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GVPE"
+        }
     },
     "5HG74A": {
         "2 yr add WE": {
@@ -1042,7 +1163,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GVPE"
+        }
     },
     "5HG85A": {
         "2 yr add WE": {
@@ -1051,7 +1174,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UC4X7E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U42GXPE"
+        }
     },
     "6GX06A": {
         "2 yr add WE": {
@@ -1060,7 +1185,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "6GX04A": {
         "2 yr add WE": {
@@ -1069,7 +1196,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "3G635A": {
         "2 yr add WE": {
@@ -1078,7 +1207,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "3G636A": {
         "2 yr add WE": {
@@ -1087,7 +1218,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "6GW64A": {
         "2 yr add WE": {
@@ -1096,7 +1229,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ272E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "3G658A": {
         "2 yr add WE": {
@@ -1105,7 +1240,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ272E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG451PE"
+        }
     },
     "CZ174A": {
         "2 yr add WE": {
@@ -1114,7 +1251,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "381U0A": {
         "2 yr add WE": {
@@ -1123,7 +1262,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U04THE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U67MCPE"
+        }
     },
     "381U2A": {
         "2 yr add WE": {
@@ -1132,7 +1273,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U04THE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U67MCPE"
+        }
     },
     "381U3A": {
         "2 yr add WE": {
@@ -1141,7 +1284,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U04THE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U67MCPE"
+        }
     },
     "381U4A": {
         "2 yr add WE": {
@@ -1150,7 +1295,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U04THE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U67MCPE"
+        }
     },
     "381V6A": {
         "2 yr add WE": {
@@ -1159,7 +1306,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U04SKE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U67M9PE"
+        }
     },
      "5QK15A": {
         "2 yr add WE": {
@@ -1168,14 +1317,15 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U36LGE"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U36LTPE"
+        }
     },
     "3D4L3A": {
         "2 yr add WE": {
             "part": "U57D7E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {}
+        "4 yr add WE": {}
     },
     "1F3W3A": {
         "2 yr add WE": {
@@ -1253,19 +1403,13 @@ printer_mapping = {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "28C12A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9NR3PE"
-        }
+        "4 yr add WE": {}
     },
     "714Z8A": {
         "2 yr add WE": {
@@ -1274,7 +1418,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "53X75A": {
         "2 yr add WE": {
@@ -1283,7 +1429,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ267E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     },
     "A58WKA": {
         "2 yr add WE": {
@@ -1292,7 +1440,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "714Z9A": {
         "2 yr add WE": {
@@ -1301,7 +1451,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "715A2A": {
         "2 yr add WE": {
@@ -1310,7 +1462,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "715A3A": {
         "2 yr add WE": {
@@ -1319,7 +1473,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "715A4A": {
         "2 yr add WE": {
@@ -1328,7 +1484,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "715A5A": {
         "2 yr add WE": {
@@ -1337,7 +1495,9 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "U62F5E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
     },
     "53N94C": {
         "2 yr add WE": {
@@ -1345,8 +1505,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ275E"
-        },
-        "1 yr PW": {}
+        }
     },
     "537P5C": {
         "2 yr add WE": {
@@ -1354,8 +1513,7 @@ printer_mapping = {
         },
         "4 yr add WE": {
             "part": "UZ276E"
-        },
-        "1 yr PW": {}
+        }
     },
     "405W2C": {
         "2 yr add WE": {
@@ -1364,14 +1522,18 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ277E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG439PE"
+        }
     },
     "404L7C": {
         "2 yr add WE": {
             "part": "U6M85E"
         },
         "4 yr add WE": {},
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "U6M83E"
+        }
     },
     "2ZN50A": {
         "2 yr add WE": {
@@ -1379,8 +1541,8 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9VV5PE"
-            }
+            "part": "U9VV7PE"
+        }
     },
     
     "499M6A": {
@@ -1390,23 +1552,23 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ260E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UG764PE"
+        }
     },
     "A8P80A": {
         "2 yr add WE": {
         },
         "4 yr add WE": {
             "part": "U5AD9E"
-        },
-        "1 yr PW": {}
+        }
     },
     "A8P79A": {
         "2 yr add WE": {
         },
         "4 yr add WE": {
             "part": "U5AD9E"
-        },
-        "1 yr PW": {}
+        }
     },
    
     "499N4A": {
@@ -1416,16 +1578,1396 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ289E"
         },
-        "1 yr PW": {}
+        "1 yr PW": {
+            "part": "UH770PE"
+        }
     }
 }
+# printer_mapping = {
+#       "Y5S43A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5S47A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+    
+#     "Y5S54A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "C6N21A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CC418A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CE655A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q37A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q39A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q46A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q47A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q50A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B51A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B52A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B59A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B60A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW48A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW49A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW63A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW64A": {
+#         "2 yr add WE": {
+#             "part": "UG361E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UQ463E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "C6N23A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CB376A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CE849A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CZ175A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q62A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q66A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q74A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q75A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q68A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q79A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G3Q76A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B70A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T6B71A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW54A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7KW56A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "F5S29B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "F5S41D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "F5S42D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "F5S66A": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "K4U05B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "K7B87D": {
+#         "2 yr add WE": {
+#             "part": "UG334E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "V1N02B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5H67D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5H68D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5H69D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5Z03B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y5Z04B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "F5S31B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7WN46D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7WN07D": {
+#         "2 yr add WE": {
+#             "part": "UG334E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "7WN44D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7WQ06B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FT02B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FR27B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FR21B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FR53D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FR54D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7WQ08B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "7FS80D": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "25R72A": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "M2U76B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "25R69A": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "M2U86B": {
+#         "2 yr add WE": {
+#             "part": "UG338E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ304E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "M2U88B": {
+#         "2 yr add WE": {
+#             "part": "UG338E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ304E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "5SE26B": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "D9L20A": {
+#         "2 yr add WE": {
+#             "part": "U6M72E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U6M74E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "D9L63A": {
+#         "2 yr add WE": {
+#             "part": "UG346E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ295E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "E3E03A": {
+#         "2 yr add WE": {
+#             "part": "UG346E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ295E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "T0G56A": {
+#         "2 yr add WE": {
+#             "part": "U6M72E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U6M74E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3UK97D": {
+#         "2 yr add WE": {
+#             "part": "UG350E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ299E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3UK98D": {
+#         "2 yr add WE": {
+#             "part": "U6M85E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "3UK90D": {
+#         "2 yr add WE": {
+#             "part": "UG470E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ287E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "5LJ20D": {
+#         "2 yr add WE": {
+#             "part": "UG349E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ298E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4KJ64D": {
+#         "2 yr add WE": {
+#             "part": "UG349E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ298E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CR768A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G1X85A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "G5J38A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CZ993A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "N4L17A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y0S18A": {
+#         "2 yr add WE": {
+#             "part": "UG347E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ296E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Y0S19A": {
+#         "2 yr add WE": {
+#             "part": "UG348E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ297E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Z4B55A": {
+#         "2 yr add WE": {
+#             "part": "UG337E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ303E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "Z4B04A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "Z4B53A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "Z6Z11A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "Z6Z13A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "7ZV78A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "Z6Z95A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "Z6Z97A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "1TJ09A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4SB24A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4SR29A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "3YW70A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "6UU46A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "6UU47A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+
+#         }
+#     },
+#     "4WF66A": {
+#         "2 yr add WE": {
+#             "part": "U35PFE"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "4ZB79A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB80A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB81A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+    
+#     "4ZB85A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB86A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB87A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB91A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB92A": {
+#         "2 yr add WE": {
+#             "part": "UB4V5E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4Y1E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB94A": {
+#         "2 yr add WE": {
+#             "part": "UB4W7E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X9E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB95A": {
+#         "2 yr add WE": {
+#             "part": "UB4W7E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X9E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB96A": {
+#         "2 yr add WE": {
+#             "part": "UB4W7E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X9E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4ZB97A": {
+#         "2 yr add WE": {
+#             "part": "UB4W7E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X9E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4QD21A": {
+#         "2 yr add WE": {
+#             "part": "UB4X9E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X7E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4RY26A": {
+#         "2 yr add WE": {
+#             "part": "UB4X9E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X7E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4RY22A": {
+#         "2 yr add WE": {
+#             "part": "UB4Z1E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "4RY23A": {
+#         "2 yr add WE": {
+#             "part": "UB4Z1E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "5HG74A": {
+#         "2 yr add WE": {
+#             "part": "UB4Z1E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "5HG85A": {
+#         "2 yr add WE": {
+#             "part": "UB4X9E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UC4X7E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "6GX06A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "6GX04A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3G635A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3G636A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "6GW64A": {
+#         "2 yr add WE": {
+#             "part": "UG481E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ272E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3G658A": {
+#         "2 yr add WE": {
+#             "part": "UG481E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ272E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "CZ174A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "381U0A": {
+#         "2 yr add WE": {
+#             "part": "U04TKE"
+#         },
+#         "4 yr add WE": {
+#             "part": "U04THE"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "381U2A": {
+#         "2 yr add WE": {
+#             "part": "U04TKE"
+#         },
+#         "4 yr add WE": {
+#             "part": "U04THE"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "381U3A": {
+#         "2 yr add WE": {
+#             "part": "U04TKE"
+#         },
+#         "4 yr add WE": {
+#             "part": "U04THE"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "381U4A": {
+#         "2 yr add WE": {
+#             "part": "U04TKE"
+#         },
+#         "4 yr add WE": {
+#             "part": "U04THE"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "381V6A": {
+#         "2 yr add WE": {
+#             "part": "U04SME"
+#         },
+#         "4 yr add WE": {
+#             "part": "U04SKE"
+#         },
+#         "1 yr PW": {}
+#     },
+#      "5QK15A": {
+#         "2 yr add WE": {
+            
+#         },
+#         "4 yr add WE": {
+#             "part": "U36LGE"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "3D4L3A": {
+#         "2 yr add WE": {
+#             "part": "U57D7E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "1F3W3A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4A8S4A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "1F3W2A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4A8R9A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "1F3Y4A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4A8D9A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "1F3Y2A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "4A8D4A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "6UU48A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "28C12A": {
+#         "2 yr add WE": {
+#             "part": "UA5C0E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9NR3PE"
+#         }
+#     },
+#     "714Z8A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "53X75A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ267E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "A58WKA": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "714Z9A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "715A2A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "715A3A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "715A4A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "715A5A": {
+#         "2 yr add WE": {
+#             "part": "U62F3E"
+#         },
+#         "4 yr add WE": {
+#             "part": "U62F5E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "53N94C": {
+#         "2 yr add WE": {
+#             "part": "UG467E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ275E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "537P5C": {
+#         "2 yr add WE": {
+#             "part": "UG468E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ276E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "405W2C": {
+#         "2 yr add WE": {
+#             "part": "UG349E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ277E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "404L7C": {
+#         "2 yr add WE": {
+#             "part": "U6M85E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {}
+#     },
+#     "2ZN50A": {
+#         "2 yr add WE": {
+#             "part": "U9VU5E"
+#         },
+#         "4 yr add WE": {},
+#         "1 yr PW": {
+#             "part": "U9VV5PE"
+#             }
+#     },
+    
+#     "499M6A": {
+#         "2 yr add WE": {
+#             "part": "UG482E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ260E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "A8P80A": {
+#         "2 yr add WE": {
+#         },
+#         "4 yr add WE": {
+#             "part": "U5AD9E"
+#         },
+#         "1 yr PW": {}
+#     },
+#     "A8P79A": {
+#         "2 yr add WE": {
+#         },
+#         "4 yr add WE": {
+#             "part": "U5AD9E"
+#         },
+#         "1 yr PW": {}
+#     },
+   
+#     "499N4A": {
+#         "2 yr add WE": {
+#             "part": "UH773E"
+#         },
+#         "4 yr add WE": {
+#             "part": "UZ289E"
+#         },
+#         "1 yr PW": {}
+#     }
+# }
 
 
   
 product_page_mapping = {
     "UG457E":"hp-deskjet-2-years-additional-warranty/",
     "UG062E":"ug062e-hp-deskjet-ia-ultra-4826-aio-printer-2-years-additional-warranty/",
-    "UH770PE":"hp-consumer-laserjet-1-year-post-warranty",
+    "AMC-UH770PE":"hp-consumer-laserjet-1-year-post-warranty",
     "U9VV5PE":"hp-laserjet-m726xx-mfp-1-year-post-warranty/",
     "UZ267E":"hp-consumer-laserjet-4-years-additional-warranty-uz267e/",
     "UH757E":"hp-consumer-laserjet-2-years-additional-warranty",
@@ -2914,9 +4456,9 @@ product_title_mapping = {
     "duration": "1 year",
     "coverage":"post-warranty"
   },
-    "UH770PE": {
+    "AMC-UH770PE": {
     "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
-    "price": "4500",
+    "price": "6500",
     "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
     "coverage":"post-warranty"
