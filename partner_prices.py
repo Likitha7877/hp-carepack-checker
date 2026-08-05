@@ -94,7 +94,7 @@ PARTNER_PRICES = {
     "U85BTE": 11505,
     "U85DTE": 5369,
     "U85BVE": 15340,
-    "U85DWE": 7316,
+    "U85DWE": 7552,
     "U85DXE": 11210,
     "U85DVE": 9794,
     "U85DYE": 14750,
