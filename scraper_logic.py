@@ -3045,16 +3045,13 @@ product_page_mapping = {
     "U7923E": "u7923e-hp-all-in-one-business-pc-3-years-additional-warranty-extension",
     "U7925E": "u7925e-hp-all-in-one-business-pc-4-years-additional-warranty-extension",
     "UJ217E" :"uj217e-hp-desktop-a-i-o-2-years-additional-warranty",
-    "U4813PE" :"u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     "UD075PE" : "ud075pe-hp-desktop-all-in-one-1-year-post-warranty/",
     "UN085E" : "/hp-omnistudio-desktop-2-years-additional-warranty/",
-    # "U4813PE" : "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     # "UA055E" : "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UN062PE": "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
     "U11BWE": "u11bwe-hp-all-in-one-business-pc-2-years-additional-warranty-extension-with-defective-media-retention-3-year-base-warranty/",
     "U11BTE": "u11bte-hp-desktop-3-year-defective-media-retention-on-factory-warranty/",
-    # "U4813PE": "u4813pe-hp-desktop-a-i-o-1-year-post-warranty",
     # "UA055E": "ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UA055E":"ua055e-hp-envy-pavilion-victus-by-hp-omen-by-hp-pro-desktop-2-years-additional-warranty",
     "UN062PE" : "un062pe-hp-envy-omen-desktop-all-in-one-1-year-post-warranty",
@@ -3275,13 +3272,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "U4813PE": {
-    "title": "HP Desktop/All-In-One 1 Year Post Warranty",
-    "price": "6500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/12/1PW-dt.png",
-    "coverage":"post-warranty",
-    "duration":"1 year"
-  },
+  
   
   "UD075PE": {
     "title": "HP Desktop/All-In-One 1 Year Post Warranty",
@@ -5194,7 +5185,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
              {
         "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
-        "parts": ["UJ217E", "U4813PE","UD075PE"],
+        "parts": ["UJ217E","UD075PE"],
     },
     #     {
     #     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
@@ -5221,7 +5212,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
            {
         "includes": [r"(?i)\b32\s*(inch|\")|pavilion\s?all|pavilion\s?3|pavilion\s?gaming\s?d"],
         "excludes": [r"(?i)255|probook|laptop|15s|14s|notebook"],
-        "parts": ["U4813PE", "UA055E","UN085E","UD075PE"],
+        "parts": [ "UA055E","UN085E","UD075PE"],
     },
 {
     "includes": [r"(?i)envy\s?all|gaming\s?desktop"],
