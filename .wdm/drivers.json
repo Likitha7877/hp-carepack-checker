@@ -6,5 +6,9 @@
     "win64_chromedriver_150.0.7871.124_for_150.0.7871": {
         "timestamp": "25/07/2026",
         "binary_path": "C:\\Aayushi\\website\\Serial number checker\\hp_carepack_checker\\hp_carepack_checker\\.wdm\\drivers\\chromedriver\\win64\\150.0.7871.124\\chromedriver-win32/chromedriver.exe"
+    },
+    "win64_chromedriver_151.0.7922.77_for_151.0.7922": {
+        "timestamp": "10/08/2026",
+        "binary_path": "C:\\Aayushi\\website\\Serial number checker\\hp_carepack_checker\\hp_carepack_checker\\.wdm\\drivers\\chromedriver\\win64\\151.0.7922.77\\chromedriver-win32/chromedriver.exe"
     }
 }

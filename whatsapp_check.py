@@ -25,15 +25,13 @@ def is_printer(product_name):
 
 def no_packs_message(result, eosl_date, is_partner=False):
     """Message when no care packs are available - picks the right reason.
-    Returns plain text, except for the printer+partner+expiring case, which
-    appends a TAG:: marker line the bridge can detect and turn into a real
-    WhatsApp @mention (only in the groups it chooses to honor it)."""
-    if eosl_date:
-        return "This product has reached End of Service Life (EOSL: " + str(eosl_date) + ") and is no longer eligible for a warranty extension."
-
+    Returns plain text, except for the printer case (any reason, when in a
+    partner context), which appends a TAG:: marker line the bridge can
+    detect and turn into a real WhatsApp @mention."""
     status = str(result.get('status', '')).lower()
     remaining = result.get('remaining_days')
 
+    # Active warranty is always its own message, printer or not.
     if 'active' in status:
         msg = "Good news! Your warranty is currently *Active* until " + str(result.get('end_date', 'N/A'))
         if remaining not in (None, '', 'N/A'):
@@ -42,12 +40,18 @@ def no_packs_message(result, eosl_date, is_partner=False):
         msg += "If you need assistance with claiming support against your warranty, please contact HP Support at 18002587170."
         return msg
 
-    if 'expir' in status:
-        if is_partner and is_printer(result.get('product_name')):
-            base_msg = ("Printer Plan not available:\n"
-                    "Requesting team to assist with relevant plans here.")
+    # Printers: same message whether EOSL date is known or missing.
+    if is_printer(result.get('product_name')):
+        base_msg = ("Printer Plan not available:\n"
+                "Requesting team to assist with relevant plans here.")
+        if is_partner:
             base_msg += "\nTAG::" + SUPPORT_TAG_NUMBER
-            return base_msg
+        return base_msg
+
+    if eosl_date:
+        return "This product has reached End of Service Life (EOSL: " + str(eosl_date) + ") and is no longer eligible for a warranty extension."
+
+    if 'expir' in status:
         return ("EOSL Date not available:\n"
                 "We need to check support for this model. Please allow us 24 hours to get back to you.")
 
@@ -70,6 +74,9 @@ def check_serial(serial, product="", is_partner=False):
     final_product = result.get("product_number") or product
     product_clean = final_product.strip().upper() if final_product else None
     eosl_date = eosl_data.get(product_clean) if product_clean else None
+    # Treat placeholder/invalid values as "no real EOSL date on file"
+    if eosl_date and str(eosl_date).strip().upper() in ("NA", "N/A", "-", ""):
+        eosl_date = None
 
     if start_date == end_date:
         return "*" + result.get('product_name', 'Your Product') + "*\n\nThis product has reached End of Service Life (EOSL) and is no longer eligible for a warranty extension."
