@@ -11,6 +11,7 @@ from eosl_data import eosl_data
 
 PRINTER_KEYWORDS = ["laserjet", "officejet","color laser","laser","lasejet pro", "deskjet", "inkjet", "printer", "mfp", "smart tank", "envy photo", "neverstop"]
 SUPPORT_TAG_NUMBER = "919560207904"
+
 def format_price(price):
     try:
         p = int(price)
@@ -42,13 +43,13 @@ def no_packs_message(result, eosl_date, is_partner=False):
         return msg
 
     if 'expir' in status:
-        base_msg = ("We currently do not have any product for your device. "
-                "The End Of Support date for your HP product is not available in our data yet. "
-                "Please give us a moment to check the Care Pack eligibility for you. "
-                "Once we have the data, our team will contact you via email, whatsapp or phone.")
         if is_partner and is_printer(result.get('product_name')):
+            base_msg = ("Printer Plan not available:\n"
+                    "Requesting team to assist with relevant plans here.")
             base_msg += "\nTAG::" + SUPPORT_TAG_NUMBER
-        return base_msg
+            return base_msg
+        return ("EOSL Date not available:\n"
+                "We need to check support for this model. Please allow us 24 hours to get back to you.")
 
     return "No compatible Care Packs are currently available for this product. Please contact us for assistance."
 

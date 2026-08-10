@@ -4867,6 +4867,29 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     return False
 
             total_months = years * 12 + months
+            print(f"📏 Total Months = {total_months}")
+            if cov == "post-warranty" and dur == "1year":
+                eosl_str = eosl_data.get(product_number)
+                print(f"📦 EOSL Lookup: {product_number} -> {eosl_str}")
+                if eosl_str:
+                    try:
+                        eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
+                        days_until_eosl = (eosl_date - today).days
+                        days_remaining = (end_date - today).days
+                        print(
+                            f"🧪 EOSL={eosl_date} | "
+                            f"DaysUntilEOSL={days_until_eosl} | "
+                            f"WarrantyRemaining={days_remaining}"
+                        )
+                        if (
+                            eosl_date > today and
+                            sts in ("active", "coverage expiring", "expired") and
+                            days_remaining <= 90
+                            ):
+                            print("✅ Printer EOSL Eligible")
+                            return True
+                    except Exception as e:
+                        print(f"⚠️ EOSL Parse Error: {e}")
           
             if 11 <= total_months < 15:
                 if sts in ("active", "coverage expiring"):
@@ -4894,6 +4917,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         return cov == "in-warranty" and dur == "5year"
             elif 35 <= total_months < 59:
                         return cov == "in-warranty" and dur == "5year"
+            
             return False
         care_packs = []
         added_parts = set()
