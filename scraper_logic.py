@@ -3420,7 +3420,9 @@ product_title_mapping = {
     "price": "21750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWBATT.png",
     "coverage":"in-warranty",
-    "duration":"3 year"
+    "duration":"3 year",
+    "tag":"Essentials"
+
   },
   "U38B3B": {
     "title": "HP Envy/Omen Battery Replacement ONLY",
