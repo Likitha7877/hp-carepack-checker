@@ -5141,7 +5141,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)omen"],
                 "excludes": [r"(?i)all|desktop"],
-                "parts": ["U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
+                "parts": ["U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U38B3B"],
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
@@ -5171,7 +5171,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)envy"],
                 "excludes": [r"(?i)all-in-one|desktop"],
-                "parts": ["U38B3B","U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE"],
+                "parts": ["U6WD2E", "UN010E", "UB5R4E", "UN007E", "U6WC9E", "UN082PE","U38B3B",],
             },
             {
                 "includes": [r"(?i)spectre"],
