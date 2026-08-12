@@ -32,7 +32,7 @@ printer_mapping = {
             "part": "UG451PE"
         }
     },
-    "8AF45A  ": {
+    "8AF45A": {
         "2 yr add WE": {
             "part": "U9JT4E" 
         },
