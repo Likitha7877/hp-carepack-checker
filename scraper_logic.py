@@ -3160,7 +3160,9 @@ product_page_mapping = {
     "UB3G4E":"hp-z-book-1-year-additional-warranty-extension-with-battery-replacement",
     "U76MBE":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty-2",
     "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
-    "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty"
+    "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
+    "U9JT6E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-4-years-additional-warranty/",
+    "U9JT4E":"https://arminfoserve.com/product/hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
 
@@ -3170,8 +3172,22 @@ product_page_mapping = {
 
 product_title_mapping = {
     "UZ267E": {
-    "title": "HP Consumer LaserJet 4 years Additional Warranty – UZ267E",
+    "title": "HP Consumer LaserJet 4 years Additional Warranty ,
     "price": "6812",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U9JT4E": {
+    "title": "HP LaserJet Pro MFP M43x, M44x, M4252x, and 4262x 2 years Additional Warranty ,
+    "price": "12500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+    "U9JT6E": {
+    "title": "HP LaserJet Pro MFP M43x, M44x, M4252x, and 4262x 4 years Additional Warranty,
+    "price": "22500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"5 year"
