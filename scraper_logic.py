@@ -3162,7 +3162,7 @@ product_page_mapping = {
     "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
     "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
     "U9JT6E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-4-years-additional-warranty/",
-    "U9JT4E":"https://arminfoserve.com/product/hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
+    "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
 
