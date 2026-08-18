@@ -2974,6 +2974,21 @@ printer_mapping = {
   
 product_page_mapping = {
     "UG457E":"hp-deskjet-2-years-additional-warranty/",
+    "UG451PE":"hp-laserjet-1-year-post-warranty/",
+    "UG437PE":"hp-officejet-pro-7720-wide-format-1-year-post-warranty/",
+    "UG427PE":"hp-deskjet-ia-aio-1-year-post-warranty/",
+    "U6M83E":"hp-officejet-pro-9130-aio-1-year-post-warranty/",
+    "U9VV7PE":"hp-laserjet-mfp-m72630dn-printer-1-year-post-warranty/",
+    "U62F7PE":"hp-laser-1008a-printer-1-year-post-warranty/",
+    "U36LTPE":"hp-color-laserjet-mgd-mfp-e78528dn-1-year-post-warranty/",
+    "U67M9PE":"/hp-laserjet-tank-1020w-printer-1-year-post-warranty/",
+    "U67MCPE":"hp-laserjet-tank-mfp-2606dn-printer-1-year-post-warranty/",
+    "U42GVPE":"hp-neverstop-laser-1000a-aio-1-year-post-warranty/",
+    "UG439PE":"hp-officejet-pro-8120-aio-1-year-post-warranty/",
+    "UG612PE":"hp-officejet-pro-9010-aio-1-year-post-warranty/",
+    "UG440PE":"hp-officejet-pro-9016-printer-aio-1-year-post-warranty/",
+    "UG437PE":"hp-officejet-pro-7720-wide-format-1-year-post-warranty/",
+    "UG764PE":"hp-color-laserjet-pro-mfp-3303sdw-p1-year-post-warranty/",
     "UG062E":"ug062e-hp-deskjet-ia-ultra-4826-aio-printer-2-years-additional-warranty/",
     "AMC-UH770PE":"hp-consumer-laserjet-1-year-post-warranty",
     "U9VV5PE":"hp-laserjet-m726xx-mfp-1-year-post-warranty/",
@@ -3162,6 +3177,7 @@ product_page_mapping = {
     "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
     "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
     "U9JT6E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-4-years-additional-warranty/",
+    ""
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -4480,6 +4496,124 @@ product_title_mapping = {
     "duration": "1 year",
     "coverage":"post-warranty"
   },
+    "UG427PE": {
+    "title": "HP DeskJet IA AiO 1 year Post Warranty",
+    "price": "4218",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"UG436PE": {
+    "title": "HP OfficeJet Pro 8210 Printer1 year Post Warranty",
+    "price": "5457",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"UG440PE": {
+    "title": "HP OfficeJet Pro 9016  Printer AiO 1 year Post Warranty",
+    "price": "6077",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"UG612PE": {
+    "title": "HP OfficeJet Pro 9010  AiO 1 year Post Warranty",
+    "price": "5457",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U6M83E": {
+    "title": "HP OfficeJet Pro 9130  AiO 1 year Post Warranty",
+    "price": "7811",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"UG439PE": {
+    "title": "HP OfficeJet Pro 8120 AiO 1 year Post Warranty",
+    "price": "5457",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U42GVPE": {
+    "title": "HP Neverstop Laser 1000a AiO 1 year Post Warranty",
+    "price": "6254",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U67MCPE": {
+    "title": "HP LaserJet Tank MFP 2606dn Printer 1 YEAR POST WARRANTY",
+    "price": "8850",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U67M9PE": {
+    "title": "HP LaserJet Tank 1020w Printer 1 YEAR POST WARRANTY",
+    "price": "6962",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U36LTPE": {
+    "title": "HP Color LaserJet Mgd MFP E78528dn  1 YEAR POST WARRANTY",
+    "price": "26417",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U62F7PE": {
+    "title": "HP Laser 1008a Printer 1 YEAR POST WARRANTY",
+    "price": "4095",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"U9VV7PE": {
+    "title": "HP LaserJet MFP M72630dn Printer 1 YEAR POST WARRANTY",
+    "price": "27574",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
+"UG764PE": {
+    "title": "HP Color LaserJet Pro MFP 3303sdw P1 year Post Warranty",
+    "price": "4248",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+"UG437PE": {
+    "title": "HP OfficeJet Pro 7720 Wide Format 1 year Post Warranty",
+    "price": "5457",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+"UG451PE": {
+    "title": "HP LaserJet 1 year Post Warranty",
+    "price": "4500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+
   "U9MW4PE": {
     "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
     "price": "22600",
