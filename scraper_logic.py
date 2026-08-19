@@ -25,7 +25,7 @@ printer_mapping = {
         "2 yr add WE": {
             "part": "UG361E"
         },
-        "4 yr add WE": {
+        "4 yr add WE": { 
             "part": "UQ463E"
         },
         "1 yr PW": {
@@ -3042,7 +3042,7 @@ product_page_mapping = {
     "UK718E": "uk718e-hp-probook-400-laptop-4-years-additional-warranty-extension",
     "UK749E": "uk749e-hp-probook-400-laptop-factory-warranty-add-on-accidental-damage-protection",
     "U85N2E": "hp-probook-g11-3-years-factory-warranty-accidental-damage-protection/",
-    "UB8B3E": "ub8b3e-hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
+    "UM237E": "hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
     "UK738PE": "uk738pe-hp-probook-400-laptop-1-year-post-warranty-carepack",
     "U86DXE": "u86dxe-hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty/",
     "UB8B6E": "ub8b6e-hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
@@ -3698,9 +3698,9 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "UB8B3E": {
+  "UM237E": {
     "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-    "price": "14750",
+    "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -5374,7 +5374,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     #     {
     #     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     #     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200"],
-    #     "parts": ["U86E7E","UK724E","U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UB8B3E", "UK738PE", "UB8B6E"],
+    #     "parts": ["U86E7E","UK724E","U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UK738PE", "UB8B6E"],
     # },
        # ProBook G11
 {
@@ -5386,7 +5386,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|g9|g8|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11"],
-    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E", "UB8B3E", "UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],
+    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E","UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],
 },
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
