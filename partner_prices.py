@@ -183,7 +183,7 @@ PARTNER_PRICES = {
     "U42GXPE": 5109,
     "UZ272E": 4510,
     "UB4X9E": 4515,
-    "U04TKE": 4357,
+    "AMC-U04TKE": 4720,
     "UZ296E": 4337,
     "UG470E": 4215,
     "U9MW4PE": 14408,

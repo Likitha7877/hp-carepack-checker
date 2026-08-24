@@ -1265,7 +1265,7 @@ printer_mapping = {
     },
     "381U0A": {
         "2 yr add WE": {
-            "part": "U04TKE"
+            "part": "AMC-U04TKE"
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1276,7 +1276,7 @@ printer_mapping = {
     },
     "381U2A": {
         "2 yr add WE": {
-            "part": "U04TKE"
+            "part": "AMC-U04TKE"
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1287,7 +1287,7 @@ printer_mapping = {
     },
     "381U3A": {
         "2 yr add WE": {
-            "part": "U04TKE"
+            "part": "AMC-U04TKE"
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1298,7 +1298,7 @@ printer_mapping = {
     },
     "381U4A": {
         "2 yr add WE": {
-            "part": "U04TKE"
+            "part": "AMC-U04TKE"
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -3113,7 +3113,7 @@ product_page_mapping = {
     "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
     "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
     "UB9S8E": "ub9s8e-hp-color-laserjet-pro-mfp-m479-4-years-additional-warranty",
-    "U04TKE": "u04tke-hp-laserjet-tank-mfp-2-years-additional-warranty",
+    "AMC-U04TKE": "u04tke-hp-laserjet-tank-mfp-2-years-additional-warranty",
     # "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
     "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
     "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
@@ -4323,9 +4323,9 @@ product_title_mapping = {
     "duration":"5 year",
     "coverage":"in-warranty"
   },
-  "U04TKE": {
-    "title": "HP LaserJet Tank MFP 2 years Additional Warranty",
-    "price": "6900",
+  "AMC-U04TKE": {
+    "title": "HP LaserJet Tank MFP 1 year AMC",
+    "price": "4720",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
     "duration":"3 year",
     "coverage":"in-warranty"
