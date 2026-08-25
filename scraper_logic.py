@@ -1839,7 +1839,7 @@ product_page_mapping = {
     "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
     "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
     "U9JT6E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-4-years-additional-warranty/",
-    ""
+    "U85BTE":"hp-elitebook-8xx-g11-2-years-additional-warranty-extension-with-adp-1y-bw/",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -2430,6 +2430,13 @@ product_title_mapping = {
     "price": "22500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "duration": "5 year",
+    "coverage":"in-warranty"
+  },
+  "U85BTE": {
+    "title": "HP EliteBook 8XX G11 2 Years Additional Warranty Extension with ADP (1y BW)",
+    "price": "14500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?w=591&ssl=1",
+    "duration": "3 year",
     "coverage":"in-warranty"
   },
   "UC279E":{
@@ -4021,7 +4028,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             {
                 "includes": [r"(?i)elitebook\s?[87]"],
                 "excludes": [r"(?i)all|mfp"],
-                "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E"],
+                "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
             },
             {
                 "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
