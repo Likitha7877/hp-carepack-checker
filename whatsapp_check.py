@@ -68,6 +68,9 @@ def check_serial(serial, product="", is_partner=False):
             return "Please also share the product number to check this device (e.g. Product: C20N1PA)."
         return "Sorry, we could not find warranty information for serial number " + serial + ". Please check the number and try again."
 
+    if result.get("out_of_india"):
+        return "Out of India Device"
+
     start_date = result.get('start_date', 'N/A')
     end_date = result.get('end_date', 'N/A')
 
