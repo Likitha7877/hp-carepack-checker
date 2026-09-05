@@ -3808,11 +3808,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_commercial_model(name: str) -> bool:
             name = name.lower()
             keyword_patterns = [
-                r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b",r"hp\s?250", r"\bhp\s?255\b",
-                r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
-                r"\belitedesk\b", r"\bprodesk\b",r"pb\d{3}",r"\bmicrotower\b",
-                r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b",r"\b10(3|4|5)\d\b",
-                ]
+        r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"hp\s?250", r"\bhp\s?255\b",
+        r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
+        r"\belitedesk\b", r"\bprodesk\b", r"pb\d{3}", r"\bmicrotower\b",
+        r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b", r"\b10(3|4|5)\d\b",
+        r"\bpro\s?tower\b", r"\btower\b",
+    ]
             for pattern in keyword_patterns:
                 if re.search(pattern, name):
                     return True
@@ -4062,8 +4063,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
    # ProBook G8/G9/G10
 {
-    "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|g9|g8|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
-    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11"],
+    "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|\bg10\b|\bg9\b|\bg8\b|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
+    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11|desktop|tower|pro\s?tower|prodesk|elitedesk|microtower|aio"],
     "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E","UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],
 },
             {
