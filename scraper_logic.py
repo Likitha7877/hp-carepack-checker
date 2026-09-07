@@ -3808,8 +3808,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_commercial_model(name: str) -> bool:
             name = name.lower()
             keyword_patterns = [
-        r"\bhp\s?240\b", r"\bhp\s?245\b", r"\bhp\s?247\b", r"hp\s?250", r"\bhp\s?255\b",
-        r"\bhp\s?340\b", r"\bhp\s?345\b", r"\bhp\s?350\b", r"\bhp\s?355\b",
+        r"\bhp\s?240", r"\bhp\s?245", r"\bhp\s?247", r"\bhp\s?250", r"\bhp\s?255",
+        r"\bhp\s?340", r"\bhp\s?345", r"\bhp\s?350", r"\bhp\s?355",
         r"\belitedesk\b", r"\bprodesk\b", r"pb\d{3}", r"\bmicrotower\b",
         r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b", r"\b10(3|4|5)\d\b",
         r"\bpro\s?tower\b", r"\btower\b",
@@ -3958,7 +3958,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
 {
     "includes": [r"(?i)\b15\b|15s|15-|hp\s?laptop\s+15s|hp\s?laptop|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s|15"],
-    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250"],
+    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250|255G9"],
     "parts": [ "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
 
@@ -4018,12 +4018,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         
  {
     "includes": [
-        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g"
+        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050"
     ],
     "excludes": [
-        r"(?i)all|14s|15s|victus|elitebook|pavilion"
+        r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"
     ],
-    "parts": ["U9BA7E","U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E","U9EF3E","U9EE7E"],
+    "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
             {
                 "includes": [r"(?i)zbook"],
@@ -4069,9 +4069,14 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
-                "excludes": [r"(?i)victus|omen|envy|spectre|printer"],
+                "excludes": [r"(?i)victus|omen|envy|spectre|printer|probook"],
                 "parts": ["UK724E","U10N7E","U10NFE", "U10N3E", "U5864PE", "U6578E", "U7899E", "U0A84E", "U10N2PE", "UF236E", "U0A83E", "UF360E", "U7923E", "U7925E", "UF361E", "U7897E", "U0A85E", "U11BVE"],
             },
+            {
+    "includes": [r"(?i)hp\s?pro\s?tower\s?\d+|pro\s?tower\s?280"],
+    "excludes": [r"(?i)all-in-one|aio|elitedesk|prodesk|microtower|victus|omen|envy|spectre|printer"],
+    "parts": ["U10N3E", "U10NFE", "U10N7E", "U10N2PE"],
+},
            {
         "includes": [r"(?i)\b32\s*(inch|\")|pavilion\s?all|pavilion\s?3|pavilion\s?gaming\s?d"],
         "excludes": [r"(?i)255|probook|laptop|15s|14s|notebook"],
