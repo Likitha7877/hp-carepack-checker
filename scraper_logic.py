@@ -902,6 +902,15 @@ printer_mapping = {
             "part": "U9NR3PE"
         }
     },
+    "5D174A": {
+        "2 yr add WE": {
+            "part": "UA5C0E"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U9NR3PE"
+        }
+    },
     "4A8D7A": {
         "2 yr add WE": {
             "part": "UA5C0E"
