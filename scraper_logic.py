@@ -1840,6 +1840,12 @@ product_page_mapping = {
     "U80MME":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
     "U9JT6E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-4-years-additional-warranty/",
     "U85BTE":"hp-elitebook-8xx-g11-2-years-additional-warranty-extension-with-adp-1y-bw/",
+    "UA6H1E":"hp-elitebook-6xx-g10-2-years-additional-warranty-3-year-base-warranty/",
+    "UA6H3E":"hp-elitebook-6xx-g10-3-year-accidental-damage-protection-on-factory-warranty/",
+    "UA6G9E":"/hp-elitebook-6xx-g10-3-year-warranty/",
+    "U85GME":"hp-elitebook-6xx-g11-2year-additional-warranty-w-3-year-adp-1ybw/",
+    "U85GJE":"hp-elitebook-6xx-g11-2-year-warranty-extension-1y-base-warranty/",
+    "UA6H2PE":"hp-probook-elitebook-6xx-g10-1y-post-warranty/",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -2519,6 +2525,48 @@ product_title_mapping = {
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
+  },
+  "UA6H1E": {
+    "title": "HP EliteBook 6xx G10 2 years additional warranty (3 year base warranty)",
+    "price": "9300",
+    "image": "https:arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+   "UA6H3E": {
+    "title": "HP EliteBook 6XX G10 3-year Accidental Damage Protection on Factory Warranty",
+    "price": "6800",
+    "image": "https:arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "UA6G9E": {
+    "title": "HP EliteBook 6XX G10 2-year Warranty Extension (1Y BW)",
+    "price": "6000",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "U85GME": {
+    "title": "HP Elitebook 6XX G11 2year additional warranty w/ 3 year ADP (1yBW)",
+    "price": "15500",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "U85GJE": {
+    "title": "HP EliteBook 6XX G11 2-year Warranty Extension (1Y Base Warranty)",
+    "price": "7330",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+   "UA6H2PE": {
+    "title": "HP ProBook/Elitebook 6xx G10 1y Post Warranty",
+    "price": "8000",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/11/1PW.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"1 year"
   },
   #desktops
   #hp aio bussines
@@ -4045,6 +4093,11 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "excludes": [r"(?i)all|mfp"],
                 "parts": ["UB0E2E", "UB0E6E","U76MBE","U80MME","U84Z0E"],
             },
+            {
+    "includes": [r"(?i)elitebook\s?6\d\d"],
+    "excludes": [r"(?i)all|mfp|x360|zbook"],
+    "parts": ["UA6H2PE", "UA6H1E", "UA6H3E", "UA6G9E", "U85GME", "U85GJE"],
+},
              {
         "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
