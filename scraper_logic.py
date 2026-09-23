@@ -1458,6 +1458,28 @@ printer_mapping = {
             "part": "U62F7PE"
         }
     },
+     "2Z632A": {
+        "2 yr add WE": {
+            "part": "U42TZE"
+        },
+        "4 yr add WE": {},
+        "1 yr PW": {
+            "part": "U42U9PE"
+        }
+    },
+
+     "53P41A": {
+        "2 yr add WE": {
+            "part": "U62F3E"
+        },
+        "4 yr add WE": {
+            "part": "U62F5E"
+        },
+        "1 yr PW": {
+            "part": "U62F7PE"
+        }
+    },
+    
     "53X75A": {
         "2 yr add WE": {
             "part": "UH773E"
@@ -2349,6 +2371,140 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
+  "UL653E": {
+  "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (1 year factory warranty)",
+  "price": "8500",
+  "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+  "coverage": "in-warranty",
+  "duration": "3 year"
+},
+
+"UK716E": {
+  "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension (1 year Base Warranty)",
+  "price": "10200",
+  "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"UK748E": {
+  "title": "HP ProBook 400 G10 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+  "price": "12800",
+  "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"UB8B3E": {
+  "title": "HP ProBook 400 G10 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+  "price": "14750",
+  "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"UK743E": {
+  "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (3 year factory warranty)",
+  "price": "6550",
+  "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"UK753E": {
+  "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
+  "price": "14500",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+"U86E1E": {
+  "title": "HP ProBook G11 laptop 2 years Additional Warranty with DMR (1 year factory warranty)",
+  "price": "8900",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "3 year"
+},
+
+"U86DWE": {
+  "title": "HP ProBook G11 4 years Additional Warranty Extension (1 year Base Warranty)",
+  "price": "10200",
+  "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U86DZE": {
+  "title": "HP ProBook G11 laptop 4 years Additional Warranty with ADP (1 year factory warranty)",
+  "price": "15200",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U85M3E": {
+  "title": "HP ProBook G11 laptop 4 years Additional Warranty with DMR + TRV(1 year factory warranty)",
+  "price": "12900",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U86E6E": {
+  "title": "HP ProBook G11 laptop 4 years Additional Warranty with DMR + ADP(1 year factory warranty)",
+  "price": "21500",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U85N5E": {
+  "title": "HP ProBook G11 3 years Factory Warranty DMR",
+  "price": "4800",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "3 year"
+},
+
+"U85N0E": {
+  "title": "HP ProBook G11 + 4 years Warranty Extension on (3 years BW)",
+  "price": "6650",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "7 year"
+},
+
+"U85N3E": {
+  "title": "HP ProBook G11 + 4 years Warranty Extension with ADP (3 years BW)",
+  "price": "9800",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "7 year"
+},
+
+"U85N1E": {
+  "title": "HP ProBook G11 + 2 years Warranty Extension (3 years BW)",
+  "price": "8500",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U85N4E": {
+  "title": "HP ProBook G11 + 2 years Warranty Extension with ADP (3 years BW)",
+  "price": "14200",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "5 year"
+},
+
+"U85N8E": {
+  "title": "HP ProBook G11 3 years Factory Warranty Accidental Damage Protection +DMR",
+  "price": "9200",
+  "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+  "coverage": "in-warranty",
+  "duration": "3 year"
+},
   "UK726E": {
     "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
     "price": "9000",
@@ -3876,7 +4032,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     return True
             return False
         def is_3_year_base_factory_warranty(start_date, end_date, coverage_type):
-            if coverage_type.strip().lower() != "factory warranty":
+            if coverage_type.strip().lower() not in ("factory warranty", "bundled warranty"):
                 return False
             diff = relativedelta(end_date, start_date)
             total_months = diff.years * 12 + diff.months
@@ -3901,7 +4057,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             start = parse_date(start_date)
             end = parse_date(end_date)
             is_3yr_base = (
-                coverage_type.strip().lower() == "factory warranty" and
+                coverage_type.strip().lower() in ("factory warranty", "bundled warranty") and
                 (end - start).days >= 1000
                 )
             if not is_3yr_base and re.search(r"\b3\s*year\s*(base|factory)\s*warranty\b", title_lower):
@@ -4119,7 +4275,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     # },
        # ProBook G11
 {
-    "includes": [r"(?i)hp\s?pb440g11\s?i5|pb\s?440|probook\s?440|g11|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
+    "includes": [r"(?i)hp\s?pb440g11\s?i5|pb\s?440|probook\s?440|g11|g1i|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g10|g9|g8"],
     "parts": ["U86DVE", "U86DYE", "U86E1E", "U86DZE", "U85M3E", "U86DXE", "U86E0E", "U86E6E", "U85N2E", "U85N5E", "U85N8E", "U85N3E"],
 },
