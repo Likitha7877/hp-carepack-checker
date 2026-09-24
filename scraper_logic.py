@@ -2276,6 +2276,13 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+    "U85RCE": {
+    "title": "HP ZBook G11 4Y additional warranty w/ ADP (1Y Base Warranty)",
+    "price": "33500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
    "U02CDE": {
     "title": "HP ZBook Mobile WKS G7/G8/G9 2y Additional Warranty w/Travel Coverage (3Y BW)",
     "price": "23000",
@@ -4230,26 +4237,27 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [
-        r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050"
-    ],
-    "excludes": [
-        r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"
-    ],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050"],
+    "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
             {
-                "includes": [r"(?i)zbook"],
-                "excludes": [r"(?i)all|mfp|g10"],
-                "parts": ["U02BVE", "U02BSE", "U10KHE","UD0P5PE","U85S0E","U02CDE","U61BRE","UB3G4E"],
-            },
+    "includes": [r"(?i)zbook|g10|g8|g9"],
+    "excludes": [r"(?i)all"],
+    "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
+},
+            {
+    "includes": [r"(?i)zbook|g11|g1i"],
+    "excludes": [r"(?i)all"],
+    "parts": ["UD0P5PE","U85S0E","U85RCE","U85SJE"],
+},
             {
                 "includes": [r"(?i)chromebook"],
                 "excludes": [],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E"],
             },
             {
-                "includes": [r"(?i)elitebook\s?[87]"],
+                "includes": [r"(?i)hp\s?elitebook\s|840|"],
                 "excludes": [r"(?i)all|mfp"],
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
             },
