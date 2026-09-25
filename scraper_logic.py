@@ -4242,12 +4242,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
             {
-    "includes": [r"(?i)zbook|g10|g8|g9"],
+    "includes": [r"(?i)zbook"],
     "excludes": [r"(?i)all"],
     "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
 },
             {
-    "includes": [r"(?i)zbook|g11|g1i"],
+    "includes": [r"(?i)zbook|g1i"],
     "excludes": [r"(?i)all"],
     "parts": ["UD0P5PE","U85S0E","U85RCE","U85SJE"],
 },
@@ -4257,8 +4257,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E"],
             },
             {
-                "includes": [r"(?i)hp\s?elitebook\s|840|"],
-                "excludes": [r"(?i)all|mfp"],
+                "includes": [r"(?i)hp\s?elitebook\s|840"],
+                "excludes": [r"(?i)all|mfp|victus|pavilion"],
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
             },
             {
@@ -4284,7 +4284,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
        # ProBook G11
 {
     "includes": [r"(?i)hp\s?pb440g11\s?i5|pb\s?440|probook\s?440|g11|g1i|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
-    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g10|g9|g8"],
+    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g10|g9|g8|victus|pavilion"],
     "parts": ["U86DVE", "U86DYE", "U86E1E", "U86DZE", "U85M3E", "U86DXE", "U86E0E", "U86E6E", "U85N2E", "U85N5E", "U85N8E", "U85N3E"],
 },
    # ProBook G8/G9/G10
