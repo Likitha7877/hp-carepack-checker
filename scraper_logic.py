@@ -4178,7 +4178,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
 {
     "includes": [r"(?i)\b15\b|15s|15-|hp\s?laptop\s+15s|hp\s?laptop|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s|15"],
-    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250|255G9"],
+    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250|255G9|255G10"],
     "parts": [ "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
 
