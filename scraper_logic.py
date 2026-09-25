@@ -40,6 +40,13 @@ printer_mapping = {
             "part": "U9JT6E" 
         } 
     },
+    "W1A33A": {
+        "1 yr PW": {
+            "part": "UB9S2PE" 
+        },
+        "4 yr add WE": {
+        } 
+    },
     "Y5S50A": {
         "2 yr add WE": {
             "part": "UH773E"
@@ -1877,6 +1884,7 @@ product_page_mapping = {
     "U85GME":"hp-elitebook-6xx-g11-2year-additional-warranty-w-3-year-adp-1ybw/",
     "U85GJE":"hp-elitebook-6xx-g11-2-year-warranty-extension-1y-base-warranty/",
     "UA6H2PE":"hp-probook-elitebook-6xx-g10-1y-post-warranty/",
+    "UB9S2PE":"hp-laserjet-m329dw-1-year-postwarranty/",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -3507,6 +3515,13 @@ product_title_mapping = {
 "UG451PE": {
     "title": "HP LaserJet 1 year Post Warranty",
     "price": "4500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
+    "duration": "1 year",
+    "coverage": "post-warranty"
+},
+"UB9S2PE": {
+    "title": "HP LaserJet M329DW 1 Year Post Warranty",
+    "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png",
     "duration": "1 year",
     "coverage": "post-warranty"
