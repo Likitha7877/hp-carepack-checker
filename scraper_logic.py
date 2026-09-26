@@ -1705,6 +1705,19 @@ product_page_mapping = {
     "U8LH9E": "u8lh9e-hp-laptop-14-15-series-factory-warranty-add-on-accidental-damage-protection",
     "UB5R2E": "ub5r2e-hp-14-15-series-2-years-additional-warranty-with-one-time-battery-replacement",
     "U9WX1E": "u9wx1e-hp-3-year-adp",
+    "U86DWE":"hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty-copy/",
+    "U86E1E":"hp-probook-g11-laptop-2-years-additional-warranty-with-dmr-1-year-factory-warranty/",
+    "U86DZE":"hp-probook-g11-laptop-2-years-additional-warranty-with-adp-1-year-factory-warranty-2/",
+    "U85M3E":"hp-probook-g11-laptop-4-years-additional-warranty-with-dmr-trv1-year-factory-warranty/",
+    "U86DXE":"u86dxe-hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty/",
+    "U86E6E":"hp-probook-g11-laptop-4-years-additional-warranty-with-dmr-adp1-year-factory-warranty/",
+    "U85N2E":"hp-probook-g11-3-years-factory-warranty-accidental-damage-protection/",
+    "U85N5E":"hp-probook-g11-3-years-factory-warranty-dmr/",
+    "U85N8E":"hp-probook-g11-3-years-factory-warranty-accidental-damage-protection-dmr/",
+    "U85N0E":"hp-probook-g11-4-years-warranty-extension-on-3-years-bw/",
+    "U85N3E":"hp-probook-g11-4-years-warranty-extension-with-adp-3-years-bw/",
+    "U85N1E":"hp-probook-g11-2-years-warranty-extension-with-adp-3-years-bw/",
+    "U85N4E":"hp-probook-g11-2-years-warranty-extension-with-adp-3-years-bw-2/",
     "U8LH3E": "u8lh3e-hp14-15-2-year-warranty-extension",
     "UN008E": "un008e-hp-laptop-14-15-series-1-year-additional-warranty-extension-with-accidental-damage-protection",
     "U0H90E": "u0h90e-hp-pavilion-2-years-additional-warranty-extension",
@@ -1753,6 +1766,7 @@ product_page_mapping = {
     "U4391E": "u4391e-hp-elitebook-2-years-additional-warranty-extension",
     "U7876E": "u7876e-hp-elitebook-7xx-8xx-4-years-additional-warranty-1-year-base-warranty",
     "UC282E": "uc282e-hp-elitebook-fw-adp-1yrs",
+    "U84Z3E":"hp-elitebook-x-g11-5y-additional-warranty-w-adp-1y-base-warranty/",
     "U7861E": "u7861e-hp-elitebook-2-years-additional-warranty-extension-3-year-base-warranty",
     "UB5T7E": "ub5t7e-hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
     "U5864PE": "u5864pe-hp-all-in-one-business-pc-1-year-post-warranty",
@@ -1885,6 +1899,7 @@ product_page_mapping = {
     "U85GJE":"hp-elitebook-6xx-g11-2-year-warranty-extension-1y-base-warranty/",
     "UA6H2PE":"hp-probook-elitebook-6xx-g10-1y-post-warranty/",
     "UB9S2PE":"hp-laserjet-m329dw-1-year-postwarranty/",
+    "UB8B3E":"hp-probook-400-g10-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection-1-year-base-warranty-2/",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -2632,6 +2647,13 @@ product_title_mapping = {
     "price": "14500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?w=591&ssl=1",
     "duration": "3 year",
+    "coverage":"in-warranty"
+  },
+   "U84Z3E": {
+    "title": "HP Elitebook X G11 5Y additional warranty w/ ADP (1Y Base Warranty)",
+    "price": "21750",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC279E":{
@@ -4193,7 +4215,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
 {
     "includes": [r"(?i)\b15\b|15s|15-|hp\s?laptop\s+15s|hp\s?laptop|hp\s?laptop\s+15a|hp\s?laptop\s+17|chromebook\s?15s|15"],
-    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250|255G9|255G10"],
+    "excludes": [r"(?i)14|pavilion|pav|victus|omen|envy|spectre|all|desktop|chromebook|250|255G9|255G10|255R"],
     "parts": [ "U8LH7PE", "U8LH8E", "U8LJ4E", "UB5R2E", "UN008E", "U8LH3E",  "U9WX1E"],
 },
 
@@ -4252,7 +4274,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050"],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
@@ -4271,16 +4293,19 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "excludes": [],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E"],
             },
+            #elitebook 8xx
             {
                 "includes": [r"(?i)hp\s?elitebook\s|840"],
                 "excludes": [r"(?i)all|mfp|victus|pavilion"],
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
             },
+            #elitebook 10XX
             {
                 "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
                 "excludes": [r"(?i)all|mfp"],
-                "parts": ["UB0E2E", "UB0E6E","U76MBE","U80MME","U84Z0E"],
+                "parts": ["UA6Z7E", "UA6Z3E", "UA6Z9E", "UB0E2E", "UB0E6E", "UB5T7E", "U80MRE", "U80MME", "UE3H0E", "U80MQE", "U80MTE", "U84Z1E", "U76MBE", "U84YZE", "U84Z0E", "U84Z3E"],
             },
+            #elitebook 6xx
             {
     "includes": [r"(?i)elitebook\s?6\d\d"],
     "excludes": [r"(?i)all|mfp|x360|zbook"],
@@ -4300,14 +4325,13 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)hp\s?pb440g11\s?i5|pb\s?440|probook\s?440|g11|g1i|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g10|g9|g8|victus|pavilion"],
-    "parts": ["U86DVE", "U86DYE", "U86E1E", "U86DZE", "U85M3E", "U86DXE", "U86E0E", "U86E6E", "U85N2E", "U85N5E", "U85N8E", "U85N3E"],
+    "parts": ["U86DVE", "U86DWE", "U86DYE", "U86E1E", "U86DZE", "U85M3E", "U86DXE", "U86E0E", "U86E6E", "U85N2E", "U85N5E", "U85N8E", "U85N0E", "U85N3E", "U85N1E", "U85N4E"],
 },
    # ProBook G8/G9/G10
 {
     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|\bg10\b|\bg9\b|\bg8\b|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11|desktop|tower|pro\s?tower|prodesk|elitedesk|microtower|aio"],
-    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E","UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],
-},
+    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E", "UB8B3E", "UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],},
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
                 "excludes": [r"(?i)victus|omen|envy|spectre|printer|probook"],
