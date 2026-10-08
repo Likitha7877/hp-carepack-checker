@@ -897,7 +897,7 @@ printer_mapping = {
             "part": "UZ303E"
         },
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "Z4B04A": {
@@ -906,7 +906,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "5D174A": {
@@ -915,7 +915,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "4A8D7A": {
@@ -932,7 +932,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "Z6Z11A": {
@@ -941,7 +941,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "Z6Z13A": {
@@ -950,7 +950,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "7ZV78A": {
@@ -959,7 +959,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "Z6Z95A": {
@@ -968,7 +968,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "Z6Z97A": {
@@ -977,7 +977,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "1TJ09A": {
@@ -1376,7 +1376,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "4A8S4A": {
@@ -1385,7 +1385,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "1F3W2A": {
@@ -1394,7 +1394,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "4A8R9A": {
@@ -1403,7 +1403,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "1F3Y4A": {
@@ -1412,7 +1412,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "4A8D9A": {
@@ -1421,7 +1421,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "1F3Y2A": {
@@ -1430,7 +1430,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "4A8D4A": {
@@ -1439,7 +1439,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "U9NR3PE"
+            "part": "AMC-U9NR3PE"
         }
     },
     "6UU48A": {
@@ -1805,7 +1805,7 @@ product_page_mapping = {
     "UA5C0E": "ua5c0e-hp-smart-tank-aio-2-years-additional-warranty",
     "U35PFE": "u35pfe-hp-smart-tank-790-aio-printer-2-years-additional-warranty",
     "UZ295E":"uz295e-hp-officejet-printers-4-years-additional-warranty/",
-    "U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
+    "AMC-U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
     "U57D7E": "u57d7e-hp-smart-tank-210-aio-2-years-additional-warranty",
     "UG337E": "ug337e-hp-deskjet-2-years-additional-warranty",
     "UZ303E": "uz303e-hp-deskjet-2-years-additional-warranty-2",
@@ -3021,8 +3021,8 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
-  "U9NR3PE": {
-    "title": "HP Smart Tank AiO 1 year Post Warranty",
+  "AMC-U9NR3PE": {
+    "title": "HP Smart Tank AiO 1 year AMC",
     "price": "4400",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
@@ -3410,6 +3410,8 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
+
+  
    "U9VV5PE": {
     "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
     "price": "16800",
@@ -3418,7 +3420,7 @@ product_title_mapping = {
     "coverage":"post-warranty"
   },
     "AMC-UH770PE": {
-    "title": "HP LaserJet Enterprise M607 M610 1 year Post Warranty",
+    "title": "HP LaserJet Enterprise M607 M610 1 year AMC",
     "price": "6500",
     "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
     "duration": "1 year",
@@ -3558,7 +3560,33 @@ product_title_mapping = {
   }
 
 }
-                                        
+
+
+# ─────────────────────────────────────────────────────────────
+# Consumer product detection
+# Consumer families: HP Victus, HP Pavilion, HP Omen, HP Envy,
+# HP Spectre, HP Chromebook, HP Laptop 14, HP Laptop 15,
+# HP OmniBook 3 / 5 / 7 / X / Ultra
+# For these, bundled warranty is never shown — only Care Pack or
+# Factory Warranty.
+# ─────────────────────────────────────────────────────────────
+CONSUMER_PATTERNS = (
+    r"\bvictus\b",
+    r"\bpavilion\b",
+    r"\bomen\b",
+    r"\benvy\b",
+    r"\bspectre\b",
+    r"\bchromebook\b",
+    r"\bomnibook\s?(3|5|7|x|ultra)\b",
+    r"\blaptop\s?1[45]",            # HP Laptop 14 / HP Laptop 15 (14-xxxx, 15-xxxx, 15s ...)
+    r"\bhp\s?1[45]s?[-\s]",         # HP 14s-dq..., HP 15s-fq..., HP 15 ...
+)
+
+
+def is_consumer_product(product_name: str) -> bool:
+    name = (product_name or "").lower().strip()
+    return any(re.search(pattern, name) for pattern in CONSUMER_PATTERNS)
+
 
 def calculate_remaining_days(end_date_str):
     try:
@@ -3635,17 +3663,19 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         name_el = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.product-info-text h2")))
         product_name = driver.execute_script("return arguments[0].innerText;", name_el).strip()
         print("🖥️ Product Name:", product_name)
-        
+
+        consumer_unit = is_consumer_product(product_name)
+        print(f"🧑‍💻 Consumer unit: {consumer_unit}")
 
         try:
            info = driver.find_element(By.CSS_SELECTOR, "div.serial-product-no")
            text = driver.execute_script("return arguments[0].innerText;", info)
-           print(f"🔍 serial-product-no text: '{text}'")   # ← ADD THIS
+           print(f"🔍 serial-product-no text: '{text}'")
            m = re.search(r"[Pp]roduct\s*:\s*(\S+)", text)
            extracted_product_number = m.group(1).strip() if m else ""
-           print(f"🔍 extracted_product_number: '{extracted_product_number}'")  # ← AND THIS
+           print(f"🔍 extracted_product_number: '{extracted_product_number}'")
         except Exception as e:
-           print(f"❌ Failed to extract product number: {e}")  # ← AND THIS
+           print(f"❌ Failed to extract product number: {e}")
            extracted_product_number = ""
 
         try:
@@ -3655,9 +3685,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         except:
             image_url = ""
 
+        # ── Parse every warranty section once ──────────────────────────
+        # Consumer units: bundled warranty sections are dropped entirely.
         sections = driver.find_elements(By.CLASS_NAME, "info-section")
-        warranty_data = None
-        carepack_active = False
+        parsed_sections = []
 
         for sec in sections:
             items = sec.find_elements(By.CLASS_NAME, "info-item")
@@ -3671,34 +3702,76 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                         print("🔍 Label:", lbl, "| Value:", val)
                 except Exception as e:
                         print("⚠️ Failed to extract info-item:", e)
-                
 
+            section_cov = data.get("Coverage type", "").strip().lower()
+            if consumer_unit and section_cov == "bundled warranty":
+                print("⏭️ Skipping bundled warranty section for consumer unit")
+                continue
 
+            parsed_sections.append((sec, data))
 
-            cov = data.get("Coverage type", "").lower()
-            sts = data.get("Status", "").lower()
-            service_type = data.get("Service type", "").lower()
-            print(f"📋 Section: cov='{cov}' | sts='{sts}' | service='{service_type}'")
-            print(f"📋 warranty_data is None: {warranty_data is None} | carepack_active: {carepack_active}")
+        # ── Pick which section to show ─────────────────────────────────
+        warranty_data = None
+        carepack_active = False
+        live_statuses = ("active", "coverage expiring", "upcoming")
 
-            if cov in ["factory warranty", "care pack", "contract","bundled warranty"] and sts in ["active","coverage expiring","upcoming"] and service_type:
-                warranty_data = data
+        if consumer_unit:
+            # Consumer: Care Pack (live) > Factory Warranty (live) > Factory Warranty (any)
+            live_carepack = None
+            live_factory = None
+            any_factory = None
+
+            for sec, data in parsed_sections:
+                cov = data.get("Coverage type", "").strip().lower()
+                sts = data.get("Status", "").strip().lower()
+                service_type = data.get("Service type", "").strip().lower()
+                print(f"📋 [Consumer] Section: cov='{cov}' | sts='{sts}' | service='{service_type}'")
+
+                if cov in ("care pack", "contract") and sts in live_statuses and live_carepack is None:
+                    live_carepack = data
+                elif cov == "factory warranty":
+                    if sts in live_statuses and live_factory is None:
+                        live_factory = data
+                    if any_factory is None:
+                        any_factory = data
+
+            if live_carepack:
+                warranty_data = live_carepack
                 carepack_active = True
-                break
+                print("✅ Consumer: showing Care Pack")
+            elif live_factory:
+                warranty_data = live_factory
+                carepack_active = True
+                print("✅ Consumer: showing active Factory Warranty")
+            elif any_factory:
+                warranty_data = any_factory
+                print("✅ Consumer: showing Factory Warranty (not active)")
+        else:
+            for sec, data in parsed_sections:
+                cov = data.get("Coverage type", "").lower()
+                sts = data.get("Status", "").lower()
+                service_type = data.get("Service type", "").lower()
+                print(f"📋 Section: cov='{cov}' | sts='{sts}' | service='{service_type}'")
+                print(f"📋 warranty_data is None: {warranty_data is None} | carepack_active: {carepack_active}")
 
-            if not carepack_active and cov == "factory warranty" and any(
-                k in service_type for k in ("hardware maintenance", "hardware replacement")
-            ) and warranty_data is None:   # ← ADD THIS
-                warranty_data = data
-        
-        # care_packs = []
-        
+                if cov in ["factory warranty", "care pack", "contract","bundled warranty"] and sts in ["active","coverage expiring","upcoming"] and service_type:
+                    warranty_data = data
+                    carepack_active = True
+                    break
+
+                if not carepack_active and cov == "factory warranty" and any(
+                    k in service_type for k in ("hardware maintenance", "hardware replacement")
+                ) and warranty_data is None:
+                    warranty_data = data
+
+        if warranty_data is None:
+            return {"error": "No valid warranty information found."}
 
         addon_text = None
         actual_service_level = "Unknown" 
         if carepack_active:
             addon_parts = []
-            for sec in sections:
+            for sec, _ in parsed_sections:
                 items = sec.find_elements(By.CLASS_NAME, "info-item")
                 for it in items:
                     try:
@@ -3752,11 +3825,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 print("❌ Error parsing start/end date:", e)
                 return None, None
                     
-        # start_date_obj = datetime.strptime(warranty_data["Start date"], "%B %d, %Y").date()
-        # end_date_obj = datetime.strptime(warranty_data["End date"], "%B %d, %Y").date()
-        # today = datetime.today().date()
-        # span = relativedelta(end_date_obj, start_date_obj)
-        # years, months = span.years, span.months
         start_date_obj = datetime.strptime(warranty_data["Start date"], "%B %d, %Y").date()
         end_date_obj = datetime.strptime(warranty_data["End date"], "%B %d, %Y").date()
         span = relativedelta(end_date_obj, start_date_obj)
@@ -3770,10 +3838,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         def is_eligible_by_span(years,months,duration_str,addon_text,part_sku,plan_cov,warranty_status,product_number,eosl_data,end_date,actual_service_level,coverage_type,result,):
             eosl_ok = False
             adp_ok = False
-            # product_number = str(product_number).upper()
-            # if not product_number.endswith(("PA", "AA")):
-            #     print("❌ This product is not purchased from India.")
-            #     return False
             dur = str(duration_str).strip().lower()
             has_adp = str(addon_text).strip().lower() not in ("", "none", "null")
             sku          = part_sku.upper()
@@ -3866,9 +3930,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                             return True
                         return dur in ( "3 year")
 
-                    # if 0 < days_to_2yr < 90:
-                    #     # within 3 months of 2-year mark
-                    #     return dur in ("2 year", "3 year") or (cov == "post-warranty")
                     if days_to_2yr >= 365:
                         # more than a year away from 2-year mark
                         return dur in ("2 year","3 year")
@@ -3888,21 +3949,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                             return False
                         print(f"✅ EOSL still valid ({days_to_eosl} days remaining), allowing post-warranty")
                         return dur == "1 year" and cov == "post-warranty"
-                    # if days_to_2yr < 0:
-                    #    eosl_str = eosl_data.get(product_number)
-                    #    days_to_eosl = -1
-                    #    if eosl_str:
-                    #        try:
-                    #            eosl_date = datetime.strptime(eosl_str, "%d-%m-%Y").date()
-                    #            days_to_eosl = (eosl_date - today).days
-                    #        except Exception as e:
-                    #            print(f"⚠️ EOSL parse error: {e}")
-                    #            days_to_eosl = -1
-                    #            if days_to_eosl < 0:
-                    #                print(f"❌ Blocked: EOSL has already passed (days_to_eosl={days_to_eosl})")
-                    #                return False
-                    #            print(f"✅ EOSL still valid ({days_to_eosl} days remaining), allowing post-warranty")
-                    #            return dur == "1 year" and cov == "post-warranty"
               
 
             elif 15 <= total_months < 23:
@@ -4038,7 +4084,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                                 price = details.get("price")
                                 image = details.get("image")
                                 tag = details.get("tag")
-                                duration = details.get("duration", "").strip().lower()  # → ""
+                                duration = details.get("duration", "").strip().lower()
                                 coverage = details.get("coverage", "").strip().lower()
                                 if not all([duration, coverage, title, price, image, slug]):
                                     print(f"🔎 Part={part}, duration={duration}, coverage={coverage}, title={title}, price={price}, image={image}, slug={slug}")
@@ -4168,10 +4214,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             return {"error": "Warranty dates could not be parsed."}
         product_number = str(extracted_product_number).upper()
         product_name_lower = product_name.lower().strip()
-        is_consumer = any(x in product_name_lower for x in [
-            "pavilion", "victus", "envy", "spectre", "omen",
-            "laptop","15s","chromebook","omnibook 3","omnibook 5","omnibook 7","omnibook X","omnibook Z"
-            ])
+        is_consumer = consumer_unit
         is_200_300_series = any(x in product_name_lower for x in [
             "hp 200", "hp 300", "200 g", "300 g","hp 240g","hp 245g","hp 250g","hp 240"
             ])
@@ -4195,7 +4238,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "coverage_type": warranty_data.get("Coverage type"),
                 "remaining_days": calculate_remaining_days(warranty_data.get("End date")),
                 "addon": addon_text,
-                # "out_of_india": is_out_of_india,   # ✅ FLAG ONLY
                 "care_packs": []
                 }
     
@@ -4274,12 +4316,12 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6"],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
             {
-    "includes": [r"(?i)zbook"],
+    "includes": [r"(?i)zbook|ZFly14G9"],
     "excludes": [r"(?i)all"],
     "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
 },
@@ -4316,11 +4358,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
         "parts": ["UJ217E","UD075PE"],
     },
-    #     {
-    #     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|g10|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
-    #     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200"],
-    #     "parts": ["U86E7E","UK724E","U85N2E", "U86DYE", "UK703E", "U86DXE", "UK744E", "UK726E", "U86E0E", "U86DVE", "UK718E", "UK749E", "UK738PE", "UB8B6E"],
-    # },
        # ProBook G11
 {
     "includes": [r"(?i)hp\s?pb440g11\s?i5|pb\s?440|probook\s?440|g11|g1i|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
@@ -4396,7 +4433,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                     coverage = details.get("coverage", "")
                     duration = details.get("duration", "")
                     status = warranty_data.get("Status", "")
-                    service_level = actual_service_level  # ✅ correctly parsed from DOM
+                    service_level = actual_service_level
                     coverage_type = warranty_data.get("Coverage type", "")
                     end_date = warranty_data.get("End date")
                     plan_cov      = details.get("coverage", "")
@@ -4451,7 +4488,6 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "care_packs": care_packs,
                 "result":result,
                 "actual_service_level": actual_service_level,
-                # "eosl_date": eosl_date,
                 "addon": addon_text
                 
             }
@@ -4463,8 +4499,3 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 
     finally:
         driver.quit()
-
-
-
-
-        
