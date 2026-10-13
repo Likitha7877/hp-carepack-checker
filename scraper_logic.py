@@ -1747,7 +1747,6 @@ product_page_mapping = {
     "U9EE8E": "u9ee8e-hp-200-300-series-4-years-additional-warranty-extension",
     "U9BA7E": "u9ba7e-hp-200-300-series-2-years-additional-warranty-extension",
     "U9BA9E": "u9ba9e-hp-200-300-series-2-years-additional-warranty-extension-with-accidental-damage-protection",
-    "UB5U0E": "ub5u0e-hp-200-300-series-4-years-additional-warranty-extension-with-accidental-damage-protection-2-claims",
     "U9BB1PE": "u9bb1pe-hp-200-300-series-1-year-post-warranty",
     "U22N8E":"u22n8e-hp-200-300-series-2-years-additional-warranty-extension-on-3-year-care-pack",
     "UK703E": "uk703e-hp-probook-400-laptop-2-years-additional-warranty-extension-1-year-factory-warranty",
@@ -1759,7 +1758,6 @@ product_page_mapping = {
     "UM237E": "hp-probook-400-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection",
     "UK738PE": "uk738pe-hp-probook-400-laptop-1-year-post-warranty-carepack",
     "U86DXE": "u86dxe-hp-probook-g11-4-years-additional-warranty-extension-1-year-base-warranty/",
-    "UB8B6E": "ub8b6e-hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
     "UB0E2E": "ub0e2e-hp-elitebook-10xx-2-years-additional-warranty-3-year-base-warranty",
     "UB0E6E": "ub0e6e-hp-elitebook-10xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
     "UC279E": "uc279ehp-elitebook-fw-adp-3yrs",
@@ -1899,7 +1897,7 @@ product_page_mapping = {
     "U85GJE":"hp-elitebook-6xx-g11-2-year-warranty-extension-1y-base-warranty/",
     "UA6H2PE":"hp-probook-elitebook-6xx-g10-1y-post-warranty/",
     "UB9S2PE":"hp-laserjet-m329dw-1-year-postwarranty/",
-    "UB8B3E":"hp-probook-400-g10-laptop-4-years-additional-warranty-extension-with-accidental-damage-protection-1-year-base-warranty-2/",
+    "UK753E":"hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
     # Add other parts mapping here...
@@ -2379,14 +2377,7 @@ product_title_mapping = {
   },
 
   
-  "UB5U0E": {
-    "title": "HP 200/300 Series 4 years Additional Warranty Extension with Accidental Damage Protection",
-    "price": "11500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
-    "tag":"Smart Pick",
-    "duration":"5 year",
-    "coverage":"in-warranty"
-  },
+
   "U9BB1PE": {
     "title": "HP 200/300 Series 1 year Post Warranty",
     "price": "6250",
@@ -2425,13 +2416,7 @@ product_title_mapping = {
   "duration": "5 year"
 },
 
-"UB8B3E": {
-  "title": "HP ProBook 400 G10 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
-  "price": "14750",
-  "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
-  "coverage": "in-warranty",
-  "duration": "5 year"
-},
+
 
 "UK743E": {
   "title": "HP ProBook 400 laptop 2 years Additional Warranty Extension (3 year factory warranty)",
@@ -2591,13 +2576,7 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
-  "UB8B6E": {
-    "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
-    "price": "13500",
-    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png" ,
-    "coverage":"in-warranty",
-    "duration":"5 year"
-  },
+
   "UK724E": {
     "title": "HP ProBook 4XX Factory Warranty Accidental Damage Protection Add-on (1 year)",
     "price": "7500",
@@ -4318,7 +4297,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
  {
     "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
-    "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
+    "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
             {
     "includes": [r"(?i)zbook|ZFly14G9"],
@@ -4370,7 +4349,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 {
     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|\bg10\b|\bg9\b|\bg8\b|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
     "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11|desktop|tower|pro\s?tower|prodesk|elitedesk|microtower|aio"],
-    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E", "UM237E", "UB8B3E", "UK749E", "UK743E", "UK744E", "UK753E", "UB8B6E"],},
+    "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E","UM237E","UK749E", "UK743E", "UK744E", "UK753E"],},
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
                 "excludes": [r"(?i)victus|omen|envy|spectre|printer|probook"],
