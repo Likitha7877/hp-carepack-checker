@@ -4316,7 +4316,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R"],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E", "UB5U0E", "U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
 },
@@ -4337,8 +4337,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             #elitebook 8xx
             {
-                "includes": [r"(?i)hp\s?elitebook\s|840"],
-                "excludes": [r"(?i)all|mfp|victus|pavilion"],
+                "includes": [r"(?i)hp\s?elitebook\s|840|EB840G10"],
+                "excludes": [r"(?i)all|mfp|victus|pavilion|14"],
                 "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
             },
             #elitebook 10XX
@@ -4353,6 +4353,8 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "excludes": [r"(?i)all|mfp|x360|zbook"],
     "parts": ["UA6H2PE", "UA6H1E", "UA6H3E", "UA6G9E", "U85GME", "U85GJE"],
 },
+            
+            
              {
         "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
