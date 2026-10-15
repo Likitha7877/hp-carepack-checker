@@ -2058,7 +2058,7 @@ product_title_mapping = {
     "duration":"3 year"
   },
   "U8LJ4E": {
-    "title": "HP Laptop 14/15 Series 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Laptop 14/15 Series 2 Years Additional Warranty Extension with ADP",
     "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag"  :"Smart Pick",
@@ -2076,7 +2076,7 @@ product_title_mapping = {
   },
 
   "UN008E": {
-    "title": "HP Laptop 14/15 Series 1 Year Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Laptop 14/15 Series 1 Year Additional Warranty Extension with ADP",
     "price": "10500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "coverage":"in-warranty",
@@ -2107,7 +2107,7 @@ product_title_mapping = {
     "duration":"3 year"
   },
   "U6WD1E": {
-    "title": "HP Pavilion/Victus by HP 2-Year Warranty with Accidental Damage Protection (ADP)",
+    "title": "HP Pavilion/Victus by HP 2-Year Warranty with ADP",
     "price": "20400",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Smart Pick",
@@ -2122,7 +2122,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "UN009E": {
-    "title": "HP Pavilion/Victus by HP 1-Year Warranty Extension with Accidental Damage Protection (ADP)",
+    "title": "HP Pavilion/Victus by HP 1-Year Warranty Extension with ADP",
     "price": "11800",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "tag":"Customer favourite",
@@ -2130,7 +2130,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "U0H96E": {
-    "title": "HP Pavilion/Victus by HP Factory Warranty Add-On Accidental Damage Protection",
+    "title": "HP Pavilion/Victus by HP Factory Warranty Add-On ADP",
     "price": "6000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
@@ -2161,7 +2161,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "U6WD2E": {
-    "title": "HP Envy/Omen 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Envy/Omen 2 Years Additional Warranty Extension with ADP",
     "price": "31270",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
@@ -2169,7 +2169,7 @@ product_title_mapping = {
     "tag":"Smart Pick"
   },
   "UN010E": {
-    "title": "HP Envy/Omen 1-year Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Envy/Omen 1-year Additional Warranty Extension with ADP",
     "price": "16750",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "coverage":"in-warranty",
@@ -2177,7 +2177,7 @@ product_title_mapping = {
     "tag":"Customer Favourite"
   },
   "U6WC9E": {
-    "title": "HP Envy/Omen Factory Warranty Add-On with Accidental Damage Protection",
+    "title": "HP Envy/Omen Factory Warranty Add-On with ADP",
     "price": "6500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
@@ -2226,7 +2226,7 @@ product_title_mapping = {
     "duration":"3 year"
   },
   "U6WD3E": {
-    "title": "HP Spectre 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Spectre 2 Years Additional Warranty Extension with ADP",
     "price": "37500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Smart Pick",
@@ -2241,7 +2241,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "UN011E": {
-    "title": "HP Spectre 1 year Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Spectre 1 year Additional Warranty Extension with ADP",
     "price": "19500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1HWADP.png",
     "tag":"Customer favourite",
@@ -2249,7 +2249,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "U6WD0E": {
-    "title": "HP Spectre Factory Warranty Add-On with Accidental Damage Protection",
+    "title": "HP Spectre Factory Warranty Add-On with ADP",
     "price": "9500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/1ADP.png",
     "coverage":"in-warranty",
@@ -2285,7 +2285,7 @@ product_title_mapping = {
     "duration":"5 year"
   },
    "U10KHE": {
-    "title": "HP Z-Book 2 Years Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP Z-Book 2 Years Additional Warranty Extension with ADP",
     "price": "19000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
@@ -2352,7 +2352,7 @@ product_title_mapping = {
   
 
   "U9BA9E": {
-    "title": "HP 200/300 Series 2 years Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP 200/300 Series 2 years Additional Warranty Extension with ADP",
     "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "tag":"Customer favourite",
@@ -2417,7 +2417,7 @@ product_title_mapping = {
 },
 
 "UK748E": {
-  "title": "HP ProBook 400 G10 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+  "title": "HP ProBook 400 G10 laptop 4 years Additional Warranty Extension with ADP (1 Year Base Warranty)",
   "price": "12800",
   "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
   "coverage": "in-warranty",
@@ -2435,7 +2435,7 @@ product_title_mapping = {
 },
 
 "UK753E": {
-  "title": "HP ProBook 4XX 2 years Additional Warranty with Accidental Damage Protection (3 Year Base Warranty)",
+  "title": "HP ProBook 4XX 2 years Additional Warranty with ADP (3 Year Base Warranty)",
   "price": "14500",
   "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
   "coverage": "in-warranty",
@@ -2522,14 +2522,14 @@ product_title_mapping = {
 },
 
 "U85N8E": {
-  "title": "HP ProBook G11 3 years Factory Warranty Accidental Damage Protection +DMR",
+  "title": "HP ProBook G11 3 years Factory Warranty ADP +DMR",
   "price": "9200",
   "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
   "coverage": "in-warranty",
   "duration": "3 year"
 },
   "UK726E": {
-    "title": "HP ProBook 4XX 2 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "title": "HP ProBook 4XX 2 years Additional Warranty Extension with ADP (1 Year BW)",
     "price": "9000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
@@ -2550,21 +2550,21 @@ product_title_mapping = {
     "duration":"5 year"
       },
   "UK749E": {
-    "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection (3 Year Base Warranty)",
+    "title": "HP ProBook 400 3 years Factory Warranty ADP (3 Year Base Warranty)",
     "price": "6450",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "U85N2E": {
-    "title": "HP ProBook 400 3 years Factory Warranty Accidental Damage Protection (3 Year Base Warranty)",
+    "title": "HP ProBook 400 3 years Factory Warranty ADP (3 Year Base Warranty)",
     "price": "6450",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UM237E": {
-    "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "title": "HP ProBook 400 laptop 4 years Additional Warranty Extension with ADP (1 Year Base Warranty)",
     "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png",
     "coverage":"in-warranty",
@@ -2586,7 +2586,7 @@ product_title_mapping = {
   },
 
   "UK724E": {
-    "title": "HP ProBook 4XX Factory Warranty Accidental Damage Protection Add-on (1 year)",
+    "title": "HP ProBook 4XX Factory Warranty ADP Add-on (1 year)",
     "price": "7500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/1ADP.png" ,
     "coverage":"in-warranty",
@@ -2594,7 +2594,7 @@ product_title_mapping = {
   },
   
   "U86E0E":{
-    "title": "HP ProBook G11 laptop 4 years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "title": "HP ProBook G11 laptop 4 years Additional Warranty Extension with ADP (1 Year Base Warranty)",
     "price": "16750",
     "image": "https://arminfoserve.com/wp-content/uploads/2026/01/4HWADP.png" ,
     "coverage":"in-warranty",
@@ -2644,14 +2644,14 @@ product_title_mapping = {
     "coverage":"in-warranty"
   },
   "UC279E":{
-    "title": "HP EliteBook 3-year Accidental Damage Protection on Factory Warranty",
+    "title": "HP EliteBook 3-year ADP on Factory Warranty",
     "price": "8750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     
   },
   "UC282E":{
-    "title": "HP EliteBook 3 year Accidental Damage Protection on 1 year Factory Warranty",
+    "title": "HP EliteBook 3 year ADP on 1 year Factory Warranty",
     "price": "14500",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
@@ -2665,7 +2665,7 @@ product_title_mapping = {
     "duration":"5 year"
   },
   "UB0E6E": {
-    "title": "HP EliteBook 10xx 2 years additional warranty with Accidental Damage Protection (3 year base warranty)",
+    "title": "HP EliteBook 10xx 2 years additional warranty with ADP (3 year base warranty)",
     "price": "17500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
@@ -2701,7 +2701,7 @@ product_title_mapping = {
   },
   
   "UB5T7E": {
-    "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
+    "title": "HP EliteBook 2 Years Additional Warranty Extension with ADP (3 Year Base Warranty)",
     "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
@@ -2723,7 +2723,7 @@ product_title_mapping = {
     "duration":"5 year"
   },
    "UA6H3E": {
-    "title": "HP EliteBook 6XX G10 3-year Accidental Damage Protection on Factory Warranty",
+    "title": "HP EliteBook 6XX G10 3-year ADP on Factory Warranty",
     "price": "6800",
     "image": "https:arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?",
     "coverage":"in-warranty",
@@ -2781,7 +2781,7 @@ product_title_mapping = {
     "duration":"5 year"
   },
   "U0A84E": {
-    "title": "HP All-in-One Business PC Factory Warranty Add-on Accidental Damage Protection",
+    "title": "HP All-in-One Business PC Factory Warranty Add-on ADP",
     "price": "5200",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/ADP-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
@@ -2796,7 +2796,7 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "U0A85E": {
-    "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with Accidental Damage Protection",
+    "title": "HP All-in-One Business PC 1 year Additional Warranty Extension with ADP",
     "price": "7250",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2023/11/1HWADP-dt.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
@@ -2810,14 +2810,14 @@ product_title_mapping = {
     "duration":"2 year"
   },
   "UF236E": {
-    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with ADP (3 Year Base Warranty)",
     "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
   "U0A83E": {
-    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with Accidental Damage Protection (1 Year Base Warranty)",
+    "title": "HP All-in-One Business PC 2 Years Additional Warranty Extension with ADP (1 Year Base Warranty)",
     "price": "7500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2HWADP-dt.png",
     "coverage":"in-warranty",
