@@ -4303,7 +4303,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6"],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6| 240 14 inch|245 14 inch|250 15.6"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E","U9EF4E"],
 },
@@ -4312,11 +4312,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "excludes": [r"(?i)all|14s|15s|pc"],
     "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
 },
-            {
-    "includes": [r"(?i)zbook|g1i"],
-    "excludes": [r"(?i)all"],
-    "parts": ["UD0P5PE","U85S0E","U85RCE","U85SJE"],
-},
+   
             {
                 "includes": [r"(?i)chromebook"],
                 "excludes": [],
@@ -4401,11 +4397,16 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "excludes": [r"(?i)pavilion|victus|laptop|notebook"],
     "parts": ["UA055E", "UN062PE","UN085E"],
 },
+         {
+    "includes": [r"(?i)zbook|g1i"],
+    "excludes": [r"(?i)all"],
+"parts": ["U85QTE", "U85QVE", "U86BRE", "U85R2E", "U85R3E", "U85RCE", "U85S0E", "U85S7E", "U85S8E", "U85SHE", "U85SJE", "U85SME"]
+},
             {
                 "includes": [r"(?i)zbook\s?g10"],
                 "excludes": [r"(?i)all-in-one"],
-                "parts": ["U60ZBE", "U60ZCE", "U60ZWE", "U60ZXE", "U61E2E"],
-            },
+                "parts": ["UB0E4E", "U60ZBE", "U60ZCE", "U60ZWE", "U60ZXE", "UD0P5PE", "U02BVE", "U61B6E", "U02BSE", "U10KHE", "U02BXE", "U61BQE", "U61BRE"] 
+                },
             {
                 "includes": [r"(?i)hp\s?p2|hp\s?e2"],
                 "excludes": [],
