@@ -2933,7 +2933,7 @@ product_title_mapping = {
     "duration":"4 year"
   },
     "U85GLE": {
-    "title": "HP Elitebook 6XX G11 2year additional warranty (3y BW)",
+    "title": "HP Elitebook 6XX G11 4year additional warranty (1y BW)",
     "price": "16000",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "coverage":"in-warranty",
