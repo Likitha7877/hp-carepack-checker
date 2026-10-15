@@ -1897,6 +1897,7 @@ product_page_mapping = {
     "U85GJE":"hp-elitebook-6xx-g11-2-year-warranty-extension-1y-base-warranty/",
     "UA6H2PE":"hp-probook-elitebook-6xx-g10-1y-post-warranty/",
     "UB9S2PE":"hp-laserjet-m329dw-1-year-postwarranty/",
+    "U9EF4E":"hp-200-300-series-4-years-additional-warranty-extension-with-adp-1-bw/",
     "UK753E":"hp-probook-4xx-2-years-additional-warranty-with-accidental-damage-protection-3-year-base-warranty",
     "U9JT4E":"hp-laserjet-pro-mfp-m43x-m44x-m4252x-and-4262x-2-years-additional-warranty/"
     
@@ -1911,6 +1912,13 @@ product_title_mapping = {
     "title": "HP Consumer LaserJet 4 years Additional Warranty",
     "price": "6812",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/4HW-pt.png?fit=591%2C591&ssl=1",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+    "U9EF4E": {
+    "title": "HP 200/300 Series 4 years Additional Warranty Extension with ADP (1 BW)",
+    "price": "19000",
+    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2026/01/4HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
@@ -4297,11 +4305,11 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
  {
     "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
-    "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E"],
+    "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E","U9EF4E"],
 },
             {
-    "includes": [r"(?i)zbook|ZFly14G9"],
-    "excludes": [r"(?i)all"],
+    "includes": [r"(?i)zbook|ZFly14G9|HP ZFly14G10 i7|i7-1355U|14 16GB/1T PC"],
+    "excludes": [r"(?i)all|14s|15s|pc"],
     "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
 },
             {
@@ -4314,27 +4322,50 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
                 "excludes": [],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E"],
             },
-            #elitebook 8xx
-            {
-                "includes": [r"(?i)hp\s?elitebook\s|840|EB840G10"],
-                "excludes": [r"(?i)all|mfp|victus|pavilion|14"],
-                "parts": ["UC279E", "U4391E", "UC282E", "U7861E", "UB5T7E", "U7876E","U85DWE","U85BQE","U85BTE"],
-            },
-            #elitebook 10XX
-            {
-                "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
-                "excludes": [r"(?i)all|mfp"],
-                "parts": ["UA6Z7E", "UA6Z3E", "UA6Z9E", "UB0E2E", "UB0E6E", "UB5T7E", "U80MRE", "U80MME", "UE3H0E", "U80MQE", "U80MTE", "U84Z1E", "U76MBE", "U84YZE", "U84Z0E", "U84Z3E"],
-            },
-            #elitebook 6xx
-            {
+            # EliteBook 8XX G10-
+{
+    "includes": [r"(?i)hp\s?elitebook\s|840|EB840G10"],
+    "excludes": [r"(?i)all|mfp|victus|pavilion|14"],
+    "parts": ["U4391E", "UC282E", "U7876E", "UM235E", "U7875E", "UC279E", "U7861E"],
+},
+
+# EliteBook 8XX G11+
+{
+    "includes": [r"(?i)hp\s?elitebook\s|840|EB840G10"],
+    "excludes": [r"(?i)all|mfp|victus|pavilion|14"],
+    "parts": ["U85BQE", "U85BTE", "U85BRE", "U85BVE", "U85E3E", "U85BSE", "U85DWE", "U85DZE", "U85DTE", "U85DXE", "U85DVE", "U85DYE"],
+},
+
+# EliteBook 10XX G10-
+{
+    "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
+    "excludes": [r"(?i)all|mfp"],
+    "parts": ["UA6Z7E", "UA6Z3E", "UA6Z9E", "UB0E2E", "UB0E6E", "UB5T7E"],
+},
+
+# EliteBook 10XX G11+
+{
+    "includes": [r"(?i)hp\s?elitebook\s?x360|elitebook\s?1"],
+    "excludes": [r"(?i)all|mfp"],
+    "parts": ["U80MRE", "U80MME", "UE3H0E", "U80MQE", "U80MTE", "U84Z1E", "U76MBE", "U84YZE", "U84Z0E", "U84Z3E"],
+},
+
+# EliteBook 6XX G10-
+{
     "includes": [r"(?i)elitebook\s?6\d\d"],
     "excludes": [r"(?i)all|mfp|x360|zbook"],
-    "parts": ["UA6H2PE", "UA6H1E", "UA6H3E", "UA6G9E", "U85GME", "U85GJE"],
+    "parts": ["UA6A1E", "UA6H2PE", "UA6H1E", "UA6H3E", "UA6H0E"],
+},
+
+# EliteBook 6XX G11+
+{
+    "includes": [r"(?i)elitebook\s?6\d\d"],
+    "excludes": [r"(?i)all|mfp|x360|zbook"],
+    "parts": ["UA6G9E", "U85GME", "U85GJE", "U85GKE", "U85GNE", "U85GLE"],
 },
             
             
-             {
+            {
         "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
         "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
         "parts": ["UJ217E","UD075PE"],
