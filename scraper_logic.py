@@ -1764,12 +1764,39 @@ product_page_mapping = {
     "U4391E": "u4391e-hp-elitebook-2-years-additional-warranty-extension",
     "U7876E": "u7876e-hp-elitebook-7xx-8xx-4-years-additional-warranty-1-year-base-warranty",
     "UC282E": "uc282e-hp-elitebook-fw-adp-1yrs",
+    "UE3H0E": "hp-elitebook-1xxx-g11-4-years-we-pda-pa-adp-dmr-1y-base-warranty",
     "U84Z3E":"hp-elitebook-x-g11-5y-additional-warranty-w-adp-1y-base-warranty/",
+    "U85GLE": "hp-elitebook-6xx-g11-2year-additional-warranty-w-3-year-adp-1ybw-2",
+    "U85GNE": "hp-elitebook-6xx-g11-2year-additional-warranty-w-3-year-adp-1ybw-3",
     "U7861E": "u7861e-hp-elitebook-2-years-additional-warranty-extension-3-year-base-warranty",
     "UB5T7E": "ub5t7e-hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty",
     "U5864PE": "u5864pe-hp-all-in-one-business-pc-1-year-post-warranty",
     "U6578E": "u6578e-hp-all-in-one-business-pc-2-years-additional-warranty-extension",
     "U0A84E": "u0a84e-hp-all-in-one-business-pc-factory-warranty-adp",
+        "U4416PE": "u4416pe-hp-elitebook-1-year-pw",
+    "U85DWE": "hp-elitebook-8xx-g11-3-year-accidental-damage-protection-on-factory-warranty",
+    "U85BQE": "hp-elitebook-8xx-g11-2-years-additional-warranty-extension-1-year-base-warranty",
+    "UB5T1E": "hp-elitebook-2-years-additional-warranty-extension-with-accidental-damage-protection-3-year-base-warranty-2",
+    "U80MRE": "hp-elitebook-10xx-g11-2-years-additional-warranty-extension-with-adp-1y-bw",
+    "UA6Z7E": "hp-elitebook-1xxx-g10-2-years-additional-warranty-extension-with-adp-1-year-base-warranty",
+    "UA6Z9E": "hp-elitebook-1xxx-g10-4-years-additional-warranty-extension-with-adp-1-year-base-warranty",
+    "UA6Z3E": "hp-elitebook-1xxx-g10-4-years-additional-warranty-extension-1-year-base-warranty",
+    "U80MQE": "hp-elitebook-g11-laptop-4-years-additional-warranty-1-year-factory-warranty",
+    "U80MTE": "hp-elitebook-g11-laptop-4-years-additional-warranty-with-adp-1-year-factory-warranty",
+    "U84Z1E": "hp-elitebook-g11-laptop-adp-3-bw",
+    "U84YZE": "hp-elitebook-g11-4-years-additional-warranty-extension-3-bw",
+    "UA6A1E": "hp-elitebook-6xx-g10-2-years-additional-warranty-extension-1-bw",
+    "U85BSE": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-1-year-base-warranty",
+    "UM235E": "hp-elitebook-8xx-g10-4-years-additional-warranty-extension-with-adp-1-year-base-warranty",
+    "U7875E": "hp-elitebook-8xx-g10-4-years-additional-warranty-extension-1-year-base-warranty-copy",
+    "U85BRE": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-1y-bw",
+    "U85BVE": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-with-adp-1y-bw",
+    "U85E3E": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-with-adp-1y-bw-copy",
+    "U85DZE": "hp-elitebook-8xx-g11-dmr-3y-bw",
+    "U85DTE": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-3y-bw",
+    "U85DXE": "hp-elitebook-8xx-g11-4-years-additional-warranty-extension-3y-bw-2",
+    "U85DVE": "hp-elitebook-8xx-g11-2-years-additional-warranty-extension-3y-bw",
+    "U85DYE": "hp-elitebook-8xx-g11-2-years-additional-warranty-extension-with-adp-3y-bw",
     "U7899E": "u7899e-hp-all-in-one-business-pc-2-years-additional-warranty-extension-3-year-base-warranty",
     "UF361E": "uf361e-hp-all-in-one-business-pc-3-years-additional-warranty-extension-with-defective-media-retention",
     "U7897E": "u7897e-hp-all-in-one-business-pc-1-year-additional-warranty-extension",
@@ -1884,6 +1911,29 @@ product_page_mapping = {
     "U85S0E":"hp-zbook-g11-factory-warranty-add-on-3-years-bw",
     "U02CDE":"hp-zbook-mobile-wks-g7-g8-g9-2y-additional-warranty-w-travel-coverage-3y-bw",
     "U61BRE":"hp-zbook-mws-g10-2-years-additional-warranty-3y-bw",
+        "UB3G4E": "ub3g4e-hp-z-book-1-year-additional-warranty-extension-with-battery-replacement",
+    "U85S0E": "hp-zbook-g11-factory-warranty-add-on-3-years-bw",
+    "UD0P5PE": "hp-zbook-g11-1-year-post-warranty",
+    "U02CDE": "hp-zbook-mobile-wks-g7-g8-g9-2y-additional-warranty-w-travel-coverage-3y-bw",
+    "U61BRE": "u61bre-hp-zbook-mws-g10-2-years-additional-warranty-3y-bw",
+    "U85RCE": "hp-zbook-g11-4y-additional-warranty-w-adp-1y-base-warranty",
+    "U85SJE": "hp-zbook-g11-4y-additional-warranty-w-adp-3y-base-warranty",
+    "U60ZBE": "hp-zbook-mws-g10-2-years-additional-warranty-1y-bw",
+    "U61BQE": "hp-zbook-mws-g10-2-years-additional-warranty-3y-bw",
+    "U85QTE": "hp-zbook-mws-g11-2-years-additional-warranty-1y-bw-copy",
+    "UB0E4E": "hp-zbook-3-year-nbd-onsite-with-adp",
+    "U60ZCE": "hp-zbook-mws-g11-2-years-additional-warranty-with-adp-1y-bw",
+    "U60ZXE": "hp-zbook-g11-4y-additional-warranty-w-adp-1y-base-warranty-2",
+    "U61B6E": "hp-zbook-mws-g10-3bw-adp",
+    "U02BXE": "hp-zbook-mobile-wks-g7-g8-g9-2-years-additional-warranty-with-adp3y-bw",
+    # "U85QVE": "",  # no slug in export (?post_type=product&p=49190)
+    # "U86BRE": "",  # no slug in export (?post_type=product&p=49192)
+    # "U85R2E": "",  # no slug in export (?post_type=product&p=49195)
+    # "U85R3E": "",  # no slug in export (?post_type=product&p=49196)
+    "U85S7E": "hp-zbook-g11-4y-additional-warranty3y-base-warranty",
+    "U85S8E": "hp-zbook-g11-4y-additional-warranty-w-adp-3y-base-warranty-2",
+    "U85SHE": "hp-zbook-g11-2years-additional-warranty-3y-base-warranty",
+    "U85SME": "hp-zbook-g11-2years-additional-warranty-with-adp-dmr-3y-base-warranty",
     "UB3G4E":"hp-z-book-1-year-additional-warranty-extension-with-battery-replacement",
     "U76MBE":"hp-elitebook-1xxx-g11-2-years-additional-warranty-extension-1-year-base-warranty-2",
     "U84Z0E":"hp-elitebook-10xx-g11-2-years-additional-warranty-3-year-base-warranty",
@@ -2333,6 +2383,125 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"1 year"
   },
+      "U85SJE": {
+    "title": "HP ZBook G11 4Y additional warranty w/ ADP (3Y Base Warranty)",
+    "price": "21000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+  "U60ZBE": {
+    "title": "HP ZBook MWS G10 2 years Additional Warranty (1Y BW)",
+    "price": "14599",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U61BQE": {
+    "title": "HP ZBook MWS G10 2 years Additional Warranty (3Y BW)",
+    "price": "16500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85QTE": {
+    "title": "HP ZBook MWS G11 2 years Additional Warranty (1Y BW)",
+    "price": "10500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "UB0E4E": {
+    "title": "HP ZBOOK 3 year NBD Onsite with ADP",
+    "price": "9250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U60ZCE": {
+    "title": "HP ZBook MWS G11 2 years Additional Warranty with ADP (1Y BW)",
+    "price": "15000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U60ZXE": {
+    "title": "HP ZBook G11 4Y additional warranty w/ ADP (1Y Base Warranty)",
+    "price": "27000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U61B6E": {
+    "title": "HP ZBook MWS G10- 3BW ADP",
+    "price": "7250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U02BXE": {
+    "title": "HP ZBook Mobile WKS G7/G8/G9 2 years Additional Warranty with ADP(3Y BW)",
+    "price": "21000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85QVE": {
+    "title": "HP ZBook MWS G11 2 years Additional Warranty with ADP (1Y BW)",
+    "price": "21152",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U86BRE": {
+    "title": "HP ZBook MWS G11 2 years Additional Warranty with ADP (1Y BW)",
+    "price": "21152",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U85R2E": {
+    "title": "HP ZBook G11 4Y additional warranty (1Y Base Warranty)",
+    "price": "27000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85R3E": {
+    "title": "HP ZBook G11 4Y additional warranty w/ ADP (1Y Base Warranty)",
+    "price": "33500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85S7E": {
+    "title": "HP ZBook G11 4Y additional warranty (3Y Base Warranty)",
+    "price": "7950",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+  "U85S8E": {
+    "title": "HP ZBook G11 4Y additional warranty w/ ADP (3Y Base Warranty)",
+    "price": "16000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+  "U85SHE": {
+    "title": "HP ZBook G11 2Years additional warranty (3Y Base Warranty)",
+    "price": "12200",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85SME": {
+    "title": "HP ZBook G11 2Years additional warranty with ADP, DMR (3Y Base Warranty)",
+    "price": "22500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
    
   "U9BA7E": {
     "title": "HP 200/300 Series 2 years Additional Warranty Extension",
@@ -2638,16 +2807,17 @@ product_title_mapping = {
   },
    "U84Z3E": {
     "title": "HP Elitebook X G11 5Y additional warranty w/ ADP (1Y Base Warranty)",
-    "price": "21750",
+    "price": "26000",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
     "duration": "5 year",
     "coverage":"in-warranty"
   },
   "UC279E":{
     "title": "HP EliteBook 3-year ADP on Factory Warranty",
-    "price": "8750",
+    "price": "9750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/08/3ADP.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
+    "duration": "3 year"
     
   },
   "UC282E":{
@@ -2659,7 +2829,7 @@ product_title_mapping = {
   },
   "UB0E2E": {
     "title": "HP EliteBook 10xx 2 years additional warranty (3 year base warranty)",
-    "price": "11500",
+    "price": "16500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2673,14 +2843,196 @@ product_title_mapping = {
   },
   "U76MBE": {
     "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "3000",
+    "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+    "U4416PE": {
+    "title": "HP EliteBook 1 year Post Warranty Care Pack",
+    "price": "10500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/11/1PW.png",
+    "coverage":"in-warranty",
+    "duration":"1 year"
+  },
+  "U85DWE": {
+    "title": "HP EliteBook 8XX G11 3-year Accidental Damage Protection on Factory Warranty",
+    "price": "9200",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U85BQE": {
+    "title": "HP EliteBook 8XX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "9900",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "UB5T1E": {
+    "title": "HP EliteBook 2 Years Additional Warranty Extension with Accidental Damage Protection (3 Year Base Warranty)",
+    "price": "19889",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U80MRE": {
+    "title": "HP EliteBook 10XX G11 2 Years Additional Warranty Extension with ADP (1y BW)",
+    "price": "17900",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "UA6Z7E": {
+    "title": "HP EliteBook 1XXX G10 2 Years Additional Warranty Extension with ADP (1 Year Base Warranty)",
+    "price": "17900",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "UA6Z9E": {
+    "title": "HP EliteBook 1XXX G10 4 Years Additional Warranty Extension with ADP (1 Year Base Warranty)",
+    "price": "32750",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "UA6Z3E": {
+    "title": "HP EliteBook 1XXX G10 4 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "24500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U80MQE": {
+    "title": "HP EliteBook G11 laptop 4 years Additional Warranty (1 year factory warranty)",
+    "price": "27000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U80MTE": {
+    "title": "HP EliteBook G11 laptop 4 years Additional Warranty with ADP (1 BW)",
+    "price": "32250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U84Z1E": {
+    "title": "HP EliteBook G11 laptop ADP (3 BW)",
+    "price": "11500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U84YZE": {
+    "title": "HP EliteBook G11 4 years additional warranty extension (3 BW)",
+    "price": "9775",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+    "U85GLE": {
+    "title": "HP Elitebook 6XX G11 2year additional warranty (3y BW)",
+    "price": "16000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85GNE": {
+    "title": "HP Elitebook 6XX G11 4 year additional warranty ADP (1yBW)",
+    "price": "17250",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "UA6A1E": {
+    "title": "HP EliteBook 6XX G10 2 Years Additional Warranty Extension ( 1 BW)",
+    "price": "8750",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U85BSE": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "25500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "UM235E": {
+    "title": "HP EliteBook 8XX G10 4 Years Additional Warranty Extension with ADP (1 Year Base Warranty)",
+    "price": "26000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U7875E": {
+    "title": "HP EliteBook 8XX G10 4 Years Additional Warranty Extension (1 Year Base Warranty)",
+    "price": "18500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85BRE": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension (1y BW)",
+    "price": "15750",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85BVE": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension with ADP (1y BW)",
+    "price": "22950",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85E3E": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension with ADP DMR (1y BW)",
+    "price": "19990",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85DZE": {
+    "title": "HP EliteBook 8XX G11 DMR (3y BW)",
+    "price": "6600",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"3 year"
+  },
+  "U85DTE": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension (3y BW)",
+    "price": "8050",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+  "U85DXE": {
+    "title": "HP EliteBook 8XX G11 4 Years Additional Warranty Extension with ADP (3y BW)",
+    "price": "14000",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"4 year"
+  },
+  "U85DVE": {
+    "title": "HP EliteBook 8XX G11 2 Years Additional Warranty Extension(3y BW)",
+    "price": "12800",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
+  "U85DYE": {
+    "title": "HP EliteBook 8XX G11 2 Years Additional Warranty Extension with ADP (3y BW)",
+    "price": "23500",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
   "U84Z0E": {
     "title": "HP EliteBook 10xx G11 2 years additional warranty (3 year base warranty)",
-    "price": "18250",
+    "price": "20000",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2690,7 +3042,7 @@ product_title_mapping = {
     "price": "10400",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
-    "duration":"5 year"
+    "duration":"3 year"
   },
   "U7861E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (3 Year Base Warranty)",
@@ -2702,7 +3054,7 @@ product_title_mapping = {
   
   "UB5T7E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension with ADP (3 Year Base Warranty)",
-    "price": "16500",
+    "price": "19500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/08/2HWADP.png",
     "coverage":"in-warranty",
     "duration":"5 year"
@@ -2710,15 +3062,15 @@ product_title_mapping = {
   
   "U4391E": {
     "title": "HP EliteBook 2 Years Additional Warranty Extension (1 Year Base Warranty)",
-    "price": "8500",
+    "price": "9900",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"3 year"
   },
   "UA6H1E": {
     "title": "HP EliteBook 6xx G10 2 years additional warranty (3 year base warranty)",
-    "price": "9300",
-    "image": "https:arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
+    "price": "13400",
+    "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
     "duration":"5 year"
   },
@@ -2743,9 +3095,16 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"3 year"
   },
+    "UE3H0E": {
+    "title": "HP ElitebooK 1XXX G11 4 years WE PDA PA ADP DMR (1Y Base Warranty)",
+    "price": "36655",
+    "image": "https://arminfoserve.com/wp-content/uploads/2025/08/3ADP.png",
+    "coverage":"in-warranty",
+    "duration":"5 year"
+  },
    "U85GJE": {
     "title": "HP EliteBook 6XX G11 2-year Warranty Extension (1Y Base Warranty)",
-    "price": "7330",
+    "price": "9750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
