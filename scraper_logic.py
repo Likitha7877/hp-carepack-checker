@@ -2085,7 +2085,7 @@ product_title_mapping = {
   },
     "UN085E": {
     "title": "HP OmniStudio Desktop 2 Years Additional Warranty",
-    "price": "14500",
+    "price": "19500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -2841,8 +2841,8 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
-  "U76MBE": {
-    "title": "HP EliteBook 1XXX G11 2 Years Additional Warranty Extension (1 Year Base Warranty)",
+   "U76MBE": {
+    "title": "HP EliteBook 1XXX G11 ONSITE (3 BW)",
     "price": "8500",
     "image": "https://arminfoserve.com/wp-content/uploads/2024/01/2HW.png",
     "coverage":"in-warranty",
@@ -3102,9 +3102,9 @@ product_title_mapping = {
     "coverage":"in-warranty",
     "duration":"5 year"
   },
-   "U85GJE": {
+    "U85GJE": {
     "title": "HP EliteBook 6XX G11 2-year Warranty Extension (1Y Base Warranty)",
-    "price": "9750",
+    "price": "8750",
     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2024/01/2HW.png?fit=591%2C591&ssl=1",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -3219,7 +3219,7 @@ product_title_mapping = {
 
    "UA055E": {
     "title": "HP Envy/Pavilion/Victus by HP/Omen by HP/Pro Desktop 2 Years Additional Warranty",
-    "price": "13500",
+    "price": "19500",
     "image": "https://arminfoserve.com/wp-content/uploads/2025/12/2-HW-desktop.png",
     "coverage":"in-warranty",
     "duration":"3 year"
@@ -4458,7 +4458,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             name = name.lower()
             keyword_patterns = [
         r"\bhp\s?240", r"\bhp\s?245", r"\bhp\s?247", r"\bhp\s?250", r"\bhp\s?255",
-        r"\bhp\s?340", r"\bhp\s?345", r"\bhp\s?350", r"\bhp\s?355",
+        r"\bhp\s?340", r"\bhp\s?345",r"\b200\s?g2i\b", r"\bhp\s?350", r"\bhp\s?355",
         r"\belitedesk\b", r"\bprodesk\b", r"pb\d{3}", r"\bmicrotower\b",
         r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b", r"\b10(3|4|5)\d\b",
         r"\bpro\s?tower\b", r"\btower\b",
