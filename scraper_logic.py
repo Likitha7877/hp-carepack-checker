@@ -4460,7 +4460,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
         r"\bhp\s?240", r"\bhp\s?245", r"\bhp\s?247", r"\bhp\s?250", r"\bhp\s?255",
         r"\bhp\s?340", r"\bhp\s?345",r"\b200\s?g2i\b", r"\bhp\s?350", r"\bhp\s?355",
         r"\belitedesk\b", r"\bprodesk\b", r"pb\d{3}", r"\bmicrotower\b",
-        r"\bprobook\b", r"\belitebook\b", r"\bzbook\b", r"\b8(3|4|5|6)\d\b", r"\b10(3|4|5)\d\b",
+        r"\bprobook\b", r"\belitebook\b", r"z\s?fly", r"\bzbook\b", r"\b8(3|4|5|6)\d\b", r"\b10(3|4|5)\d\b",
         r"\bpro\s?tower\b", r"\btower\b",
     ]
             for pattern in keyword_patterns:
@@ -4667,7 +4667,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E","U9EF4E"],
 },
             {
-    "includes": [r"(?i)zbook|ZFly14G9|HP ZFly14G10 i7|i7-1355U|14 16GB/1T PC"],
+    "includes": [r"(?i)HP ZFly14G9zbook|ZFly14G9|HP ZFly14G10 i7|i7-1355U|14 16GB/1T PC"],
     "excludes": [r"(?i)all|14s|15s|pc"],
     "parts": ["U02BVE","U02BSE","U10KHE","U61BQE","U61BRE","U60ZBE","U02CDE","UB3G4E"],
 },
@@ -4734,8 +4734,9 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
    # ProBook G8/G9/G10
 {
     "includes": [r"(?i)hp\s?pb440g10\s?i5|pb\s?440|probook\s?440|\bg10\b|\bg9\b|\bg8\b|probook\s?445|probook\s?455|probook\s?450|probook\s?430|\bi5\b|133u|512\s?pc"],
-    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11|desktop|tower|pro\s?tower|prodesk|elitedesk|microtower|aio"],
+    "excludes": [r"(?i)all|mfp|250|240|245|255|345|355|omnibook|elitebook|zbook|200|g11|desktop|tower|pro\s?tower|prodesk|elitedesk|microtower|aio|Z book|z fly"],
     "parts": ["UK738PE", "UK703E", "UK726E", "UL653E", "UK716E", "UK748E", "UK718E","UM237E","UK749E", "UK743E", "UK744E", "UK753E"],},
+
             {
                 "includes": [r"(?i)elitedesk|prodesk|microtower"],
                 "excludes": [r"(?i)victus|omen|envy|spectre|printer|probook"],
