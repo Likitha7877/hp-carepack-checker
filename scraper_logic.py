@@ -4627,7 +4627,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
             {
                 "includes": [r"(?i)omnibook\s?3"],
-                "excludes": [r"(?i)all|desktop"],
+                "excludes": [r"(?i)all|desktop|15"],
                 "parts": ["U8LH7PE", "U8LH8E", "U8LJ4E", "UN008E", "UB5R2E", "U8LH3E",  "U9WX1E"],
             },
             {
