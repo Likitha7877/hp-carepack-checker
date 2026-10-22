@@ -4662,7 +4662,7 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
             },
         
  {
-    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6| 240 14 inch|245 14 inch|250 15.6"],
+    "includes": [r"(?i)250rg\d+|hp\s?240\s?g|hp\s?255\s?g9|hp\s?245\s?g|hp\s?255\s?g|hp\s?250\s?g|hp\s?340\s?g|hp\s?345\s?g|hp\s?350\s?g|hp\s?355\s?g|athsil3050|255RG1|255 15.6|240R|255R 15.6| 240 14 inch|245 14 inch|250 15.6|250R 15.6"],
     "excludes": [r"(?i)\ball\b|\bhp\s?14s\b|\bhp\s?15s\b|\bhp\s?15\b(?!\s?g\d)|victus|elitebook|pavilion"],
     "parts": ["U9BA7E", "U9BA9E", "U9EE8E","U9BB1PE", "U22N8E", "U9EF3E", "U9EE7E","U9EF4E"],
 },
