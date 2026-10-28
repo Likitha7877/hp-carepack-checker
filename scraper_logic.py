@@ -896,18 +896,14 @@ printer_mapping = {
         "4 yr add WE": {
             "part": "UZ303E"
         },
-        "1 yr PW": {
-            "part": "AMC-U9NR3PE"
-        }
+        "1 yr PW": {}
     },
     "Z4B04A": {
         "2 yr add WE": {
             "part": "UA5C0E"
         },
         "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "AMC-U9NR3PE"
-        }
+        "1 yr PW": {}
     },
     "5D174A": {
         "2 yr add WE": {
@@ -915,7 +911,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+          
         }
     },
     "4A8D7A": {
@@ -932,7 +928,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+          
         }
     },
     "Z6Z11A": {
@@ -941,7 +937,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "Z6Z13A": {
@@ -950,7 +946,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "7ZV78A": {
@@ -959,7 +955,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "Z6Z95A": {
@@ -968,7 +964,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+         
         }
     },
     "Z6Z97A": {
@@ -977,7 +973,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "1TJ09A": {
@@ -1300,7 +1296,7 @@ printer_mapping = {
     },
     "381U0A": {
         "2 yr add WE": {
-            "part": "AMC-U04TKE"
+          
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1311,7 +1307,7 @@ printer_mapping = {
     },
     "381U2A": {
         "2 yr add WE": {
-            "part": "AMC-U04TKE"
+        
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1322,7 +1318,7 @@ printer_mapping = {
     },
     "381U3A": {
         "2 yr add WE": {
-            "part": "AMC-U04TKE"
+           
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1333,7 +1329,7 @@ printer_mapping = {
     },
     "381U4A": {
         "2 yr add WE": {
-            "part": "AMC-U04TKE"
+          
         },
         "4 yr add WE": {
             "part": "U04THE"
@@ -1376,7 +1372,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+        
         }
     },
     "4A8S4A": {
@@ -1385,7 +1381,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+          
         }
     },
     "1F3W2A": {
@@ -1394,7 +1390,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+       
         }
     },
     "4A8R9A": {
@@ -1403,7 +1399,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+          
         }
     },
     "1F3Y4A": {
@@ -1412,7 +1408,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+         
         }
     },
     "4A8D9A": {
@@ -1421,7 +1417,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "1F3Y2A": {
@@ -1430,7 +1426,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+          
         }
     },
     "4A8D4A": {
@@ -1439,7 +1435,7 @@ printer_mapping = {
         },
         "4 yr add WE": {},
         "1 yr PW": {
-            "part": "AMC-U9NR3PE"
+           
         }
     },
     "6UU48A": {
@@ -1691,7 +1687,6 @@ product_page_mapping = {
     "UG437PE":"hp-officejet-pro-7720-wide-format-1-year-post-warranty/",
     "UG764PE":"hp-color-laserjet-pro-mfp-3303sdw-p1-year-post-warranty/",
     "UG062E":"ug062e-hp-deskjet-ia-ultra-4826-aio-printer-2-years-additional-warranty/",
-    "AMC-UH770PE":"hp-consumer-laserjet-1-year-post-warranty",
     "U9VV5PE":"hp-laserjet-m726xx-mfp-1-year-post-warranty/",
     "UZ267E":"hp-consumer-laserjet-4-years-additional-warranty-uz267e/",
     "UH757E":"hp-consumer-laserjet-2-years-additional-warranty",
@@ -1830,7 +1825,6 @@ product_page_mapping = {
     "UA5C0E": "ua5c0e-hp-smart-tank-aio-2-years-additional-warranty",
     "U35PFE": "u35pfe-hp-smart-tank-790-aio-printer-2-years-additional-warranty",
     "UZ295E":"uz295e-hp-officejet-printers-4-years-additional-warranty/",
-    "AMC-U9NR3PE":"u9nr3pe-hp-smart-tank-aio-1-year-post-warranty",
     "U57D7E": "u57d7e-hp-smart-tank-210-aio-2-years-additional-warranty",
     "UG337E": "ug337e-hp-deskjet-2-years-additional-warranty",
     "UZ303E": "uz303e-hp-deskjet-2-years-additional-warranty-2",
@@ -1852,7 +1846,6 @@ product_page_mapping = {
     "UG361E": "ug361e-hp-laser-jet-pro-printers-2-years-additional-warranty",
     "UQ463E": "uq463e-hp-laserjet-printers-4-years-additional-warranty",
     "UB9S8E": "ub9s8e-hp-color-laserjet-pro-mfp-m479-4-years-additional-warranty",
-    "AMC-U04TKE": "u04tke-hp-laserjet-tank-mfp-2-years-additional-warranty",
     # "UG481E": "ug481e-hp-laserjet-printer-2-years-additional-warranty",
     "UH773E": "uh773e-hp-consumer-laserjet-2-years-additional-warranty",
     "UZ289E": "uz289e-hp-consumer-laserjet-4-years-additional-warranty",
@@ -3367,13 +3360,13 @@ product_title_mapping = {
     "duration": "3 year",
     "coverage":"in-warranty"
   },
-  "AMC-U9NR3PE": {
-    "title": "HP Smart Tank AiO 1 year AMC",
-    "price": "4400",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "1 year",
-    "coverage":"post-warranty"
-  },
+#   "AMC-U9NR3PE": {
+#     "title": "HP Smart Tank AiO 1 year AMC",
+#     "price": "4400",
+#     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
+#     "duration": "1 year",
+#     "coverage":"post-warranty"
+#   },
   "UG361E": {
     "title": "HP LaserJet Pro Printers 2 years Additional Warranty",
     "price": "4400",
@@ -3597,13 +3590,13 @@ product_title_mapping = {
     "duration":"5 year",
     "coverage":"in-warranty"
   },
-  "AMC-U04TKE": {
-    "title": "HP LaserJet Tank MFP 1 year AMC",
-    "price": "7080",
-    "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
-    "duration":"3 year",
-    "coverage":"in-warranty"
-  },
+#   "AMC-U04TKE": {
+#     "title": "HP LaserJet Tank MFP 1 year AMC",
+#     "price": "7080",
+#     "image": "https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/2HW-pt.png?fit=591%2C591&ssl=1",
+#     "duration":"3 year",
+#     "coverage":"in-warranty"
+#   },
   "U04SKE": {
     "title": "HP LASERJET TANK 1020W 4 years Additional Warranty",
     "price": "13200",
@@ -3765,13 +3758,13 @@ product_title_mapping = {
     "duration": "1 year",
     "coverage":"post-warranty"
   },
-    "AMC-UH770PE": {
-    "title": "HP LaserJet Enterprise M607 M610 1 year AMC",
-    "price": "6500",
-    "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
-    "duration": "1 year",
-    "coverage":"post-warranty"
-  },
+#     "AMC-UH770PE": {
+#     "title": "HP LaserJet Enterprise M607 M610 1 year AMC",
+#     "price": "6500",
+#     "image":"https://i0.wp.com/arminfoserve.com/wp-content/uploads/2025/06/1PW-pt.png?fit=591%2C591&ssl=1",
+#     "duration": "1 year",
+#     "coverage":"post-warranty"
+#   },
     "UG427PE": {
     "title": "HP DeskJet IA AiO 1 year Post Warranty",
     "price": "4218",
