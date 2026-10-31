@@ -13,1661 +13,662 @@ from eosl_data import eosl_data
 from datetime import datetime, date
 
 printer_mapping = {
-      "Y5S43A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        }
+    "Y5S43A": {
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "Y5S47A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": { 
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "8AF45A": {
-        "2 yr add WE": {
-            "part": "U9JT4E" 
-        },
-        "4 yr add WE": {
-            "part": "U9JT6E" 
-        } 
+        "2 yr add WE": {"part": "U9JT4E"},
+        "4 yr add WE": {"part": "U9JT6E"}
     },
     "W1A33A": {
-        "1 yr PW": {
-            "part": "UB9S2PE" 
-        },
-        "4 yr add WE": {
-        } 
+        "4 yr add WE": {}
     },
     "Y5S50A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
-    },
-     "Y5S50A": {
-        "2 yr add WE": {
-           
-        },
-        "4 yr add WE": {
-        }
-    },
-     "Y5S50A": {
-        "2 yr add WE": {
-            "part": "UH757E"
-        },
-        "4 yr add WE": {
-            "part": "UZ267E"
-            
-        }
+        "2 yr add WE": {"part": "UH757E"},
+        "4 yr add WE": {"part": "UZ267E"}
     },
     "Y5S54A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "C6N21A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "CC418A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "CE655A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "G3Q37A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "G3Q39A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "G3Q46A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "G3Q47A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "G3Q50A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "T6B51A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "U27BRE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "T6B52A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "U27BRE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "T6B59A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "T6B60A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "7KW48A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "7KW49A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "7KW63A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "7KW64A": {
-        "2 yr add WE": {
-            "part": "UG361E"
-        },
-        "4 yr add WE": {
-            "part": "UQ463E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG361E"},
+        "4 yr add WE": {"part": "UQ463E"}
     },
     "C6N23A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "CB376A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "CE849A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "CZ175A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q62A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q66A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q74A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q75A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q68A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q79A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "G3Q76A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "T6B70A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "T6B71A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "7KW54A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "7KW56A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "F5S29B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "F5S41D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "F5S42D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "F5S66A": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "K4U05B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "K7B87D": {
-        "2 yr add WE": {
-            "part": "UG334E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG334E"},
+        "4 yr add WE": {}
     },
     "V1N02B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Y5H67D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Y5H68D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "60K34B": {
-        "2 yr add WE": {
-            "part": "UG062E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            
-        }
+        "2 yr add WE": {"part": "UG062E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Y5H69D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Y5Z03B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Y5Z04B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "F5S31B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7WN46D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7WN07D": {
-        "2 yr add WE": {
-            "part": "UG334E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG334E"},
+        "4 yr add WE": {}
     },
     "7WN44D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7WQ06B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FT02B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FR27B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FR21B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FR53D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FR54D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7WQ08B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "7FS80D": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "25R72A": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "M2U76B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "25R69A": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "M2U86B": {
-        "2 yr add WE": {
-            "part": "UG338E"
-        },
-        "4 yr add WE": {
-            "part": "UZ304E"
-        }
+        "2 yr add WE": {"part": "UG338E"},
+        "4 yr add WE": {"part": "UZ304E"}
     },
     "M2U88B": {
-        "2 yr add WE": {
-            "part": "UG338E"
-        },
-        "4 yr add WE": {
-            "part": "UZ304E"
-        }
+        "2 yr add WE": {"part": "UG338E"},
+        "4 yr add WE": {"part": "UZ304E"}
     },
     "5SE26B": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {
-            "part": "UG427PE"
-        }
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "D9L20A": {
-        "2 yr add WE": {
-            "part": "U6M72E"
-        },
-        "4 yr add WE": {
-            "part": "U6M74E"
-        },
-        "1 yr PW": {
-            "part": "U6M78PE"
-        }
+        "2 yr add WE": {"part": "U6M72E"},
+        "4 yr add WE": {"part": "U6M74E"}
     },
     "D9L63A": {
-        "2 yr add WE": {
-            "part": "UG346E"
-        },
-        "4 yr add WE": {
-            "part": "UZ295E"
-        },
-        "1 yr PW": {
-            "part": "UG436PE"
-        }
+        "2 yr add WE": {"part": "UG346E"},
+        "4 yr add WE": {"part": "UZ295E"}
     },
     "E3E03A": {
-        "2 yr add WE": {
-            "part": "UG346E"
-        },
-        "4 yr add WE": {
-            "part": "UZ295E"
-        },
-        "1 yr PW": {
-            "part": "UG436PE"
-        }
+        "2 yr add WE": {"part": "UG346E"},
+        "4 yr add WE": {"part": "UZ295E"}
     },
     "T0G56A": {
-        "2 yr add WE": {
-            "part": "U6M72E"
-        },
-        "4 yr add WE": {
-            "part": "U6M74E"
-        }
+        "2 yr add WE": {"part": "U6M72E"},
+        "4 yr add WE": {"part": "U6M74E"}
     },
     "3UK97D": {
-        "2 yr add WE": {
-            "part": "UG350E"
-        },
-        "4 yr add WE": {
-            "part": "UZ299E"
-        },
-        "1 yr PW": {
-            "part": "UG612PE"
-        }
+        "2 yr add WE": {"part": "UG350E"},
+        "4 yr add WE": {"part": "UZ299E"}
     },
     "3UK98D": {
-        "2 yr add WE": {
-            "part": "U6M85E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U6M83E"
-        }
+        "2 yr add WE": {"part": "U6M85E"},
+        "4 yr add WE": {}
     },
     "3UK90D": {
-        "2 yr add WE": {
-            "part": "UG470E"
-        },
-        "4 yr add WE": {
-            "part": "UZ287E"
-        },
-        "1 yr PW": {
-            "part": "UG440PE"
-        }
+        "2 yr add WE": {"part": "UG470E"},
+        "4 yr add WE": {"part": "UZ287E"}
     },
     "5LJ20D": {
-        "2 yr add WE": {
-            "part": "UG349E"
-        },
-        "4 yr add WE": {
-            "part": "UZ298E"
-        }
+        "2 yr add WE": {"part": "UG349E"},
+        "4 yr add WE": {"part": "UZ298E"}
     },
     "4KJ64D": {
-        "2 yr add WE": {
-            "part": "UG349E"
-        },
-        "4 yr add WE": {
-            "part": "UZ298E"
-        },
-        "1 yr PW": {
-            "part": "UG439PE"
-        }
+        "2 yr add WE": {"part": "UG349E"},
+        "4 yr add WE": {"part": "UZ298E"}
     },
     "CR768A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "G1X85A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "G5J38A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        },
-        "1 yr PW": {
-            "part": "UG438PE"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "CZ993A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        },
-        "1 yr PW": {
-            "part": "UG438PE"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "N4L17A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        },
-        "1 yr PW": {
-            "part": "UG438PE"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "Y0S18A": {
-        "2 yr add WE": {
-            "part": "UG347E"
-        },
-        "4 yr add WE": {
-            "part": "UZ296E"
-        },
-        "1 yr PW": {
-            "part": "UG437PE"
-        }
+        "2 yr add WE": {"part": "UG347E"},
+        "4 yr add WE": {"part": "UZ296E"}
     },
     "Y0S19A": {
-        "2 yr add WE": {
-            "part": "UG348E"
-        },
-        "4 yr add WE": {
-            "part": "UZ297E"
-        },
-        "1 yr PW": {
-            "part": "UG438PE"
-        }
+        "2 yr add WE": {"part": "UG348E"},
+        "4 yr add WE": {"part": "UZ297E"}
     },
     "Z4B55A": {
-        "2 yr add WE": {
-            "part": "UG337E"
-        },
-        "4 yr add WE": {
-            "part": "UZ303E"
-        },
-        "1 yr PW": {}
+        "2 yr add WE": {"part": "UG337E"},
+        "4 yr add WE": {"part": "UZ303E"}
     },
     "Z4B04A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {}
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "5D174A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-          
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "4A8D7A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "Z4B53A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-          
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "Z6Z11A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "Z6Z13A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "7ZV78A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "Z6Z95A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-         
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "Z6Z97A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "1TJ09A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "4SB24A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "4SR29A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "3YW70A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "6UU46A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "6UU47A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "4WF66A": {
-        "2 yr add WE": {
-            "part": "U35PFE"
-        },
+        "2 yr add WE": {"part": "U35PFE"},
         "4 yr add WE": {}
     },
     "4ZB79A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB80A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB81A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
-    
     "4ZB85A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB86A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB87A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB91A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB92A": {
-        "2 yr add WE": {
-            "part": "UB4V5E"
-        },
-        "4 yr add WE": {
-            "part": "UC4Y1E"
-        },
-        "1 yr PW": {
-            "part": "U42GQPE"
-        }
+        "2 yr add WE": {"part": "UB4V5E"},
+        "4 yr add WE": {"part": "UC4Y1E"}
     },
     "4ZB94A": {
-        "2 yr add WE": {
-            "part": "UB4W7E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X9E"
-        },
-        "1 yr PW": {
-            "part": "U42GSPE"
-        }
+        "2 yr add WE": {"part": "UB4W7E"},
+        "4 yr add WE": {"part": "UC4X9E"}
     },
     "4ZB95A": {
-        "2 yr add WE": {
-            "part": "UB4W7E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X9E"
-        },
-        "1 yr PW": {
-            "part": "U42GSPE"
-        }
+        "2 yr add WE": {"part": "UB4W7E"},
+        "4 yr add WE": {"part": "UC4X9E"}
     },
     "4ZB96A": {
-        "2 yr add WE": {
-            "part": "UB4W7E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X9E"
-        },
-        "1 yr PW": {
-            "part": "U42GSPE"
-        }
+        "2 yr add WE": {"part": "UB4W7E"},
+        "4 yr add WE": {"part": "UC4X9E"}
     },
     "4ZB97A": {
-        "2 yr add WE": {
-            "part": "UB4W7E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X9E"
-        },
-        "1 yr PW": {
-            "part": "U42GSPE"
-        }
+        "2 yr add WE": {"part": "UB4W7E"},
+        "4 yr add WE": {"part": "UC4X9E"}
     },
     "4QD21A": {
-        "2 yr add WE": {
-            "part": "UB4X9E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X7E"
-        },
-        "1 yr PW": {
-            "part": "U42GXPE"
-        }
+        "2 yr add WE": {"part": "UB4X9E"},
+        "4 yr add WE": {"part": "UC4X7E"}
     },
     "4RY26A": {
-        "2 yr add WE": {
-            "part": "UB4X9E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X7E"
-        },
-        "1 yr PW": {
-            "part": "U42GXPE"
-        }
+        "2 yr add WE": {"part": "UB4X9E"},
+        "4 yr add WE": {"part": "UC4X7E"}
     },
     "4RY22A": {
-        "2 yr add WE": {
-            "part": "UB4Z1E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X5E"
-        },
-        "1 yr PW": {
-            "part": "U42GVPE"
-        }
+        "2 yr add WE": {"part": "UB4Z1E"},
+        "4 yr add WE": {"part": "UC4X5E"}
     },
     "4RY23A": {
-        "2 yr add WE": {
-            "part": "UB4Z1E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X5E"
-        },
-        "1 yr PW": {
-            "part": "U42GVPE"
-        }
+        "2 yr add WE": {"part": "UB4Z1E"},
+        "4 yr add WE": {"part": "UC4X5E"}
     },
     "5HG74A": {
-        "2 yr add WE": {
-            "part": "UB4Z1E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X5E"
-        },
-        "1 yr PW": {
-            "part": "U42GVPE"
-        }
+        "2 yr add WE": {"part": "UB4Z1E"},
+        "4 yr add WE": {"part": "UC4X5E"}
     },
     "5HG85A": {
-        "2 yr add WE": {
-            "part": "UB4X9E"
-        },
-        "4 yr add WE": {
-            "part": "UC4X7E"
-        },
-        "1 yr PW": {
-            "part": "U42GXPE"
-        }
+        "2 yr add WE": {"part": "UB4X9E"},
+        "4 yr add WE": {"part": "UC4X7E"}
     },
     "6GX06A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "6GX04A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "3G635A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "3G636A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "6GW64A": {
-        "2 yr add WE": {
-            "part": "UG481E"
-        },
-        "4 yr add WE": {
-            "part": "UZ272E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG481E"},
+        "4 yr add WE": {"part": "UZ272E"}
     },
     "3G658A": {
-        "2 yr add WE": {
-            "part": "UG481E"
-        },
-        "4 yr add WE": {
-            "part": "UZ272E"
-        },
-        "1 yr PW": {
-            "part": "UG451PE"
-        }
+        "2 yr add WE": {"part": "UG481E"},
+        "4 yr add WE": {"part": "UZ272E"}
     },
     "CZ174A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     },
     "381U0A": {
-        "2 yr add WE": {
-          
-        },
-        "4 yr add WE": {
-            "part": "U04THE"
-        },
-        "1 yr PW": {
-            "part": "U67MCPE"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U04THE"}
     },
     "381U2A": {
-        "2 yr add WE": {
-        
-        },
-        "4 yr add WE": {
-            "part": "U04THE"
-        },
-        "1 yr PW": {
-            "part": "U67MCPE"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U04THE"}
     },
     "381U3A": {
-        "2 yr add WE": {
-           
-        },
-        "4 yr add WE": {
-            "part": "U04THE"
-        },
-        "1 yr PW": {
-            "part": "U67MCPE"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U04THE"}
     },
     "381U4A": {
-        "2 yr add WE": {
-          
-        },
-        "4 yr add WE": {
-            "part": "U04THE"
-        },
-        "1 yr PW": {
-            "part": "U67MCPE"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U04THE"}
     },
     "381V6A": {
-        "2 yr add WE": {
-            "part": "U04SME"
-        },
-        "4 yr add WE": {
-            "part": "U04SKE"
-        },
-        "1 yr PW": {
-            "part": "U67M9PE"
-        }
+        "2 yr add WE": {"part": "U04SME"},
+        "4 yr add WE": {"part": "U04SKE"}
     },
-     "5QK15A": {
-        "2 yr add WE": {
-            
-        },
-        "4 yr add WE": {
-            "part": "U36LGE"
-        },
-        "1 yr PW": {
-            "part": "U36LTPE"
-        }
+    "5QK15A": {
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U36LGE"}
     },
     "3D4L3A": {
-        "2 yr add WE": {
-            "part": "U57D7E"
-        },
+        "2 yr add WE": {"part": "U57D7E"},
         "4 yr add WE": {}
     },
     "1F3W3A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-        
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "4A8S4A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-          
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "1F3W2A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-       
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "4A8R9A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-          
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "1F3Y4A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-         
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "4A8D9A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "1F3Y2A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-          
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "4A8D4A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-           
-        }
+        "2 yr add WE": {"part": "UA5C0E"},
+        "4 yr add WE": {}
     },
     "6UU48A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "28C12A": {
-        "2 yr add WE": {
-            "part": "UA5C0E"
-        },
+        "2 yr add WE": {"part": "UA5C0E"},
         "4 yr add WE": {}
     },
     "714Z8A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
-     "2Z632A": {
-        "2 yr add WE": {
-            "part": "U42TZE"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U42U9PE"
-        }
+    "2Z632A": {
+        "2 yr add WE": {"part": "U42TZE"},
+        "4 yr add WE": {}
     },
-
-     "53P41A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+    "53P41A": {
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
-    
     "53X75A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ267E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ267E"}
     },
     "A58WKA": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "714Z9A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "715A2A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
-     "A58WFA": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+    "A58WFA": {
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
-      "A58WCA": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+    "A58WCA": {
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "715A3A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "715A4A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "715A5A": {
-        "2 yr add WE": {
-            "part": "U62F3E"
-        },
-        "4 yr add WE": {
-            "part": "U62F5E"
-        },
-        "1 yr PW": {
-            "part": "U62F7PE"
-        }
+        "2 yr add WE": {"part": "U62F3E"},
+        "4 yr add WE": {"part": "U62F5E"}
     },
     "53N94C": {
-        "2 yr add WE": {
-            "part": "UG467E"
-        },
-        "4 yr add WE": {
-            "part": "UZ275E"
-        }
+        "2 yr add WE": {"part": "UG467E"},
+        "4 yr add WE": {"part": "UZ275E"}
     },
     "537P5C": {
-        "2 yr add WE": {
-            "part": "UG468E"
-        },
-        "4 yr add WE": {
-            "part": "UZ276E"
-        }
+        "2 yr add WE": {"part": "UG468E"},
+        "4 yr add WE": {"part": "UZ276E"}
     },
     "405W2C": {
-        "2 yr add WE": {
-            "part": "UG349E"
-        },
-        "4 yr add WE": {
-            "part": "UZ277E"
-        },
-        "1 yr PW": {
-            "part": "UG439PE"
-        }
+        "2 yr add WE": {"part": "UG349E"},
+        "4 yr add WE": {"part": "UZ277E"}
     },
     "404L7C": {
-        "2 yr add WE": {
-            "part": "U6M85E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U6M83E"
-        }
+        "2 yr add WE": {"part": "U6M85E"},
+        "4 yr add WE": {}
     },
     "2ZN50A": {
-        "2 yr add WE": {
-            "part": "U9VU5E"
-        },
-        "4 yr add WE": {},
-        "1 yr PW": {
-            "part": "U9VV7PE"
-        }
+        "2 yr add WE": {"part": "U9VU5E"},
+        "4 yr add WE": {}
     },
-    
     "499M6A": {
-        "2 yr add WE": {
-            "part": "UG482E"
-        },
-        "4 yr add WE": {
-            "part": "UZ260E"
-        },
-        "1 yr PW": {
-            "part": "UG764PE"
-        }
+        "2 yr add WE": {"part": "UG482E"},
+        "4 yr add WE": {"part": "UZ260E"}
     },
     "A8P80A": {
-        "2 yr add WE": {
-        },
-        "4 yr add WE": {
-            "part": "U5AD9E"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U5AD9E"}
     },
     "A8P79A": {
-        "2 yr add WE": {
-        },
-        "4 yr add WE": {
-            "part": "U5AD9E"
-        }
+        "2 yr add WE": {},
+        "4 yr add WE": {"part": "U5AD9E"}
     },
-   
     "499N4A": {
-        "2 yr add WE": {
-            "part": "UH773E"
-        },
-        "4 yr add WE": {
-            "part": "UZ289E"
-        },
-        "1 yr PW": {
-            "part": "UH770PE"
-        }
+        "2 yr add WE": {"part": "UH773E"},
+        "4 yr add WE": {"part": "UZ289E"}
     }
 }
-
-
   
 product_page_mapping = {
     "UG457E":"hp-deskjet-2-years-additional-warranty/",
