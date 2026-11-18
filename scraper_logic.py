@@ -3714,10 +3714,10 @@ def run_warranty_check(serial_number, product_number=None, eosl_data=eosl_data):
 },
             
             
-            {
-        "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27"],
-        "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
-        "parts": ["UJ217E","UD075PE"],
+    {
+    "includes": [r"(?i)hp\s?all-in-one|slim|desktop\s?pc\s?m|hp\s?27|omn​​istudio"],
+    "excludes": [r"(?i)victus|omen|envy|spectre|printer|14s|15s|pavilion|gaming"],
+    "parts": ["UJ217E", "UD075PE"],
     },
        # ProBook G11
 {
